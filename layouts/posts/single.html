@@ -1,0 +1,162 @@
+{{define "main"}}
+<div class="container-grid">
+   <div style="max-width: 100%;"></div>
+
+</div>
+<div class="container-grid">
+<div class=" single-page-container">
+ 
+  
+    {{ if ne (.Params.postdate) (.Lastmod | time.Format ":date_long") }}
+    <span class="post-date"> {{.Params.postdate}}</span>
+    <span class="post-date" style="color: rgb(148, 148, 148);"> / {{ .Params.weight }} /</span>
+{{ else }}
+<span class="post-date"> {{ .Lastmod | time.Format ":date_long" }}   </span>
+<span class="post-date" style="color: rgb(148, 148, 148);"> / {{ .Params.weight }} /</span>
+{{ end }}
+
+  <h1>{{.Params.title}}</h1>
+
+
+  <div class="post-metadata">
+    {{if .Params.author_credit}}
+<p><img class="author__img" src="{{ .Params.author_credit_image}}" alt="{{ .Params.author_credit_name}}"></img>
+    <p class="author">{{ .Params.author_credit_name}} </p>
+
+    {{else if not .Params.author_credit}}
+    <p><img class="author__img" src="/images/author_jamiu.webp" alt="{{ .Params.author}}"></img>
+    <p class="author">{{ .Params.author}} </p>
+    {{end}}
+      <p class="dot">/</p>
+      <!-- <p class="dot">/</p><p class="weight">{{ .Params.weight }} </p>  <p class="dot">/</p> -->
+    <p class="post-category">
+      <a class="on-what-topic" href="{{.Params.categorylink}}"
+        >{{if isset .Params "categorylabel" }}{{ .Params.categorylabel
+        }}{{end}}</a
+      >
+    </p>
+    <p class="dot">/</p>
+    <!-- <p class="dot">&#8226;</p> -->
+    <p class="read-time">
+      Read Time &#128352; - {{ $readingTime := .ReadingTime }} {{ print
+      $readingTime "mins" | safeHTML }}
+    </p>
+  </div>
+  <!-- {{ $date := .Date.Format "02.01.2006" }}
+  {{ $lastmod := .Lastmod.Format "02.01.2006" }} -->
+  <!-- <br>
+  Last modified on {{ .Page.Lastmod.Format "2006-01-02" }}
+  <br>
+  {{ .Lastmod | time.Format ":date_long" }}
+  <br>
+  <span class="date-info italic">published on {{ $date }}</span>
+  {{ if ne $lastmod $date }}
+      <span class="date-info italic"> <br> modified on {{ .Lastmod | time.Format ":date_long"  }}</span>
+  {{ end }}
+
+  {{ .Date | time.Format ":date_medium" }} -->
+  <div class="bar-style"></div>
+ 
+  
+  <!-- <details>
+    <summary>Table of Contents</summary>
+    {{ .Page.TableOfContents }}
+  </details> -->
+
+  {{.Content}} 
+<!-- ShareThis BEGIN -->
+<!-- <div class="sharethis-inline-reaction-buttons"></div> -->
+<!-- ShareThis END -->
+    {{partial "socialshare" . }}
+
+
+ {{if .Params.Affliate_Links}}
+   <blockquote>
+    <p><strong>Disclosure: </strong>Tooabstractive is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. </p>
+   </blockquote>
+    {{end}}
+ 
+
+<div id="emote_com"></div>
+
+{{if .Params.author_credit}}
+<div class="author-credit">
+  <h2 class="author-credit-heading">About The Author</h2>
+<div class="author-detail">
+   <div class="author-credit-img">
+   
+    <img src=" {{.Params.author_credit_image}}" alt="{{.Params.author_credit_name}}">
+   
+  </div>
+  <div class="author-credit-info">
+    <h3 class="author-credit-name">{{.Params.author_credit_name}}</h3>
+    <p>{{.Params.author_credit_info}}</p>
+    <span class="author-social-links" style="display: inline-block; "> 
+      <a href="https://www.linkedin.com/in/mohammad-jamiu-balogun-b61a7a17a" target="_blank" rel="noopener"> <svg style="height: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.87 28.87" id="linkedin"><g><g><rect width="28.87" height="28.87" fill="#0b86ca" rx="6.48" ry="6.48"></rect><path fill="#fff" d="M8 12h3v9.68H8zm1.53-4.81a1.74 1.74 0 11-1.74 1.75 1.74 1.74 0 011.74-1.75M12.92 12h2.89v1.32a3.16 3.16 0 012.85-1.56c3 0 3.61 2 3.61 4.61v5.31h-3V17c0-1.12 0-2.57-1.56-2.57s-1.8 1.22-1.8 2.48v4.79h-3z"></path></g></g></svg> </a>
+    </span></div>
+    
+</div> 
+</div>
+{{end}}
+
+
+<!-- <p>Disclosure: Some of the links above are affiliate links. This means that, at zero cost to you, I will earn an affiliate commission if you click through the link and finalize a purchase.</p>
+   -->
+  
+  <div class="readmore-recommend">
+    <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
+
+    <!-- {{ $relatednew:= (.Site.RegularPages.Related .) | shuffle | first 5 }}  -->
+    {{ $related:= (.Site.Pages.Related .) | shuffle | first 5 }} {{ range
+    $related }}
+    <!-- <ul class="ul-in-post" style="list-style-type:square;">
+      <li>
+        <a class="links-to-others" href="{{.RelPermalink}}">{{.Title}}</a>
+      </li>
+    </ul> -->
+     <div class="xx">
+        <img src="{{.Params.image}}" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="{{.RelPermalink}}">{{.Title}}</a>
+ </div>
+    {{end}}
+
+  
+   
+  </div>
+ 
+</div>
+<aside class="sidebar">
+   <div class="readmore-recommend-desktop">
+    <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
+
+    <!-- {{ $relatednew:= (.Site.RegularPages.Related .) | shuffle | first 5 }}  -->
+    {{ $related:= (.Site.Pages.Related .) | shuffle | first 5 }} {{ range
+    $related }}
+    <!-- <ul class="ul-in-post" style="list-style-type:square;">
+      <li>
+        <a class="links-to-others" href="{{.RelPermalink}}">{{.Title}}</a>
+      </li>
+    </ul> -->
+       <div class="xx">
+        <img src="{{.Params.image}}" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="{{.RelPermalink}}">{{.Title}}</a>
+ </div>
+    {{end}}
+  </div>
+</aside>
+</div>
+
+
+
+
+
+
+  <!-- Scripts for social media buttons -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="1a2b3c"></script>
+  <script type="text/javascript" src="//platform.linkedin.com/in.js"> lang: en_US</script>
+  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+{{end}}
+

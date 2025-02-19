@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head" .}} {{ partial "site_schema.html" . }}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+
+    {{ partial "header" .}} {{block "main" .}} {{end}}
+
+    <!-- Footer Section -->
+
+    {{ partial "footer" .}}
+    <script defer src="/js/script.js"></script>
+    <!-- <script type="text/javascript">
+      //<![CDATA[
+      var lazyadsense2 = false;
+      window.addEventListener(
+        "scroll",
+        function () {
+          if (
+            (document.documentElement.scrollTop != 0 &&
+              lazyadsense2 === false) ||
+            (document.body.scrollTop != 0 && lazyadsense2 === false)
+          ) {
+            (function () {
+              var ad = document.createElement("script");
+              ad.setAttribute("data-ad-client", "ca-pub-7879769699553347");
+              ad.async = true;
+              ad.src =
+                "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+              var sc = document.getElementsByTagName("script")[0];
+              sc.parentNode.insertBefore(ad, sc);
+            })();
+            lazyadsense2 = true;
+          }
+        },
+        true
+      );
+      //]]>
+    </script> -->
+
+    <!-- <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=6474ea4458d85b001927bc7b&product=sop"
+      async="async"
+    ></script>  <script defer src="https://i.emote.com/js/emote.js"></script> -->
+
+    <script>
+      var allPostsSwiper = new Swiper(".all-posts-carousel", {
+        loop: true,
+        navigation: {
+          nextEl: ".all-posts-next",
+          prevEl: ".all-posts-prev",
+        },
+        autoplay: {
+          delay: 4000, // 2 seconds before moving to the next slide
+          disableOnInteraction: false, // Keep autoplay running even after interaction
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

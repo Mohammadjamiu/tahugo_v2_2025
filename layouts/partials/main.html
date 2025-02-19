@@ -1,0 +1,150 @@
+<section class="main">
+  <div class="container">
+    <div class="explore-more">
+      <h2>Explore More &#128204;</h2>
+      <div class="explore-more-card">
+        <div class="engineering-grasped">
+          <div class="engineering-grasped-icon explore-icon-box">
+            <div class="span">&#129691;</div>
+          </div>
+          <!-- <div class="engineering-grasped-icon explore-icon-box">
+            <img src="/images/grasp.svg" alt="" />
+          </div> -->
+          <div class="engineering-grasped-content explore-content-box">
+            <a href="/posts/">Engineering Grasped</a>
+          </div>
+        </div>
+        <!-- <div class="ebook-resources">
+          <div class="ebook-resources-icon explore-icon-box">
+            <img src="/images/ebook.svg" alt="" />
+          </div>
+          <div class="ebook-resources-content explore-content-box">
+            <a href="#">eBook and Resources</a>
+          </div>
+        </div> -->
+        <div class="tech-stuff">
+          <div class="tech-stuff-icon explore-icon-box">
+            <div class="span">&#128104;&#8205;&#128187;</div>
+          </div>
+          <!-- <div class="tech-stuff-icon explore-icon-box">
+            <img src="/images/lightupx.svg" alt="" />
+          </div> -->
+          <div class="tech-stuff-content explore-content-box">
+            <a href="/categories/how-to-tech/">Tech Related Stuffs</a>
+          </div>
+        </div>
+        <div class="productivity-writing">
+          <div class="productivity-writing-icon explore-icon-box">
+            <div class="span">&#128212;</div>
+          </div>
+          <!-- <div class="productivity-writing-icon explore-icon-box">
+            <img src="/images/content.svg" alt="" />
+          </div> -->
+          <div class="productivity-writing-content explore-content-box">
+            <a href="/categories/productivity-and-writings/"
+              >Productivity and <br />Writing</a
+            >
+          </div>
+        </div>
+        <div class="productivity-writing">
+          <div class="productivity-writing-icon explore-icon-box">
+            <div class="span">&#128176;</div>
+          </div>
+          <div class="productivity-writing-content explore-content-box">
+            <a href="/categories/financial-stuffs/"
+              >Financial and Economic <br />
+              Related Stuffs</a
+            >
+          </div>
+        </div>
+        <div class="productivity-writing">
+          <div class="productivity-writing-icon explore-icon-box">
+            <div class="span">&#128230;</div>
+          </div>
+          <div class="productivity-writing-content explore-content-box">
+            <a href="/categories/product-reviews-recommendations/"
+              >Product Reviews and <br />
+              Recommendations</a
+            >
+          </div>
+        </div>
+        <div class="productivity-writing">
+          <div class="productivity-writing-icon explore-icon-box">
+            <div class="span">&#128218;</div>
+          </div>
+          <!-- <div class="productivity-writing-icon explore-icon-box">
+            <img src="/images/ebook.svg" alt="" />
+          </div> -->
+          <div class="productivity-writing-content explore-content-box">
+            <a href="/ebookcategories/electrical-engineering/"
+              >eBooks and <br />Resources</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{if .IsHome}}
+    <div class="youtube-content-box">
+      <h2>Youtube Contents &#128250;</h2>
+      {{/*
+      <div class="youtube-content-wrapper">{{partial "ytcontent" .}}</div>
+      */}}
+      <a
+        href="https://www.youtube.com/channel/UCm814Any5c0GvOrRCUE3z8g"
+        class="recent-post-btn hero-btn"
+        >&#128073; Subscribe For More</a
+      >
+    </div>
+    {{end}}
+
+    <div class="recent-posts">
+      <h2>Recent Posts &#128357;</h2>
+      <div class="recent-posts-card">
+        {{range (where .Site.RegularPages.ByWeight.Reverse ".Type" "eq" "posts")
+        | first 15 }}
+
+        <div class="recent-post-box">
+          <div class="recent-post-img">
+            <img
+              loading="lazy"
+              class="img-in-recent-post"
+              src="{{if .Params.image}}{{.Params.image}}{{else}}{{`/images/imgph.webp`}}{{end}}"
+              alt="{{.Title}}"
+              srcset=""
+            />
+          </div>
+          <div class="recent-post-heading">
+            <h2>{{.Params.Title | truncate 115}}</h2>
+
+            <a href="{{.RelPermalink}}" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+        {{end}}
+      </div>
+      <a href="/posts/" class="recent-post-btn hero-btn"
+        >&#128073; Read More and Explore</a
+      >
+    </div>
+
+    <div class="explore-by-tag">
+      <h2>Explore By Tag &#10024;</h2>
+      <div class="explore-by-tag-card">
+        <a href="/tags/difference-between/">Difference Between</a>
+        <a href="/tags/how-to/">How to's</a>
+        <a href="/tags/finance/">Finance</a>
+        <a href="/tags/economy/">Economy</a>
+        <a href="/tags/javascript">Javascript</a>
+        <a href="/tags/nodejs">NodeJS</a>
+        <a href="/tags/self-development">Self Development</a>
+        <a href="/tags/study-tips">Student Tips</a>
+
+        <!-- {{ range (where .Site.RegularPages.ByWeight.Reverse ".Type" "eq"
+        "posts")}} {{ $tags := .Params.tags }} {{ if in  $tags "difference between" }}
+        {{.}}
+   
+        {{end}} {{end}} -->
+      </div>
+    </div>
+  </div>
+</section>

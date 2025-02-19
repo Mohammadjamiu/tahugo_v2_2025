@@ -1,0 +1,79 @@
+baseURL: https://tooabstractive.com/
+languageCode: en-us
+title: Tooabstractive
+enableEmoji: true
+enableRobotsTXT: true
+enableGitInfo: true
+canonifyURLs: true
+dateFormat: "02 Jan 2006"
+paginate: 15
+timeout:  60000 
+ignoreErrors: ["error-remote-getjson"]
+params:
+  description: TA is here to demystify abstractive concepts ranging from (engineering - tech - writing)
+  author: Mohammad Jamiu
+  logo: /favicon.png
+  Copyright: Mohammad Jamiu (Tooabstractive)
+  og_image: /images/tabluelogopng.png
+  dateFormat: "02 Jan 2006"
+  social:
+    share:
+      facebook: true
+      pinterest: true
+      twitter: true
+      whatsapp: true
+      email: true
+build:
+  environment:
+    TZ: Africa/Lagos
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    noHl: false
+    style: monokailight
+    tabWidth: 4
+
+menu:
+  main:
+    - name: Home &#127968;
+      url: /
+      weight: 1
+    - name: Posts &#128221;
+      url: /posts/
+      weight: 2
+    - name: Youtube &#128250;
+      url: https://www.youtube.com/channel/UCm814Any5c0GvOrRCUE3z8g/
+      weight: 3
+    - name: Contact &#9742;
+      url: /contact/
+      weight: 4
+    - name: About &#8505;
+      url: /about/
+      weight: 5
+
+related:
+  threshold: 0
+  includeNewer: false
+  toLower: false
+  indices:
+    - name: categories
+      weight: 100
+    - name: date
+      weight: 9
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  ebookcategory: "ebookcategories"
+  developernotes: "developernotes"

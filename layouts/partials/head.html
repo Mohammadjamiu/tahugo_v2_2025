@@ -1,0 +1,90 @@
+{{ partial "metatags" . }} {{partial "links" .}} {{if .Params.mathjax}}
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"],
+      ],
+    },
+    svg: {
+      fontCache: "global",
+    },
+  };
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"
+></script>
+{{end}}
+
+<script
+  type="text/javascript"
+  async="async"
+  data-noptimize="1"
+  data-cfasync="false"
+  src="//scripts.scriptwrapper.com/tags/1b666cfe-ea5d-4ced-ba36-a1b8b5199400.js"
+></script>
+
+
+<!-- Journey Script -->
+
+<script data-grow-initializer="">
+  !(function () {
+    window.growMe ||
+      ((window.growMe = function (e) {
+        window.growMe._.push(e);
+      }),
+      (window.growMe._ = []));
+    var e = document.createElement("script");
+    (e.type = "text/javascript"),
+      (e.src = "https://faves.grow.me/main.js"),
+      (e.defer = !0),
+      e.setAttribute(
+        "data-grow-faves-site-id",
+        "U2l0ZToxYjY2NmNmZS1lYTVkLTRjZWQtYmEzNi1hMWI4YjUxOTk0MDA="
+      );
+    var t = document.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(e, t);
+  })();
+</script>
+
+<!-- Meta tags for verification -->
+<!-- Commented on 22/dec/2024 for grow -->
+<!-- <meta
+  name="google-site-verification"
+  content="DNFwnzCDjmAJ66Py0Sc0GmACD0P9hzdN1u2-_wMrCJ0"
+/> -->
+<!-- Commented on 22/dec/2024 for grow -->
+
+<!-- <meta name="fo-verify" content="47615df9-ca6b-4ddf-94a2-931bcf97ae50" /> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZKBCM99NE5"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-ZKBCM99NE5");
+</script>
+
+<!-- End Google Analytics -->
+
+<!-- Netlify Identity  -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<!-- End of Netlify Identity  -->
