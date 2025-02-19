@@ -1,0 +1,24 @@
+name: Update ads.txt
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs at midnight UTC every day
+
+jobs:
+  update-ads-txt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download ads.txt
+        run: |
+          curl -L https://srv.adstxtmanager.com/19390/tooabstractive.com > static/ads.txt
+
+      - name: Commit updated ads.txt
+        run: |
+          git config --global user.email "youremail@example.com"
+          git config --global user.name "Your Name"
+          git add static/ads.txt
+          git commit -m "Update ads.txt"
+          git push
