@@ -1,2 +1,3 @@
 # ads.txt setup
 # Place your redirect instructions here
+google.com, pub-7879769699553347, direct, f08c47fec0942fa0
