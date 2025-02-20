@@ -21,4 +21,7 @@ jobs:
           git config --global user.name "Your Name"
           git add static/ads.txt
           git commit -m "Update ads.txt"
-          git push
+
+      - name: Push changes
+        run: |
+          git push https://${{ secrets.CRON_TOKEN }}@github.com/Mohammadjamiu/tahugo_v2_2025.git
