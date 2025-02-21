@@ -126,7 +126,8 @@ html {
 
   font-family: "Muli", sans-serif;
   font-weight: 500;
-  line-height: 1.63;
+  line-height: 1.65;
+  /* line-height: 1.63; */
   overflow-x: hidden !important;
   scroll-padding-top: 2rem;
 }
@@ -164,7 +165,7 @@ h4 {
 }
 p {
   font-family: Muli, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 500;
   margin: 1.6rem auto;
 }

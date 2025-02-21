@@ -1,2 +1,81 @@
-# ads.txt setup
-# Place your redirect instructions here
+#Ads.txt tooabstractive.com
+#Ads.txt managed by AdsTxtManager.com - the free ads.txt management tool for publishers
+ownerdomain=tooabstractive.com
+contact=directsales@ezoic.com
+managerdomain=ezoic.ai
+
+ezoic.ai, ef35b019eca91f758811e51d83413327, DIRECT
+ezoic.ai, 7afeab2da762198d2134fb59fb0a2671, DIRECT
+ezoic.co.uk, 7afeab2da762198d2134fb59fb0a2671, DIRECT
+# 35
+themediagrid.com, 4M5PGT, DIRECT, 35d5010d7789b49d
+themediagrid.com, Q19AKF, DIRECT, 35d5010d7789b49d
+sonobi.com, 192ecdea01, RESELLER, d1a215d9eb5aee9e
+google.com, pub-6644558441501035, DIRECT, f08c47fec0942fa0
+google.com, pub-1175987143200523, RESELLER, f08c47fec0942fa0
+adingo.jp, 24483, RESELLER
+# 36
+sharethrough.com, PmzCMtAd, DIRECT, d53b998a7bd4ecd2
+google.com, pub-9508156287817487, RESELLER, f08c47fec0942fa0
+improvedigital.com, 2483, RESELLER
+# 10048
+sonobi.com, f4e5b5299c, DIRECT, d1a215d9eb5aee9e
+# 10050
+criteo.com, B-062427, DIRECT, 9fac4a4a87c2a44f
+themediagrid.com, 2RT75Y, DIRECT, 35d5010d7789b49d
+# 10061
+pubmatic.com, 156983, DIRECT, 5d62403b186f2ace
+pubmatic.com, 160020, DIRECT, 5d62403b186f2ace
+pubmatic.com, 162833, DIRECT, 5d62403b186f2ace
+# 10063
+rubiconproject.com, 21152, DIRECT, 0bfd66d529a55807
+rubiconproject.com, 21150, DIRECT, 0bfd66d529a55807
+# 10081
+appnexus.com, 3153, RESELLER, f5ab79cb980f11d1
+# 11290
+amxrtb.com, 105199335, DIRECT
+appnexus.com, 12290, RESELLER
+lijit.com, 260380, RESELLER
+pubmatic.com, 158355, RESELLER
+openx.com, 559680764, RESELLER
+# 11291
+freewheel.tv, 20393, RESELLER
+freewheel.tv, 24377, RESELLER
+onetag.com, 62499636face9dc, DIRECT
+onetag.com, 62499636face9dc-OB, DIRECT
+smartadserver.com, 4111, RESELLER
+# 11301
+contextweb.com, 562406, DIRECT, 89ff185a4c4e857c
+# 11307
+media.net, 8CUBCB617, DIRECT
+openx.com, 537100188, RESELLER, 6a698e2ec38604c6
+openx.com, 559911747, RESELLER, 6a698e2ec38604c6
+# 11309
+openx.com, 540274407, RESELLER, 6a698e2ec38604c6
+smaato.com, 1100047713, RESELLER, 07bcf65f187117b4
+smartadserver.com, 4342, RESELLER
+sharethrough.com, b18911a2, DIRECT, d53b998a7bd4ecd2
+sharethrough.com, zhQZ2Tfv, DIRECT, d53b998a7bd4ecd2
+# 11313
+smilewanted.com, 2864, DIRECT
+# 11314
+adyoulike.com, ad8c19559e1f2d3424eb0be801d8e184, DIRECT
+# 11315
+openx.com, 558228330, RESELLER, 6a698e2ec38604c6
+video.unrulymedia.com, 3463482822, RESELLER
+smartadserver.com, 4524, RESELLER, 060d053dcf45cbf3
+smartyads.com, 217, RESELLER, fd2bde0ff2e62c5d
+yieldmo.com, 2723393041019642186, DIRECT
+yieldmo.com, 2834292204858450860, DIRECT
+yieldmo.com, 2676856567361380607, DIRECT
+# 11321
+33across.com, 0010b00002MpnPqAAJ, DIRECT, bbea06d9c4d2853c
+conversantmedia.com, 100141, RESELLER
+openx.com, 537120563, RESELLER, 6a698e2ec38604c6
+triplelift.com, 12503, RESELLER, 6c33edb13117fd86
+video.unrulymedia.com, 2439829435, RESELLER
+# 11375
+xapads.com, 199688, DIRECT
+aps.amazon.com, 822c7bc2-d58f-4911-b8a2-95ee49e044c8, RESELLER
+# 21202
+google.com, pub-7879769699553347, DIRECT, f08c47fec0942fa0
