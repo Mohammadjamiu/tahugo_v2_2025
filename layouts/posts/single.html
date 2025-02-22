@@ -7,11 +7,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     {{ if ne (.Params.postdate) (.Lastmod | time.Format ":date_long") }}
@@ -71,6 +68,8 @@
   </details> -->
 
   {{.Content}} 
+  <div id="ezoic-pub-ad-placeholder-166"></div>
+ 
 <!-- ShareThis BEGIN -->
 <!-- <div class="sharethis-inline-reaction-buttons"></div> -->
 <!-- ShareThis END -->
@@ -84,11 +83,7 @@
     {{end}}
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 {{if .Params.author_credit}}
@@ -143,11 +138,7 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     <!-- {{ $relatednew:= (.Site.RegularPages.Related .) | shuffle | first 5 }}  -->
     {{ $related:= (.Site.Pages.Related .) | shuffle | first 5 }} {{ range
     $related }}
@@ -167,8 +158,12 @@
 
 
 
-
-
+<!-- Ezoic ads script -->
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   <!-- Scripts for social media buttons -->
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
