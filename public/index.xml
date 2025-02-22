@@ -3284,6 +3284,27 @@
       <description>In my previous post, I talked about improving the responsiveness of my Next.js website by adding a progress bar.&#xA;This helped by letting users know something was loading and made the site feel more responsive.&#xA;You can read about it here: How to Add a Progress Bar to Your Next.js App for Better User Experience.&#xA;However, while a progress bar can reduce bounce rates caused by perceived slowness, it doesn&amp;rsquo;t fix the actual speed of the site.</description>
     </item>
     <item>
+      <title>Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</title>
+      <link>http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/</guid>
+      <description>While working on a React project, I encountered the following error:&#xA;Error: React.Children.only expected to receive a single React element child. This error occurred with the following code:&#xA;&amp;lt;Button className=&amp;#34;bg-blue-600 hover:bg-blue-700&amp;#34; asChild&amp;gt; &amp;lt;Link href=&amp;#34;#projects&amp;#34; className=&amp;#34;flex items-center&amp;#34;&amp;gt; View Projects &amp;lt;ArrowRight className=&amp;#34;w-4 h-4 ml-2&amp;#34; /&amp;gt; &amp;lt;/Link&amp;gt; &amp;lt;/Button&amp;gt; Problem:&#xA;The asChild prop in the Button component expects exactly one child element.&#xA;In the code above, the Button component has multiple children within the Link component (View Projects text and the ArrowRight icon), which causes the error.</description>
+    </item>
+    <item>
+      <title>Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</title>
+      <link>http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/</guid>
+      <description>I purchased a domain name from Namecheap to use for my Turborepo projects, which include two Next.js applications.&#xA;One is the main site, which should be accessible at monoed.africa, while the other is a subdomain project, accessible at cv-resume-builder.monoed.africa.&#xA;After deploying both projects separately on Vercel, I configured the domain settings as follows:&#xA;Main site domain (monoed.africa) setup in Vercel: Type: A Host: @ Value: 76.76.21.21 Type: CNAME Host: www Value: cname.</description>
+    </item>
+    <item>
+      <title>Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</title>
+      <link>http://localhost:1313/how-to-tech/nextjs-middleware-file-location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-tech/nextjs-middleware-file-location/</guid>
+      <description>Middleware in Next.js is a powerful tool for handling route protection, authentication, and redirects before the page even loads.&#xA;Unlike solutions that rely on useEffect or useRouter, middleware runs at the edge, ensuring a seamless experience without flickering UI issues.&#xA;Problem: Middleware Not Working Due to Incorrect Placement If your middleware.ts file isn’t working, it’s likely placed incorrectly in your project structure.&#xA;Solution: Correct Middleware Placement Based on Your Project Structure ✅ If You Are Using the src Directory: Place middleware.</description>
+    </item>
+    <item>
       <title></title>
       <link>http://localhost:1313/networking/difference-between-unicast-multicast-broadcast-and-anycast/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
