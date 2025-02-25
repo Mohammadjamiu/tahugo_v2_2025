@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,41 +338,199 @@
   
   
 
-  <p><strong>In today&rsquo;s mini guide, I will be explaining how to access the admin page of a website e.g., yoursite.com/admin which is configured using netlifyCMS using google account.</strong></p>
+  
+
+
+
+
+
+
+<p><strong>In today&rsquo;s mini guide, I will be explaining how to access the admin page of a website e.g., yoursite.com/admin which is configured using netlifyCMS using google account.</strong></p>
+
+
+
 <p>The first thing to do is, make sure that there is an admin folder in the root of your website, which has to contain two files: a <strong>config.yml and index.html</strong>.</p>
+
+
+
 <p>The important thing which allows Netlify to grant access to the admin page when a user goes to his or her  website URL/admin is that you there must be a link that has to be embedded into the index.html file inside the admin folder.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It must also be embedded inside the head tag of the homepage.</p>
+
+
+
 <p>Depending on how you build your site, as in the case of mine, I use Hugo (an SSG) which means that the homepage is the index.html inside layout/index.html.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Also, as I break my site into manageable chunks, I have a partial inside the partials folder called the head.html. It holds all the stuffs that have to go into the head tag of a webpage.</p>
+
+
+
 <p>So just place the Netlify identity script link and you are done with that for now.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/identity-script-link.webp" alt="identity script link" title="identity script link"></p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://identity.netlify.com/v1/netlify-identity-widget.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>Now you will need to log in to your Netlify dashboard and click on the integrations tab.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>On the integrations page, you will see a sidebar in which there is a link called <strong>identity</strong>.</p>
+
+
+
 <p>Click on it and it shows display the Netlify identity integration.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/identity-integrations.webp" alt="netlify identity integration" title="netlify identity integration"></p>
+
+
+
 <p>Then, click on <strong>View</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/identity-integrations-settings-and-usage.webp" alt="identity setting and usage" title="identity setting and usage"></p>
+
+
+
 <p>Next, is to click on <strong>Settings and Usage</strong> and then move to the <strong>Registration</strong> tab, click on edit settings and click on <strong>Invites only.</strong> The purpose of this is to allow only the user you give access to, to be able to log in with their Google email account.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-49-23-identity-site-settings.webp" alt="netlify config registration tab" title="netlify config registration tab"></p>
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-49-49-identity-site-settings.webp" alt="invites only" title="invites only"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>You then need to go to the external provider tab, which is right under the registration tab.</p>
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-50-08-identity-site-settings.webp" alt="netlify external provider" title="netlify external provider"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Under the dropdown, click on Google, as in my case I have already done that, that&rsquo;s why you see it as default.</p>
+
+
+
 <p>One last thing to not forget is to enable <strong>Git Gateway</strong> if you are using GitHub.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p><strong>Note:</strong></p>
+
+
+
 <p>NetlifyCMS works with Github as of now.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-45-49-identity-site-settings.webp" alt="enable git gateway" title="enable git gateway"></p>
+
+
+
 <p>Go back to the Netlify Identity tab and then click on invite users. You will need to add the email address that you wish to give access to, and that&rsquo;s it.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-51-42-identity-integrations.webp" alt="back to netlify identity tab" title="back to netlify identity tab"></p>
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-15-16-09-identity-integrations.webp" alt="choose email" title="choose email"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>After sending the <strong>invite link</strong> to the email, open the email and then click on the invite link.</p>
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-53-49-you-ve-been-invited-to-join-tahugo-update.netlify.app-jamiubabatundebalogun-gmail.com-gmail.webp" alt="invite link in email" title="invite link in email"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Now login to your website/admin and click on Google and then the Google account.</p>
+
+
+
 <p><img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-55-27-content-manager.webp" alt="netlify admin login" title="netlify admin login"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Boom that&rsquo;s all.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -487,11 +642,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -507,32 +658,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/light-mac-browser.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-lightweight-browsers-for-mac/">6 Best Lightweight Browsers for macOS (2024)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-chrome-keyboard-shortcuts/">List of Google Chrome Useful Keyboard Shortcut Keys (2024)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/preview-pane-enabled.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-preview-markdown-md-file-in-vscode/">How to Preview Markdown(.md) File in VSCode</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/emoji-rendering-in-mdx-with-remark-emoji-in-nextjs.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-emoji-rendering-in-mdx-with-remark-emoji-in-nextjs/">How to Fix Emoji Rendering in MDX with remark-emoji in Next.js</a>
+        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
+        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
  </div>
     
 
@@ -546,41 +697,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
+        <img src="http://localhost:1313/images/apple_new-m1-chip-graphic_11102020_big.jpg.large.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-processor-is-best-for-coding-or-programming/">Which Processor is Best for Coding or Programming?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/sam-altman-plugin-rollout.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-use-the-internet/">Does ChatGPT Use the Internet?</a>
+        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
+        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/rf-rm-powershell-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/remove-item-a-parameter-cannot-be-found-that-matches-parameter-name-rf/">How to Fix &#34;Remove-Item: A parameter cannot be found that matches parameter name &#39;rf&#39;&#34;</a>
+        <img src="http://localhost:1313/images/surveillance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-surveillance-and-monitoring/">Surveillance vs. Monitoring: What&#39;s The Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
+        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
  </div>
     
   </div>
@@ -590,7 +737,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

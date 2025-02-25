@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,26 +338,90 @@
   
   
 
-  <p>I noticed that my Next.js blog post page took some time to load, which made the website feel unresponsive.</p>
+  
+
+
+
+
+
+
+<p>I noticed that my Next.js blog post page took some time to load, which made the website feel unresponsive.</p>
+
+
+
 <p>Even though I’ve been optimizing the app by dynamically importing modules, tracking large package sizes, and making improvements, it still felt sluggish to users.</p>
+
+
+
 <p>To address this, I decided to add a progress bar at the top of the page.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Interestingly, it gives a sense of activity, reducing the perception of unresponsiveness.</p>
+
+
+
 <p>It’s funny how our brains work—just seeing a loading bar feels reassuring!</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>I Followed These Steps&hellip;</strong><br>
 To implement a progress bar in my Next.js 15 app, I used the <em><strong>Next NProgress Bar</strong></em> package. Here’s how I did it:</p>
+
+
+
 <ol>
 <li>
 <p><strong>Install the Package</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>I installed the package using:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm i next-nprogress-bar
 </span></span></code></pre></div><p>If you’re using npm, you can run:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm i next-nprogress-bar
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Create a ProgressBarProvider Component</strong></p>
+
+
+
 <p>I followed the package documentation and created a provider component to wrap my application.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This ensures that the progress bar is properly integrated without requiring the <code>use client</code> directive in my layout.</p>
+
+
+
 <p>Here&rsquo;s a link to the package documentation on npmjs. <a href="https://www.npmjs.com/package/next-nprogress-bar" target="_blank" rel="nofollow noopener ">https://www.npmjs.com/package/next-nprogress-bar</a></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// /components/ProgressBarProvider.tsx
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s2">&#34;use client&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -383,10 +444,19 @@ To implement a progress bar in my Next.js 15 app, I used the <em><strong>Next NP
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Providers</span><span class="p">;</span>
 </span></span></code></pre></div><p>Note: You can customize the progress bar color using HEX or HSL values.</p>
+
+
+
 </li>
 <li>
 <p><strong>Import and use the Provider inside <code>layout.tsx</code></strong><br>
 I imported the <code>Providers</code> component into the <code>layout.tsx</code> file to wrap the <code>{children}</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// /app/layout.tsx
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">Providers</span> <span class="nx">from</span> <span class="s2">&#34;@/components/ProgressBarProvider&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// This line above 👆
@@ -412,10 +482,41 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
 </span></span></code></pre></div></li>
 </ol>
 <p>Wrapping the app this way avoids making the <code>layout.tsx</code> a client component, which is not ideal for performance.</p>
+
+
+
 <p>After completing the setup, I ran my app locally to test the changes.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The progress bar now gives immediate feedback to users, significantly improving the perceived speed of my app.</p>
+
+
+
 <p>While there’s still an initial cold start, the progress bar improves the user experience, making the site feel faster.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Hopefully, future updates in Next.js will address this issue. Thanks to the Next.js team for their contributions to the dev community!</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -527,11 +628,7 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -547,32 +644,32 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
+        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
+        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
  </div>
     
 
@@ -586,41 +683,37 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-coding-apps-for-android/">Best Coding Apps for Android: Learn and Practice in 2023</a>
+        <img src="http://localhost:1313/images/npm-eintegrity-error.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-npm-installation-error-npm-err-code-eintegrity/">How to Fix npm Installation Error: npm ERR! code EINTEGRITY?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
+        <img src="http://localhost:1313/images/free-wifi-signboard-airport-zone-600w-506762929-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-wi-fi-and-wlan/">What is the difference between Wi-Fi and WLAN?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/sam-altman-plugin-rollout.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-use-the-internet/">Does ChatGPT Use the Internet?</a>
+        <img src="http://localhost:1313/images/branch-deleted-successfully.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-a-git-branch-locally-and-remotely/">How to Delete a Git Branch Locally and Remotely?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
+        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
  </div>
     
   </div>
@@ -630,7 +723,11 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,19 +338,77 @@
   
   
 
-  <p>In my previous post, I talked about improving the responsiveness of my Next.js website by adding a progress bar.</p>
+  
+
+
+
+
+
+
+<p>In my previous post, I talked about improving the responsiveness of my Next.js website by adding a progress bar.</p>
+
+
+
 <p>This helped by letting users know something was loading and made the site feel more responsive.</p>
+
+
+
 <p>You can read about it here: <a href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>However, while a progress bar can reduce bounce rates caused by perceived slowness, it doesn&rsquo;t fix the actual speed of the site.</p>
+
+
+
 <p>When I first developed my blog, it took longer to load than I expected.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>I did some digging to figure out why my Next.js blog loaded slowly and found a few optimization techniques.</p>
+
+
+
 <p>These steps may not make the site perfect, but they&rsquo;ve improved things a lot, and I’m okay with the results for now.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Here&rsquo;s what I did to optimize my website and make it load faster:</p>
+
+
+
 <h2 id="1-optimize-images-using-nextjs-image-component"><strong>1. Optimize Images Using Next.js <code>Image</code> Component</strong></h2>
 <p>Images play a huge role in website speed. Thankfully, Next.js has a built-in <code>Image</code> component that optimizes images out of the box.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It automatically resizes images to fit the user’s screen size and lazy-loads them.</p>
+
+
+
 <p>For instance, if the original image is 800x400 pixels but the user’s screen only displays 360x180 pixels, the image is resized dynamically to match that size.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Here’s how you can use the <code>Image</code> component:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Image</span> <span class="nx">from</span> <span class="s2">&#34;next/image&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">Image</span>
@@ -364,49 +419,143 @@
 </span></span><span class="line"><span class="cl">  <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">/&gt;;</span>
 </span></span></code></pre></div><p>Additionally, I recommend reducing the size of your images before uploading them. Even though Next.js will handle optimization, tools like <a href="https://tinypng.com" target="_blank" rel="nofollow noopener ">TinyPNG</a> for PNGs, <a href="https://tinyjpg.com" target="_blank" rel="nofollow noopener ">TinyJPG</a> for JPEGs, or <a href="https://www.freeconvert.com" target="_blank" rel="nofollow noopener ">FreeConvert</a> can compress your images and reduce their size without compromising quality.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>For example, a 1MB image can be reduced to just a few KB, which saves bandwidth and makes your site faster.</p>
+
+
+
 <h2 id="2-dynamically-import-heavy-components-or-libraries"><strong>2. Dynamically Import Heavy Components or Libraries</strong></h2>
 <p>Some components and libraries don’t need to load immediately. Importing these dynamically ensures they only load when required, reducing the initial page load time.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>For example, let’s say you have a heavy animation library or component. Instead of importing it normally, you can import it dynamically like this:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dynamic</span> <span class="nx">from</span> <span class="s2">&#34;next/dynamic&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">AnimationComponent</span> <span class="o">=</span> <span class="nx">dynamic</span><span class="p">(()</span> <span class="p">=&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;@/components/AnimationComponent&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">mod</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">mod</span><span class="p">.</span><span class="k">default</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div><p>Here’s another example from my blog where I dynamically import a <code>BlogPageHero</code> component:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">BlogPageHero</span> <span class="o">=</span> <span class="nx">dynamic</span><span class="p">(()</span> <span class="p">=&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;@/components/Blog/BlogPageHero&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">mod</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">mod</span><span class="p">.</span><span class="k">default</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div><p>I also use dynamic imports for MDX components, which render blog content, because they are a bit heavy. This approach keeps the initial load light and improves performance.</p>
+
+
+
 <h2 id="3-tree-shake-your-imports"><strong>3. Tree-Shake Your Imports</strong></h2>
 <p>If you’re importing entire libraries, you might be adding unnecessary weight to your app. Instead, drill down to the specific module or function you need.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>For example:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="c1">// Less efficient
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">format</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;date-fns&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// More efficient
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">format</span> <span class="nx">from</span> <span class="s2">&#34;date-fns/format&#34;</span><span class="p">;</span>
 </span></span></code></pre></div><p>By doing this, you only load what you actually need, making your code lighter and faster.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p>&#x1f4a1; <strong>Pro Tip:</strong> Install the &ldquo;Import Cost&rdquo; extension in VS Code. It helps you see the size of imported libraries and identify potential optimization opportunities.</p>
+
+
+
 </blockquote>
 <p><img src="http://localhost:1313/images/package-size-extension-resize.jpeg" alt="Import Cost extension in VS Code"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="4-pre-render-dynamic-routes-using-generatestaticparams"><strong>4. Pre-render Dynamic Routes Using <code>generateStaticParams</code></strong></h2>
 <p>If your site has dynamic routes, like <code>/blog/[slug]/page.tsx</code> for blog posts, you can pre-render these pages at build time using <code>generateStaticParams</code>. This ensures the pages load much faster for users because most of the HTML content is already generated.</p>
+
+
+
 <p>Here’s an example:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">generateStaticParams</span><span class="p">()</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">params</span><span class="o">:</span> <span class="p">{</span> <span class="nx">slug</span>: <span class="kt">string</span> <span class="p">}</span> <span class="p">}[]</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">allBlogs</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">blog</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span> <span class="nx">params</span><span class="o">:</span> <span class="p">{</span> <span class="nx">slug</span>: <span class="kt">blog.slugAsParams</span> <span class="p">}</span> <span class="p">}));</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>This works well with the latest Next.js App Router. For those using the old Pages Router, you can achieve the same results using <code>getStaticProps</code> and <code>getStaticPaths</code>.</p>
+
+
+
 <h2 id="5-use-optimized-fonts-with-nextjs"><strong>5. Use Optimized Fonts with Next.js</strong></h2>
 <p>Next.js fonts are optimized for performance and designed to load quickly. By using them, you can reduce font loading times and improve your page speed.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="wrapping-up">Wrapping up</h3>
 <p>With these steps, I was able to significantly improve my blog&rsquo;s load times and user experience.</p>
+
+
+
 <p>While the site might not be perfect yet, the changes made a noticeable difference, especially when it comes to reducing bounce rates and improving performance.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>If you’ve been struggling with a slow-loading Next.js site, give these tips a try.</p>
+
+
+
 <p>They worked for me, and I hope they’ll help you too! If you find this useful then kindly share.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -518,11 +667,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -538,32 +683,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/isolate-tailwindcss-to-fix-z-index-issue.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-tailwindcss-z-index-problem-with-isolate/">How to Fix TailwindCSS z-index Problem with `isolate`</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
+        <img src="http://localhost:1313/images/resolving-the-eperm-operation-not-permitted-error-caused.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/resolving-the-eperm-operation-not-permitted-error-caused-by-concurrent-next-js-instances/">Resolving the EPERM: Operation Not Permitted Error Caused by Concurrent Next.js Instances</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-remove-unused-packages-and-update-dependencies-in-a-next.js-project.jpeg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-unused-packages-and-update-dependencies-in-a-next-js-project/">How to Remove Unused Packages and Update Dependencies in a Next.js Project</a>
+        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
+        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-microsoft-edge-useful-keyboard-shortcuts-keys-for-windows/">List of Microsoft Edge Useful Keyboard Shortcuts Keys for Windows (2024)</a>
  </div>
     
 
@@ -577,41 +722,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
+        <img src="http://localhost:1313/images/nodejs-website.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-install-nodejs-in-windows/">How to Install Node.js in Windows?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-09-02-at-1.55.54-pm.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-your-devices-were-logged-out-error-on-whatsapp/">How to Fix &#34;Your Devices Were Logged Out&#34; Error on WhatsApp?</a>
+        <img src="http://localhost:1313/images/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs/">How to Automatically Sort Tailwind CSS Classes in React or Next.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
+        <img src="http://localhost:1313/images/reverse-a-string-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-reverse-a-string-in-javascript/">How to Reverse a String in JavaScript: 3 Easy Ways</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
+        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
  </div>
     
   </div>
@@ -621,7 +762,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

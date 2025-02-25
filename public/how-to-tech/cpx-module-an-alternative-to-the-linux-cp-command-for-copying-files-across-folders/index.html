@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,30 +338,107 @@
   
   
 
-  <p>I was studying a GitHub repository and decided to download a copy of the code to my machine. After running <code>npm install</code>, I encountered an error caused by this <code>postinstall</code> script:</p>
+  
+
+
+
+
+
+
+<p>I was studying a GitHub repository and decided to download a copy of the code to my machine. After running <code>npm install</code>, I encountered an error caused by this <code>postinstall</code> script:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;postinstall&#34;</span><span class="err">:</span> <span class="s2">&#34;cp node_modules/swiftlatex/dist/swift*.js node_modules/swiftlatex/dist/*.wasm public&#34;</span>
 </span></span></code></pre></div><p>It required the use of the <code>cp</code> command, which I learned is a Linux command used for copying files or folders from one part of the file system to another. It’s a powerful tool for file system operations like moving, deleting, or duplicating files.</p>
+
+
+
 <p>Since I’m using a Windows machine, the Linux <code>cp</code> command wouldn’t work. After doing some research, I found an npm package called <strong>cpx</strong>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Link to the cpx module:</strong> <a href="https://www.npmjs.com/package/cpx" target="_blank" rel="nofollow noopener ">https://www.npmjs.com/package/cpx</a></p>
+
+
+
 <p>According to its documentation, cpx provides a CLI tool similar to <code>cp</code>, with added functionality like watching for file changes.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Here’s how you can install it:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install cpx
 </span></span></code></pre></div><p>The usage pattern is:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cpx &lt;source&gt; &lt;dest&gt; <span class="o">[</span>options<span class="o">]</span>
 </span></span></code></pre></div><p>Where:</p>
+
+
+
 <ul>
 <li><code>&lt;source&gt;</code> is the glob pattern for the files you want to copy.</li>
 <li><code>&lt;dest&gt;</code> is the destination directory.</li>
 </ul>
 <p>For example:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cpx <span class="s2">&#34;src/**/*.{html,png,jpg}&#34;</span> app --watch
 </span></span></code></pre></div><p>This command copies all <code>.html</code>, <code>.png</code>, and <code>.jpg</code> files from the <code>src</code> directory to the <code>app</code> directory, preserving the folder structure. It also watches for changes and re-copies files as needed.</p>
+
+
+
 <p>In the project I was working on, the <code>postinstall</code> script looked like this:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;postinstall&#34;</span><span class="err">:</span> <span class="s2">&#34;cp node_modules/swiftlatex/dist/swift*.js node_modules/swiftlatex/dist/*.wasm public&#34;</span>
 </span></span></code></pre></div><p>To make it work on Windows, I replaced <code>cp</code> with <code>cpx</code>, like this:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;postinstall&#34;</span><span class="err">:</span> <span class="s2">&#34;cpx \&#34;node_modules/swiftlatex/dist/swift*.js\&#34; public &amp;&amp; cpx \&#34;node_modules/swiftlatex/dist/*.wasm\&#34; public&#34;</span>
 </span></span></code></pre></div><p>This version uses <code>cpx</code> to copy all files matching <code>swift*.js</code> and <code>.wasm</code> from the <code>node_modules/swiftlatex/dist</code> directory into the <code>public</code> folder in my Next.js project.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>In essence, <strong>cpx</strong> is a great alternative to the Linux <code>cp</code> command for Windows users. It was exciting to learn something new and see how seamlessly I could adapt the project to my environment!</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -476,11 +550,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -496,32 +566,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
+        <img src="http://localhost:1313/images/sam-altman-plugin-rollout.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-use-the-internet/">Does ChatGPT Use the Internet?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/java-compare-string.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-compare-strings-in-java/">How to Compare Strings in Java?</a>
+        <img src="http://localhost:1313/images/find-and-replace-dialog-box.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-find-and-replace-in-vscode/">How to Use Find and Replace in VSCode?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/work-smart-vs-work-hard-venn-diagram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-does-chatgpt-get-data-from/">Where Does ChatGPT Get Its Data From?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
+        <img src="https://neuralink.com/assets/static/whats-next-mobile.aede448d.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-powers-neuralink-chip-when-implanted-into-the-human-brain/">What Powers Neuralink Chip When Implanted into the Human Brain?</a>
  </div>
     
 
@@ -535,41 +605,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
+        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/vscode-update-mode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-stop-or-disable-vscode-auto-update/">How to Stop or Disable VSCode Auto Update?</a>
+        <img src="http://localhost:1313/images/console-error.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.error/">Difference Between console.log and console.error</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
+        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-needed-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-semicolons-needed-in-css/">Are Semicolons Needed in CSS?</a>
+        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/download-image-from-url.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-image-from-url-in-node-js/">How to Download Images from URL in Node.js?</a>
+        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
  </div>
     
   </div>
@@ -579,7 +645,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

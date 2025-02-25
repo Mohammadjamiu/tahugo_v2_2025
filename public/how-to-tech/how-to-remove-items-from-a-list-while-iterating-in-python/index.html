@@ -304,11 +304,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -344,8 +341,21 @@
   
   
 
-  <p>Python, with its flexibility and power, provides various methods to manipulate lists.</p>
+  
+
+
+
+
+
+
+<p>Python, with its flexibility and power, provides various methods to manipulate lists.</p>
+
+
+
 <p>However, removing items from a list while iterating can be a tricky task. In this article, we will look at several methods that will allow you to remove elements from a list while iterating through it.</p>
+
+
+
 <div class="toc-container">
   <h2 class="toc-h2">
     Table of Contents <button class="toggle-button">↬</button>
@@ -363,34 +373,70 @@
     <li><a href="#wrap-up"><strong>Wrap Up</strong></a></li>
   </ul>
 </nav></div>
-  <div id="ezoic-pub-ad-placeholder-166"></div>
-  <script>
-    ezstandalone.cmd.push(function () {
-      ezstandalone.showAds(166);
-    });
-  </script>
 </div>
 <h2 id="how-to-remove-items-from-a-list-while-iterating-in-python"><strong>How to Remove Items from a List While Iterating in Python?</strong></h2>
 <h3 id="1-creating-a-new-list-with-list-comprehension">1. Creating a New List with List Comprehension:</h3>
 <p>List comprehension is a concise and elegant way to filter elements based on a condition.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Here&rsquo;s how you can create a new list while removing specific items:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_list</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>  
 </span></span></code></pre></div><pre tabindex="0"><code>   [4, 5]
 </code></pre><p>This Python code snippet initializes a list, <code>my_list</code>, with values 1, 2, 3, 4, and 5.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It then creates a new list, <code>new_list</code>, using a list comprehension to filter elements from <code>my_list</code> that are greater than 3.</p>
+
+
+
 <p>Finally, the code prints the resulting <code>new_list</code>, which, in this case, contains the values [4, 5].</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="2-assigning-to-a-slice">2. Assigning to a Slice:</h3>
 <p>Another approach is to assign the filtered list directly to the original list using slicing.</p>
+
+
+
 <p>This method is efficient and modifies the existing list:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">my_list</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_list</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">]</span>  
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> 
 </span></span></code></pre></div><pre tabindex="0"><code>   [1, 3, 4, 5]
 </code></pre><h3 id="3-filtering-with-itertools">3. Filtering with itertools:</h3>
 <p>The itertools module provides a powerful <code>filterfalse</code> function that allows you to filter elements based on a condition.</p>
+
+
+
 <p>Here&rsquo;s how you can use it:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">itertools</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -398,11 +444,32 @@
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">filtered_list</span><span class="p">)</span>  <span class="c1"># Output: [4, 5]</span>
 </span></span></code></pre></div><pre tabindex="0"><code>  [4, 5]
 </code></pre><p>This code snippet employs the <code>itertools</code> module to filter elements from a list. After initializing the list called <code>my_list</code> with values 1, 2, 3, 4, and 5, the <code>filterfalse</code> function from <code>itertools</code> is used.</p>
+
+
+
 <p>It creates a new list, <code>filtered_list</code>, by excluding elements from <code>my_list</code> that are less than 4.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The lambda function within the <code>filterfalse</code> specifies the condition for exclusion. Finally, the code prints the contents of the newly created <code>filtered_list</code>.</p>
+
+
+
 <p>In this example, the output of the printed list would be <code>[4, 5]</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="4-copying-and-iterating">4. Copying and Iterating:</h3>
 <p>Copying the list and then iterating over the copy can be a safe way to remove elements.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">my_list</span><span class="o">.</span><span class="n">copy</span><span class="p">():</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">item</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
@@ -410,11 +477,42 @@
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> 
 </span></span></code></pre></div><pre tabindex="0"><code>  [3, 4, 5]
 </code></pre><p>This code aims to selectively remove elements from a list named <code>my_list</code> based on a given condition.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It begins by initializing <code>my_list</code> with values 1, 2, 3, 4, and 5. The subsequent <code>for</code> loop iterates over a copy of <code>my_list</code> to avoid modifying the list directly during iteration.</p>
+
+
+
 <p>Inside the loop, elements less than 3 are identified using the condition <code>if item &lt; 3</code>, and these elements are removed from the original list using <code>my_list.remove(item)</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Finally, the modified <code>my_list</code> is printed, showing the output <code>[3, 4, 5]</code>, indicating the removal of elements meeting the specified condition.</p>
+
+
+
 <h2 id="wrap-up"><strong>Wrap Up</strong></h2>
 <p>There you have it on how to remove items from a list while iterating in python &#x1f389;.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -526,11 +624,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -546,32 +640,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
+        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
+        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
+        <img src="http://localhost:1313/images/semicolon-needed-css.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-semicolons-needed-in-css/">Are Semicolons Needed in CSS?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/using-control-shift-and-pallete.jpg.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-terminal-in-vs-code/">How to Clear the Terminal in VS Code?</a>
+        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
  </div>
     
 
@@ -585,11 +679,7 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
@@ -600,26 +690,26 @@
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/how-to-remove-unused-packages-and-update-dependencies-in-a-next.js-project.jpeg" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-unused-packages-and-update-dependencies-in-a-next-js-project/">How to Remove Unused Packages and Update Dependencies in a Next.js Project</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/apple_new-m1-chip-graphic_11102020_big.jpg.large.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-processor-is-best-for-coding-or-programming/">Which Processor is Best for Coding or Programming?</a>
+        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
+        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-interpreter/">Compiler vs. Interpreter: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
  </div>
     
   </div>
@@ -629,7 +719,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

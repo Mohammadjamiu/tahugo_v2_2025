@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,42 +338,158 @@
   
   
 
-  <p><strong>File paths</strong> are an essential part of navigating the file system while working on a Node.js project.</p>
+  
+
+
+
+
+
+
+<p><strong>File paths</strong> are an essential part of navigating the file system while working on a Node.js project.</p>
+
+
+
 <p>Understanding how to specify file paths using the <code>/</code>, <code>./</code>, and <code>../</code> symbols is important for accessing files and directories.</p>
+
+
+
 <p>When requiring a Node.js module or file, you can specify the file path using a relative or absolute path.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>If the file path begins with <code>./</code> or <code>../</code>, Node.js will interpret it as a relative path, and if it begins with <code>/</code>, Node.js will interpret it as an absolute path.</p>
+
+
+
 <blockquote>
 <p><strong>Note:</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The<code>/</code> path kind of work the same as <code>./</code> when accessing a file in a Node.js or HTML project.</p>
+
+
+
 </blockquote>
 <p><strong>A relative file path</strong> specifies the location of a file or directory relative to the current working directory.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The current working directory is the directory in which the user is currently working.</p>
+
+
+
 <p>A relative file path can begin with <code>./</code>, which represents the current directory, or <code>../</code>, which represents the parent directory, i.e., the directory that is above it.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>For example, let&rsquo;s say you have a file named <code>myModule.js</code> located in the same directory as the file that is requiring it.</p>
+
+
+
 <p>You can require <code>myModule.js</code> using a relative file path that begins with <code>./</code>, like this:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModule</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./myModule&#34;</span><span class="p">);</span>
 </span></span></code></pre></div><p>If <code>myModule.js</code> is located in a subdirectory of the current directory, you can specify the file path using <code>../</code> to go up one level in the directory tree, like this:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModule</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../subdirectory/myModule&#34;</span><span class="p">);</span>
 </span></span></code></pre></div><blockquote>
 <p>The <code>../</code> mean that leave the current directory or folder.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><code>../subdirectory</code> mean leave the current directory and enter this new directory called <code>subdirectory</code></p>
+
+
+
 <p><code>../subdirectory/myModule</code> means leave the current directory, go into the new directory <code>subdirectory</code> and then into the <code>myModule</code> directory.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <p><strong>An absolute file path</strong> specifies the location of a file or directory from the root of the file system. An absolute file path begins with <code>/</code>.</p>
+
+
+
 <p>For example, if you have a file named <code>myModule.js</code> located in the directory <code>/home/user/myproject</code>, you can require it using an absolute file path, like this:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModule</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;/home/user/myproject/myModule&#34;</span><span class="p">);</span>
 </span></span></code></pre></div><blockquote>
 <p><strong>Note:</strong></p>
+
+
+
 <p>Just as it is said earlier, the<code>/</code> path kind of work the same as <code>./</code> when accessing a file in a Node.js or HTML project.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <p>However, it&rsquo;s generally recommended to use relative file paths whenever possible, as they are more flexible and easier to maintain.</p>
+
+
+
 <p><strong>In a few points,</strong> the <code>/</code>, <code>./</code>, and <code>../</code> symbols are used to specify absolute or relative file paths in Node.js.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Where:</strong></p>
+
+
+
 <ul>
 <li>/ and ./ is similar, and it denotes <strong>“In the same directory”</strong></li>
 <li>../ means leave the directory you are in and go one level up</li>
 </ul>
 <p>Having knowledge on how to use these symbols is important for navigating the file system and accessing files and directories in Node.js.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -488,11 +601,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -508,32 +617,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
+        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
+        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cpx-an-alternative-to-cp-linux-command.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/cpx-module-an-alternative-to-the-linux-cp-command-for-copying-files-across-folders/">cpx Module: An Alternative to the Linux cp Command for Copying Files Across Folders</a>
+        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/node-module-right-click-delete.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-node-modules-in-vscode/">How to Delete Node Modules in VSCode?</a>
+        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
+        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
  </div>
     
 
@@ -547,23 +656,19 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
+        <img src="http://localhost:1313/images/stepqr.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-barcode-in-word/">How to Create Barcode in Word In just few steps</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-interpreter/">Compiler vs. Interpreter: What&#39;s The Difference?</a>
  </div>
     
     
@@ -574,14 +679,14 @@
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/select-placeholder-1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-placeholder-for-a-select-box/">How to make a placeholder for a &#39;select&#39; box?</a>
+        <img src="http://localhost:1313/images/npm-install-encoding.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/module-not-found-cant-resolve-encoding-in-next-js/">How to Fix &#34;Module not found: Can&#39;t resolve encoding&#34; in Next.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
  </div>
     
   </div>
@@ -591,7 +696,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

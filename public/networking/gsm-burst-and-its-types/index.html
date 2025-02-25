@@ -304,11 +304,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -344,7 +341,14 @@
   
   
 
-  <div class="toc-container">
+  
+
+
+
+
+
+
+<div class="toc-container">
   <h2 class="toc-h2">
     Table of Contents <button class="toggle-button">↬</button>
   </h2>
@@ -374,23 +378,41 @@
     </li>
   </ul>
 </nav></div>
-  <div id="ezoic-pub-ad-placeholder-166"></div>
-  <script>
-    ezstandalone.cmd.push(function () {
-      ezstandalone.showAds(166);
-    });
-  </script>
 </div>
 <h2 id="what-is-gsm-burst"><strong>What is GSM Burst?</strong></h2>
 <p>In the Global System for Mobile Communications (GSM), a burst is a short sequence of radio waves used to transmit data between a mobile station (MS) and a base station (BTS).</p>
+
+
+
 <p>Bursts are fundamental to the GSM system&rsquo;s Time Division Multiple Access (TDMA) scheme, which allows multiple users to share the same frequency channel efficiently.</p>
+
+
+
 <p>Bursts are typically transmitted within a time slot, which is a fixed-length duration of 0.577 milliseconds.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p>&#x1f4a1;</p>
+
+
+
 <p>i.e., the actual content of a time slot is called the <strong>burst</strong>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <h2 id="types-of-gsm-bursts"><strong>Types of GSM Bursts</strong></h2>
 <p>There are five main types of GSM bursts:</p>
+
+
+
 <ul>
 <li><strong>Normal Burst (NB)</strong></li>
 <li><strong>Frequency Correction Burst (FCB)</strong></li>
@@ -400,16 +422,43 @@
 </ul>
 <h3 id="normal-burst-nb"><strong>Normal Burst (NB)</strong></h3>
 <p>The most common type of burst, used to carry both signaling and user data. Normal bursts are 0.577 milliseconds (or 577 microseconds) long and consist of 156 bits.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/normal-burst.webp" alt="Normal burst structure" title="Normal burst structure"></p>
+
+
+
 <p>Signaling data is used to establish and manage communication links between the MS and the BTS, while user data includes voice and data traffic.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The normal burst consists of two tail bits, two encrypted or information bits, a training sequence and a guard period.</p>
+
+
+
 <h4 id="structure-of-normal-burst"><strong>Structure of normal burst:</strong></h4>
 <ul>
 <li>
 <p><strong>Tail Bits (3 bits):</strong> These three bits are used to terminate the convolutional encoding process, ensuring that the decoder can correctly interpret the encoded data.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 <li>
 <p><strong>Encrypted Bits (58 bits):</strong> These 58 bits are used to carry encrypted user data or signaling information. They are divided into two sections:</p>
+
+
+
 <ul>
 <li><strong>Data Bits (57 bits):</strong> These 57 bits carry the actual information being transmitted.</li>
 <li><strong>Stealing Flag (1 bit):</strong> This single bit indicates whether the burst is carrying user data (speech) or has been “stolen” by the FACCH (Fast Associated Control Channel) for signaling purposes.</li>
@@ -417,19 +466,52 @@
 </li>
 <li>
 <p><strong>Training Sequence (26 bits):</strong> This sequence of 26 bits is used for channel equalization and synchronization. It helps the receiver to identify and correct distortions in the signal caused by multipath propagation and other factors.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 <li>
 <p><strong>Guard Period (8.25 bits):</strong> This period of 8.25 bits is used to prevent overlap between different bursts and ensure that they are received within their assigned time slots.</p>
+
+
+
 </li>
 </ul>
 <h3 id="frequency-correction-burst-fcb"><strong>Frequency Correction Burst (FCB)</strong></h3>
 <p>Used to correct the frequency offset between the MS and the BTS, ensuring accurate data transmission.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Frequency offset arises from variations in the carrier frequencies used by the MS and the BTS, which can lead to signal distortion and interference.</p>
+
+
+
 <blockquote>
 <p>&#x1f4a1;</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Frequency correction burst is used for correcting frequency error. It used by the <strong>FACCH</strong> (Fast Associated Control Channel).</p>
+
+
+
 </blockquote>
 <p><img src="http://localhost:1313/images/fcb-and-sburst_1.webp" alt="frequency correction burst structure" title="frequency correction burst structure"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h4 id="structure-of-frequency-correction-burst"><strong>Structure of frequency correction burst:</strong></h4>
 <ul>
 <li><strong>Tail bits (3):</strong> It consists of two tail bits.</li>
@@ -438,10 +520,28 @@
 </ul>
 <h3 id="synchronization-burst-sb"><strong>Synchronization Burst (SB)</strong></h3>
 <p>Used to synchronize the MS and the BTS, ensuring that they are both transmitting and receiving data at the same time.</p>
+
+
+
 <p>Synchronization is important for maintaining the integrity of data transmission and preventing errors.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/fcb-and-sburst_2.webp" alt="synchronization burst structure" title="synchronization burst structure"></p>
+
+
+
 <h4 id="structure-of-synchronization-burst"><strong>Structure of synchronization burst:</strong></h4>
 <p>It consists of:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ul>
 <li><strong>Tail bits (3)</strong></li>
 <li><strong>Sync bits (39):</strong> There are two sync bits, each with 39 bits for synchronization.</li>
@@ -450,15 +550,45 @@
 </ul>
 <h3 id="dummy-burst-db"><strong>Dummy Burst (DB)</strong></h3>
 <p>Used to fill in unused time slots on the TDMA frame, preventing interference from other users.</p>
+
+
+
 <p>When no data needs to be transmitted, DBs are inserted to maintain the TDMA structure and prevent other MS&rsquo;s from using those time slots.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/dummy-burst_1.webp" alt="dummy burst structure" title="dummy burst structure"></p>
+
+
+
 <p>DBs are 0.577 milliseconds long just as the normal burst and contain no data.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p>&#x1f4a1;</p>
+
+
+
 <p>Dummy burst looks like a normal burst but doesnot carry information.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <h4 id="structure-of-dummy-burst"><strong>Structure of dummy burst:</strong></h4>
 <p>It consists of:</p>
+
+
+
 <ul>
 <li><strong>Tail Bits (3 bits)</strong></li>
 <li><strong>Data Bits (57 bits)</strong></li>
@@ -468,15 +598,48 @@
 </ul>
 <h3 id="access-burst-ab"><strong>Access Burst (AB)</strong></h3>
 <p>Used by the MS to request access to the network, typically during call setup or when sending a short message service (SMS) message.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/access-burst_1.webp" alt="access burst structure" title="access burst structure"></p>
+
+
+
 <p>Access burst is used by RACH (Random access grant channel) and AGCH (Access grant channel).</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p>&#x1f4a1;</p>
+
+
+
 <p><strong>RACH</strong> is used for requesting access by the mobile station to the network.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>AGCH</strong> is used by the network to grant access to devices or mobile stations.</p>
+
+
+
 </blockquote>
 <h4 id="structure-of-access-burst"><strong>Structure of access burst:</strong></h4>
 <p>It consists of:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ul>
 <li><strong>Tail Bits (8 bits) and (3 bits):</strong> The first tail bits contain 8 bits, and it is called <em>extended tail bits</em>, while the ending tail bits consist of 3 bits.</li>
 <li><strong>Sync Sequence (41 bits)</strong></li>
@@ -484,29 +647,105 @@
 <li><strong>Guard Period (68.25 bits)</strong></li>
 </ul>
 <p>They have longer guard period to account for the fact that the mobile station and the base station does not have time-advance information.</p>
+
+
+
 <h2 id="wrap-up"><strong>Wrap Up</strong></h2>
 <p>GSM bursts are fundamental building blocks of the GSM system, enabling efficient data transmission and multiple user access within a shared frequency channel.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Each type of burst serves a specific purpose, from carrying signaling and user data to correcting frequency offsets and synchronizing timing.</p>
+
+
+
 <p>The structured arrangement of synchronization, data, and control bits ensures reliable and interoperable communication within the GSM network.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="faqs"><strong>FAQs</strong></h2>
 <h3 id="1-what-is-the-purpose-of-the-normal-burst-in-gsm-and-what-type-of-information-does-it-carry">1. What is the purpose of the Normal Burst in GSM, and what type of information does it carry?</h3>
 <p>The Normal Burst is the most common burst type in GSM, used for carrying both signaling and user data. It is 0.577 milliseconds long and consists of 156 bits.</p>
+
+
+
 <p>Signaling data is used for establishing and managing communication links, while user data includes voice and data traffic.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="2-what-is-the-duration-of-a-gsm-burst">2. What is the duration of a GSM burst?</h3>
 <p>The duration of a GSM burst is typically 0.577 milliseconds. This fixed-length duration is a fundamental aspect of the Time Division Multiple Access (TDMA) scheme used in GSM.</p>
+
+
+
 <h3 id="3-what-is-the-role-of-the-dummy-burst-in-the-gsm-time-division-multiple-access-tdma-scheme-and-does-it-carry-any-information">3. What is the role of the Dummy Burst in the GSM Time Division Multiple Access (TDMA) scheme, and does it carry any information?</h3>
 <p>The Dummy Burst is used to fill unused time slots in the TDMA frame, preventing interference. Unlike other bursts, DBs do not carry any data.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>They are inserted when no data needs to be transmitted to maintain the TDMA structure and prevent interference from other users.</p>
+
+
+
 <h3 id="4-when-is-the-access-burst-used-in-gsm-and-what-channels-utilize-it-for-network-access">4. When is the Access Burst used in GSM, and what channels utilize it for network access?</h3>
 <p>The Access Burst is used by the MS to request access to the network, especially during call setup or when sending SMS messages.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It is used by the Random Access Grant Channel (RACH) for requesting access and the Access Grant Channel (AGCH) for granting access to mobile stations.</p>
+
+
+
 <h3 id="5-what-is-transmission-burst-in-gsm">5. What is transmission burst in GSM?</h3>
 <p>A transmission burst in GSM refers to a short sequence of radio waves used for transmitting data between a mobile station (MS) and a base station (BTS).</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="6-what-is-the-guard-period-in-gsm">6. What is the guard period in GSM?</h3>
 <p>The guard period in GSM is a segment within the structure of a burst that serves to prevent overlap between different bursts and ensure they are received within their assigned time slots.</p>
+
+
+
 <h3 id="7-how-does-the-frequency-correction-burst-fcb-contribute-to-accurate-data-transmission-in-gsm">7. How does the Frequency Correction Burst (FCB) contribute to accurate data transmission in GSM?</h3>
 <p>The Frequency Correction Burst corrects frequency offsets between the mobile station (MS) and the base station (BTS), ensuring accurate data transmission.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Frequency offsets can cause signal distortion and interference, and the FCB is utilized by the Fast Associated Control Channel (FACCH) for this purpose.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -618,11 +857,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -638,32 +873,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/diff-mac-ip.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-difference-between-mac-address-and-ip-address/">What Is the Difference Between MAC Address and IP Address</a>
+        <img src="http://localhost:1313/images/patch-panel-install.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/how-long-does-it-take-to-become-a-networking-expert/">How Long Does It Take to Become a Networking Expert?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/satellite.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-similarities-between-packet-switching-and-message-switching/">What Are the Similarities Between Packet Switching and Message Switching</a>
+        <img src="http://localhost:1313/images/u-storsberg-_maupmujj08-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-lan-and-wan-with-examples/">Difference Between LAN and WAN With Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/multiplexing-and-multiple-access.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-multiplexing-and-multiple-access/">Difference between Multiplexing and Multiple Access</a>
+        <img src="http://localhost:1313/images/networks-installment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-difference-between-gsm-and-internet/">What is the Difference Between GSM and Internet?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/probability_1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-random-process-and-random-variable/">Difference Between Random Process and Random Variable</a>
+        <img src="http://localhost:1313/images/network-congestion.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-multicast-address-with-example/">What is a Multicast Address? With Examples and Applications</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/wired-and-wireless-networdk.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-wired-and-wireless-network-with-examples/">Difference Between Wired and Wireless Networks With Examples</a>
+        <img src="http://localhost:1313/images/temprv_1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-a-random-process-with-examples/">What Is a Random Process With Examples?</a>
  </div>
     
 
@@ -677,41 +912,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
+        <img src="http://localhost:1313/images/embedded.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-different-types-of-noise-in-computer-networks/">Different Types of Noise in Computer Networks?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/network-congestion.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-multicast-address-with-example/">What is a Multicast Address? With Examples and Applications</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/thomas-jensen-h3vt1kp0fxa-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-difference-between-ethernet-and-intranet/">What Is the Difference Between Ethernet and Intranet?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/fiberoptics_1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-core-and-cladding-losses-in-optical-fiber/">What Are Core and Cladding Losses in Optical Fiber?</a>
+ </div>
+    
+    
+       <div class="xx">
         <img src="http://localhost:1313/images/laserworld-laserbeam-llqy3id5xxm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/why-is-laser-used-in-optical-fiber-communication/">Why Is Laser Used in Optical Fiber Communication?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/fiberoptics_4.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-single-mode-and-multimode-fiber/">Difference Between Single Mode and Multimode Fiber</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/wavelength-and-fiber-optics.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-wavelength-and-why-is-it-important-to-fiber-optics/">What is Wavelength, and Why Is It Important to Fiber Optics?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/line-coding.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/digital-transmission-in-computer-networks/">Digital Transmission in Computer Networks | Line Coding</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-sata-and-esata/">Difference Between SATA(Serial ATA) and eSATA (external Serial ATA)</a>
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/characteristics-of-laser/">LASER and its Characteristics</a>
  </div>
     
   </div>
@@ -721,7 +952,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

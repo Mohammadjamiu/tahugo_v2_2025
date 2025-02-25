@@ -1265,7 +1265,7 @@
       <link>http://localhost:1313/how-to-tech/nextjs-middleware-file-location/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/how-to-tech/nextjs-middleware-file-location/</guid>
-      <description>Understanding Middleware Placement in Next.js 15 Middleware in Next.js is a powerful tool for handling route protection, authentication, and redirects before the page even loads. Unlike solutions that rely on useEffect or useRouter, middleware runs at the edge, ensuring a seamless experience without flickering UI issues.&#xA;Problem: Middleware Not Working Due to Incorrect Placement If your middleware.ts file isn’t working, it’s likely placed incorrectly in your project structure.&#xA;Solution: Correct Middleware Placement Based on Your Project Structure ✅ If You Are Using the src Directory: Place middleware.</description>
+      <description>Middleware in Next.js is a powerful tool for handling route protection, authentication, and redirects before the page even loads.&#xA;Unlike solutions that rely on useEffect or useRouter, middleware runs at the edge, ensuring a seamless experience without flickering UI issues.&#xA;Problem: Middleware Not Working Due to Incorrect Placement If your middleware.ts file isn’t working, it’s likely placed incorrectly in your project structure.&#xA;Solution: Correct Middleware Placement Based on Your Project Structure ✅ If You Are Using the src Directory: Place middleware.</description>
     </item>
   </channel>
 </rss>

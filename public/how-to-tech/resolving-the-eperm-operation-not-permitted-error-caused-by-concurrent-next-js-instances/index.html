@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,7 +338,17 @@
   
   
 
-  <p>I was working on a Next.js 15 project using <code>pnpm</code>, and when I tried to run the build command (<code>pnpm build</code>), I encountered the following error:</p>
+  
+
+
+
+
+
+
+<p>I was working on a Next.js 15 project using <code>pnpm</code>, and when I tried to run the build command (<code>pnpm build</code>), I encountered the following error:</p>
+
+
+
 <pre tabindex="0"><code>uncaughtException [Error: EPERM: operation not permitted, open &#39;C:\Users\USER\Desktop\My Projects\tooabstractive\.next\trace&#39;] {
   errno: -4048,
   code: &#39;EPERM&#39;,
@@ -350,12 +357,24 @@
 }
  ELIFECYCLE  Command failed with exit code 1.
 </code></pre><p>This error occurred because I was also running an instance of the app using <code>pnpm dev</code> (the development server) at the same time.</p>
+
+
+
 <p>Once I closed the dev server, the issue was resolved, and the build process worked as expected.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="what-i-learned">What I Learned</h3>
 <ol>
 <li>
 <p><strong>Close the Development Server:</strong>
 I realized that running the development server (<code>pnpm dev</code>) while also attempting to build the project (<code>pnpm build</code>) caused a conflict, as both processes tried to access and modify the same files in the <code>.next</code> folder.</p>
+
+
+
 <ul>
 <li>I stopped the development server by closing the terminal where <code>pnpm dev</code> was running or by pressing <code>Ctrl + C</code> in that terminal.</li>
 </ul>
@@ -363,14 +382,42 @@ I realized that running the development server (<code>pnpm dev</code>) while als
 <li>
 <p><strong>Run the Build Command:</strong>
 After closing the development server, I ran <code>pnpm build</code> again, and the build process completed successfully without the &ldquo;EPERM: operation not permitted&rdquo; error.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 <li>
 <p><strong>Avoid Running Multiple Instances Simultaneously:</strong>
 To prevent this issue from occurring in the future, I made sure to avoid running both the development server and the build process simultaneously.</p>
+
+
+
 <p>This way, only one instance has access to the <code>.next</code> folder at a time, preventing conflicts and permission issues.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 </ol>
 <p>By ensuring that only one process is accessing the <code>.next</code> folder at a time, I was able to successfully build my Next.js project without encountering the &ldquo;EPERM: operation not permitted&rdquo; error.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -482,11 +529,7 @@ To prevent this issue from occurring in the future, I made sure to avoid running
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -502,32 +545,32 @@ To prevent this issue from occurring in the future, I made sure to avoid running
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-screen-size-is-best-for-programming/">Which Laptop Screen Size Is Best for Programming?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/npm-install-encoding.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/module-not-found-cant-resolve-encoding-in-next-js/">How to Fix &#34;Module not found: Can&#39;t resolve encoding&#34; in Next.js</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
- </div>
-    
-    
-     <div class="xx">
         <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/select-placeholder-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-placeholder-for-a-select-box/">How to make a placeholder for a &#39;select&#39; box?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/branch-deleted-successfully.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-a-git-branch-locally-and-remotely/">How to Delete a Git Branch Locally and Remotely?</a>
  </div>
     
 
@@ -541,41 +584,37 @@ To prevent this issue from occurring in the future, I made sure to avoid running
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
+        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-dev-dependency-and-dependency/">Difference Between Dev-Dependency and Dependency?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/node-module-right-click-delete.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-node-modules-in-vscode/">How to Delete Node Modules in VSCode?</a>
+        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-number-from-string-in-regex-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-numbers-from-a-string-in-python-using-regex/">How to Remove Numbers from a String in Python using Regex?</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
   </div>
@@ -585,7 +624,11 @@ To prevent this issue from occurring in the future, I made sure to avoid running
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

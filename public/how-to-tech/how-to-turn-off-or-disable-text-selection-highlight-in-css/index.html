@@ -304,11 +304,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -344,18 +341,58 @@
   
   
 
-  <p><img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="how to turn off or disable text selection highlight in css" title="how to turn off or disable text selection highlight in css"></p>
+  
+
+
+
+
+
+
+<p><img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="how to turn off or disable text selection highlight in css" title="how to turn off or disable text selection highlight in css"></p>
+
+
+
 <p>CSS provides a powerful way to control the visual aspects of a webpage, and one common requirement is the ability to turn off or disable text selection highlighting.</p>
+
+
+
 <p>Whether you want to enhance the design or prevent users from copying content, CSS offers a solution. In this article, we will look at how to achieve this.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="how-to-turn-off-or-disable-text-selection-highlight-in-css"><strong>How to Turn Off or Disable Text Selection Highlight in CSS?</strong></h2>
 <p>To disable text selection in CSS, use the <code>user-select</code> property. By setting it to &rsquo;none&rsquo; for specific elements, you can make them unselectable.</p>
+
+
+
 <p>Let&rsquo;s take a look at the basic code snippet:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">no-select</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>To ensure your CSS code works seamlessly across different browsers, it&rsquo;s essential to include vendor prefixes.</p>
+
+
+
 <p>This is particularly important for older versions of browsers.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Here&rsquo;s an example with prefixes for Safari, Chrome, Firefox, and Internet Explorer.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">no-select</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kp">-webkit-</span><span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="c">/* for Safari and Chrome */</span>
 </span></span><span class="line"><span class="cl">  <span class="kp">-moz-</span><span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="c">/* for Firefox */</span>
@@ -363,19 +400,52 @@
 </span></span><span class="line"><span class="cl">  <span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="c">/* for modern browsers */</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Now that we have CSS code ready, you can apply the <code>no-select</code> class to the elements you want to make unselectable.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>In the following HTML example, the <code>&lt;p&gt;</code> element with the &ldquo;no-select&rdquo; class will be unselectable, while the <code>&lt;p&gt;</code> element without the &ldquo;no-select&rdquo; class can be selectable.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;no-select&#34;</span><span class="p">&gt;</span>This text cannot be selected.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This text can be selected.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>&#x1f4a1; <strong>Extra Tips on Text Selection for you:</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>On the other way round, if you want a whole line of text to be selected at once when a user clicks on the block of text once</p>
+
+
+
 <p>(i.e., to select the entire element and its contents on a single click), you can use the CSS style below.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The <code>user-select</code> property is set to &lsquo;all&rsquo;.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">select-all</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">user-select</span><span class="p">:</span> <span class="kc">all</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;select-all&#34;</span><span class="p">&gt;</span>This text can be selected just with a single click.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="wrap-up"><strong>Wrap Up</strong></h2>
 <p>There you have it on how to turn off or disable text selection highlight in CSS.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="faqs"><strong>FAQs</strong></h2>
 <ol>
 <li><strong>Does disabling text selection impact SEO?</strong> Disabling text selection itself does not directly impact SEO. However, it&rsquo;s crucial to ensure that your content remains accessible and user-friendly.</li>
@@ -385,6 +455,13 @@
 Applying it to all elements may hinder user experience and accessibility.</li>
 <li><strong>What are the potential challenges of disabling text selection?</strong> Disabling text selection can pose challenges for users who rely on assistive technologies.</li>
 </ol>
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -496,11 +573,7 @@ Applying it to all elements may hinder user experience and accessibility.</li>
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -516,32 +589,32 @@ Applying it to all elements may hinder user experience and accessibility.</li>
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stepqr.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-barcode-in-word/">How to Create Barcode in Word In just few steps</a>
+        <img src="http://localhost:1313/images/hdd.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-ssd-and-hdd/">SSD vs. HDD: What&#39;s The Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
+        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/migrating-hugo-website-netlify-to-vercel-version-mismatch.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/migrating-hugo-website-netlify-to-vercel-version-mismatch/">Migrating a Hugo Website from Netlify to Vercel: Resolving Deployment Errors Due to Hugo Version Mismatch</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-export-and-import-modules-in-javascript/">How to Import and Export Modules in Javascript | Simple Explanation</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
+        <img src="http://localhost:1313/images/pseudo-before-tailwindcss.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-before-and-after-pseudo-tailwind-css/">Tailwind CSS: how do you add :before and :after pseudo-element?</a>
  </div>
     
 
@@ -555,41 +628,37 @@ Applying it to all elements may hinder user experience and accessibility.</li>
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-screen-size-is-best-for-programming/">Which Laptop Screen Size Is Best for Programming?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/who-owns-chatgpt-and-who-created-it/">Who Owns ChatGPT and Who Created It? All You Need to Know</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-09-02-at-1.55.54-pm.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-your-devices-were-logged-out-error-on-whatsapp/">How to Fix &#34;Your Devices Were Logged Out&#34; Error on WhatsApp?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
+        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/node-module-right-click-delete.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-node-modules-in-vscode/">How to Delete Node Modules in VSCode?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
  </div>
     
   </div>
@@ -599,7 +668,11 @@ Applying it to all elements may hinder user experience and accessibility.</li>
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

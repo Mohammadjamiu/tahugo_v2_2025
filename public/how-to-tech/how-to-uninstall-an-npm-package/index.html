@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,27 +338,109 @@
   
   
 
-  <p>As a developer, you&rsquo;re always on the lookout for new tools and packages that can help you build better software.</p>
+  
+
+
+
+
+
+
+<p>As a developer, you&rsquo;re always on the lookout for new tools and packages that can help you build better software.</p>
+
+
+
 <p>But as your project grows and evolves, you may find yourself with a bloated dependency list that slows down your development process.</p>
+
+
+
 <p><strong>Removing or uninstalling unnecessary packages from your project is an important step in keeping your codebase clean and efficient.</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>In this article, we&rsquo;ll explore two ways for uninstalling an npm package from your project.</p>
+
+
+
 <h2 id="1-running-npm-uninstall-in-the-terminal">1/ Running <code>npm uninstall</code> in the terminal</h2>
 <p>Using <code>npm uninstall</code> command, is the most straightforward way to remove an npm package from your project.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This command removes the specified package and all of its dependencies from your project.</p>
+
+
+
 <p>To uninstall an NPM package using <code>npm uninstall</code>, you can run this command – ⁣<code>npm uninstall &lt;package-name&gt;</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Assuming you have the <code>sharp</code> Node.js package, which is used to get the width and height of an image and other metadata, installed on your machine, and you wish to uninstall it,</p>
+
+
+
 <p>here is the command you need to run in your terminal – ⁣<code>npm uninstall sharp</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="npm unistall sharp" title="npm unistall sharp"></p>
+
+
+
 <p>This will remove the <code>sharp</code> package and all of its dependencies from your project.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a></p>
+
+
+
 <h3 id="how-to-uninstall-a-devdependency-with-npm-uninstall">How to Uninstall a devDependency with <code>npm uninstall</code></h3>
 <p>What if the package you intend to uninstall is a dev dependency because the package that is removed above by using the syntax <code>npm uninstall &lt;package-name&gt;</code> is a dependency package.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Confused of what dependency and dev dependency are, check this article out – Difference<a href="http://localhost:1313/how-to-tech/difference-between-dev-dependency-and-dependency/"> Between Dev-Dependency and Dependency?</a>.</p>
+
+
+
 <blockquote>
 <p>In simple term, <strong>dependency</strong> is a package that your application need to function both during the development stage and the production stage i.e., when you deploy the project.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Dev dependency</strong> is a package that is needed only in the development stage.</p>
+
+
+
 </blockquote>
 <p>Look at this package.json file, you will see an object with the name <strong>dependencies</strong> and another named <strong>devDependencies.</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;learn-nodejs&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
@@ -382,16 +461,52 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>To uninstall or remove the devDependency package, you need to run the command <code>npm uninstall -D &lt;package-name&gt;</code>. The <code>-D</code>  is a flag that denotes that only devDependencies should be uninstalled.</p>
+
+
+
 <p>So to uninstall <code>nodemon</code> which is a devDependency, <code>npm uninstall -D nodemon</code> is the command you need to run in the terminal.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p><code>nodemon</code> is like liveserver that help to keep your nodeJS file changes up-to-date.</p>
+
+
+
 </blockquote>
 <h3 id="2-editing-and-deleting-the-package-from-packagejson">2/ Editing and deleting the package from <code>package.json</code></h3>
 <p>Another way to remove an npm package is by editing the <code>package.json</code> file and removing the package from the list of dependencies.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This method is useful if you want to remove a package permanently from your project and prevent it from being installed again in the future.</p>
+
+
+
 <p>Because a package.json file inside your project is the file that tracks all the dependencies and devDependencies your project relies on.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>That&rsquo;s why when you move a project to another machine, all the dependencies and devDependencies are known because they are tracked and can be installed onto the new machine.</p>
+
+
+
 <p>To remove an npm package by editing <code>package.json</code>, all you need to do is -</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ol>
 <li>Open the <code>package.json</code> file in your project directory.</li>
 <li>Locate the <code>dependencies</code> section.</li>
@@ -400,6 +515,9 @@
 <li>Clean up the code base by running <code>npm prune</code>.</li>
 </ol>
 <p>For example, if this is your package.json file -</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;learn-nodejs&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
@@ -420,7 +538,16 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>And you want to remove the <code>sharp</code> package using this method, you would remove the following line from your <code>package.json</code> file: <code>&quot;sharp&quot;: &quot;^0.32.1&quot;,</code> and then save the file.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>So your new package.json file will look like this -</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;learn-nodejs&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
@@ -440,9 +567,37 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>After saving the changes to the <code>package.json</code> file, you still have to run <code>npm prune</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This purpose of running this command is to remove any packages that are not listed as dependencies in the project&rsquo;s package.json file, helping to keep the <code>node_modules</code> directory clean and efficient.</p>
+
+
+
 <p><code>Pruning can also help to resolve issues related to version conflicts and missing dependencies.</code></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>To remove a devDependency with this approach, the same process applies, just remove the line with the package name and version, save and run <code>npm prune</code> to keep the <code>node_modules</code> clean.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -554,11 +709,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -574,32 +725,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
+        <img src="http://localhost:1313/images/logical-or-and-logical-and.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-logical-or-and-logical-and-in-javascript/">Difference Between || and &amp;&amp; in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/text-wrap-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-text-wrap-to-next-line-in-css/">How to Make Text Wrap to Next Line in CSS?</a>
+        <img src="http://localhost:1313/images/mifi.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-mifi/">Difference between Wi-Fi and MiFi: All You Need to Know</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/area-size-of-cell.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-hexagonal-shape-is-preferred-in-cellular-architecture/">Why Hexagonal Shape Is Preferred in Cellular Architecture?</a>
+        <img src="" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-computer-science-and-software-engineering/">Difference Between Computer Science and Software Engineering</a>
+        <img src="http://localhost:1313/images/resolving-the-eperm-operation-not-permitted-error-caused.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/resolving-the-eperm-operation-not-permitted-error-caused-by-concurrent-next-js-instances/">Resolving the EPERM: Operation Not Permitted Error Caused by Concurrent Next.js Instances</a>
  </div>
     
 
@@ -613,41 +764,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
+        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
+        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/npm-install-encoding.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/module-not-found-cant-resolve-encoding-in-next-js/">How to Fix &#34;Module not found: Can&#39;t resolve encoding&#34; in Next.js</a>
+        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-computer-science-and-software-engineering/">Difference Between Computer Science and Software Engineering</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
+        <img src="http://localhost:1313/images/speed-up-optimize-nextjs-website-blog.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/speed-up-optimize-nextjs-website-blog/">How to Speed Up and Optimize Your Next.js Website or Blog for Faster Page Load</a>
  </div>
     
   </div>
@@ -657,7 +804,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

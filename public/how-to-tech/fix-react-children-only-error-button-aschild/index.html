@@ -55,7 +55,7 @@
 
 
   <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
-  <meta property="article:modified_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+  <meta property="article:modified_time" content="2025-02-22 17:23:57 &#43;0100 WAT" />
   <meta property="article:section" content="how-to-tech" />
 
 
@@ -165,7 +165,7 @@
     "copyrightYear" : "0001",
     "dateCreated": "0001-01-01T00:00:00.00Z",
     "datePublished": "0001-01-01T00:00:00.00Z",
-    "dateModified": "0001-01-01T00:00:00.00Z",
+    "dateModified": "2025-02-22T17:23:57.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Tooabstractive",
@@ -301,16 +301,13 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
-    <span class="post-date"> February 22, 2025</span>
-    <span class="post-date" style="color: rgb(148, 148, 148);"> / 461 /</span>
+<span class="post-date"> February 22, 2025   </span>
+<span class="post-date" style="color: rgb(148, 148, 148);"> / 461 /</span>
 
 
   <h1>Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</h1>
@@ -341,10 +338,23 @@
   
   
 
-  <p>While working on a React project, I encountered the following error:</p>
+  
+
+
+
+
+
+
+<p>While working on a React project, I encountered the following error:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">Error</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Children</span><span class="p">.</span><span class="nx">only</span> <span class="nx">expected</span> <span class="nx">to</span> <span class="nx">receive</span> <span class="nx">a</span> <span class="nx">single</span> <span class="nx">React</span> <span class="nx">element</span> <span class="nx">child</span><span class="p">.</span>
 </span></span></code></pre></div><p>This error occurred with the following code:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">Button</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;bg-blue-600 hover:bg-blue-700&#34;</span> <span class="na">asChild</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">Link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#projects&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;flex items-center&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">View</span> <span class="nx">Projects</span>
@@ -352,11 +362,38 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">Link</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p><strong>Problem:</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The <code>asChild</code> prop in the <code>Button</code> component expects exactly one child element.</p>
+
+
+
 <p>In the code above, the <code>Button</code> component has multiple children within the <code>Link</code> component (<code>View Projects</code> text and the <code>ArrowRight</code> icon), which causes the error.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Solution:</strong></p>
+
+
+
 <p>To resolve this issue, ensure that the <code>Button</code> component with the <code>asChild</code> prop wraps a single React element.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Here&rsquo;s the corrected code:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">Button</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;bg-blue-600 hover:bg-blue-700&#34;</span> <span class="na">asChild</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">Link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#projects&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;flex items-center&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">View</span> <span class="nx">Projects</span>
@@ -364,27 +401,100 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">Link</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>In this corrected version, the <code>Button</code> component wraps a single <code>Link</code> component, which contains both the text and the <code>ArrowRight</code> icon.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This structure satisfies the requirement of having a single child element, resolving the error.</p>
+
+
+
 <p>&#x1f4a1; <strong>Key Takeaway:</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>When using the <code>asChild</code> prop in a <code>Button</code> component, ensure it wraps only one React element.</p>
+
+
+
 <p>This practice prevents the &ldquo;React.Children.only expected to receive a single React element child&rdquo; error.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>FAQs:</strong></p>
+
+
+
 <ol>
 <li>
 <p><strong>What does the <code>asChild</code> prop do in a <code>Button</code> component?</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The <code>asChild</code> prop allows the <code>Button</code> component to render another component (e.g., a <code>Link</code>) as its child, effectively adopting the child&rsquo;s element type and props.</p>
+
+
+
 </li>
 <li>
 <p><strong>Why does the <code>Button</code> component with <code>asChild</code> require a single child element?</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The <code>Button</code> component utilizes <code>React.Children.only</code>, a React utility that ensures only one child is passed.</p>
+
+
+
 <p>If multiple children are provided, it throws an error to maintain consistency and prevent unexpected behavior.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 <li>
 <p><strong>How can I include multiple elements (e.g., text and icon) inside a <code>Button</code> with <code>asChild</code>?</strong></p>
+
+
+
 <p>Wrap the multiple elements inside a single parent component (such as a <code>Link</code>), and then pass this parent component as the single child to the <code>Button</code> with <code>asChild</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 </ol>
 <p>By sticking to this structure, you can effectively use the <code>asChild</code> prop in <code>Button</code> components without encountering child-related errors.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -496,11 +606,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -516,32 +622,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/resolving-the-eperm-operation-not-permitted-error-caused.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/resolving-the-eperm-operation-not-permitted-error-caused-by-concurrent-next-js-instances/">Resolving the EPERM: Operation Not Permitted Error Caused by Concurrent Next.js Instances</a>
+        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-export-and-import-modules-in-javascript/">How to Import and Export Modules in Javascript | Simple Explanation</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
+        <img src="http://localhost:1313/images/cache-file-size.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-vscode-cached-data-files/">How to Delete VSCode Cached Data Files?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
+        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-vscode-useful-keyboard-shortcuts/">List of VSCode Useful Keyboard Shortcut Keys (2024)</a>
+        <img src="http://localhost:1313/images/java-compare-string.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-compare-strings-in-java/">How to Compare Strings in Java?</a>
  </div>
     
 
@@ -555,41 +661,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
+        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/sam-altman-plugin-rollout.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-use-the-internet/">Does ChatGPT Use the Internet?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
+        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hdd.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-ssd-and-hdd/">SSD vs. HDD: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
  </div>
     
   </div>
@@ -599,7 +701,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

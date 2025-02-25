@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,16 +338,56 @@
   
   
 
-  <p>In this post, I am going to highlight how to troubleshoot <strong>“No utility classes were detected in your source files”</strong> error in tailwindcss.</p>
+  
+
+
+
+
+
+
+<p>In this post, I am going to highlight how to troubleshoot <strong>“No utility classes were detected in your source files”</strong> error in tailwindcss.</p>
+
+
+
 <p>The problem comes most time due to file path not configured properly. So if you don&rsquo;t have a tailwindcss config file in your project, then that might be one of the issue.</p>
+
+
+
 <p>To make a tailwindcss config file, you need to run this command -</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">npx</span> <span class="nx">tailwindcss</span> <span class="nx">init</span>
 </span></span></code></pre></div><p>A <code>tailwind.config.js</code> file will be created. Inside the config file, you need to specify the paths to all of your template files.</p>
+
+
+
 <p>This means that all the files that use tailwindcss will have to be specified.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>For example, your index.html file which is the HTML file to display your page, if it uses tailwindcss, you need to specify the path to which it can be located inside the <code>tailwind.config.js.</code></p>
+
+
+
 <blockquote>
 <p>Note:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Make sure that there is @tailwind directives inside your styles file which is located inside the src folder.</p>
+
+
+
 </blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* This should be inside the styles file inside the src folder */</span>
 </span></span><span class="line"><span class="cl">
@@ -358,6 +395,12 @@
 </span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">tailwind</span> <span class="nt">components</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">tailwind</span> <span class="nt">utilities</span><span class="p">;</span>
 </span></span></code></pre></div><p>The <code>tailwind.config.js</code> file will look have some content like this:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="cm">/** @type {import(&#39;tailwindcss&#39;).Config} */</span>
 </span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">content</span><span class="o">:</span> <span class="p">[],</span>
@@ -367,15 +410,54 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>In the <code>content: [],</code> put in the path for the files that is using tailwindcss.</p>
+
+
+
 <p>In my case, inside the legacy1.0 project, there are a bunch of folders and files. But the most important one is the public folder – this folder holds the index.html file of the webpage and since it uses tailwind then it&rsquo;s file path must be specified.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="legacy folder" title="legacy folder"></p>
+
+
+
 <p><img src="http://localhost:1313/images/screenshot_3-2-.webp" alt="folders structure" title="folders structure"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>In the <code>tailwind.config.js</code> file, to specify the path to which index.html is, <code>&quot;./public/index.html&quot;</code> is used which corresponds to how it is in the structure of the folder.</p>
+
+
+
 <p>The src folder is also important because, depending on the project you&rsquo;re working on. Let say it is a ReactJS project, then you know you will need a <code>src</code> folder which includes HTML file and JS file.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p>Note:</p>
+
+
+
 <p><strong>.css</strong> is not added in both the public folder file path and in the <strong>src</strong> folder because tailwind does everything under the hood.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It will be good to add the src folder file path even if you are not working with reactjs project as the tailwindcss file is stored in the src folder.</p>
+
+
+
 </blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="cm">/* *@type {import(&#39;tailwindcss&#39;).Config} */</span>
 </span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
@@ -386,10 +468,29 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>Lastly, after all this changes, run the script for building your tailwindcss file. Remember to use a <code>--watch</code> flag inside your package.json script.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"> <span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;build-css&#34;</span><span class="p">:</span> <span class="s2">&#34;tailwindcss build -i ./src/styles.css -o ./public/styles.css --watch&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="err">,</span>
 </span></span></code></pre></div><p>Hope this helps. Keep coding! &#x1f389;</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -501,11 +602,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -521,32 +618,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
- </div>
-    
-    
-     <div class="xx">
         <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/cache-file-size.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-vscode-cached-data-files/">How to Delete VSCode Cached Data Files?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
  </div>
     
 
@@ -560,41 +657,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-does-chatgpt-get-data-from/">Where Does ChatGPT Get Its Data From?</a>
+        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
+        <img src="http://localhost:1313/images/speed-up-optimize-nextjs-website-blog.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/speed-up-optimize-nextjs-website-blog/">How to Speed Up and Optimize Your Next.js Website or Blog for Faster Page Load</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
+        <img src="http://localhost:1313/images/text-wrap-css.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-text-wrap-to-next-line-in-css/">How to Make Text Wrap to Next Line in CSS?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
+        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
  </div>
     
   </div>
@@ -604,7 +697,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,15 +338,46 @@
   
   
 
-  <p>Underscore <code>(_)</code> is just a character that has no special meaning in JavaScript. But it can be used for different purposes.</p>
+  
+
+
+
+
+
+
+<p>Underscore <code>(_)</code> is just a character that has no special meaning in JavaScript. But it can be used for different purposes.</p>
+
+
+
 <h2 id="use-of-underscore-_-in-javascript">Use of underscore (_) in JavaScript</h2>
 <p>Here are some of the uses of underscore in JavaScript:</p>
+
+
+
 <h3 id="1-variable-name-spacing">1. Variable name spacing</h3>
 <p>The most common use of an underscore in JavaScript is to give space to a variable name, which makes it easier to understand what a variable is all about. For example, <code>var my_variable = 10;</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="2-ignoring-function-parameters">2. Ignoring function parameters</h3>
 <p>Underscore can be used for ignoring function parameters. For example, you may define a function that requires parameters, but you don&rsquo;t intend to use all of them at that time.</p>
+
+
+
 <p>In such cases, you can use an underscore as a convention to indicate that the parameter is intentionally being ignored.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It&rsquo;s a way to communicate to other developers that the parameter value is not relevant to the function&rsquo;s logic.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">exampleFunc</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// The first parameter (_) is ignored
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
@@ -359,6 +387,12 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// Output: &#34;used&#34;
 </span></span></span></code></pre></div><h3 id="ignoring-value-when-calling-functions">Ignoring value when calling functions</h3>
 <p>When calling functions that return multiple values, you can use an underscore to ignore values that you don&rsquo;t need from the functions.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getCoordinates</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Simulating a function that returns an array of coordinates
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
@@ -369,20 +403,69 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// Output: 10 20
 </span></span></span></code></pre></div><h3 id="library-or-framework-conventions">Library or framework conventions</h3>
 <p>Some JavaScript libraries or frameworks, like Underscore.js or Lodash, use the underscore as part of their naming conventions.</p>
+
+
+
 <p>These libraries provide utility functions for working with arrays, objects, and other data types.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>For example, in <a href="https://underscorejs.org/" target="_blank" rel="nofollow noopener ">Underscore.js</a>, you can transform an array into a new array using the functions or methods it provides like filter and map.</p>
+
+
+
 <p>Here is a code snippet that use Underscore.js map method to double the value of the numbers in an array.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">_</span><span class="p">.</span><span class="nx">map</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Output: [2, 4, 6]
 </span></span></span></code></pre></div><p>Though, the map method in the code above was used to transform the array <code>[1, 2, 3]</code> into <code>[2, 4, 6]</code> by multiplying <code>[1, 2, 3]</code> by 2.</p>
+
+
+
 <p>This way of transforming or mapping an array into a new array was done using the underscore.js library.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>In today&rsquo;s modern <a href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">ES6 JavaScript</a>, there are inbuilt functions/method like <code>map()</code> and <code>filter()</code> that comes with JavaScript, which makes the use of underscore.js quite obsolete.</p>
+
+
+
 <p><strong>Read on:</strong> <em><a href="http://localhost:1313/how-to-tech/difference-between-map-and-filter-in-javascript-with-example/">Difference Between map() and filter() in JavaScript With Example</a></em></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="in-few-points">In Few Points:</h2>
 <p>The use of _ in JavaScript is to give space to a variable name, to ignore a function parameter, and it is also used in a library like underscore.js to transform arrays and object.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -494,11 +577,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -514,32 +593,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
+        <img src="http://localhost:1313/images/vscode-is-not-responding.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-vscode-window-not-responding/">How to Fix VSCode Window Not Responding?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
+        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
+        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-chatgpt-and-chatgpt-plus/">Differences between ChatGPT and ChatGPT Plus</a>
+        <img src="http://localhost:1313/images/free-wifi-signboard-airport-zone-600w-506762929-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-wi-fi-and-wlan/">What is the difference between Wi-Fi and WLAN?</a>
  </div>
     
 
@@ -553,29 +632,13 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-vscode-useful-keyboard-shortcuts/">List of VSCode Useful Keyboard Shortcut Keys (2024)</a>
  </div>
     
     
@@ -586,8 +649,20 @@
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
+        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
  </div>
     
   </div>
@@ -597,7 +672,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -304,11 +304,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -344,9 +341,28 @@
   
   
 
-  <p>When it comes to debugging and logging messages in JavaScript, two commonly used methods are <code>console.log</code> and <code>console.info</code>.</p>
+  
+
+
+
+
+
+
+<p>When it comes to debugging and logging messages in JavaScript, two commonly used methods are <code>console.log</code> and <code>console.info</code>.</p>
+
+
+
 <p>Although they may seem similar, they have distinct characteristics that make them useful in different scenarios.</p>
+
+
+
 <p>In this article, we will look at the differences between <code>console.log</code> and <code>console.info</code> and learn when to use each method effectively.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="toc-container">
   <h2 class="toc-h2">
     Table of Contents <button class="toggle-button">↬</button>
@@ -370,58 +386,151 @@
     <li><a href="#faqs">FAQs</a></li>
   </ul>
 </nav></div>
-  <div id="ezoic-pub-ad-placeholder-166"></div>
-  <script>
-    ezstandalone.cmd.push(function () {
-      ezstandalone.showAds(166);
-    });
-  </script>
 </div>
 <h2 id="overview-of-consolelog">Overview of <code>console.log</code></h2>
 <p>The <code>console.log</code> method is widely used for logging messages in JavaScript. It allows developers to output informative messages, variables, or objects to the console.</p>
+
+
+
 <p>Here&rsquo;s an example:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;John&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Name:&#34;</span><span class="p">,</span> <span class="nx">name</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Age:&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="p">);</span>
 </span></span></code></pre></div><p>In this example, we log the values of the <code>name</code> and <code>age</code> variables using <code>console.log</code>. The output will be:</p>
+
+
+
 <pre tabindex="0"><code>
 
 Name: John
 Age: 30
 </code></pre><h2 id="understanding-consoleinfo">Understanding <code>console.info</code></h2>
 <p>On the other hand, the <code>console.info</code> method is specifically designed for logging informational messages.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It is similar to <code>console.log</code> in terms of usage, but it is intended to convey information that may be more helpful than regular logging.</p>
+
+
+
 <p>Let&rsquo;s see an example:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">importantMessage</span> <span class="o">=</span> <span class="s2">&#34;Remember to save your progress!&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">importantMessage</span><span class="p">);</span>
 </span></span></code></pre></div><p><img src="http://localhost:1313/images/console.info.webp" alt="console.info" title="console.info"></p>
+
+
+
 <p>In this example, we use <code>console.info</code> to log an important message. The output will be styled differently, depending on the browser&rsquo;s implementation, to indicate that it is an informational message.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="differences-between-consolelog-and-consoleinfo">Differences between <code>console.log</code> and <code>console.info</code></h2>
 <h3 id="output-appearance">Output appearance</h3>
 <p>One of the main differences between <code>console.log</code> and <code>console.info</code> is their output appearance.</p>
+
+
+
 <p>While the exact styling may vary across browsers, <code>console.info</code> messages are typically displayed in a distinctive way, such as with an “i” icon or a different text color.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This visual distinction helps differentiate informational messages from regular log messages.</p>
+
+
+
 <h3 id="default-behavior">Default behavior</h3>
 <p>Another important distinction is the default behavior of these methods. In most browsers, the <code>console.log</code> method outputs messages with the default logging level, often set to “log.”</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>On the other hand, <code>console.info</code> messages are displayed with a different default logging level, such as &ldquo;info.”</p>
+
+
+
 <p>This difference can be useful when categorizing and filtering log messages based on their importance or type.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="message-importance">Message importance</h3>
 <p>While both methods serve the purpose of logging messages, <code>console.log</code> is generally used for general-purpose logging, including informational messages, warnings, or errors.</p>
+
+
+
 <p><code>console.info</code> on the other hand, is specifically intended for providing important informational content.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>It implies that the logged message contains crucial details that are useful for understanding the execution flow or the state of the application.</p>
+
+
+
 <h3 id="log-levels">Log levels</h3>
 <p>In some browser environments, log messages are categorized into different levels, such as “log,&rdquo; &ldquo;info,&rdquo; &ldquo;warn,&rdquo; or &ldquo;error.&rdquo;</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>These levels enable developers to filter and control the visibility of messages in the console. By default, <code>console.log</code> messages are often assigned the &ldquo;log&rdquo; level, while `console.info` messages are assigned the &ldquo;info&rdquo; level.</p>
+
+
+
 <p>However, it&rsquo;s important to note that log levels and their behaviors can vary across different browsers.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="use-cases-for-consolelog">Use cases for <code>console.log</code></h2>
 <p>The versatility of <code>console.log</code> makes it suitable for various use cases, including:</p>
+
+
+
 <ul>
 <li>Logging general messages or variables during development</li>
 <li>Debugging code by printing values or object properties</li>
 </ul>
 <p>Here&rsquo;s an example of using <code>console.log</code> for debugging:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">addNumbers</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Adding numbers:&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="s2">&#34;+&#34;</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
@@ -430,22 +539,43 @@ Age: 30
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">addNumbers</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Result:&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
 </span></span></code></pre></div><p>The output will be:</p>
+
+
+
 <pre tabindex="0"><code>
 
 Adding numbers: 5 + 10
 Result: 15
 </code></pre><h2 id="use-cases-for-consoleinfo">Use cases for <code>console.info</code></h2>
 <p>The distinctive styling and default log level of <code>console.info</code> make it ideal for specific use cases, such as:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ul>
 <li>Providing important information about the application&rsquo;s state</li>
 <li>Displaying key details during program execution</li>
 </ul>
 <p>Here&rsquo;s an example of using <code>console.info</code> to convey important information:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="s2">&#34;john123&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="sb">`Welcome, </span><span class="si">${</span><span class="nx">username</span><span class="si">}</span><span class="sb">! Your session expires in 10 minutes.`</span><span class="p">);</span>
 </span></span></code></pre></div><p>The output will be visually distinct, indicating that it is an informational message.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="best-practices-for-using-consolelog-and-consoleinfo">Best practices for using <code>console.log</code> and <code>console.info</code></h2>
 <p>To make the most out of <code>console.log</code> and <code>console.info</code>, consider the following best practices:</p>
+
+
+
 <ol>
 <li>Use <code>console.log</code> for general-purpose logging and debugging.</li>
 <li>Utilize <code>console.info</code> to convey important details or instructions.</li>
@@ -455,8 +585,23 @@ Result: 15
 </ol>
 <h2 id="wrap-up">Wrap Up</h2>
 <p><code>console.log</code> and <code>console.info</code> are both valuable tools for logging messages in JavaScript.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>While they share similarities, their subtle differences make them suitable for specific use cases.</p>
+
+
+
 <p>Having a good understanding of these differences and using them effectively, developers can enhance their debugging and logging capabilities.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="faqs">FAQs</h2>
 <ol>
 <li><strong>Can I use <code>console.log</code> and <code>console.info</code> together in the same codebase?</strong> Yes! These methods are not mutually exclusive. You can use them together based on the specific requirements of your application.</li>
@@ -470,6 +615,13 @@ However, you can use CSS formatting techniques to add custom styles to the outpu
 <br>
 This helps maintain a clean codebase and prevents unnecessary console output in the production environment.</li>
 </ol>
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -581,11 +733,7 @@ This helps maintain a clean codebase and prevents unnecessary console output in 
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -601,8 +749,8 @@ This helps maintain a clean codebase and prevents unnecessary console output in 
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/file-path-node.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/access-a-file-in-node-js-using-relative-and-absolute-path/">How To Access a File in Node.js? ( /, ./, and ../ ) Paths Explained</a>
+        <img src="" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
  </div>
     
     
@@ -613,20 +761,20 @@ This helps maintain a clean codebase and prevents unnecessary console output in 
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
+        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
+        <img src="http://localhost:1313/images/rf-rm-powershell-error.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/remove-item-a-parameter-cannot-be-found-that-matches-parameter-name-rf/">How to Fix &#34;Remove-Item: A parameter cannot be found that matches parameter name &#39;rf&#39;&#34;</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
+        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
  </div>
     
 
@@ -640,41 +788,37 @@ This helps maintain a clean codebase and prevents unnecessary console output in 
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
+        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-vscode-useful-keyboard-shortcuts/">List of VSCode Useful Keyboard Shortcut Keys (2024)</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/how-to-remove-unused-packages-and-update-dependencies-in-a-next.js-project.jpeg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-unused-packages-and-update-dependencies-in-a-next-js-project/">How to Remove Unused Packages and Update Dependencies in a Next.js Project</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/light-mac-browser.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-lightweight-browsers-for-mac/">6 Best Lightweight Browsers for macOS (2024)</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
+        <img src="http://localhost:1313/images/vscode-is-not-responding.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-vscode-window-not-responding/">How to Fix VSCode Window Not Responding?</a>
  </div>
     
   </div>
@@ -684,7 +828,11 @@ This helps maintain a clean codebase and prevents unnecessary console output in 
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

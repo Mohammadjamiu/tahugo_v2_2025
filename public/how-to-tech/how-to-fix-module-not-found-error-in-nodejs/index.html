@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,46 +338,177 @@
   
   
 
-  <p>If you have been working with Node.js for a while, chances are you have encountered the <code>MODULE_NOT_FOUND</code> error at some point.</p>
+  
+
+
+
+
+
+
+<p>If you have been working with Node.js for a while, chances are you have encountered the <code>MODULE_NOT_FOUND</code> error at some point.</p>
+
+
+
 <p>This error occurs when you try to require a module in your Node.js code, but the module cannot be found.</p>
+
+
+
 <p>In this blog post, we&rsquo;ll explore what causes this error and how to fix it.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="what-is-the-module_not_found-error">What Is the <code>MODULE_NOT_FOUND</code> Error?</h2>
 <p>The <code>MODULE_NOT_FOUND</code> error is a runtime error in Node.js that occurs when you try to require a module that does not exist.</p>
+
+
+
 <p>This error is thrown when Node.js is unable to find the specified module.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="what-causes-the-module_not_found-error-and-how-to-fix-it">What Causes the <code>MODULE_NOT_FOUND</code> Error and How To Fix It?</h2>
 <p>Here are some reasons why you might encounter the <code>MODULE_NOT_FOUND</code> error in your Node.js code and how to fix it:</p>
+
+
+
 <h3 id="1-the-module-has-not-been-installed">1/ The module has not been installed</h3>
 <p>If you are trying to require a module that has not been installed in your project, you will get the <code>MODULE_NOT_FOUND</code> error. <br>
 <br>
 Make sure the module is installed in your project by running <code>npm install &lt;module-name&gt;</code> in your terminal.<br>
 <br>
 This should often be the first step that you need to take because most time it is usually the cause.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>So let say you want to get the dimension (height x width) of an image, you need to install a package called sharp or image-size.</p>
+
+
+
 <p>To install it, just run <code>npm install sharp</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p>Make sure to install it in the root directory and not inside a subdirectory.</p>
+
+
+
 <p>For example, your node.js project folder name is <code>learn_node</code> and it has a subfolder within it like <code>learn_node/new_folder</code>, so to install any package you have to leave the subdirectory and go to the root directory.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <h3 id="2-the-module-path-is-incorrect">2/ The module path is incorrect</h3>
 <p>Double-check the path to the module you are trying to require. Make sure the path is correct, and the module is located in the specified directory.</p>
+
+
+
 <p>For example, if you create a custom node.js module, and you try to import the module using the <code>require</code> syntax inside a different directory, you will definitely get an error.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>So make sure to check the path in which the module is located and fix it.</p>
+
+
+
 <p>Let say you have a folder named <code>root_folder</code> and inside the folder there is <code>folder_1</code> and <code>folder_2</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Now inside <code>folder_2</code>, you create a <code>folder-2.js</code> file which need to access some code from the <code>folder-1.js</code> file inside the <code>folder_1.</code></p>
+
+
+
 <p>Using the <code>require</code> syntax, it will look something like <code>const accessFileFromFolderOne = require('../folder-1/folder-1.js');</code></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <blockquote>
 <p><strong>Where:</strong></p>
+
+
+
 <p>../ means “leave the current directory – which is <code>folder_2</code>”</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>../folder-1 means leave the current directory and enter <code>folder_2.</code>That&rsquo;s the pattern.</p>
+
+
+
 <p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/access-a-file-in-node-js-using-relative-and-absolute-path/">How to access a file in NodeJS? /, ./ and ../ paths explained</a></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </blockquote>
 <h3 id="3-the-module-has-been-renamed-or-deleted">3/ The module has been renamed or deleted</h3>
 <p>If the module has been renamed or deleted, you will get the <code>MODULE_NOT_FOUND</code> error.</p>
+
+
+
 <p>So make sure to check if the module has been renamed or deleted. If it has been renamed, make sure to update the require statement accordingly.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="4-the-module-has-a-different-title-case-sensitivity">4/ The module has a different title case sensitivity</h3>
 <p>Node.js is case-sensitive, so make sure the case of the module name in your require statement matches the title case of the actual module.</p>
+
+
+
 <p><strong>In a few points,</strong> the <code>MODULE_NOT_FOUND</code> error is a common error in Node.js that occurs when the module you are trying to require cannot be found.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>To fix this error, make sure the module is installed, double-check the path to the module, check the spelling and case of the module name in your require statement, and make sure the module has not been renamed or deleted.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -492,11 +620,7 @@ This should often be the first step that you need to take because most time it i
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -512,32 +636,32 @@ This should often be the first step that you need to take because most time it i
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
+        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
+        <img src="http://localhost:1313/images/this-in-object-scope.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-this-and-that-in-javascript/">Difference Between the ‘This’ and ‘That’ Keyword in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/isolate-tailwindcss-to-fix-z-index-issue.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-tailwindcss-z-index-problem-with-isolate/">How to Fix TailwindCSS z-index Problem with `isolate`</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
+        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/vscode-is-not-responding.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-vscode-window-not-responding/">How to Fix VSCode Window Not Responding?</a>
+        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
  </div>
     
 
@@ -551,41 +675,37 @@ This should often be the first step that you need to take because most time it i
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
+        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/resolving-the-eperm-operation-not-permitted-error-caused.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/resolving-the-eperm-operation-not-permitted-error-caused-by-concurrent-next-js-instances/">Resolving the EPERM: Operation Not Permitted Error Caused by Concurrent Next.js Instances</a>
+        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
+        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
+        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
  </div>
     
   </div>
@@ -595,7 +715,11 @@ This should often be the first step that you need to take because most time it i
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

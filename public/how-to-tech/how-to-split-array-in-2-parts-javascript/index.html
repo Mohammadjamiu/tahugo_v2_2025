@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,41 +338,123 @@
   
   
 
-  <p>Arrays are a fundamental data structure in JavaScript that allow us to store multiple values in a single variable.</p>
+  
+
+
+
+
+
+
+<p>Arrays are a fundamental data structure in JavaScript that allow us to store multiple values in a single variable.</p>
+
+
+
 <p>There are various scenarios where we may need to split an array into two parts.</p>
+
+
+
 <p>In this article, we will explore different methods to achieve this task and understand their pros and cons.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="what-is-an-array-in-javascript"><strong>What is an Array in JavaScript?</strong></h2>
 <p>Before going into splitting arrays, let&rsquo;s quickly review what arrays are in JavaScript. <strong>An array is an ordered collection of elements, where each element can be accessed by its index.</strong></p>
+
+
+
 <p>Arrays in JavaScript are zero-indexed, meaning that the first element is at index 0, the second element at index 1, and so on.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="methods-of-splitting-an-array-into-two-parts"><strong>Methods of Splitting an Array into Two Parts</strong></h2>
 <p>There are multiple ways to split an array into two parts in JavaScript. Let&rsquo;s look at three common methods.</p>
+
+
+
 <h3 id="method-1-using-the-slice-method"><strong>Method 1: Using the slice() method</strong></h3>
 <p>The <code>slice()</code> method is a built-in function in JavaScript arrays that allows us to extract a portion of an array into a new array without modifying the original array.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>To split an array into two parts using <code>slice()</code>, we can specify the start and end indices for each part.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">midIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">firstPart</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">midIndex</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">secondPart</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">midIndex</span><span class="p">);</span>
 </span></span></code></pre></div><h3 id="method-2-using-the-splice-method"><strong>Method 2: Using the splice() method</strong></h3>
 <p>The <code>splice()</code> method is another built-in function in JavaScript arrays that can be used to add or remove elements from an array.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>We can also utilize <code>splice()</code> to split an array into two parts. By specifying the index at which to start the split and removing the elements after that index, we can obtain the two parts.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">midIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">firstPart</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">midIndex</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">secondPart</span> <span class="o">=</span> <span class="nx">array</span><span class="p">;</span>
 </span></span></code></pre></div><h3 id="method-3-using-the-spread-operator-and-slice"><strong>Method 3: Using the spread operator and slice()</strong></h3>
 <p>In ES6, JavaScript introduced the spread operator (<code>...</code>) which allows us to expand an iterable object, such as an array, into individual elements.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>We can use the spread operator in combination with the <code>slice()</code> method to split an array into two parts.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">midIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">firstPart</span><span class="p">,</span> <span class="nx">secondPart</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">midIndex</span><span class="p">),</span> <span class="p">...</span><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">midIndex</span><span class="p">)];</span>
 </span></span></code></pre></div><h3 id="choosing-the-right-method"><strong>Choosing the Right Method</strong></h3>
 <p>The choice of method for splitting an array into two parts depends on the specific requirements of your task.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>If you need to preserve the original array, methods 1 and 3 are suitable since they create a new array.</p>
+
+
+
 <p>If you don&rsquo;t need the original array and want to modify it, method 2 can be used.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h2 id="example-code-on-implementations"><strong>Example Code on Implementations</strong></h2>
 <p>Let&rsquo;s see some practical examples of splitting arrays in JavaScript.</p>
+
+
+
 <p><strong>Example 1: Splitting an array of names into two groups</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">,</span> <span class="s1">&#39;Frank&#39;</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">midIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">names</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">firstGroup</span> <span class="o">=</span> <span class="nx">names</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">midIndex</span><span class="p">);</span>
@@ -383,8 +462,20 @@
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstGroup</span><span class="p">);</span> <span class="c1">// Output: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;]
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">secondGroup</span><span class="p">);</span> <span class="c1">// Output: [&#39;David&#39;, &#39;Eve&#39;, &#39;Frank&#39;]
 </span></span></span></code></pre></div><p><strong>Output:</strong></p>
+
+
+
 <p><img src="http://localhost:1313/images/slice-method-1.webp" alt="split array method example 1" title="split array method example 1"></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Example 2: Splitting an array of numbers into two halves</strong></p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">midIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">firstHalf</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">midIndex</span><span class="p">);</span>
@@ -392,8 +483,23 @@
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstHalf</span><span class="p">);</span> <span class="c1">// Output: [1, 2, 3, 4, 5]
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">secondHalf</span><span class="p">);</span> <span class="c1">// Output: [6, 7, 8, 9, 10]
 </span></span></span></code></pre></div><p><strong>Output:</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/split-array-method-2.webp" alt="split array method example 2" title="split array method example 2"></p>
+
+
+
 <p><strong>Example 3: Splitting an Array into Two Parts using the Spread Operator</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">midIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">firstPart</span><span class="p">,</span> <span class="p">...</span><span class="nx">secondPart</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">midIndex</span><span class="p">),</span> <span class="p">...</span><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">midIndex</span><span class="p">)];</span>
@@ -402,9 +508,34 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">secondPart</span><span class="p">);</span> <span class="c1">// Output: [4, 5, 6]
 </span></span></span></code></pre></div><h2 id="wrap-up"><strong>Wrap Up</strong></h2>
 <p>Splitting an array into two parts is a common operation in JavaScript, and there are multiple methods to accomplish it.</p>
+
+
+
 <p>In this article, we explored three approaches: using the <code>slice()</code> method, the <code>splice()</code> method, and a combination of the spread operator <code>...</code> and <code>slice()</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The choice of method depends on whether you want to modify the original array and other specific requirements of your task.</p>
+
+
+
 <p>By understanding these techniques, you can effectively split arrays in JavaScript to manipulate and process data more efficiently.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -516,11 +647,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -536,32 +663,32 @@
      
     
      <div class="xx">
-        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-assembler/">Difference Between Compiler and Assembler</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/vscode-update-mode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-stop-or-disable-vscode-auto-update/">How to Stop or Disable VSCode Auto Update?</a>
+        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-system-software-and-application-software-with-examples/">Difference Between System Software and Application Software with Examples</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
+        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
  </div>
     
 
@@ -575,41 +702,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/mail.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-email-and-gmail/">Difference Between Email and Gmail: A Detailed Comparison</a>
+        <img src="http://localhost:1313/images/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs/">How to Automatically Sort Tailwind CSS Classes in React or Next.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
+        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/jeswin-thomas-hgju2ykh4e-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/impact-of-chatgpt-on-students/">Impact of ChatGPT on Students: Positive and Negative Effect</a>
+        <img src="http://localhost:1313/images/cpu.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-core-i3-i5-i7/">Intel Core i3, i5, and i7 Processors: What&#39;s The Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
+        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
+        <img src="http://localhost:1313/images/reverse-a-string-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-reverse-a-string-in-javascript/">How to Reverse a String in JavaScript: 3 Easy Ways</a>
  </div>
     
   </div>
@@ -619,7 +742,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

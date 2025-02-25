@@ -301,11 +301,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -341,11 +338,39 @@
   
   
 
-  <p>When working on a Node.js project or any project that need some Node.js dependencies, you will definitely have two JSON files. One of them been package.json and the other package-lock.json.</p>
+  
+
+
+
+
+
+
+<p>When working on a Node.js project or any project that need some Node.js dependencies, you will definitely have two JSON files. One of them been package.json and the other package-lock.json.</p>
+
+
+
 <p><strong>The purpose of package.json and package-lock.json in a Node.js project, is to ensure that all the dependencies or packages that are needed for your application to function properly are tracked.</strong></p>
+
+
+
 <p>The main things that are tracked are the names of the packages and their versions.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Let&rsquo;s take an example of a package.json file and package-lock.json and see their difference.</p>
+
+
+
 <p><strong>Package.json snippet</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;legacy1.0&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
@@ -362,6 +387,9 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p><strong>Package-lock.json snippet</strong></p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"> <span class="s2">&#34;node_modules/tailwindcss&#34;</span><span class="err">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;3.2.6&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;resolved&#34;</span><span class="p">:</span> <span class="s2">&#34;https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.6.tgz&#34;</span><span class="p">,</span>
@@ -403,17 +431,81 @@
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
 </span></span></code></pre></div><p>As you can see, the <code>package.json</code> file has just little information like the dependency name and the corresponding version.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><code>&quot;dependencies&quot;: { &quot;tailwindcss&quot;: &quot;^3.2.6&quot; }</code></p>
+
+
+
 <p>But package-lock.json file takes its own to another level by providing details about the name of the package, the corresponding version, the npm registry where the package is downloaded from,</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>and other behind the scene packages that the package you intend to install also depends on.</p>
+
+
+
 <p>Like in the example above, you will see that the package or dependency is <code>tailwindcss</code>.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>This <code>tailwindcss</code> package also depends on another package called <code>postcss</code>.</p>
+
+
+
 <p>Also, this <code>postcss</code> package in the package-lock.json file under the <code>tailwindcss</code> dependency has it own corresponding version. That&rsquo;s how detailed the information in the package-lock.json file is.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Now here comes the answer to the question – “Is package-lock.json needed for deployment?”</p>
+
+
+
 <p><strong>Yes, the <code>package-lock.json</code> file is needed for deployment in most cases. Because when you deploy your application, the package manager either npm or yarn will use the information in the <code>package-lock.json</code> file to install the exact same versions of the packages and dependencies that you have been working with during development.</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a></p>
+
+
+
 <p>This ensures that your application runs as expected in the production environment, with the same package versions and dependencies as in your development environment.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>So therefore, the <code>package-lock.json</code> file is an essential part of the Node.js application deployment process and should be included in the deployment package.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -525,11 +617,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -545,32 +633,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
+        <img src="http://localhost:1313/images/nextjs-hydration.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-hydration-failed-because-the-initial-ui-does-not-match-what-was-rendered-on-the-server-in-nextjs/">How to fix error hydration failed because the initial UI does not match what was rendered on the server in nextJS?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/console-error.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.error/">Difference Between console.log and console.error</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
+        <img src="http://localhost:1313/images/hdd.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-ssd-and-hdd/">SSD vs. HDD: What&#39;s The Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
+        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/mifi.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-mifi/">Difference between Wi-Fi and MiFi: All You Need to Know</a>
+        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
  </div>
     
 
@@ -584,41 +672,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
+        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
+        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hitesh-choudhary-t1paibmtjim-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-machine-learning-and-generative-ai/">Difference Between Machine Learning and Generative AI </a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-assembler/">Difference Between Compiler and Assembler</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/log-and-write.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-document.write-in-javascript/">Difference Between console.log() and document.write() in JavaScript</a>
+        <img src="http://localhost:1313/images/cpx-an-alternative-to-cp-linux-command.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/cpx-module-an-alternative-to-the-linux-cp-command-for-copying-files-across-folders/">cpx Module: An Alternative to the Linux cp Command for Copying Files Across Folders</a>
  </div>
     
   </div>
@@ -628,7 +712,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

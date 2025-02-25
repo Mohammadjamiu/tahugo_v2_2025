@@ -67,7 +67,22 @@
     {{ .Page.TableOfContents }}
   </details> -->
 
-  {{.Content}} 
+  <!-- {{.Content}}  -->
+{{$content := .Content }}
+{{$paragraphs := split $content "</p>" }}
+{{$total := len $paragraphs }}
+{{$interval := 3 }}
+
+{{range $index, $paragraph := $paragraphs}}
+{{$paragraph | safeHTML}}</p>
+{{if and (ne $index 0) (eq (mod $index $interval) 0)}}
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+{{end}}
+{{end}}
+
+
+
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
 <!-- ShareThis BEGIN -->

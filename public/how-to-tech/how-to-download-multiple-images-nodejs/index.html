@@ -304,11 +304,8 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
@@ -344,8 +341,21 @@
   
   
 
-  <p>Downloading multiple images in Node.js can be efficiently accomplished using the Promise and async/await features.</p>
+  
+
+
+
+
+
+
+<p>Downloading multiple images in Node.js can be efficiently accomplished using the Promise and async/await features.</p>
+
+
+
 <p>In this article, we are going to look at how to achieve this in your Node.js projects.</p>
+
+
+
 <div class="toc-container">
   <h2 class="toc-h2">
     Table of Contents <button class="toggle-button">↬</button>
@@ -358,39 +368,69 @@
     <li><a href="#validating-image-urls"><strong>Validating Image URLs</strong></a></li>
   </ul>
 </nav></div>
-  <div id="ezoic-pub-ad-placeholder-166"></div>
-  <script>
-    ezstandalone.cmd.push(function () {
-      ezstandalone.showAds(166);
-    });
-  </script>
 </div>
 <h2 id="installation-and-setup"><strong>Installation and Setup</strong></h2>
 <p>To begin, ensure that you have Node.js installed on your system. Then, follow these steps to set up your project:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ol>
 <li>
 <p>Create a new directory for your project.</p>
+
+
+
 </li>
 <li>
 <p>Open a terminal and navigate to the project directory.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 <li>
 <p>Run the following command to initialize a new Node.js project:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm init -y
 </span></span></code></pre></div></li>
 <li>
 <p>Install the required dependencies by running the following command:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm install request fs
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="downloading-multiple-images"><strong>Downloading Multiple Images</strong></h2>
 <p>To download multiple images in Node.js, follow these steps:</p>
+
+
+
 <ol>
 <li>
 <p>Create a file named <code>imageDownloader.js</code> in your project directory.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 </li>
 <li>
 <p>Open the file and add the following code:</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -409,6 +449,12 @@
 </span></span></code></pre></div></li>
 <li>
 <p>In your main file (e.g., <code>app.js</code>), import the <code>downloadImage</code> function and define an array of image URLs.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">downloadImage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./imageDownloader&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrls</span> <span class="o">=</span> <span class="p">[</span>
@@ -422,6 +468,9 @@
 </span></span></code></pre></div></li>
 <li>
 <p>Implement the <code>downloadImages</code> function using the async/await approach.</p>
+
+
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">downloadImages</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">downloadPromises</span> <span class="o">=</span> <span class="nx">imageUrls</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">url</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -438,18 +487,67 @@
 </span></span></code></pre></div></li>
 </ol>
 <p><strong>At the end of testing the code out, you should get something like this:</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="how to download multiple images nodejs" title="how to download multiple images nodejs"></p>
+
+
+
 <blockquote>
 <p>💡</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Make sure to create the folder that you intend to store the image so that, the image will be downloaded to that folder.</p>
+
+
+
 </blockquote>
 <h2 id="handling-errors"><strong>Handling Errors</strong></h2>
 <p>Handling errors during the image download process is crucial for a smooth user experience.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>By attaching an event listener to the <code>error</code> event, you can handle errors effectively. In the <code>imageDownloader.js</code> file, we already handle errors using the <code>on('error')</code> event listener.</p>
+
+
+
 <h2 id="validating-image-urls"><strong>Validating Image URLs</strong></h2>
 <p>Before downloading images, it&rsquo;s important to validate the image URLs to avoid unnecessary requests and handle invalid URLs.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/how-to-check-if-an-image-url-is-valid-in-javascript/">How to Check if an Image URL is Valid in JavaScript?</a></p>
+
+
+
 <p>You can utilize regular expressions or libraries like <code>url-regex</code> to validate URLs. The <a href="https://www.npmjs.com/package/url-regex" target="_blank" rel="nofollow noopener ">url-regex</a> library provides a simple way to validate URLs.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+</p>
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -561,11 +659,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -581,14 +675,20 @@
      
     
      <div class="xx">
+        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
+ </div>
+    
+    
+     <div class="xx">
         <img src="http://localhost:1313/images/find-and-replace-dialog-box.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-find-and-replace-in-vscode/">How to Use Find and Replace in VSCode?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
+        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
  </div>
     
     
@@ -599,14 +699,8 @@
     
     
      <div class="xx">
-        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-give-the-same-answer-to-everyone/">Does ChatGPT Give the Same Answer to Everyone?</a>
+        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
  </div>
     
 
@@ -620,41 +714,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/reverse-a-string-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-reverse-a-string-in-javascript/">How to Reverse a String in JavaScript: 3 Easy Ways</a>
+        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
+        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
+        <img src="http://localhost:1313/images/log-and-write.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-document.write-in-javascript/">Difference Between console.log() and document.write() in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
+        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
  </div>
     
   </div>
@@ -664,7 +754,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

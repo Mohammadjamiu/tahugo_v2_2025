@@ -55,7 +55,7 @@
 
 
   <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
-  <meta property="article:modified_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+  <meta property="article:modified_time" content="2025-02-22 17:23:57 &#43;0100 WAT" />
   <meta property="article:section" content="how-to-tech" />
 
 
@@ -165,7 +165,7 @@
     "copyrightYear" : "0001",
     "dateCreated": "0001-01-01T00:00:00.00Z",
     "datePublished": "0001-01-01T00:00:00.00Z",
-    "dateModified": "0001-01-01T00:00:00.00Z",
+    "dateModified": "2025-02-22T17:23:57.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Tooabstractive",
@@ -301,16 +301,13 @@
 <div class=" single-page-container">
 
   <div id="ezoic-pub-ad-placeholder-163"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(163);
-    });
-</script>
+
+
  
   
     
-    <span class="post-date"> February 22, 2025</span>
-    <span class="post-date" style="color: rgb(148, 148, 148);"> / 462 /</span>
+<span class="post-date"> February 22, 2025   </span>
+<span class="post-date" style="color: rgb(148, 148, 148);"> / 462 /</span>
 
 
   <h1>Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</h1>
@@ -341,9 +338,28 @@
   
   
 
-  <p>I purchased a domain name from Namecheap to use for my <strong>Turborepo</strong> projects, which include two Next.js applications.</p>
+  
+
+
+
+
+
+
+<p>I purchased a domain name from Namecheap to use for my <strong>Turborepo</strong> projects, which include two Next.js applications.</p>
+
+
+
 <p>One is the <strong>main site</strong>, which should be accessible at <strong>monoed.africa</strong>, while the other is a subdomain project, accessible at <strong>cv-resume-builder.monoed.africa</strong>.</p>
+
+
+
 <p>After deploying both projects separately on Vercel, I configured the domain settings as follows:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ul>
 <li><strong>Main site domain (monoed.africa) setup in Vercel:</strong></li>
 </ul>
@@ -364,15 +380,51 @@
 </li>
 </ol>
 <p>Vercel then refreshed and applied an SSL certificate.</p>
+
+
+
 <p>However, a problem arose when accessing <strong>monoed.africa</strong> in the browser—it failed to load and showed a “cannot reach page” error.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>Meanwhile, <strong><a href="https://www.monoed.africa" target="_blank" rel="nofollow noopener ">www.monoed.africa</a></strong> and the default <strong>monoed.vercel.app</strong> domain worked perfectly.</p>
+
+
+
 <h2 id="problem-analysis">Problem Analysis</h2>
 <p>The issue was that the <strong>Apex domain (monoed.africa)</strong> was not correctly pointing to the Vercel deployment.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The A record (<strong>76.76.21.21</strong>) did not resolve correctly, causing the domain to be inaccessible without the “www.” prefix.</p>
+
+
+
 <p>Many users I sent the domain to instinctively typed <strong>monoed.africa</strong>, expecting it to work, but it did not.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>I had to find a solution to ensure the apex domain worked correctly.</p>
+
+
+
 <h2 id="solution-correcting-the-namecheap-dns-settings">Solution: Correcting the Namecheap DNS Settings</h2>
 <p>To fix the issue, I followed these steps:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <h3 id="1-remove-the-incorrect-a-record">1. Remove the Incorrect A Record</h3>
 <ul>
 <li>In <strong>Namecheap Advanced DNS</strong>, delete the <strong>A record</strong> with:
@@ -384,6 +436,9 @@
 </ul>
 <p><img src="http://localhost:1313/images/vercel-apex-domain-issue.jpeg" alt="Vercel Incorrect Apex Namecheap">
 <img src="http://localhost:1313/images/vercel-incorrect-apex.jpeg" alt="Vercel Incorrect Apex Namecheap"></p>
+
+
+
 <h3 id="2-add-a-cname-record-for-the-apex-domain">2. Add a CNAME Record for the Apex Domain</h3>
 <ul>
 <li>Create a <strong>CNAME record</strong> instead:
@@ -418,12 +473,21 @@
 </ul>
 <h3 id="6-subdomain-setup-for-the-secondary-nextjs-project">6. Subdomain Setup for the Secondary Next.js Project</h3>
 <p>For the second project (<strong>cv-resume-builder.monoed.africa</strong>), I added:</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ul>
 <li><strong>Type:</strong> CNAME</li>
 <li><strong>Host:</strong> cv-resume-builder</li>
 <li><strong>Value:</strong> cname.vercel-dns.com</li>
 </ul>
 <p>After these changes, <strong>both the apex domain and subdomains started working correctly.</strong></p>
+
+
+
 <h2 id="in-summary">In Summary</h2>
 <ul>
 <li><strong>Primary Issue:</strong> The apex domain (<strong>monoed.africa</strong>) was not resolving because the A record (76.76.21.21) did not point correctly to the deployment.</li>
@@ -432,9 +496,27 @@
 </ul>
 <h2 id="faqs">FAQs</h2>
 <p><strong>1. Why wasn’t monoed.africa working without www?</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>The A record (76.76.21.21) didn’t resolve correctly, causing an issue with apex domain resolution.</p>
+
+
+
 <p>Changing it to a CNAME pointing to the Vercel deployment fixed the problem.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p><strong>2. What DNS records should I use for a Vercel deployment with a Namecheap domain?</strong></p>
+
+
+
 <ul>
 <li>For the <strong>apex domain</strong>, use a <strong>CNAME</strong> record:
 <ul>
@@ -450,14 +532,42 @@
 </li>
 </ul>
 <p><strong>3. How long does DNS propagation take?</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <p>DNS propagation can take up to <strong>48 hours</strong>. Use <a href="https://dnschecker.org/" target="_blank" rel="nofollow noopener ">DNS Checker</a> to monitor changes.</p>
+
+
+
 <p><strong>4. How do I set up redirects between the apex domain and www subdomain on Vercel?</strong></p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
 <ul>
 <li>Go to <strong>Vercel &gt; Domains &gt; Redirect Settings</strong></li>
 <li>Choose whether to redirect <strong>monoed.africa</strong> to <strong><a href="https://www.monoed.africa" target="_blank" rel="nofollow noopener ">www.monoed.africa</a></strong> or vice versa</li>
 <li>Save and test to ensure it works</li>
 </ul>
 <p>By following these steps, I was able to resolve the <strong>apex domain issue</strong> and ensure that both my <strong>apex and subdomains work correctly</strong> on Vercel.</p>
+
+
+
+</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
+
+
+
+
+  <div id="ezoic-pub-ad-placeholder-166"></div>
  
 
 
@@ -569,11 +679,7 @@
  
  
     <div id="ezoic-pub-ad-placeholder-164"></div>
-    <script>
-        ezstandalone.cmd.push(function() {
-            ezstandalone.showAds(164);
-        });
-    </script>
+   
 <div id="emote_com"></div>
 
 
@@ -589,32 +695,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
+        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
+        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
+        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
+        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
+        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
  </div>
     
 
@@ -628,41 +734,37 @@
 
     <h2 class="related-more">More For You <span style="color:#e4982d; font-size: 3rem; "> &#9732</span></h2>
 <div id="ezoic-pub-ad-placeholder-165"></div>
-<script>
-    ezstandalone.cmd.push(function() {
-        ezstandalone.showAds(165);
-    });
-</script>
+
     
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
+        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
+        <img src="http://localhost:1313/images/valid-image-in-js-or-not.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-an-image-url-is-valid-in-javascript/">How to Check if an Image URL is Valid in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/vscode-update-mode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-stop-or-disable-vscode-auto-update/">How to Stop or Disable VSCode Auto Update?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
+        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
+        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
  </div>
     
   </div>
@@ -672,7 +774,11 @@
 
 
 
-
+<script>
+  ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(163,164,165,166);
+  });
+</script>
 
   
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
