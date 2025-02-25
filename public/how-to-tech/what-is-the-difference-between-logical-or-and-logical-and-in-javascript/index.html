@@ -389,19 +389,16 @@
 <h2 id="-logical-or-operator"><strong>|| (Logical OR) Operator</strong></h2>
 <p>The <code>||</code> operator in JavaScript is primarily used to combine expressions and return the value of the first truthy operand encountered.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>If both operands are falsy, the operator returns the value of the last operand.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>Let&rsquo;s dive deeper into the behavior of the <code>||</code> operator:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -435,19 +432,16 @@
 
 <p>In the context of the <code>||</code> operator, if the first operand is truthy, it immediately returns that value without evaluating the second operand.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>If the first operand is falsy, the operator proceeds to evaluate the second operand and returns it if it is truthy.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>For example:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -475,21 +469,18 @@
 
 <p>Consider the following example:</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="nx">getUserInput</span><span class="p">()</span> <span class="o">||</span> <span class="s2">&#34;Guest&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Welcome, &#34;</span> <span class="o">+</span> <span class="nx">username</span><span class="p">);</span>
 </span></span></code></pre></div><p>In this case, if the <code>getUserInput()</code> function returns a truthy value (e.g., a valid username), the <code>||</code> operator short-circuits and assigns that value to <code>username</code>.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>However, if the function returns a falsy value (e.g., an empty string or <code>null</code>), the <code>||</code> operator assigns the default value &ldquo;Guest&rdquo; to <code>username</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -518,20 +509,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>In this scenario, the loop continues as long as the <code>array[i]</code> expression is truthy or if <code>i</code> is equal to 0.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>The <code>||</code> operator ensures that the loop terminates once both conditions are falsy, effectively iterating over the elements of the array.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
 
 
 
 <h2 id="-logical-and-operator"><strong>&amp;&amp; (Logical AND) Operator</strong></h2>
 <p>The <code>&amp;&amp;</code> operator in JavaScript is used to combine expressions and return the value of the first falsy operand encountered.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -564,20 +552,17 @@
 
 <p>Hence, the expression <code>a &amp;&amp; b</code> returns <code>false</code> since <code>b</code> is falsy.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <h3 id="usage-with-non-boolean-values-1"><strong>Usage with Non-Boolean Values</strong></h3>
 <p>Similar to the <code>||</code> operator, the <code>&amp;&amp;</code> operator can work with non-Boolean values by employing coercion to Boolean equivalents.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>When the <code>&amp;&amp;</code> operator encounters a falsy value as the first operand, it immediately returns that value without evaluating the second operand.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -611,19 +596,16 @@
 
 <p>The operator evaluates the first operand and then proceeds to evaluate the second operand.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>Since both operands have truthy values, the result is the value of the second operand.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>In the last two cases, one of the operands is falsy. When the <code>&amp;&amp;</code> operator encounters a falsy value as the first operand, it immediately returns the falsy value without evaluating the second operand.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -648,20 +630,17 @@
 
 <p>If either of the conditions evaluates to a falsy value, the code block is skipped.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>The <code>&amp;&amp;</code> operator enables the logical combination of conditions, providing a compact syntax for complex conditions.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
 
 
 
 <h3 id="usage-in-loops-1"><strong>Usage in Loops</strong></h3>
 <p>The <code>&amp;&amp;</code> operator is also beneficial in loop conditions to specify multiple criteria for iteration.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -686,9 +665,6 @@
 <h3 id="usage-in-functions"><strong>Usage in Functions</strong></h3>
 <p>The <code>&amp;&amp;</code> operator can be utilized within functions to perform conditional operations or set default values. Let&rsquo;s consider an example:</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greetUser</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
@@ -706,12 +682,12 @@
   Hello, Guest
 </code></pre><p>In this function, the <code>&amp;&amp;</code> operator is used to conditionally execute code based on the truthiness of the <code>name</code> parameter.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>If <code>name</code> is truthy (e.g., a valid name), the <code>&amp;&amp;</code> operator executes the first expression, which logs a personalized greeting.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -733,19 +709,16 @@
 
 <p>These operators can work with both Boolean and non-Boolean values through coercion.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>The <code>||</code> operator is commonly used to provide fallback or default values, especially in conditional statements and assignments.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>It allows for concise code by short-circuiting when a truthy value is encountered. On the other hand, the <code>&amp;&amp;</code> operator is often utilized for conditional checks and loop conditions.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -899,32 +872,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
+        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
+        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/find-and-replace-dialog-box.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-find-and-replace-in-vscode/">How to Use Find and Replace in VSCode?</a>
+        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-hackers-better-than-programmers/">Are Hackers Better Than Programmers?</a>
  </div>
     
 
@@ -943,32 +916,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/map-and-filter.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-map-and-filter-in-javascript-with-example/">Difference Between map() and filter() in JavaScript With Example</a>
+        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-unable-to-connect.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-whatsapp-unable-to-connect-please-try-again-error/">How to Fix WhatsApp &#34;Unable to Connect. Please try again&#34; Error?</a>
+        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/using-control-shift-and-pallete.jpg.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-terminal-in-vs-code/">How to Clear the Terminal in VS Code?</a>
+        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/resolving-the-eperm-operation-not-permitted-error-caused.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/resolving-the-eperm-operation-not-permitted-error-caused-by-concurrent-next-js-instances/">Resolving the EPERM: Operation Not Permitted Error Caused by Concurrent Next.js Instances</a>
+        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
+        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
  </div>
     
   </div>

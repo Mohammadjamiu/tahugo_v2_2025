@@ -355,21 +355,18 @@
 
 <p>It makes code easier to manage and also to help abstract some stuff so you would just focus on executing.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <h2 id="how-to-import-modules-in-javascript">How to Import Modules in JavaScript.</h2>
 <p>To import modules in JavaScript, you need to link to the main JS file. The main JS file denotes the overhead file where other modules are imported into. In the index.html file of your webpage, you need to use <code>&lt;script type=&quot;module&quot; src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</code> as oppose <code>&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</code>. You can see that the difference is the added <code>type=&quot;module&quot;</code> which tells the browser that the main JS file is using a module.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <blockquote>
 <p>If you got an error here is how to <a href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">truoubleshoot it</a>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -402,9 +399,6 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>In order to use this functions in our main JS file, which in my case is named <code>script.js</code>, I need to make some tweak to the code. The tweak is to export the functions.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <h2 id="how-to-export-modules-in-javascript">How to Export Modules in JavaScript</h2>
@@ -419,13 +413,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>As you can see, the keyword <code>export</code> is added at the front of every function to make them available for other files.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <blockquote>
 <p>If you dont export the files, there is no way to access the file.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -447,19 +441,16 @@
 
 <p><strong>as</strong> is used to give <strong>*</strong> a name</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p><strong>days</strong> is the name of the file we are importing, or whatever name you want</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p><strong>from</strong> is self-explanatory and lastly, the file path.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -482,19 +473,16 @@
 
 <p>Now let&rsquo;s destructure what we pass in the <code>console.log()</code> which is <code>days.monday()</code>.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p><code>days</code> – is the name we named it from the <code>import * as [days] from &quot;/js/days.js&quot;</code> and, secondly, one of the name of the function inside the days.js file.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>So to log other functions, you can do this</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -527,20 +515,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="s1">It&#39;</span><span class="nx">s</span> <span class="nx">Wednesday</span><span class="o">!</span>
 </span></span></code></pre></div><p>You can see that the difference is that instead of the <code>*</code>, <code>{}</code> is used, and the needed function name is passed in and separated with a comma if there are more than one. Another thing is that instead of the <code>days.monday()</code> used previously, it is eliminated completely and just <code>monday()</code> the function name is used.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <h2 id="second-way">Second way</h2>
 <p>What if in the file you wanted to import into your main JS file contain only one function as it is mostly done in ReactJS because, each component contains a function, and it is going to return JSX (JavaScript XML – In simple term, It is HTML inside JavaScript).</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>So in the case of just a single function, you export the file like this.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -587,9 +572,6 @@
 
 <p>To import the days.js file, it is imported this way. Notice that the function <code>week</code> is imported directly, as it is exported as default.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">week</span> <span class="nx">from</span> <span class="s2">&#34;/js/days.js&#34;</span><span class="p">;</span>
@@ -597,6 +579,9 @@
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">week</span><span class="p">());</span>
 </span></span></code></pre></div><h2 id="another-way">Another way</h2>
 <p>There is another way in which you can export functions from a module, and here it is.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
 
 
 
@@ -607,9 +592,6 @@
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s another week!&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>This code can be exported as</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -642,9 +624,6 @@
 
 
 </p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -778,32 +757,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-interpreter/">Compiler vs. Interpreter: What&#39;s The Difference?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/free-wifi-signboard-airport-zone-600w-506762929-transformed-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-wi-fi-and-wlan/">What is the difference between Wi-Fi and WLAN?</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-coding-apps-for-android/">Best Coding Apps for Android: Learn and Practice in 2023</a>
  </div>
     
     
      <div class="xx">
         <img src="http://localhost:1313/images/screenshot-2023-02-06-at-03-51-12-enabled-integrations.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-plugins-from-netlify/">How to remove plugins from Netlify?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
  </div>
     
 
@@ -822,32 +801,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
+        <img src="http://localhost:1313/images/chatgpt.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/can-chatgpt-replace-search-engines-like-google/">Can ChatGPT Replace Search Engines like Google?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
+        <img src="http://localhost:1313/images/cpu.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-core-i3-i5-i7/">Intel Core i3, i5, and i7 Processors: What&#39;s The Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
+        <img src="http://localhost:1313/images/promptinstallplugin.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-sitemap-to-your-site-using-netlify-plugin/">How to add sitemap to your site using netlify plugin</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-give-the-same-answer-to-everyone/">Does ChatGPT Give the Same Answer to Everyone?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
+        <img src="http://localhost:1313/images/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs/">How to Automatically Sort Tailwind CSS Classes in React or Next.js</a>
  </div>
     
   </div>

@@ -357,19 +357,16 @@
 <h3 id="the-this-keyword"><strong>The <code>this</code> Keyword:</strong></h3>
 <p><code>this</code> is a special keyword in JavaScript that refers to the current execution context or the object that the function is being executed within.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>The value of <code>this</code> is determined dynamically at runtime, based on how a function is invoked.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p><code>this</code> provides a way to access and manipulate properties and methods within the current execution context.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -391,20 +388,17 @@
 
 <p>So now as you entered a room, you are not directly enclosed by the building (i.e., object or function) rather you are enclosed by a new room (i.e., another object or function) hence your context or the <code>this</code> keyword context changes.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 </blockquote>
 <p>The value of <code>this</code> can change depending on the way a function is called:</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p><strong>Global Scope</strong> – When <code>this</code> is used in the global scope (outside any function), it refers to the global object, which is <code>window</code> in browsers and <code>global</code> in Node.js.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -433,12 +427,12 @@
 
 <p>In the code example above, <code>this</code> inside the <code>greet</code> method refers to the <code>person</code> object, so <code>this.name</code> accesses the <code>name</code> property of the object – <code>name: “John”</code>.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p><strong>Event Handlers</strong> –When <code>this</code> is used within an event handler, such as a click event or a timer function e.g., (setTimeout), it usually refers to the element that triggered the event.</p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
 
 
 
@@ -447,9 +441,6 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Button clicked:&#34;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></div><p><img src="http://localhost:1313/images/this-in-enventlistener-scope.webp" alt="this in event handlers context" title="this in event handlers context"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -477,20 +468,17 @@
 
 <p>In order to use the name in the <code>person</code> object inside the <code>greet()</code> function, <code>call()</code> is used to invoke the <code>greet</code> function with <code>person</code> as the explicit context for <code>this</code>.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <blockquote>
 <p><em><strong>Note:</strong></em></p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p><em>The behavior of <code>this</code> can be different in arrow functions, as they do not bind their own <code>this</code> value, but rather inherit it from the surrounding lexical scope.</em></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -512,9 +500,6 @@
 
 <p>Let&rsquo;s see an example to illustrate this behavior:</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
@@ -535,12 +520,12 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">sayHelloArrow</span><span class="p">();</span> <span class="c1">// Output: Hello, John
 </span></span></span></code></pre></div><p>In the code example above, we have an object called <strong>“person”</strong> with two methods: <strong>“sayHello”</strong> and <strong>“sayHelloArrow”</strong>. Both methods use a <code>setTimeout</code> function to delay the execution of an inner function.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>In the <strong>“sayHello”</strong> method, we use a regular function as the inner function of <code>setTimeout</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -562,20 +547,17 @@
 
 <p><em>While the <code>person</code> object is the building that covers the sayHello (the room).</em></p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 </blockquote>
 <p>Hence, when we try to access “this.name”, it results in “undefined”.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>On the other hand, in the <strong>“sayHelloArrow”</strong> method, we use an arrow function as the inner function of <code>setTimeout</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -599,19 +581,16 @@
 <h3 id="the-that-keyword"><strong>The <code>that</code> Keyword:</strong></h3>
 <p><code>that</code> is just a keyword commonly used as variables within JavaScript functions as a workaround to preserve the value of <code>this</code> in certain scenarios.</p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 <p>This workaround is often used in nested functions or callback functions, where <code>this</code> might refer to a different object, context or is undefined.</p>
 
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
+
 
 
 <p>Here is a code snippet to illustrate the <code>that</code> keyword:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
 
 
 
@@ -643,12 +622,12 @@
 
 <p><strong>Generally, <code>this</code> is preferred when it correctly refers to the desired object, while <code>that</code> is used as a workaround when <code>this</code> needs to be preserved in nested or callback functions.</strong></p>
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
 
 
 </p>
+
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
 
 
 
@@ -782,32 +761,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-eintegrity-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-npm-installation-error-npm-err-code-eintegrity/">How to Fix npm Installation Error: npm ERR! code EINTEGRITY?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
+        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-system-software-and-application-software-with-examples/">Difference Between System Software and Application Software with Examples</a>
+        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
 
@@ -826,32 +805,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
+        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
+        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/log-and-write.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-document.write-in-javascript/">Difference Between console.log() and document.write() in JavaScript</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-assembler/">Difference Between Compiler and Assembler</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
+        <img src="" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-chrome-keyboard-shortcuts/">List of Google Chrome Useful Keyboard Shortcut Keys (2024)</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
   </div>
