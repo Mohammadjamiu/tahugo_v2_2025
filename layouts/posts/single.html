@@ -5,7 +5,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -71,11 +71,13 @@
 {{$content := .Content }}
 {{$paragraphs := split $content "</p>" }}
 {{$total := len $paragraphs }}
-{{$interval := 3 }}
+{{$interval := 2 }}
 
 {{range $index, $paragraph := $paragraphs}}
 {{$paragraph | safeHTML}}</p>
 {{if and (ne $index 0) (eq (mod $index $interval) 0)}}
+<div id="ezoic-pub-ad-placeholder-120"></div>
+<div id="ezoic-pub-ad-placeholder-124"></div>
 <div id="ezoic-pub-ad-placeholder-166"></div>
 
 {{end}}
@@ -176,7 +178,7 @@
 <!-- Ezoic ads script -->
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 
