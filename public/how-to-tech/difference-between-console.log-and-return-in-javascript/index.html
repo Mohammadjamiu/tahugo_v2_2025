@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,141 +342,7 @@
 
 
 
-
-
-
-<p><code>console.log()</code> is used for printing information to the console during program execution, while <code>return</code> is used to provide a value back to the caller and terminate the execution of a function.</p>
-
-
-
-<p>i.e., <code>console.log()</code> is for logging, while <code>return</code> is for determining the output or result of a function.</p>
-
-
-
-<h2 id="what-is-consolelog-in-javascript">What is <code>console.log()</code> in JavaScript?</h2>
-<p><code>console.log()</code> is a built-in function that allows developers to print information to the console during the execution of a program. It is commonly used for debugging and testing purposes.</p>
-
-
-
-<p><code>console.log()</code> can output various types of data, such as strings, numbers, objects, and arrays.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The output is displayed in the browser&rsquo;s console, which is a developer tool for inspecting and logging information.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Example using console.log()
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34;!&#34;</span><span class="p">);</span> <span class="c1">// Output: Hello, Mohammad!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">greet</span><span class="p">(</span><span class="s2">&#34;Mohammad&#34;</span><span class="p">);</span>
-</span></span></code></pre></div><p>In the example code above, we define a function called <code>greet()</code> that takes a name parameter. Inside the function, we use <code>console.log()</code> to print a greeting message to the console, including the provided name.</p>
-
-
-
-<p>When we call <code>greet(“Mohammad”)</code>, it prints <em>“Hello, Mohammad!”</em> to the console.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/log-mohammad-to-console.webp" alt="logging to the console" title="logging to the console"></p>
-
-
-
-<p>Hence, <code>console.log()</code> is used for displaying information during the execution of the program.</p>
-
-
-
-<h2 id="what-is-return-in-javascript">What is <code>return</code> in JavaScript?</h2>
-<p><code>return</code> is a keyword used within functions to provide a result or value back to the caller. When a function encounters a return statement, it stops executing and immediately returns the specified value to the caller.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The returned value can be of any data type, including primitive values like numbers and strings, as well as objects or even other functions.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Example using return
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// Output: 15
-</span></span></span></code></pre></div><p>In this code example, we define a function called <code>multiply()</code> that takes two parameters, a and b. Inside the function, we use the return keyword to specify the result of multiplying a and b.</p>
-
-
-
-<p>When we call <code>multiply(5, 3)</code> and assign the returned value to the variable result, it calculates the product (5 × 3) and returns the value 15.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>We then use <code>console.log(result)</code> to print the result to the console.</p>
-
-
-
-<p><img src="http://localhost:1313/images/return-keyword.webp" alt="return keyword in js" title="return keyword in js"></p>
-
-
-
-<h2 id="difference-between-consolelog-and-return-in-javascript"><strong>Difference Between console.log() and return in JavaScript</strong></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>console.log()</th>
-<th>return</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Purpose</td>
-<td>Output information for debugging</td>
-<td>Provide a value back to the caller, e.g., when a function is called</td>
-</tr>
-<tr>
-<td>Output</td>
-<td>Prints output to the console</td>
-<td>Returns value to the caller</td>
-</tr>
-<tr>
-<td>Execution</td>
-<td>Does not stop the execution</td>
-<td>Stops the execution of the function</td>
-</tr>
-<tr>
-<td>Usage</td>
-<td>Debugging, testing, and logging</td>
-<td>Determining function output</td>
-</tr>
-<tr>
-<td>Usage Example</td>
-<td><code>console.log(&quot;Hello, world!&quot;);</code></td>
-<td><code>return result;</code></td>
-</tr>
-</tbody>
-</table>
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -606,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-screen-size-is-best-for-programming/">Which Laptop Screen Size Is Best for Programming?</a>
+        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-fix-play-store-not-working-try-again-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-play-store-not-working-try-again-error/">How to Fix Play Store Not Working &#34;Try Again&#34; Error?</a>
+        <img src="http://localhost:1313/images/bard-activity-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-google-bard-better-than-chatgpt/">Is Google Bard Better Than ChatGPT?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
+        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
+        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
  </div>
     
 
@@ -650,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/surveillance.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-surveillance-and-monitoring/">Surveillance vs. Monitoring: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
+        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
+        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/rf-rm-powershell-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/remove-item-a-parameter-cannot-be-found-that-matches-parameter-name-rf/">How to Fix &#34;Remove-Item: A parameter cannot be found that matches parameter name &#39;rf&#39;&#34;</a>
+        <img src="http://localhost:1313/images/nextjs-hydration.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-hydration-failed-because-the-initial-ui-does-not-match-what-was-rendered-on-the-server-in-nextjs/">How to fix error hydration failed because the initial UI does not match what was rendered on the server in nextJS?</a>
  </div>
     
   </div>
@@ -683,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

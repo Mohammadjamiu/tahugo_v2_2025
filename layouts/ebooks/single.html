@@ -38,8 +38,28 @@
 
 <section class="pagebody">
   <div class="container single-page-container">
-    {{ .Content }}
-
+    <!-- {{ .Content }} -->
+    {{$content := .Content }}
+    {{$paragraphs := split $content "</p>" }}
+    {{$total := len $paragraphs }}
+    {{$interval := 2 }}
+    {{$adGroups := slice 
+      (slice "ezoic-pub-ad-placeholder-120" "ezoic-pub-ad-placeholder-124") 
+      (slice "ezoic-pub-ad-placeholder-127" "ezoic-pub-ad-placeholder-128") 
+      (slice "ezoic-pub-ad-placeholder-129" "ezoic-pub-ad-placeholder-130") 
+    }}
+    
+    
+    
+    
+    {{range $index, $paragraph := $paragraphs}}
+      {{$paragraph | safeHTML}}</p>
+      {{if and (ne $index 0) (eq (mod $index $interval) 0)}}
+        {{$adIndex := mod (div $index $interval) (len $adGroups)}}
+        <div id="{{index (index $adGroups $adIndex) 0}}"></div>
+        <div id="{{index (index $adGroups $adIndex) 1}}"></div>
+      {{end}}
+    {{end}}
     <div class="disclaimer">
       <h2>&#9888; Disclaimer</h2>
       <p>
@@ -57,12 +77,15 @@
         connect@tooabstractive.com so we can remove the document.
       </p>
     </div>
+    <div id="ezoic-pub-ad-placeholder-163"></div>
 
     <div class="ebook-download-link">
       <a class="hero-btn" href="{{ .Params.Downloadlink }}"
         >Download File</a
       >
     </div>
+<div id="ezoic-pub-ad-placeholder-166"></div>
+
     <!-- <div class="ebook-amazon-link">
       <a class="links-to-others" href="{{ .Params.AmazonLink }}"
         >Get From Amazon</a
@@ -70,5 +93,11 @@
     </div> -->
   </div>
 </section>
-
+<!-- Ezoic ads script -->
+<script>
+  ezstandalone.cmd.push(function() {
+      // ezstandalone.showAds(120,124,146,163,164,165,166);
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
+  });
+</script>
 {{end}}

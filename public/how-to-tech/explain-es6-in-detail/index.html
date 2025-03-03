@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,162 +342,7 @@
 
 
 
-
-
-
-<p><strong>ES6, or ECMAScript 6</strong>, is a version of JavaScript that comes with several new features and improvements to the language.</p>
-
-
-
-<p>Here are some of the key features of ES6 explained for beginners:</p>
-
-
-
-<p><strong>1. let and const keywords</strong>: let and const are two new ways to declare variables in JavaScript. Variables declared with let are block-scoped, meaning they are only accessible within the block they are declared in, and can be reassigned. Variables declared with const are also block-scoped, but cannot be reassigned.</p>
-
-
-
-<blockquote>
-<p>In the old version of JavaScript, the <code>Var</code> keyword is used and it is not block-scoped. i.e it can be accessed from anywhere which can cause bugs in codes.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p><strong>2. Arrow functions:</strong> Arrow functions are a shorthand way of writing functions in JavaScript. They use a <code>=&gt;</code> syntax and have a more concise syntax than traditional function declarations.</p>
-
-
-
-<p>The traditional way of writing functions</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">regularFunc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;No arrow function&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">regularFunc</span><span class="p">();</span>
-</span></span></code></pre></div><p>The arrow function way of writing functions</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">regularFunc</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;No arrow function&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">regularFunc</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// The keyword `function` is removed
-</span></span></span></code></pre></div><p><strong>3. Template literals:</strong> Template literals are a way of writing strings in JavaScript that allow for variable interpolation and multi-line strings. They use backticks (`) instead of single or double quotes.</p>
-
-
-
-<p>The traditional way</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Seven is &#34;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Output: Seven is (7)
-</span></span></span></code></pre></div><p>The template literal way</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Seven is (a + b)`</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Output: Seven is (7)
-</span></span></span></code></pre></div><blockquote>
-<p>In the template literal way, no use of <code>+</code> and <code>&quot; &quot;</code> rather <code>(</code> <code>)</code></p>
-
-
-
-</blockquote>
-<p><strong>4. Destructuring:</strong> Destructuring is a way of extracting values from arrays or objects and assigning them to variables in a single line of code. This can help simplify code and make it more readable.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">[</span><span class="nx">apple</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">happy</span><span class="p">];</span>
-</span></span></code></pre></div><p>To get the values from the array, in the traditional way it can be done as:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">[</span><span class="nx">apple</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">happy</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fruit</span> <span class="o">=</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">x</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">mood</span> <span class="o">=</span> <span class="nx">x</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-</span></span></code></pre></div><p>In the new version, it can be done as:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">[</span><span class="nx">apple</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">happy</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">fruit</span><span class="p">,</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">mood</span><span class="p">]</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
-</span></span></code></pre></div><p><strong>5. Spread syntax:</strong> The spread syntax allows you to “spread” the elements of an array or object into another array or object. This can be useful when creating new arrays or objects or passing arguments to functions.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">array</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">5</span> <span class="p">};</span> <span class="c1">// { 0: 1, 1: 2, 2: 3 }
-</span></span></span></code></pre></div><blockquote>
-<p>Now <code>newArray</code> has the value of <code>array</code> and thenit own unique value 5,6</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p><strong>6. Classes:</strong> ES6 introduced a new syntax for defining classes in JavaScript, making it easier to create and work with object-oriented code.</p>
-
-
-
-<p><strong>7. Promises:</strong> Promises are a way of handling asynchronous code in JavaScript. They allow you to write code that will run when an asynchronous operation is completed, rather than waiting for the operation to finish.</p>
-
-
-
-<p><strong>8. Modules:</strong> ES6 introduced a standard syntax for creating and importing modules in JavaScript. This allows for better organization and separation of code, and makes it easier to share code between different files and projects.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><strong>9. Default parameters:</strong> Default parameters allow you to specify default values for function parameters, which will be used if no value is provided when the function is called.</p>
-
-
-
-<p><strong>10. Rest parameters:</strong> Rest parameters allow you to pass an arbitrary number of arguments to a function as an array. This can be useful when working with functions that take a variable number of arguments.</p>
-
-
-
-<p>These are just a few of the many new features and improvements introduced in ES6. By learning and using these features, you can write cleaner, more efficient, and more readable JavaScript code.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -627,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-09-02-at-1.55.54-pm.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-your-devices-were-logged-out-error-on-whatsapp/">How to Fix &#34;Your Devices Were Logged Out&#34; Error on WhatsApp?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
+        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-give-the-same-answer-to-everyone/">Does ChatGPT Give the Same Answer to Everyone?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/default-margin.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-wide-is-the-default-body-margin-webpage/">How Wide is the Default `&lt;body&gt;` Margin [HTML Webpage]?</a>
+        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
+        <img src="http://localhost:1313/images/abstraction.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-abstraction-in-computer-science-with-example/">Abstraction in Computer Science Explained (With Examples)</a>
  </div>
     
 
@@ -671,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
+        <img src="http://localhost:1313/images/jeswin-thomas-hgju2ykh4e-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/impact-of-chatgpt-on-students/">Impact of ChatGPT on Students: Positive and Negative Effect</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/apple-laptop-pc.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-best-json-file-viewer-for-mac/">The 5 Best JSON File Viewer for Macs: View, Edit and Debug</a>
+        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
+        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-chrome-keyboard-shortcuts/">List of Google Chrome Useful Keyboard Shortcut Keys (2024)</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
  </div>
     
   </div>
@@ -704,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

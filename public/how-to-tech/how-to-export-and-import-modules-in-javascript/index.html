@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,292 +342,7 @@
 
 
 
-
-
-
-<p><strong>What is and Why use Module?</strong></p>
-
-
-
-<p>A module in simple term is a broken piece from a huge file. Or let say you have several files and instead of jamming everything into a single js file you can split it into several js files and import each file where necessary.</p>
-
-
-
-<p>It makes code easier to manage and also to help abstract some stuff so you would just focus on executing.</p>
-
-
-
-<h2 id="how-to-import-modules-in-javascript">How to Import Modules in JavaScript.</h2>
-<p>To import modules in JavaScript, you need to link to the main JS file. The main JS file denotes the overhead file where other modules are imported into. In the index.html file of your webpage, you need to use <code>&lt;script type=&quot;module&quot; src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</code> as oppose <code>&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</code>. You can see that the difference is the added <code>type=&quot;module&quot;</code> which tells the browser that the main JS file is using a module.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<blockquote>
-<p>If you got an error here is how to <a href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">truoubleshoot it</a>.</p>
-
-
-
-</blockquote>
-<p>Let create another JS file which we need to import. I will name it days.js,</p>
-
-
-
-<blockquote>
-<p>make sure that all js files are in the same folder or a defined hierachy</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p>Inside the days.js add these following lines codes.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">monday</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s Monday!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">tuesday</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s Tuesday!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">wednesday</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s Wednesday!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p>In order to use this functions in our main JS file, which in my case is named <code>script.js</code>, I need to make some tweak to the code. The tweak is to export the functions.</p>
-
-
-
-<h2 id="how-to-export-modules-in-javascript">How to Export Modules in JavaScript</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">monday</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s Monday!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">tuesday</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s Tuesday!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">wednesday</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s Wednesday!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p>As you can see, the keyword <code>export</code> is added at the front of every function to make them available for other files.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<blockquote>
-<p>If you dont export the files, there is no way to access the file.</p>
-
-
-
-</blockquote>
-<p>In the script.js file, to import the days.js file, you need to use the <code>import</code> keyword as below <code>import * as days from &quot;/js/days.js&quot;;</code></p>
-
-
-
-<p>Where: <strong>import</strong> says import,</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><strong>*</strong> denotes everything</p>
-
-
-
-<p><strong>as</strong> is used to give <strong>*</strong> a name</p>
-
-
-
-<p><strong>days</strong> is the name of the file we are importing, or whatever name you want</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><strong>from</strong> is self-explanatory and lastly, the file path.</p>
-
-
-
-<blockquote>
-<p>The file path must be in quotes and it depends upon where your file lives.</p>
-
-
-
-<p>Sometimes it wont work the way i set it up as &ldquo;/js/days.js&rdquo; so you can try &ldquo;./js/days.js&rdquo;, &ldquo;../js/days.js&rdquo; or &ldquo;./days&rdquo;</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p>To test if everything is working well, log one of the function <code>console.log(days.monday());</code></p>
-
-
-
-<p>Now let&rsquo;s destructure what we pass in the <code>console.log()</code> which is <code>days.monday()</code>.</p>
-
-
-
-<p><code>days</code> – is the name we named it from the <code>import * as [days] from &quot;/js/days.js&quot;</code> and, secondly, one of the name of the function inside the days.js file.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>So to log other functions, you can do this</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">days</span> <span class="nx">from</span> <span class="s2">&#34;/js/days.js&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">days</span><span class="p">.</span><span class="nx">monday</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">days</span><span class="p">.</span><span class="nx">tuesday</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">days</span><span class="p">.</span><span class="nx">wednesday</span><span class="p">());</span>
-</span></span></code></pre></div><p>Now we are done with importing and exporting of files using the <strong>*</strong> placeholder.</p>
-
-
-
-<p>There are other ways of importing files which is practical as it mostly used in JS library such as ReactJS.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h3 id="first-way">First way</h3>
-<p>If you just want to access specific function from the days.js file, instead of importing everything, you can use destructuring to access specific functions.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">monday</span><span class="p">,</span> <span class="nx">wednesday</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;/js/days.js&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">monday</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">wednesday</span><span class="p">());</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">It</span><span class="s1">&#39;s Monday!
-</span></span></span><span class="line"><span class="cl"><span class="s1">It&#39;</span><span class="nx">s</span> <span class="nx">Wednesday</span><span class="o">!</span>
-</span></span></code></pre></div><p>You can see that the difference is that instead of the <code>*</code>, <code>{}</code> is used, and the needed function name is passed in and separated with a comma if there are more than one. Another thing is that instead of the <code>days.monday()</code> used previously, it is eliminated completely and just <code>monday()</code> the function name is used.</p>
-
-
-
-<h2 id="second-way">Second way</h2>
-<p>What if in the file you wanted to import into your main JS file contain only one function as it is mostly done in ReactJS because, each component contains a function, and it is going to return JSX (JavaScript XML – In simple term, It is HTML inside JavaScript).</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>So in the case of just a single function, you export the file like this.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">week</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s a new week!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// export const monday = function () {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   return &#34;It&#39;s Monday!&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="c1">// };
-</span></span></span><span class="line"><span class="cl"><span class="c1">// export const tuesday = function () {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   return &#34;It&#39;s Tuesday!&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="c1">// };
-</span></span></span><span class="line"><span class="cl"><span class="c1">// export const wednesday = function () {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   return &#34;It&#39;s Wednesday!&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="c1">// };
-</span></span></span></code></pre></div><blockquote>
-<p>I commented out the files in the days.js and add a new single function called <code>week</code> and it is going to return <code>&quot;It's a new week!&quot;</code></p>
-
-
-
-</blockquote>
-<p>You can see that it is the same pattern as we have defined for the previous function, since it now contain single function week, the way to export the days.js file will be a bit different.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">week</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s a new week!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// export const monday = function () {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   return &#34;It&#39;s Monday!&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="c1">// };
-</span></span></span><span class="line"><span class="cl"><span class="c1">// export const tuesday = function () {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   return &#34;It&#39;s Tuesday!&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="c1">// };
-</span></span></span><span class="line"><span class="cl"><span class="c1">// export const wednesday = function () {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   return &#34;It&#39;s Wednesday!&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="c1">// };
-</span></span></span></code></pre></div><p>You have to use add default after the export keyword and remove <code>const week =</code> since export default allow only function to be exported and give the function a name. <code>week</code> which is used before is used.</p>
-
-
-
-<p>To import the days.js file, it is imported this way. Notice that the function <code>week</code> is imported directly, as it is exported as default.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">week</span> <span class="nx">from</span> <span class="s2">&#34;/js/days.js&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">week</span><span class="p">());</span>
-</span></span></code></pre></div><h2 id="another-way">Another way</h2>
-<p>There is another way in which you can export functions from a module, and here it is.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">week</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">week</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s a new week!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">weekOne</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">weekOne</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s another week!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p>This code can be exported as</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">week</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">week</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s a new week!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">weekOne</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">weekOne</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;It&#39;s another week!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">week</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="p">{</span> <span class="nx">weekOne</span> <span class="p">};</span>
-</span></span></code></pre></div><blockquote>
-<p>When you export using this method, you hve to export one of the functions as <strong>default</strong> and the rest as component using {&hellip;., &hellip;., &hellip;.}</p>
-
-
-
-</blockquote>
-<p>Here&rsquo;s how to import the module:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">week</span> <span class="nx">from</span> <span class="s2">&#34;/js/days.js&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span><span class="nx">weekOne</span><span class="p">,</span> <span class="p">....,</span> <span class="p">.....}</span> <span class="nx">from</span> <span class="s2">&#34;/js/days.js&#34;</span><span class="p">;</span>
-</span></span></code></pre></div><p>Have a nice day &#x1f389;</p>
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -757,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
+        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
+        <img src="http://localhost:1313/images/slice-method-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-split-array-in-2-parts-javascript/">How to Split an Array in 2 Parts in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/work-smart-vs-work-hard-venn-diagram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a>
+        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-chrome-keyboard-shortcuts/">List of Google Chrome Useful Keyboard Shortcut Keys (2024)</a>
+        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
+        <img src="http://localhost:1313/images/nested-array-in-obj-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-you-access-an-array-that-is-nested-in-an-object/">How to access an array that is nested in an object? (Javascript)</a>
  </div>
     
 
@@ -801,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-06-at-03-51-12-enabled-integrations.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-plugins-from-netlify/">How to remove plugins from Netlify?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
+        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/pseudo-before-tailwindcss.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-before-and-after-pseudo-tailwind-css/">Tailwind CSS: how do you add :before and :after pseudo-element?</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/jeswin-thomas-hgju2ykh4e-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/impact-of-chatgpt-on-students/">Impact of ChatGPT on Students: Positive and Negative Effect</a>
+        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/branch-deleted-successfully.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-a-git-branch-locally-and-remotely/">How to Delete a Git Branch Locally and Remotely?</a>
+        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
  </div>
     
   </div>
@@ -834,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,226 +342,7 @@
 
 
 
-
-
-
-<p>Most times, when working with images in Node.js, you need to know the size or dimension like the <strong>height</strong> and <strong>width</strong> of the image in order to work with it in your code.</p>
-
-
-
-<p>There are several libraries and modules available to help accomplish this task. Two of the most popular and widely used packages are <code>sharp</code> and <code>image-size</code>.</p>
-
-
-
-<h2 id="-sharp--package"><code>`sharp`</code> Package</h2>
-<p><code>sharp</code> is a powerful and efficient image processing library that can be used for a wide range of image manipulation tasks.</p>
-
-
-
-<p>It is particularly useful for working with large images or performing complex operations on images.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>One of its features is the ability to extract <strong>metadata</strong> such as the <strong>file format</strong> of the image, like JPEG or PNG.</p>
-
-
-
-<p>It can also be used to get the <strong>color space</strong> of the image, like RGB or CMYK and also to extract the <strong>dimensions</strong> of the image, which means the width and height in pixels.</p>
-
-
-
-<h2 id="how-to-use--sharp--to-get-the-height-and-width-of-an-image">How To Use <code>`sharp`</code> To Get the Height and Width of an Image</h2>
-<p>Assuming you have created a Node.js project, and you have subsequently created a <code>.js</code> file in the folder.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here&rsquo;s how to use <code>sharp</code> to get the height and width of an image:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sharp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;sharp&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">sharp</span><span class="p">(</span><span class="s2">&#34;path/to/image.jpg&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">metadata</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">metadata</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">metadata</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">metadata</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Image dimensions from sharp: </span><span class="si">${</span><span class="nx">width</span><span class="si">}</span><span class="sb">x</span><span class="si">${</span><span class="nx">height</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">})</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span></code></pre></div><p>As you can see from the code, we first import the <code>sharp</code> module and then use its <code>metadata()</code> method to retrieve the metadata of the image file specified in the <code>sharp</code> function.</p>
-
-
-
-<blockquote>
-<p>Make sure to replace <code>path/to/image.jpg</code> with the actual path to your image file.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/access-a-file-in-node-js-using-relative-and-absolute-path/">How To Access a File in Node.js? /, ./ and ../ Paths Explained</a></p>
-
-
-
-<blockquote>
-<p>Note:</p>
-
-
-
-<p>Make sure to install the <code>sharp</code> package using either npm or yarn.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>To install sharp using npm, in your root directory run <code>npm install sharp</code>.</p>
-
-
-
-</blockquote>
-<p><img src="http://localhost:1313/images/npm-install-sharp.webp" alt="installing sharp using npm" title="installing sharp using npm"></p>
-
-
-
-<p>To see if the package is installed, open your package.json file and find where the dependencies are. You will see something like this-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/sharp-in-packagejson.webp" alt="sharp installed in package.json" title="sharp installed in package.json"></p>
-
-
-
-<p>The <code>metadata()</code> method returns a <strong>Promise</strong> that resolves to an object containing various metadata about the image, including its width and height.</p>
-
-
-
-<p>We then extract these values from the metadata object and log them to the console.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here is the result gotten when an image is used -<code> Image dimensions from sharp: 1584x616</code></p>
-
-
-
-<h2 id="-image-size--package"><code>`image-size`</code> Package</h2>
-<p><code>image-size</code> is a lightweight Node.js module that provides a simple and easy-to-use interface for retrieving the dimensions of an image.</p>
-
-
-
-<p>It supports a wide variety of image formats and requires the entire image file to be read into memory in order to determine its dimensions.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="how-to-use--image-size--to-get-the-height-and-width-of-an-image">How To Use <code>`image-size`</code> To Get the Height and Width of an Image</h2>
-<p>Here&rsquo;s the code on how to use <code>image-size</code> to get the height and width of an image:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sizeOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;image-size&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">dimensions</span> <span class="o">=</span> <span class="nx">sizeOf</span><span class="p">(</span><span class="s2">&#34;path/to/image.jpg&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="sb">`Image dimensions from image-size width: </span><span class="si">${</span><span class="nx">dimensions</span><span class="p">.</span><span class="nx">width</span><span class="si">}</span><span class="sb"> x height: </span><span class="si">${</span><span class="nx">dimensions</span><span class="p">.</span><span class="nx">height</span><span class="si">}</span><span class="sb">`</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span></code></pre></div><p>Just as we did when using <code>sharp</code>, we first import the <code>sizeOf()</code> function from the <code>image-size</code> module and then call it with the path to the image file as its argument.</p>
-
-
-
-<blockquote>
-<p>Make sure to replace <code>path/to/image.jpg</code> with the actual path to your image file.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p>The <code>sizeOf()</code> function returns an object containing the <code>width</code> and <code>height</code> properties, which can then log to the console.</p>
-
-
-
-<blockquote>
-<p><strong>Note:</strong></p>
-
-
-
-<p>Make sure to install the <code>image-size</code> package using either npm or yarn.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>To install sharp using npm, in your root directory run <code>npm install image-size</code>.</p>
-
-
-
-</blockquote>
-<p>Here is the output when an image is used -<code> Image dimensions from image-size width: 1584 x height: 616</code></p>
-
-
-
-<p>One advantage of using <code>image-size</code> is that it supports a wide variety of image formats, including JPEG, PNG, GIF, BMP, ICO, and many others. However, its downside is that it does require the entire image file to be read into memory in order to determine its dimensions.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This may be slower and less efficient than using <code>sharp</code> to retrieve the image metadata.</p>
-
-
-
-<blockquote>
-<p><strong>Note:</strong></p>
-
-
-
-<p><code>sharp</code> may also be slow sometimes because the <code>metadata()</code> method return a Promise which need to be resolved first.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p>So if you need to work with large images or perform complex image processing tasks, <code>sharp</code> is the better choice.</p>
-
-
-
-<p>But if you need a simple and lightweight solution that supports a wide range of image formats, <code>image-size</code> is a good option.</p>
-
-
-
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -691,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
+        <img src="http://localhost:1313/images/file-path-node.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/access-a-file-in-node-js-using-relative-and-absolute-path/">How To Access a File in Node.js? ( /, ./, and ../ ) Paths Explained</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-screen-size-is-best-for-programming/">Which Laptop Screen Size Is Best for Programming?</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-coding-apps-for-android/">Best Coding Apps for Android: Learn and Practice in 2023</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+        <img src="http://localhost:1313/images/stepqr.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-barcode-in-word/">How to Create Barcode in Word In just few steps</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-system-software-and-application-software-with-examples/">Difference Between System Software and Application Software with Examples</a>
+        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
+        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
  </div>
     
 
@@ -735,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
+        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
+        <img src="http://localhost:1313/images/bard-activity-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-google-bard-better-than-chatgpt/">Is Google Bard Better Than ChatGPT?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/pseudo-before-tailwindcss.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-before-and-after-pseudo-tailwind-css/">Tailwind CSS: how do you add :before and :after pseudo-element?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-does-chatgpt-get-data-from/">Where Does ChatGPT Get Its Data From?</a>
+        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/mifi.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-mifi/">Difference between Wi-Fi and MiFi: All You Need to Know</a>
+        <img src="http://localhost:1313/images/abstraction.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-abstraction-in-computer-science-with-example/">Abstraction in Computer Science Explained (With Examples)</a>
  </div>
     
   </div>
@@ -768,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

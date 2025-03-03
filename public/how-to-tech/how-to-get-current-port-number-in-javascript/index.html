@@ -302,7 +302,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -345,188 +345,7 @@
 
 
 
-
-
-
-<p>Before we look at how to get the current port number in JavaScript, we need to understand what port numbers are?</p>
-
-
-
-<h2 id="understanding-port-numbers-in-urls">Understanding port numbers in URLs</h2>
-<p>Suppose we have the URL: <code>http://example.com:8080/path/to/page</code></p>
-
-
-
-<p>In this example, the port number is <code>8080</code>. It is appended to the domain name <code>example.com</code> and separated by a colon (<code>:</code>).</p>
-
-
-
-<p>This specific port allows the web server to listen for incoming requests on that port.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<blockquote>
-<p>Please note that the actual port number used in URLs can vary depending on the specific web application or service being accessed.</p>
-
-
-
-</blockquote>
-<h2 id="how-to-get-current-port-number-in-javascript"><strong>How to Get Current Port Number in JavaScript?</strong></h2>
-<h3 id="1-make-use-of-the-location-object"><strong>1. Make Use of the <code>location</code> Object</strong></h3>
-<p>JavaScript provides a built-in <code>location</code> object that represents the current URL of the webpage.</p>
-
-
-
-<p>This object allows us to easily retrieve the current port number.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here is the code to retrieve the port number:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">currentPort</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">port</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Current Port:&#34;</span><span class="p">,</span> <span class="nx">currentPort</span><span class="p">);</span>
-</span></span></code></pre></div><p>In the code example above, we declared a variable <code>currentPort</code> which stores the information provided by <code>window.location.port</code>.</p>
-
-
-
-<ul>
-<li>The <code>window</code> object represents the current browser window, while the <code>location</code> property of the <code>window</code> object provides information about the ongoing URL.</li>
-<li>The <code>port</code> property of the <code>location</code> object returns the current port number.</li>
-<li>Finally, <code>console.log(&quot;Current Port:&quot;, currentPort)</code> is used to display the port number to the console.</li>
-</ul>
-<p>For example, the page I was working on has the URL:  <code>http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/</code> so in order for me to know the port number even though from the URL I can easily identify it, I just open the developer tool by right-clicking on the page.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>And then I copied the code above into the console, and here is the result.</p>
-
-
-
-<p><img src="http://localhost:1313/images/url-complete-port.webp" alt="URL" title="URL"></p>
-
-
-
-<p><img src="http://localhost:1313/images/current-port.webp" alt="port number" title="port number"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>If there is no port number, you will get an empty string as the result.</p>
-
-
-
-<p><img src="http://localhost:1313/images/empty-port-number.webp" alt="empty port number" title="empty port number"></p>
-
-
-
-<h3 id="2-alternative-method-parsing-the-url"><strong>2. Alternative Method: Parsing the URL</strong></h3>
-<p>If the <code>location</code> object is not available or does not provide the desired information, we can parse the URL string to extract the port number.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>For example, in the code below,</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">currentUrl</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nx">currentUrl</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">currentPort</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">port</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Current Port:&#34;</span><span class="p">,</span> <span class="nx">currentPort</span><span class="p">);</span>
-</span></span></code></pre></div><ul>
-<li>The <code>href</code> property of the <code>location</code> object returns the complete URL of the current webpage.</li>
-<li>The <code>URL</code> constructor parses the URL string.</li>
-<li>The <code>port</code> property of the <code>URL</code> object returns the port number.</li>
-<li>Finally, <code>console.log(&quot;Current Port:&quot;, currentPort)</code> is used to display the port number to the console.</li>
-</ul>
-<h2 id="wrap-up"><strong>Wrap Up</strong></h2>
-<p>Retrieving the current port number in JavaScript is a fundamental task when working with web applications.</p>
-
-
-
-<p>In this guide, we look at two methods: making use of the <code>location</code> object and parsing the URL.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>By following the step-by-step instructions, you can easily obtain the current port number and use it in your JavaScript code.</p>
-
-
-
-<p>Remember that the methods discussed here retrieve the current port number of the webpage&rsquo;s URL and are not intended for remote URLs.</p>
-
-
-
-<p>For remote URLs, server-side solutions are typically required.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="faqs-frequently-asked-questions"><strong>FAQs (Frequently Asked Questions)</strong></h2>
-<h3 id="1-how-can-i-verify-if-the-current-port-matches-a-specific-value"><strong>1. How can I verify if the current port matches a specific value?</strong></h3>
-<p>To check whether the current port matches a specific value, you can use a simple conditional statement in JavaScript. Here&rsquo;s an example:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="nx">currentPort</span> <span class="o">===</span> <span class="s2">&#34;8080&#34;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;The current port matches 8080.&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;The current port does not match 8080.&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span></code></pre></div><p>In this example, we compare the <code>currentPort</code> variable with the value <code>&quot;8080&quot;</code>. If they match, it will log a message indicating that the current port matches the desired value.</p>
-
-
-
-<p>Otherwise, it will log a message stating that the current port does not match.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h3 id="2-can-i-use-these-methods-to-get-the-port-number-of-a-remote-url"><strong>2. Can I use these methods to get the port number of a remote URL?</strong></h3>
-<p>No, these methods retrieve the port number of the current webpage&rsquo;s URL. They are not intended for retrieving the port number of remote URLs.</p>
-
-
-
-<p>If you need to obtain the port number of a remote URL, you will typically require a server-side solution.</p>
-
-
-
-<h3 id="3-what-if-the-url-does-not-contain-a-port-number"><strong>3. What if the URL does not contain a port number?</strong></h3>
-<p>If the URL does not specify a port number, both methods discussed in this guide will return an empty string (<code>&quot;&quot;</code>) for the <code>currentPort</code> variable. You can check for an empty string and handle it accordingly in your JavaScript code.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -656,32 +475,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
+        <img src="http://localhost:1313/images/work-smart-vs-work-hard-venn-diagram.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/vscode-update-mode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-stop-or-disable-vscode-auto-update/">How to Stop or Disable VSCode Auto Update?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
+        <img src="http://localhost:1313/images/pexels-miguel-%c3%a1-padri%c3%b1%c3%a1n-3930091.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/online-tools-for-college-students/">27&#43; Online Tools for College Students to Become Smart and Productive (2023)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
+        <img src="http://localhost:1313/images/surveillance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-surveillance-and-monitoring/">Surveillance vs. Monitoring: What&#39;s The Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
+        <img src="" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
  </div>
     
 
@@ -700,32 +519,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/promptinstallplugin.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-sitemap-to-your-site-using-netlify-plugin/">How to add sitemap to your site using netlify plugin</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/speed-up-optimize-nextjs-website-blog.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/speed-up-optimize-nextjs-website-blog/">How to Speed Up and Optimize Your Next.js Website or Blog for Faster Page Load</a>
+        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/npm-eintegrity-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-npm-installation-error-npm-err-code-eintegrity/">How to Fix npm Installation Error: npm ERR! code EINTEGRITY?</a>
+        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
+        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
  </div>
     
   </div>
@@ -733,11 +552,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

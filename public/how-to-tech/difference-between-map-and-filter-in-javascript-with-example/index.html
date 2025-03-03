@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,231 +342,7 @@
 
 
 
-
-
-
-<p><code>map()</code> and <code>filter()</code> are methods in JavaScript that are used to perform operations on arrays. When the operation or transformation is done, a new array is returned as a result.</p>
-
-
-
-<p><strong>The <code>map</code> method transforms each element of an array and creates a new array with the transformed values, while the <code>filter</code> method creates a new array by selecting only the elements that satisfy a specified condition.</strong></p>
-
-
-
-<h2 id="difference-between-map-and-filter"><strong>Difference Between map() and filter()</strong></h2>
-<h3 id="map-method"><code>map()</code> Method</h3>
-<p><code>map</code> method is used to transform an array by applying a function to each element and creating a new array with the transformed values.</p>
-
-
-
-<blockquote>
-<p>Here is the syntax for using the <code>map</code> method – ⁣<code>array.map(callbackFunction)</code></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p>The <code>map</code> method is called on an array and takes a callback function as an argument. The callback function is executed for each element in the array, and the result of each function call is stored in a new array.</p>
-
-
-
-<p>The new array, containing the transformed elements, is returned as the result of the <code>map</code> method.</p>
-
-
-
-<p>Imagine you have a list of numbers and you want to double each number. Instead of manually iterating over the array and performing the doubling operation, you can use the <code>map</code> method.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Let&rsquo;s look at how to double each number manually by using the traditional for loop to loop through the numbers and then push the result unto a new variable.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">doubledNumbers</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">doubledNumbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doubledNumbers</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Output: [2, 4, 6, 8, 10]
-</span></span></span></code></pre></div><p>As you can see in this code example, we defined a variable called <code>numbers</code> that holds an array of numbers <code>[1, 2, 3, 4, 5]</code>.</p>
-
-
-
-<p>We then create another variable, <code>doubledNumbers</code> and initialize it with an empty array – ⁣<code>[]</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><code>for</code> loop is then used to loop through the numbers array, and each number is doubled by multiplying 2 to it.</p>
-
-
-
-<p>The result is stored in the <code>doubledNumbers</code> array which, when console logged, we get <code>Output: [2, 4, 6, 8, 10]</code>. The process is quite simple but not as easier and better as using the map method.</p>
-
-
-
-<p>Here is an example code that illustrate how to use a <code>map</code> method to double the numbers in an array.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">doubledNumbers</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doubledNumbers</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Output: [2, 4, 6, 8, 10]
-</span></span></span></code></pre></div><p>In the above code example, we have the same array called <code>numbers</code> containing <code>[1, 2, 3, 4, 5]</code>. By using the <code>map</code> method on the <code>numbers</code> array, we provide a function (often called a <em><strong>callback function</strong></em>) as an argument or parameter.</p>
-
-
-
-<p>This function takes each number from the array, doubles it by multiplying it by 2, and returns the doubled value. The <code>map</code> method then stores the transformed values in the new array (<code>doubledNumbers</code>).</p>
-
-
-
-<p>The new array <code>doubledNumbers</code> now contains <code>[2, 4, 6, 8, 10]</code>, where each element is the original value from the <code>numbers</code> array multiplied by 2.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h3 id="filter-method"><code>filter()</code> Method</h3>
-<p><code>filter</code> method is used to extract elements from an array based on a condition and create a new array containing only the elements that satisfy that condition.</p>
-
-
-
-<blockquote>
-<p>Here is the syntax for using the <code>filter</code>⁣ method – ⁣<code>array.filter(callbackFunction)</code></p>
-
-
-
-</blockquote>
-<p>The <code>filter</code> method is called on an array and takes a callback function as an argument. The callback function is executed for each element in the array, and only the elements that satisfy a specified condition are included in the new array.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The new array, containing the filtered elements, is returned as the result of the <code>filter</code> method.</p>
-
-
-
-<p>Let&rsquo;s say you have a list of numbers, and you want to extract only the even numbers. Instead of manually iterating over the array and checking each element, you can use the <code>filter</code> method.</p>
-
-
-
-<p>First, let us use the traditional <code>for</code> loop method.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">evenNumbers</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">evenNumbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evenNumbers</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Output: [2, 4]
-</span></span></span></code></pre></div><p>In the above code example, we initialize an empty array called <code>evenNumbers</code> to store the filtered elements. We use a <code>for</code> loop to iterate over each element of the <code>numbers</code> array. Inside the loop, we check if the current number is divisible by 2 (i.e., an even number) using the condition <code>numbers[i] % 2 === 0</code>.</p>
-
-
-
-<p>If the condition is true, we push the number into the <code>evenNumbers</code> array.</p>
-
-
-
-<p>After the loop finishes, the <code>evenNumbers</code> array contains only the even numbers from the original <code>numbers</code> array, which in this case is <code>[2, 4]</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Using the <code>filter</code> method provides a more concise and readable way to filter elements from an array based on a condition.</p>
-
-
-
-<p>Now let&rsquo;s use the filter method.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">evenNumbers</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evenNumbers</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Output: [2, 4]
-</span></span></span></code></pre></div><p>In the above code example, we have the same array called <code>numbers</code> containing <code>[1, 2, 3, 4, 5]</code>. By using the <code>filter</code> method on the <code>numbers</code> array, we provide a function (callback function) as an argument.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This function takes each number from the array, checks if it is divisible by 2 (i.e., an even number) using the condition <code>num % 2 === 0</code>, and returns <code>true</code> or <code>false</code> accordingly.</p>
-
-
-
-<p>The <code>filter</code> method evaluates the condition for each number in the array. It collects only the numbers for which the condition returns <code>true</code> and creates a new array (<code>evenNumbers</code>) with those numbers.</p>
-
-
-
-<p>In this example, the resulting <code>evenNumbers</code> array contains <code>[2, 4]</code>, which are the even numbers from the original <code>numbers</code> array.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="in-few-points">In Few Points:</h2>
-<p>Both the <code>map</code> and <code>filter</code> methods are useful in JavaScript when working with arrays. They allow you to transform and extract data in a simpler and more concise way compared to traditional loops.</p>
-
-
-
-<p>The difference between map and filter method is that – ⁣<code>map</code> transforms each element of an array based on a transformation function and returns a new array of the same length,</p>
-
-
-
-<p>While, <code>filter</code> creates a new array with only the elements that satisfy a specified condition.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Both methods return a new array and do not modify the original array.</p>
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -696,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/light-mac-browser.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-lightweight-browsers-for-mac/">6 Best Lightweight Browsers for macOS (2024)</a>
+        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/surveillance.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-surveillance-and-monitoring/">Surveillance vs. Monitoring: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
+        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/file-path-node.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/access-a-file-in-node-js-using-relative-and-absolute-path/">How To Access a File in Node.js? ( /, ./, and ../ ) Paths Explained</a>
+        <img src="http://localhost:1313/images/migrating-hugo-website-netlify-to-vercel-version-mismatch.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/migrating-hugo-website-netlify-to-vercel-version-mismatch/">Migrating a Hugo Website from Netlify to Vercel: Resolving Deployment Errors Due to Hugo Version Mismatch</a>
  </div>
     
 
@@ -740,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hdd.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-ssd-and-hdd/">SSD vs. HDD: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/find-and-replace-dialog-box.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-find-and-replace-in-vscode/">How to Use Find and Replace in VSCode?</a>
+        <img src="http://localhost:1313/images/surveillance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-surveillance-and-monitoring/">Surveillance vs. Monitoring: What&#39;s The Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
+        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/select-placeholder-1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-placeholder-for-a-select-box/">How to make a placeholder for a &#39;select&#39; box?</a>
+        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
  </div>
     
   </div>
@@ -773,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

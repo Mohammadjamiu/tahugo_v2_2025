@@ -321,7 +321,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -364,184 +364,7 @@
 
 
 
-
-
-
-<p>The following are the basic operations that can be done on discrete time signal</p>
-
-
-
-<ol>
-<li>Addition</li>
-<li>Subtraction</li>
-<li>Multiplication</li>
-<li>Amplitude scaling</li>
-<li>Time shifting</li>
-<li>Time reversal</li>
-<li>Time scaling</li>
-</ol>
-<p>The first 4 operations are performed along the y or value axis while the last 3 are performed along the x or time axis.</p>
-
-
-
-<p>but before solving problems on it, let’s discuss briefly on what discrete-time signal mean.</p>
-
-
-
-<h2 id="what-is-discrete-time-signals-or-dts">what is discrete-time signals or DTS?</h2>
-<p><strong>Discrete-time signals</strong> refers to signals that are defined only at discrete or finite time.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Discrete time simply means that it exists at whole numbers or digits but not on fraction e.g. 1,2, 3,6 but not 0.5, 3.5.</p>
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_4 (1).webp" alt="discrete time signal sketches">
-<p>Time is denoted in discrete time signal as $(n)$ as oppose to continuous time signal $(t)$.</p>
-
-
-
-<h2 id="addition-of-discrete-time-signals">Addition of discrete time signals</h2>
-<p>For the discrete time signal below, you need to add the amplitude following the intervals on time axis.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>For example, the two signals $x_{1}(n)$ and $x_{2}(n)$, in order to add them you need to locate a point on the time axis that is same for both and add the amplitude.</p>
-
-
-
-<p>let&rsquo;s look at the example below, as you can see both signals starts from $-2$ to $2$ so all you need to do is to locate $-2$ on $x_{1}(n)$ and identify it&rsquo;s value which is 1 and then locate $-2$ on the time axis of the second signal $x_{2}(n)$ and then identify it&rsquo;s amplitude which is 3 so adding 1 + 3 = 4 will result in a new signal with amplitude of 4 and also located at $-2$ on the time axis.</p>
-
-
-
-<p>The same process goes for the rest.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_6 (1).webp" alt="addition of discrete time signal">
-<h2 id="subtraction-of-discrete-time-signal">Subtraction of discrete time signal</h2>
-<p>Just as it is done for the addition of DTS, you just subtract either the first signal with the other or vice versa depending on the signal with the negative sign. E.g. if you are given A – B, you subtract B from A but if you are given –A + B, you subtract A from B since (-A + B = B – A).</p>
-
-
-
-<p>Using the $x_{1}(n)$ and $x_{2}(n)$ signal above, in order to subtract $x_{2}(n)$ from $x_{1}(n)$ i.e. $x_{2}(n)$ - $x_{1}(n)$.</p>
-
-
-
-<p>So at $-2$, $3 - 1 = 2$;
-<img loading="lazy" src="http://localhost:1313/images/dts_7 (1).webp" alt="subtraction of discrete time signal"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="multiplication-of-discrete-time-signal">Multiplication of discrete time signal</h2>
-<p>Same as the preceding operations, just multiply the amplitudes together making sure each time interval for both signals are corresponded to each other.</p>
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_1 (1).webp" alt="multiplication of discrete time signal">
-<blockquote>
-<p>Note:</p>
-
-
-
-<p>On the signals below, there are signal present at the origin that&rsquo;s why it is slightly more dark.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
- <br>
-<h2 id="amplitude-scaling-of-discrete-time-signal">Amplitude scaling of discrete time signal</h2>
-<p>Amplitude scaling is done on a single signal or waveform which takes the form $aX(n)$. The $a$ is the scaling factor i.e. if the amplitude is one and the scaling factor a = 2 hence just multiply $1 * 2 = 2$.</p>
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_5 (1).webp" alt="amplitude scaling on discrete time signal">
-<h2 id="time-shifting-of-discrete-time-signal">Time shifting of discrete time signal</h2>
-<p>Time shifting as the name implies is an operation done along the time axis. It is splited into two;</p>
-
-
-
-<ul>
-<li>One has to do with shifting forward (or to the right) called <strong>delay</strong></li>
-<li>The other has to do with shifting backward (or to the left) called <strong>advance</strong></li>
-</ul>
-<p>shifting to the right by a factor of $a$ is denoted as $x(n – a)$ while shifting to the left by a factor of $a$ is denoted as $x(n + a)$.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>But you might be wondering why is moving forward has the sign negative while moving backward has a sign of positive which does not seem okay with the way we think.</p>
-
-
-
-<p>Yeah it is because in signals and system the way things are, are different to the way we think.
-But if you look at the $(n – a)$ and equating to zero, $(n – a = 0) = (n = a)$ this means that the signal is shifted forward to $a$. For $(n + a), (n + a = 0) = (n = - a)$ which means signal is shifted backward to $a$.</p>
-
-
-
-<p>For example</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_10 (1).webp" alt="time shifting (forward) of discrete time signal">
-<img loading="lazy" src="http://localhost:1313/images/dts_3 (1).webp" alt="time shifting (backward) of discrete time signal">
-<h2 id="time-scaling-of-discrete-time-signal">Time Scaling of discrete time signal</h2>
-<p>Time scaling refers to scaling expansion or compression of signals.</p>
-
-
-
-<p>When a signal is defined as $x(an)$ (as you can see the scaling factor $a$ is affecting the time axis that’s why it is inside the bracket as oppose to amplitude scaling that is outside). The $a$ scaling factor is considered to be compression in time signal while in $x(n/a)$ the $a$ is considered to be an expansion factor in time signal which seems contradicting but there is a way to think of it better.</p>
-
-
-
-<p>Remember if you fast forward song 2.0x, it plays very fast but the period it takes in playing is short likewise if you play a song 0.5x, it plays slowly and the time it takes in playing will be much. So the 2.0x is the $a$ in the $x(an)$ while the 0.5x is the $1/a$ in $x(n/a)$ where $a$ is 2 which gives $\frac{1}{2} = 0.5$.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_2 (1).webp" alt="time scaling (compresion) of discrete time signal">
-<img loading="lazy" src="http://localhost:1313/images/dts_9 (1).webp" alt="time scaling (expansion) of discrete time signal">
-<h2 id="time-reversal-of-discrete-time-signals">Time reversal of discrete time signals</h2>
-<p>In time reversal, you just need to flip the signal or waveform about the y axis, denoted as $x(-n)$.</p>
-
-
-
-<img loading="lazy" src="http://localhost:1313/images/dts_8 (1).webp" alt="time reversal of discrete time signal">
-<p>Recall, as you are reversing the signal, whatever operation you know of will also change i.e. as $(n – a)$ means moving forward, if the n is reversed, $(-n – a)$ means you are moving backward.</p>
-
-
-
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -671,14 +494,20 @@ But if you look at the $(n – a)$ and equating to zero, $(n – a = 0) = (n = a
      
     
      <div class="xx">
+        <img src="http://localhost:1313/images/signals_9.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/difference-between-causal-and-non-causal-signal/">Differences Between Causal and Non-Causal Signal</a>
+ </div>
+    
+    
+     <div class="xx">
         <img src="http://localhost:1313/images/dirichlet_3.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/dirichlet-conditions-for-existence-of-fourier-series/">What are Dirichlet conditions for existence of Fourier series?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/signal-and-system-waves.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/difference-between-linear-time-variant-and-linear-time-invariant-system/">Difference Between Linear Time Variant (LTV) and Linear Time Invariant (LTI) Systems</a>
+        <img src="http://localhost:1313/images/signals_6%282%29.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/what-is-a-signal-and-its-types/">What Is a Signal and its Different Types In Electronics And Communications?</a>
  </div>
     
     
@@ -689,14 +518,8 @@ But if you look at the $(n – a)$ and equating to zero, $(n – a = 0) = (n = a
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-lti-system.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/how-do-you-check-whether-a-system-is-lti-or-not/">How Do You Check Whether a System Is LTI or Not?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/signals_3%282%29.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/deterministic-and-random-signals-with-examples-and-differences/">What are Deterministic and Random Signals? with Examples and Differences</a>
+        <img src="http://localhost:1313/images/odd-signal-waveform.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/how-to-determine-if-a-signal-is-even-or-odd/">How to Determine if a Signal Is Even or Odd?</a>
  </div>
     
 
@@ -715,8 +538,8 @@ But if you look at the $(n – a)$ and equating to zero, $(n – a = 0) = (n = a
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dirichlet_3.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/dirichlet-conditions-for-existence-of-fourier-series/">What are Dirichlet conditions for existence of Fourier series?</a>
+        <img src="http://localhost:1313/images/how-to-check-lti-system.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/how-do-you-check-whether-a-system-is-lti-or-not/">How Do You Check Whether a System Is LTI or Not?</a>
  </div>
     
     
@@ -727,8 +550,14 @@ But if you look at the $(n – a)$ and equating to zero, $(n – a = 0) = (n = a
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/signals_10.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/how-do-you-solve-energy-and-power-signals-problem/">How Do You Solve Energy and Power Signals Problem Step By Step With Tips and Shortcuts?</a>
+        <img src="http://localhost:1313/images/signals_3%282%29.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/deterministic-and-random-signals-with-examples-and-differences/">What are Deterministic and Random Signals? with Examples and Differences</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/signals_9.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/difference-between-causal-and-non-causal-signal/">Differences Between Causal and Non-Causal Signal</a>
  </div>
     
     
@@ -737,22 +566,17 @@ But if you look at the $(n – a)$ and equating to zero, $(n – a = 0) = (n = a
               <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/difference-between-power-signal-and-energy-signal/">Difference Between Power Signal and Energy Signal</a>
  </div>
     
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/odd-signal-waveform.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/signal-and-system/how-to-determine-if-a-signal-is-even-or-odd/">How to Determine if a Signal Is Even or Odd?</a>
- </div>
-    
   </div>
 </aside>
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

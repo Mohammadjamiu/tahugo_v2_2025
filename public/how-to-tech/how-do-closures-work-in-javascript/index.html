@@ -302,7 +302,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -345,360 +345,7 @@
 
 
 
-
-
-
-<p>JavaScript is a versatile programming language widely used for web development. It supports various powerful features that make it popular among developers.</p>
-
-
-
-<p>One such feature is closures, which enable the creation of powerful and flexible code structures.</p>
-
-
-
-<p>In this article, we will look at the concept of JavaScript closures, understand how they work, and explore their practical applications.</p>
-
-
-
-<div class="toc-container">
-  <h2 class="toc-h2">
-    Table of Contents <button class="toggle-button">↬</button>
-  </h2>
-  <div class="table-of-contents"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#understanding-lexical-scope">Understanding lexical scope</a></li>
-    <li><a href="#what-is-a-closure">What is a closure?</a></li>
-    <li><a href="#creating-a-closure-in-javascript">Creating a closure in JavaScript</a></li>
-    <li><a href="#the-anatomy-of-a-closure">The anatomy of a closure</a></li>
-    <li><a href="#practical-uses-of-closures">Practical uses of closures</a>
-      <ul>
-        <li><a href="#1-encapsulation-and-data-privacy">1. Encapsulation and data privacy</a></li>
-        <li><a href="#2-event-handling">2. Event handling</a></li>
-        <li><a href="#3-callback-functions">3. Callback functions</a></li>
-        <li><a href="#4-memoization">4. Memoization</a></li>
-      </ul>
-    </li>
-    <li><a href="#common-challenges-and-pitfalls-with-closures">Common challenges and pitfalls with closures</a></li>
-    <li><a href="#best-practices-for-using-closures">Best practices for using closures</a></li>
-    <li><a href="#wrap-up">Wrap Up</a></li>
-    <li><a href="#faqs">FAQs</a></li>
-  </ul>
-</nav></div>
-</div>
-<h2 id="understanding-lexical-scope">Understanding lexical scope</h2>
-<p>Before diving into closures, it&rsquo;s essential to understand the concept of lexical scope. In JavaScript, variables are scoped based on their location in the source code.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This means that variables declared inside a function are accessible within that function and any nested functions.</p>
-
-
-
-<h2 id="what-is-a-closure">What is a closure?</h2>
-<p>A closure is a function that has access to its own scope, the scope in which it was defined, and the scope of its parent function.</p>
-
-
-
-<p>In simpler terms, a closure “closes” over the variables from its parent function, even after the parent function has finished executing.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>It retains access to these variables, allowing them to persist and be accessed by the closure.</p>
-
-
-
-<h2 id="creating-a-closure-in-javascript">Creating a closure in JavaScript</h2>
-<p>Closures are created when a function is defined inside another function and is returned or passed as an argument to another function.</p>
-
-
-
-<p>This creates a chain of scopes, with each inner function retaining access to the variables of its outer functions.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">outerFunction</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">outerVariable</span> <span class="o">=</span> <span class="s1">&#39;I am from the outer function&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">innerFunction</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">outerVariable</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">innerFunction</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">closure</span> <span class="o">=</span> <span class="nx">outerFunction</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="nx">closure</span><span class="p">();</span> <span class="c1">// Output: &#34;I am from the outer function&#34;
-</span></span></span></code></pre></div><pre tabindex="0"><code> I am from the outer function
-</code></pre><p>In this code, there are two functions: <code>outerFunction</code> and <code>innerFunction</code>.</p>
-
-
-
-<ol>
-<li>The <code>outerFunction</code> is defined and contains a variable called <code>outerVariable</code>, which is assigned the value <code>'I am from the outer function'</code>. This variable is scoped to the <code>outerFunction</code>.</li>
-<li>Inside the <code>outerFunction</code>, there is another function called <code>innerFunction</code>. This inner function has access to the <code>outerVariable</code> because of closures. It can access variables from its own scope as well as from the outer function&rsquo;s scope.</li>
-<li>The <code>innerFunction</code> simply logs the value of <code>outerVariable</code> using <code>console.log()</code>.</li>
-<li>The <code>outerFunction</code> returns the <code>innerFunction</code> itself. This means that when <code>outerFunction</code> is called, it returns the <code>innerFunction</code> as a result.</li>
-<li>The line <code>var closure = outerFunction();</code> calls <code>outerFunction</code> and assigns the returned <code>innerFunction</code> to the variable <code>closure</code>. Here, <code>closure</code> now refers to the <code>innerFunction</code>.</li>
-<li>Finally, the line <code>closure();</code> executes the <code>innerFunction</code>, which logs the value of <code>outerVariable</code> to the console. In this case, the output will be <code>&quot;I am from the outer function&quot;</code>.</li>
-</ol>
-<p>In summary, the code demonstrates the concept of closures in JavaScript. The <code>innerFunction</code> retains access to the variables of its outer scope (<code>outerVariable</code>) even after the <code>outerFunction</code> has finished executing.</p>
-
-
-
-<p>This allows the <code>innerFunction</code>, referred to as <code>closure</code>, to access and utilize the value of <code>outerVariable</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="the-anatomy-of-a-closure">The anatomy of a closure</h2>
-<p>A closure consists of two main components: the function and the environment. The function holds the code to be executed, while the environment consists of the variables and values that were in scope when the closure was created.</p>
-
-
-
-<p>When a closure is created, it retains a reference to its outer scope, allowing it to access the variables and functions from that scope.</p>
-
-
-
-<p>This mechanism ensures that the variables used inside the closure maintain their values even when the outer scope finishes execution.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="practical-uses-of-closures">Practical uses of closures</h2>
-<p>Closures have several practical applications in JavaScript. Let&rsquo;s explore a few of them:</p>
-
-
-
-<h3 id="1-encapsulation-and-data-privacy">1. Encapsulation and data privacy</h3>
-<p>Closures enable encapsulation by providing a way to create private variables and functions.</p>
-
-
-
-<p>The variables within the closure are not accessible from outside, making them private and protecting them from unintended modifications.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">counter</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">increment</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">decrement</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">count</span><span class="o">--</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">getCount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">count</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">myCounter</span> <span class="o">=</span> <span class="nx">counter</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="nx">myCounter</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myCounter</span><span class="p">.</span><span class="nx">getCount</span><span class="p">());</span> <span class="c1">// Output: 1
-</span></span></span></code></pre></div><pre tabindex="0"><code> 1
-</code></pre><p>In this example, the <code>counter </code>function returns an object with three methods: increment<code>,</code>decrement, and getCount.</p>
-
-
-
-<p>These methods have access to the <code>count </code>variable through the closure, providing a way to modify and retrieve its value while keeping it private.</p>
-
-
-
-<h3 id="2-event-handling">2. Event handling</h3>
-<p>Closures are commonly used in event handling scenarios. By using closures, we can retain the context and state of variables when an event occurs, allowing us to respond appropriately.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">setupButton</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Button clicked &#39;</span> <span class="o">+</span> <span class="nx">count</span> <span class="o">+</span> <span class="s1">&#39; times.&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">setupButton</span><span class="p">();</span>
-</span></span></code></pre></div><p>In this example, the closure created by the event listener function has access to both the <code>button</code> element and the <code>count</code> variable.</p>
-
-
-
-<p><img src="http://localhost:1313/images/button-clicked-closure.webp" alt="event handling closure" title="event handling closure"></p>
-
-
-
-<p>It can increment the count and log the number of times the button is clicked, maintaining the state across multiple clicks.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h3 id="3-callback-functions">3. Callback functions</h3>
-<p>Closures are often utilized in callback functions. A callback function is a function that is passed as an argument to another function and is executed at a later time.</p>
-
-
-
-<p>Closures enable the callback function to access the variables and context of the outer function when it is eventually invoked.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">fetchData</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// Simulating an asynchronous request
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="s1">&#39;Data received: &#39;</span> <span class="o">+</span> <span class="nx">url</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">processResponse</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">fetchData</span><span class="p">(</span><span class="s1">&#39;https://api.example.com&#39;</span><span class="p">,</span> <span class="nx">processResponse</span><span class="p">);</span>
-</span></span></code></pre></div><p><img src="http://localhost:1313/images/fetch-data-closure.webp" alt="fetch data closure" title="fetch data closure"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>In this example, the <code>fetchData</code> function makes an asynchronous request and passes the received data to the <code>processResponse</code> callback function.</p>
-
-
-
-<p>The closure created by <code>fetchData</code> retains access to the <code>callback</code> function, allowing it to invoke the function with the received data.</p>
-
-
-
-<h3 id="4-memoization">4. Memoization</h3>
-<p>Memoization is a technique used to optimize function execution by caching its results based on the input parameters.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Closures can be utilized to store and access the cached values, improving performance by avoiding redundant calculations.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">memoizedFunction</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">cache</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="k">in</span> <span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="cm">/* Perform expensive calculation */</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">cache</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">calculate</span> <span class="o">=</span> <span class="nx">memoizedFunction</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calculate</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// Output: Result of calculation for 5
-</span></span></span></code></pre></div><p>In this example, the <code>memoizedFunction</code> creates a closure that holds the <code>cache</code> object. The returned function checks if the result for a given input <code>n</code> exists in the cache.</p>
-
-
-
-<p>If it does, it returns the cached result; otherwise, it performs the expensive calculation, stores the result in the cache, and returns the result.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="common-challenges-and-pitfalls-with-closures">Common challenges and pitfalls with closures</h2>
-<p>While closures offer powerful capabilities, they can also lead to unexpected behavior if not used carefully.</p>
-
-
-
-<p>Some common challenges and pitfalls include:</p>
-
-
-
-<ul>
-<li><strong>Memory leaks:</strong> Closures can inadvertently hold references to large objects, preventing them from being garbage collected and resulting in memory leaks.</li>
-<li><strong>Shared state:</strong> Multiple closures referencing and modifying the same variables can lead to unexpected side effects and make the code harder to reason about.</li>
-<li><strong>Performance implications:</strong> Closures involve creating and maintaining additional scopes, which can have an impact on performance if overused or misused.</li>
-</ul>
-<p>To reduce these challenges, it is essential to have a good understanding of closures and follow best practices.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="best-practices-for-using-closures">Best practices for using closures</h2>
-<p>To ensure optimal usage of closures, consider the following best practices:</p>
-
-
-
-<ol>
-<li>Limit the use of closures to where they are truly needed, avoiding unnecessary nesting.</li>
-<li>Avoid creating circular references between closures and objects to prevent memory leaks.</li>
-<li>Minimize shared mutable state among closures to prevent unintended side effects.</li>
-<li>When using closures in loops, be cautious of unintended variable capture due to asynchronous behavior.</li>
-<li>Document your code well, explaining the purpose and expected behavior of closures for future maintainers.</li>
-</ol>
-<p>By following these best practices, you can harness the power of closures while minimizing potential issues.</p>
-
-
-
-<h2 id="wrap-up">Wrap Up</h2>
-<p>JavaScript&rsquo;s closures are a fundamental concept that provides a powerful mechanism for encapsulation, maintaining state, and creating flexible code structures.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>By understanding how closures work and their practical applications, you can leverage this feature to write more efficient and maintainable JavaScript code.</p>
-
-
-
-<h2 id="faqs">FAQs</h2>
-<ol>
-<li><strong>Are closures unique to JavaScript?</strong> No, closures are not unique to JavaScript. Other programming languages like Python and Ruby also support closures.</li>
-<li><strong>Can closures be used in object-oriented programming?</strong> Yes, closures can be used in conjunction with object-oriented programming. <br>
-<br>
-They can provide a way to encapsulate private variables and methods within objects.</li>
-<li><strong>Do closures have any performance implications?</strong> Closures involve creating additional scopes, which can impact performance if misused or overused. <br>
-<br>
-However, when used appropriately, the performance impact is typically negligible.</li>
-<li><strong>Can closures be modified after they are created?</strong> No, closures are immutable. Once created, they retain access to the variables from their outer scope, but their references cannot be changed.</li>
-<li><strong>Are closures supported in all web browsers?</strong> Yes, closures are a fundamental part of JavaScript and are supported in all modern web browsers.</li>
-</ol>
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -828,32 +475,32 @@ However, when used appropriately, the performance impact is typically negligible
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
+        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-microsoft-edge-useful-keyboard-shortcuts-keys-for-windows/">List of Microsoft Edge Useful Keyboard Shortcuts Keys for Windows (2024)</a>
+        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
+        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/console-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.error/">Difference Between console.log and console.error</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
+        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
  </div>
     
 
@@ -872,32 +519,32 @@ However, when used appropriately, the performance impact is typically negligible
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
+        <img src="http://localhost:1313/images/in.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-regular-expressions-in-python/">Regular Expression in Python: A Step by Step Explanation</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
+        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/tech-driven-strategies-for-optimal-medical-billing-performance.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/strategies-for-optimal-medical-billing-performance/">Tech-Driven Strategies for Optimal Medical Billing Performance</a>
+        <img src="http://localhost:1313/images/circular-image-css.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-circular-image-in-css/">How to Make a Circular Image in CSS?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
+        <img src="http://localhost:1313/images/select-placeholder-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-placeholder-for-a-select-box/">How to make a placeholder for a &#39;select&#39; box?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
+        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
  </div>
     
   </div>
@@ -905,11 +552,12 @@ However, when used appropriately, the performance impact is typically negligible
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

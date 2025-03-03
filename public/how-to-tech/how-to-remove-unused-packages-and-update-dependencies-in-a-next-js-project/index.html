@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,166 +342,7 @@
 
 
 
-
-
-
-<p><strong>The Problem I Faced: Losing Track of Unused Packages and Outdated Dependencies</strong></p>
-
-
-
-<p>I realized that my project was becoming difficult to manage due to a clutter of unused and outdated packages.</p>
-
-
-
-<p>I had installed several packages, some of which I no longer needed, and others were out of date.</p>
-
-
-
-<p>The issue arose because I was unsure which packages were actively being used in my code and which ones were just taking up space.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This made it harder to keep the project optimized and maintainable.</p>
-
-
-
-<p>Additionally, with packages that I didn’t need anymore, my dependency tree was unnecessarily large, which could also lead to potential issues in performance and security.</p>
-
-
-
-<p>I wanted to clean up my project by removing unused dependencies and updating outdated packages.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>But, without a clear way to check which packages were in use, I was unsure how to go about it.</p>
-
-
-
-<h3 id="steps-i-took-to-clean-up-unused-packages-and-keep-my-dependencies-up-to-date"><strong>Steps I Took to Clean Up Unused Packages and Keep My Dependencies Up-to-Date</strong></h3>
-<p>To solve this problem, I followed these steps:</p>
-
-
-
-<h4 id="install-npm-check-tool"><strong>Install <code>npm-check</code> Tool:</strong></h4>
-<p>The first step I took was to install the <code>npm-check</code> tool globally.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This tool helps identify which packages are outdated, missing, or unused in my project. I installed it using the following command:</p>
-
-
-
-<pre tabindex="0"><code>npm install -g npm-check
-</code></pre><h4 id="run-npm-check"><strong>Run <code>npm-check</code>:</strong></h4>
-<p>Once <code>npm-check</code> was installed, I navigated to my project directory in the terminal and ran the command:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm-check
-</span></span></code></pre></div><p>This command analyzed my <code>node_modules</code> folder and <code>package.json</code> file, generating a report that highlighted the following:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<ul>
-<li>Packages with updates available.</li>
-<li>Packages that were potentially unused.</li>
-<li>Packages that were missing from <code>package.json</code> but still referenced in the code.</li>
-</ul>
-<p><img src="http://localhost:1313/images/how-to-remove-unused-packages-and-update-dependencies-in-a-next.js-project.jpeg" alt="how-to-remove-unused-packages-and-update-dependencies-in-a-next.js-project.jpeg"></p>
-
-
-
-<h4 id="identify-unused-packages"><strong>Identify Unused Packages:</strong></h4>
-<p>After running the check, I noticed several packages flagged as <strong>&ldquo;NOTUSED&rdquo;</strong>. For example, packages like <code>mdast-util-toc</code>, <code>rehype-parse</code>, and <code>remark</code> were no longer being used in the code.</p>
-
-
-
-<p>The tool suggested that I review my code before removing them, but based on my inspection, I confirmed they were not required.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h4 id="remove-unused-packages"><strong>Remove Unused Packages:</strong></h4>
-<ul>
-<li>
-<p>Since I was confident the unused packages weren’t needed, I uninstalled them with the following commands:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm uninstall mdast-util-toc
-</span></span><span class="line"><span class="cl">npm uninstall rehype-parse
-</span></span><span class="line"><span class="cl">npm uninstall remark
-</span></span></code></pre></div><p>I repeated this process for all unused packages flagged by the tool.</p>
-
-
-
-</li>
-</ul>
-<h4 id="update-outdated-packages"><strong>Update Outdated Packages:</strong></h4>
-<p>The tool also notified me of several packages with updates available, such as <code>next</code>, <code>react</code>, <code>tailwindcss</code>, and <code>eslint</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>To ensure my project was up-to-date, I followed the provided commands to update these packages:</p>
-
-
-
-<pre tabindex="0"><code> ```bash
- npm install next@15.0.4 --save
- npm install react@19.0.0 --save
- npm install tailwindcss@3.4.16 --save-dev
- npm install eslint@9.16.0 --save-dev
- ```
-
- This ensured that my project was using the latest versions of these dependencies, reducing the risk of bugs and vulnerabilities.
-</code></pre><h4 id="address-missing-packages"><strong>Address Missing Packages:</strong></h4>
-<p>During the check, I also noticed that the <code>site</code> package was missing from my <code>package.json</code> but was still referenced in several files.</p>
-
-
-
-<p>Since it was required by my project, I added it back by installing it:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="sb">```bash
-</span></span></span><span class="line"><span class="cl"><span class="sb"> npm install site --save
-</span></span></span><span class="line"><span class="cl"><span class="sb"> ```</span><span class="p">;</span>
-</span></span></code></pre></div><p>After making the changes, I ran my application to ensure everything was still working correctly.</p>
-
-
-
-<p>I also ran <code>npm-check</code> again to confirm that there were no more unused packages and that everything was up-to-date.</p>
-
-
-
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -631,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
+        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
+        <img src="http://localhost:1313/images/this-in-object-scope.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-this-and-that-in-javascript/">Difference Between the ‘This’ and ‘That’ Keyword in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-hydration.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-hydration-failed-because-the-initial-ui-does-not-match-what-was-rendered-on-the-server-in-nextjs/">How to fix error hydration failed because the initial UI does not match what was rendered on the server in nextJS?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-hackers-better-than-programmers/">Are Hackers Better Than Programmers?</a>
  </div>
     
 
@@ -675,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
+        <img src="http://localhost:1313/images/mifi.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-mifi/">Difference between Wi-Fi and MiFi: All You Need to Know</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
+        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-microsoft-edge-useful-keyboard-shortcuts-keys-for-windows/">List of Microsoft Edge Useful Keyboard Shortcuts Keys for Windows (2024)</a>
+        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
+        <img src="http://localhost:1313/images/closeup-wireless-router-young-man-600w-521452618-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-router/">Difference between Wi-Fi and Router: Understand the Basics</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
+        <img src="http://localhost:1313/images/nodejs-website.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-install-nodejs-in-windows/">How to Install Node.js in Windows?</a>
  </div>
     
   </div>
@@ -708,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

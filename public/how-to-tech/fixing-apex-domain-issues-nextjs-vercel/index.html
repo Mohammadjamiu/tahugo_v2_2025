@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -345,18 +345,27 @@
 
 
 
-<p>I purchased a domain name from Namecheap to use for my <strong>Turborepo</strong> projects, which include two Next.js applications.</p>
 
 
 
+
+
+  <p>I purchased a domain name from Namecheap to use for my <strong>Turborepo</strong> projects, which include two Next.js applications.</p>
+  
+
+  
 <p>One is the <strong>main site</strong>, which should be accessible at <strong>monoed.africa</strong>, while the other is a subdomain project, accessible at <strong>cv-resume-builder.monoed.africa</strong>.</p>
+  
 
-
-
+  
 <p>After deploying both projects separately on Vercel, I configured the domain settings as follows:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
 
-
-
+  
 <ul>
 <li><strong>Main site domain (monoed.africa) setup in Vercel:</strong></li>
 </ul>
@@ -377,48 +386,55 @@
 </li>
 </ol>
 <p>Vercel then refreshed and applied an SSL certificate.</p>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 <p>However, a problem arose when accessing <strong>monoed.africa</strong> in the browser—it failed to load and showed a “cannot reach page” error.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
 
-
-
+  
 <p>Meanwhile, <strong><a href="https://www.monoed.africa" target="_blank" rel="nofollow noopener ">www.monoed.africa</a></strong> and the default <strong>monoed.vercel.app</strong> domain worked perfectly.</p>
+  
 
-
-
+  
 <h2 id="problem-analysis">Problem Analysis</h2>
 <p>The issue was that the <strong>Apex domain (monoed.africa)</strong> was not correctly pointing to the Vercel deployment.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 <p>The A record (<strong>76.76.21.21</strong>) did not resolve correctly, causing the domain to be inaccessible without the “www.” prefix.</p>
+  
 
-
-
+  
 <p>Many users I sent the domain to instinctively typed <strong>monoed.africa</strong>, expecting it to work, but it did not.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
 
-
-
+  
 <p>I had to find a solution to ensure the apex domain worked correctly.</p>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 <h2 id="solution-correcting-the-namecheap-dns-settings">Solution: Correcting the Namecheap DNS Settings</h2>
 <p>To fix the issue, I followed these steps:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
 
-
-
+  
 <h3 id="1-remove-the-incorrect-a-record">1. Remove the Incorrect A Record</h3>
 <ul>
 <li>In <strong>Namecheap Advanced DNS</strong>, delete the <strong>A record</strong> with:
@@ -430,9 +446,9 @@
 </ul>
 <p><img src="http://localhost:1313/images/vercel-apex-domain-issue.jpeg" alt="Vercel Incorrect Apex Namecheap">
 <img src="http://localhost:1313/images/vercel-incorrect-apex.jpeg" alt="Vercel Incorrect Apex Namecheap"></p>
+  
 
-
-
+  
 <h3 id="2-add-a-cname-record-for-the-apex-domain">2. Add a CNAME Record for the Apex Domain</h3>
 <ul>
 <li>Create a <strong>CNAME record</strong> instead:
@@ -467,21 +483,22 @@
 </ul>
 <h3 id="6-subdomain-setup-for-the-secondary-nextjs-project">6. Subdomain Setup for the Secondary Next.js Project</h3>
 <p>For the second project (<strong>cv-resume-builder.monoed.africa</strong>), I added:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 <ul>
 <li><strong>Type:</strong> CNAME</li>
 <li><strong>Host:</strong> cv-resume-builder</li>
 <li><strong>Value:</strong> cname.vercel-dns.com</li>
 </ul>
 <p>After these changes, <strong>both the apex domain and subdomains started working correctly.</strong></p>
+  
 
-
-
+  
 <h2 id="in-summary">In Summary</h2>
 <ul>
 <li><strong>Primary Issue:</strong> The apex domain (<strong>monoed.africa</strong>) was not resolving because the A record (76.76.21.21) did not point correctly to the deployment.</li>
@@ -490,24 +507,29 @@
 </ul>
 <h2 id="faqs">FAQs</h2>
 <p><strong>1. Why wasn’t monoed.africa working without www?</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
 
-
-
+  
 <p>The A record (76.76.21.21) didn’t resolve correctly, causing an issue with apex domain resolution.</p>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 <p>Changing it to a CNAME pointing to the Vercel deployment fixed the problem.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
 
-
-
+  
 <p><strong>2. What DNS records should I use for a Vercel deployment with a Namecheap domain?</strong></p>
+  
 
-
-
+  
 <ul>
 <li>For the <strong>apex domain</strong>, use a <strong>CNAME</strong> record:
 <ul>
@@ -523,37 +545,44 @@
 </li>
 </ul>
 <p><strong>3. How long does DNS propagation take?</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 <p>DNS propagation can take up to <strong>48 hours</strong>. Use <a href="https://dnschecker.org/" target="_blank" rel="nofollow noopener ">DNS Checker</a> to monitor changes.</p>
+  
 
-
-
+  
 <p><strong>4. How do I set up redirects between the apex domain and www subdomain on Vercel?</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
 
-
-
+  
 <ul>
 <li>Go to <strong>Vercel &gt; Domains &gt; Redirect Settings</strong></li>
 <li>Choose whether to redirect <strong>monoed.africa</strong> to <strong><a href="https://www.monoed.africa" target="_blank" rel="nofollow noopener ">www.monoed.africa</a></strong> or vice versa</li>
 <li>Save and test to ensure it works</li>
 </ul>
 <p>By following these steps, I was able to resolve the <strong>apex domain issue</strong> and ensure that both my <strong>apex and subdomains work correctly</strong> on Vercel.</p>
+  
 
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
+  
 </p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
 
 
 
-
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -683,32 +712,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
+        <img src="http://localhost:1313/images/download-image-from-url.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-image-from-url-in-node-js/">How to Download Images from URL in Node.js?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-chrome-keyboard-shortcuts/">List of Google Chrome Useful Keyboard Shortcut Keys (2024)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
+        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
+        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
  </div>
     
 
@@ -727,32 +756,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/cpx-an-alternative-to-cp-linux-command.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/cpx-module-an-alternative-to-the-linux-cp-command-for-copying-files-across-folders/">cpx Module: An Alternative to the Linux cp Command for Copying Files Across Folders</a>
+        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-assembler/">Difference Between Compiler and Assembler</a>
+        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/wifi-bluetooth.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-bluetooth/">Difference Between Wi-Fi and Bluetooth</a>
+        <img src="http://localhost:1313/images/emoji-rendering-in-mdx-with-remark-emoji-in-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-emoji-rendering-in-mdx-with-remark-emoji-in-nextjs/">How to Fix Emoji Rendering in MDX with remark-emoji in Next.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/node-module-right-click-delete.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-node-modules-in-vscode/">How to Delete Node Modules in VSCode?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/bard-activity-1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-google-bard-better-than-chatgpt/">Is Google Bard Better Than ChatGPT?</a>
+        <img src="http://localhost:1313/images/logical-or-and-logical-and.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-logical-or-and-logical-and-in-javascript/">Difference Between || and &amp;&amp; in JavaScript?</a>
  </div>
     
   </div>
@@ -760,11 +789,13 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -926,6 +957,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

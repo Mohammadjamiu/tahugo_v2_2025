@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,116 +342,7 @@
 
 
 
-
-
-
-<p>I was building a website with a sticky navbar that had a <code>z-index</code> of <code>z-10</code>. Later, I added a <code>div</code> with some text in the main content section.</p>
-
-
-
-<p>When I scrolled up, I realized that the text appeared <strong>above</strong> the navbar, even though I had increased the navbar’s z-index and reduced the z-index of the content.</p>
-
-
-
-<p>I even tried using the <code>!important</code> flag (e.g., <code>!z-</code>) on the z-index, which worked sometimes, but it felt messy and unreliable.</p>
-
-
-
-<p>Before using the isolate, here is how the text goes over the navbar.
-<img src="http://localhost:1313/images/when-there-is-no-isolate.jpeg" alt="Before adding isolate tailwindcss class" title="Before adding isolate tailwindcss class"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h2 id="the-solution">The Solution</h2>
-<p>I followed these steps to fix the issue:</p>
-
-
-
-<ol>
-<li>
-<p><strong>Locate the Parent Container</strong>: I identified the main parent <code>div</code> that holds all the content below the navbar.</p>
-
-
-
-</li>
-<li>
-<p><strong>Add the <code>isolate</code> Class</strong>: I added the <code>isolate</code> class to this parent <code>div</code>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This class ensures that the z-index of its children doesn’t interfere with elements outside this container, like the navbar.</p>
-
-
-
-</li>
-<li>
-<p><strong>Tested the Fix</strong>: After applying the <code>isolate</code> class, I noticed that the text no longer appeared above the navbar, even when its z-index was set higher.</p>
-
-
-
-<p>The <code>isolate</code> class scoped the z-index properly, ensuring no overlap.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-</ol>
-<h3 id="example-implementation-in-nextjs">Example Implementation in Next.js</h3>
-<p>Here’s the exact code I used:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Home</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="cm">/* Sticky Navbar */</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">header</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;sticky top-0 z-10 bg-blue-500 p-4 text-white&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">Sticky</span> <span class="nx">Navbar</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="cm">/* Main Content */</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">main</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;relative isolate p-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;relative z-20 bg-gray-100 p-8&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-2xl font-bold&#34;</span><span class="p">&gt;</span><span class="nx">Main</span> <span class="nx">Content</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">This</span> <span class="nx">content</span> <span class="nx">has</span> <span class="nx">a</span> <span class="nx">higher</span> <span class="nx">z</span><span class="o">-</span><span class="nx">index</span> <span class="nx">but</span> <span class="nx">won</span><span class="err">’</span><span class="nx">t</span> <span class="nx">overlap</span> <span class="nx">the</span> <span class="nx">navbar</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">because</span> <span class="nx">the</span> <span class="sb">`isolate`</span> <span class="kr">class</span> <span class="nx">is</span> <span class="nx">applied</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">parent</span> <span class="nx">container</span><span class="p">.</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>After using the isolate, here is how the text goes below the navbar.
-<img src="http://localhost:1313/images/when-there-is-isolate.jpeg" alt="After adding isolate tailwindcss class" title="After adding isolate tailwindcss class"></p>
-
-
-
-<h3 id="why-it-works">Why It Works</h3>
-<p>By adding the <code>isolate</code> class to the parent container (<code>&lt;main&gt;</code>), the z-index values of its children (<code>&lt;div&gt;</code> with <code>z-20</code>) become relative to other elements <strong>within that container</strong>.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This prevents them from interfering with elements outside, like the sticky navbar.</p>
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -581,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/logical-or-and-logical-and.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-logical-or-and-logical-and-in-javascript/">Difference Between || and &amp;&amp; in JavaScript?</a>
+        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
+        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-eintegrity-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-npm-installation-error-npm-err-code-eintegrity/">How to Fix npm Installation Error: npm ERR! code EINTEGRITY?</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-09-02-at-1.55.54-pm.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-your-devices-were-logged-out-error-on-whatsapp/">How to Fix &#34;Your Devices Were Logged Out&#34; Error on WhatsApp?</a>
  </div>
     
 
@@ -625,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
+        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
+        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
+        <img src="http://localhost:1313/images/hdd.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-ssd-and-hdd/">SSD vs. HDD: What&#39;s The Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/tech-driven-strategies-for-optimal-medical-billing-performance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/strategies-for-optimal-medical-billing-performance/">Tech-Driven Strategies for Optimal Medical Billing Performance</a>
  </div>
     
     
        <div class="xx">
-        <img src="https://neuralink.com/assets/static/whats-next-mobile.aede448d.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-powers-neuralink-chip-when-implanted-into-the-human-brain/">What Powers Neuralink Chip When Implanted into the Human Brain?</a>
+        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
  </div>
     
   </div>
@@ -658,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

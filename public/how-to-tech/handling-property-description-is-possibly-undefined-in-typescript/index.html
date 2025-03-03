@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,92 +342,7 @@
 
 
 
-
-
-
-<p>I was building a dynamic category page in Next.js where blog posts are displayed. Each post includes a title, image, categories, and a short description. However, when accessing the <code>description</code> property of a <code>post</code> object, I encountered the TypeScript error:<br>
-<code>'post.description' is possibly 'undefined'.</code></p>
-
-
-
-<p>I realized this happened because TypeScript inferred that the <code>description</code> property might not always be defined for all <code>post</code> objects in the <code>posts</code> array. TypeScript, being strict about undefined properties, flagged this as a potential runtime issue.</p>
-
-
-
-<h3 id="how-i-fixed-it"><strong>How I Fixed It</strong></h3>
-<p>I resolved this issue by implementing a fallback mechanism for the <code>description</code> property. Here’s how I did it:</p>
-
-
-
-<ol>
-<li>
-<p><strong>Understand the Source of the Error:</strong><br>
-I examined the <code>posts</code> array structure and confirmed that not all <code>post</code> objects guaranteed the presence of a <code>description</code> field.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-<li>
-<p><strong>Use the Nullish Coalescing Operator (<code>??</code>)</strong>:<br>
-To provide a fallback value in case <code>description</code> is <code>undefined</code> or <code>null</code>, I updated the code as follows:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h3</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-base text-muted-foreground&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">description</span><span class="o">?</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">90</span>
-</span></span><span class="line"><span class="cl">      <span class="o">?</span> <span class="sb">`</span><span class="si">${</span><span class="nx">post</span><span class="p">.</span><span class="nx">description</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span><span class="si">}</span><span class="sb">...`</span>
-</span></span><span class="line"><span class="cl">      <span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">description</span> <span class="o">??</span> <span class="s2">&#34;No description available&#34;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-</span></span></code></pre></div><ul>
-<li>The <code>?.</code> (optional chaining) ensures the length check is only performed if <code>description</code> is defined.</li>
-<li>The <code>??</code> (nullish coalescing) operator provides a default string if <code>description</code> is <code>undefined</code> or <code>null</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Optional: Use a Type Guard:</strong><br>
-If preferred, I could explicitly check for the existence of the <code>description</code> property before attempting to access or manipulate it:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h3</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-base text-muted-foreground&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">description</span>
-</span></span><span class="line"><span class="cl">      <span class="o">?</span> <span class="nx">post</span><span class="p">.</span><span class="nx">description</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">90</span>
-</span></span><span class="line"><span class="cl">        <span class="o">?</span> <span class="sb">`</span><span class="si">${</span><span class="nx">post</span><span class="p">.</span><span class="nx">description</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span><span class="si">}</span><span class="sb">...`</span>
-</span></span><span class="line"><span class="cl">        <span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">description</span>
-</span></span><span class="line"><span class="cl">      <span class="o">:</span> <span class="s2">&#34;No description available&#34;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Test the Solution:</strong><br>
-After implementing the fallback mechanism, I ran the application and verified that:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<ul>
-<li>Posts with a defined <code>description</code> displayed correctly.</li>
-<li>Posts without a <code>description</code> showed the fallback text: “No description available.”</li>
-</ul>
-</li>
-</ol>
-<p>By following these steps, I ensured that the code handled undefined <code>description</code> values gracefully without triggering TypeScript errors or runtime crashes.</p>
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -557,32 +472,32 @@ After implementing the fallback mechanism, I ran the application and verified th
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
+        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
+        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/remove-number-from-string-in-regex-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-numbers-from-a-string-in-python-using-regex/">How to Remove Numbers from a String in Python using Regex?</a>
+        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
+        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
  </div>
     
 
@@ -601,32 +516,32 @@ After implementing the fallback mechanism, I ran the application and verified th
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-09-02-at-1.55.54-pm.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-your-devices-were-logged-out-error-on-whatsapp/">How to Fix &#34;Your Devices Were Logged Out&#34; Error on WhatsApp?</a>
+        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
+        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
+        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
+        <img src="http://localhost:1313/images/work-smart-vs-work-hard-venn-diagram.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hitesh-choudhary-t1paibmtjim-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-machine-learning-and-generative-ai/">Difference Between Machine Learning and Generative AI </a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-interpreter/">Compiler vs. Interpreter: What&#39;s The Difference?</a>
  </div>
     
   </div>
@@ -634,11 +549,12 @@ After implementing the fallback mechanism, I ran the application and verified th
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

@@ -302,7 +302,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -345,212 +345,7 @@
 
 
 
-
-
-
-<p>When working with image URLs in JavaScript, it&rsquo;s crucial to ensure their validity. This article provides a comprehensive guide on how to check if an image URL is valid in JavaScript, along with code examples.</p>
-
-
-
-<div class="toc-container">
-  <h2 class="toc-h2">
-    Table of Contents <button class="toggle-button">↬</button>
-  </h2>
-  <div class="table-of-contents"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#understanding-image-url-validation"><strong>Understanding Image URL Validation</strong></a></li>
-    <li><a href="#ways-to-check-if-an-image-url-is-valid-in-javascript"><strong>Ways to Check if an Image URL is Valid in JavaScript?</strong></a>
-      <ul>
-        <li><a href="#1-using-regular-expressions"><strong>1. Using Regular Expressions</strong></a></li>
-        <li><a href="#2-using-the-fetch-api"><strong>2. Using the Fetch API</strong></a></li>
-        <li><a href="#3-utilizing-external-libraries"><strong>3. Utilizing External Libraries</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#faqs"><strong>FAQs</strong></a></li>
-  </ul>
-</nav></div>
-</div>
-<h2 id="understanding-image-url-validation"><strong>Understanding Image URL Validation</strong></h2>
-<p>Validating an image URL ensures that the URL points to an existing and accessible image file.</p>
-
-
-
-<p>It helps prevent errors when attempting to load or process the image in your JavaScript application.</p>
-
-
-
-<h2 id="ways-to-check-if-an-image-url-is-valid-in-javascript"><strong>Ways to Check if an Image URL is Valid in JavaScript?</strong></h2>
-<h3 id="1-using-regular-expressions"><strong>1. Using Regular Expressions</strong></h3>
-<p>Regular expressions provide a powerful way to validate image URLs. By defining a pattern that matches the expected format of an image URL, you can perform a validation check using JavaScript&rsquo;s <code>test()</code> method.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here&rsquo;s an example of using regular expressions to validate an image URL:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrl</span> <span class="o">=</span> <span class="s1">&#39;https://example.com/images/image.jpg&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrlRegex</span> <span class="o">=</span> <span class="sr">/\.(jpeg|jpg|gif|png)$/i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">isValidImageUrl</span> <span class="o">=</span> <span class="nx">imageUrlRegex</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidImageUrl</span><span class="p">);</span>
-</span></span></code></pre></div><pre tabindex="0"><code> true
-</code></pre><p>In the code snippet above, we define a regular expression pattern (<code>imageUrlRegex</code>) that matches common image file extensions.</p>
-
-
-
-<p>We then use the <code>test()</code> method to check if the <code>imageUrl</code> matches the pattern, indicating whether the URL is valid.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>If you noticed in the code, you will see <code>(jpeg|jpg|gif|png).</code> This defines the extension of the image that you want to access.</p>
-
-
-
-<p>If you want to validate for an image with a <strong>.webp</strong> extension, you have to modify it to this: <code>(jpeg|jpg|gif|png|webp).</code></p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrl</span> <span class="o">=</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;https://tooabstractive.com/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrlRegex</span> <span class="o">=</span> <span class="sr">/\.(jpeg|jpg|gif|png|webp)$/i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">isValidImageUrl</span> <span class="o">=</span> <span class="nx">imageUrlRegex</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidImageUrl</span><span class="p">);</span>
-</span></span></code></pre></div><h3 id="2-using-the-fetch-api"><strong>2. Using the Fetch API</strong></h3>
-<p>The Fetch API offers a convenient method to check the validity of an image URL. By making a <code>fetch</code> request to the URL and checking the response status, you can determine whether the URL points to a valid image.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here&rsquo;s an example of using the Fetch API to validate an image URL:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrl</span> <span class="o">=</span> <span class="s1">&#39;https://example.com/images/image.jpg&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Image URL is valid&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Image URL is invalid&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">})</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error validating image URL:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span></code></pre></div><p>In the code snippet above, we use the <code>fetch()</code> function to make a GET request to the <code>imageUrl</code>. We then check the response&rsquo;s <code>ok</code> property to determine if the URL is valid.</p>
-
-
-
-<p><strong>For example, if you run this:</strong></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrl</span> <span class="o">=</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;https://tooabstractive.com/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Image URL is valid&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Image URL is invalid&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">})</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Error validating image URL:&#34;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span></code></pre></div><p><strong>You will get this as output:</strong></p>
-
-
-
-<pre tabindex="0"><code> Image URL is valid
-</code></pre><h3 id="3-utilizing-external-libraries"><strong>3. Utilizing External Libraries</strong></h3>
-<p>In Node.js, several external libraries, such as <code>validator.js</code> and <code>url-regex</code>, provide ready-to-use functions for validating URLs, including image URLs.</p>
-
-
-
-<p>These libraries offer robust validation capabilities and handle edge cases effectively.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here&rsquo;s an example of using the <code>validator.js</code> library to validate an image URL:</p>
-
-
-
-<blockquote>
-<p>&#x1f4a1;</p>
-
-
-
-<p>Make sure you have the necessary Node.js dependencies installed. For example, the <code>validator.js</code> library.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">validator</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;validator&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrl</span> <span class="o">=</span> <span class="s1">&#39;https://example.com/images/image.jpg&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">isValidImageUrl</span> <span class="o">=</span> <span class="nx">validator</span><span class="p">.</span><span class="nx">isURL</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">,</span> <span class="p">{</span> <span class="nx">protocols</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="s1">&#39;https&#39;</span><span class="p">],</span> <span class="nx">require_tld</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidImageUrl</span><span class="p">);</span> 
-</span></span></code></pre></div><p>In the code snippet above, we use the <code>isURL()</code> function from the <code>validator.js</code> library to validate the <code>imageUrl</code>. The function checks if the URL is valid based on specified options, such as required protocols and TLD.</p>
-
-
-
-<p><strong>Also, if you run this:</strong></p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">validator</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;validator&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrl</span> <span class="o">=</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;https://tooabstractive.com/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">isValidImageUrl</span> <span class="o">=</span> <span class="nx">validator</span><span class="p">.</span><span class="nx">isURL</span><span class="p">(</span><span class="nx">imageUrl</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">protocols</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;http&#34;</span><span class="p">,</span> <span class="s2">&#34;https&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">require_tld</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidImageUrl</span><span class="p">);</span>
-</span></span></code></pre></div><p>You should get <code>true</code> as the output.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<pre tabindex="0"><code> true
-</code></pre><h2 id="faqs"><strong>FAQs</strong></h2>
-<ol>
-<li><strong>Are there any built-in JavaScript functions for image URL validation?</strong> JavaScript doesn&rsquo;t have built-in functions specifically for image URL validation. However, you can utilize regular expressions or external libraries to achieve URL validation.</li>
-<li><strong>Can I check if an image URL exists without downloading the entire image?</strong> Yes, by using techniques like the Fetch API, you can send a request to the image URL and check the response status. This allows you to verify if the image exists without downloading the entire file.</li>
-<li><strong>What are some common edge cases to consider when validating image URLs?</strong> Common edge cases include handling different URL formats (relative URLs, data URLs), checking for valid image file extensions, handling redirects, and considering URL encoding and decoding.</li>
-<li><strong>Which external libraries are commonly used for URL validation in JavaScript?</strong> Some popular external libraries for URL validation in JavaScript are <code>validator.js</code>, <code>url-regex</code>, <code>valid-url</code>, and <code>is-url</code>. These libraries provide comprehensive URL validation functionality.</li>
-</ol>
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -680,32 +475,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-fix-play-store-not-working-try-again-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-play-store-not-working-try-again-error/">How to Fix Play Store Not Working &#34;Try Again&#34; Error?</a>
+        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
+        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
+        <img src="http://localhost:1313/images/using-control-shift-and-pallete.jpg.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-terminal-in-vs-code/">How to Clear the Terminal in VS Code?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-hackers-better-than-programmers/">Are Hackers Better Than Programmers?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
+        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
  </div>
     
 
@@ -724,32 +519,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
+        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/work-smart-vs-work-hard-venn-diagram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/nodejs-website.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-install-nodejs-in-windows/">How to Install Node.js in Windows?</a>
+        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
+        <img src="http://localhost:1313/images/wm_hon-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-vs-cpp-vs-csharp-whats-the-difference/">C vs C&#43;&#43; vs C#: What&#39;s the Difference?</a>
  </div>
     
   </div>
@@ -757,11 +552,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

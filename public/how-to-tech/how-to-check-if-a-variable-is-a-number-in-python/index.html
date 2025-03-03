@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,159 +342,7 @@
 
 
 
-
-
-
-<p>In Python, variables can hold various types of data, including integers (int) and floating-point numbers (float).</p>
-
-
-
-<p>When dealing with dynamic data, it&rsquo;s crucial to ascertain whether a variable contains a numeric value before performing mathematical operations.</p>
-
-
-
-<p>We will discuss two methods that help you achieve this goal: the type() function and the isinstance() function.</p>
-
-
-
-<h2 id="1-making-use-of-the-type-function"><strong>1. Making Use of the type() Function</strong></h2>
-<h3 id="-defining-the-function"><strong>— Defining the Function</strong></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    This function checks if a variable is a number.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        variable: The variable to check.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        True if the variable is a number, False otherwise.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
-</span></span></code></pre></div><h3 id="how-it-works"><strong>How it Works</strong></h3>
-<p>The <code>type()</code> function returns the type of the given variable. If the type is either int or float, the function returns True, indicating that the variable is a number.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Otherwise, it returns False.</p>
-
-
-
-<p><strong>Example Code:</strong></p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    This function checks if a variable is a number.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        variable: The variable to check.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        True if the variable is a number, False otherwise.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Examples</span>
-</span></span><span class="line"><span class="cl"><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl"><span class="n">result_number</span> <span class="o">=</span> <span class="n">is_number</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">string</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">result_string</span> <span class="o">=</span> <span class="n">is_number</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Is </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> a number? </span><span class="si">{</span><span class="n">result_number</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Is </span><span class="si">{</span><span class="n">string</span><span class="si">}</span><span class="s2"> a number? </span><span class="si">{</span><span class="n">result_string</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><pre tabindex="0"><code>
-
-Is 10 a number? True
-Is Hello a number? False
-</code></pre><h2 id="2-making-use-of-the-isinstance-function"><strong>2. Making Use of the isinstance() Function</strong></h2>
-<h3 id="-defining-the-function-1"><strong>— Defining the Function</strong></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    This function checks if a variable is a number.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        variable: The variable to check.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        True if the variable is a number, False otherwise.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
-</span></span></code></pre></div><h3 id="how-it-works-1"><strong>How it Works</strong></h3>
-<p>The <code>isinstance()</code> function verifies if the variable is an instance of either the int or float class.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>If the variable is indeed an instance of either of these classes, the function returns True; otherwise, it returns False.</p>
-
-
-
-<p><strong>Example Code:</strong></p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    This function checks if a variable is a number.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        variable: The variable to check.
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        True if the variable is a number, False otherwise.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Examples</span>
-</span></span><span class="line"><span class="cl"><span class="n">number</span> <span class="o">=</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl"><span class="n">result_number</span> <span class="o">=</span> <span class="n">is_number</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">string</span> <span class="o">=</span> <span class="s2">&#34;Good Bye&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">result_string</span> <span class="o">=</span> <span class="n">is_number</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Is </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> a number? </span><span class="si">{</span><span class="n">result_number</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Is </span><span class="si">{</span><span class="n">string</span><span class="si">}</span><span class="s2"> a number? </span><span class="si">{</span><span class="n">result_string</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><pre tabindex="0"><code>
-
-Is 20 a number? True
-Is Good Bye a number? False
-</code></pre><h2 id="which-one-to-use"><strong>Which One to Use?</strong></h2>
-<p>The choice between the <code>type()</code> and <code>isinstance()</code> methods depends on your coding style and specific requirements.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The <code>type()</code> function offers a concise approach, while the <code>isinstance()</code> function provides more explicit validation.</p>
-
-
-
-<h2 id="frequently-asked-questions-faqs"><strong>Frequently Asked Questions (FAQs)</strong></h2>
-<ol>
-<li><strong>Can these methods distinguish between integer and floating-point numbers?</strong>
-Yes, both methods can distinguish between integers and floating-point numbers.</li>
-<li><strong>What happens if I use the type() function on a non-numeric variable?</strong>
-The type() function will return the type of the variable, which might not be int or float.</li>
-<li><strong>Are there any performance differences between these two methods?</strong>
-Generally, the type() function is slightly faster than the isinstance() function due to its simplicity.</li>
-<li><strong>Can I use these functions to check for complex numbers as well?</strong>
-No, these methods are designed to check for int and float types only. To check for complex numbers, you would need a different approach.</li>
-<li><strong>Can I create a custom function to check for other numeric types, such as decimals?</strong>
-Yes, you can create custom functions using similar logic to check for other numeric types like decimals or fractions.</li>
-</ol>
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -624,20 +472,20 @@ Yes, you can create custom functions using similar logic to check for other nume
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
+        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-fix-play-store-not-working-try-again-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-play-store-not-working-try-again-error/">How to Fix Play Store Not Working &#34;Try Again&#34; Error?</a>
+        <img src="http://localhost:1313/images/node-module-right-click-delete.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-node-modules-in-vscode/">How to Delete Node Modules in VSCode?</a>
  </div>
     
     
@@ -648,8 +496,8 @@ Yes, you can create custom functions using similar logic to check for other nume
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
+        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
  </div>
     
 
@@ -668,32 +516,32 @@ Yes, you can create custom functions using similar logic to check for other nume
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
+        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
+        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
+        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/nested-array-in-obj-1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-you-access-an-array-that-is-nested-in-an-object/">How to access an array that is nested in an object? (Javascript)</a>
+        <img src="http://localhost:1313/images/surveillance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-surveillance-and-monitoring/">Surveillance vs. Monitoring: What&#39;s The Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
+        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
  </div>
     
   </div>
@@ -701,11 +549,12 @@ Yes, you can create custom functions using similar logic to check for other nume
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

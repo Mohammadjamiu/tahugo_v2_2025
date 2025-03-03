@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,167 +342,7 @@
 
 
 
-
-
-
-<p>I noticed that my Next.js blog post page took some time to load, which made the website feel unresponsive.</p>
-
-
-
-<p>Even though I’ve been optimizing the app by dynamically importing modules, tracking large package sizes, and making improvements, it still felt sluggish to users.</p>
-
-
-
-<p>To address this, I decided to add a progress bar at the top of the page.</p>
-
-
-
-<p>Interestingly, it gives a sense of activity, reducing the perception of unresponsiveness.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>It’s funny how our brains work—just seeing a loading bar feels reassuring!</p>
-
-
-
-<p><strong>I Followed These Steps&hellip;</strong><br>
-To implement a progress bar in my Next.js 15 app, I used the <em><strong>Next NProgress Bar</strong></em> package. Here’s how I did it:</p>
-
-
-
-<ol>
-<li>
-<p><strong>Install the Package</strong></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>I installed the package using:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm i next-nprogress-bar
-</span></span></code></pre></div><p>If you’re using npm, you can run:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm i next-nprogress-bar
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Create a ProgressBarProvider Component</strong></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>I followed the package documentation and created a provider component to wrap my application.</p>
-
-
-
-<p>This ensures that the progress bar is properly integrated without requiring the <code>use client</code> directive in my layout.</p>
-
-
-
-<p>Here&rsquo;s a link to the package documentation on npmjs. <a href="https://www.npmjs.com/package/next-nprogress-bar" target="_blank" rel="nofollow noopener ">https://www.npmjs.com/package/next-nprogress-bar</a></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// /components/ProgressBarProvider.tsx
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s2">&#34;use client&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">AppProgressBar</span> <span class="nx">as</span> <span class="nx">ProgressBar</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;next-nprogress-bar&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Providers</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">children</span> <span class="p">}</span><span class="o">:</span> <span class="p">{</span> <span class="nx">children</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">ReactNode</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">children</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">ProgressBar</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">height</span><span class="o">=</span><span class="s2">&#34;4px&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">color</span><span class="o">=</span><span class="s2">&#34;#fffd00&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// This line above 👆
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">options</span><span class="o">=</span><span class="p">{{</span> <span class="nx">showSpinner</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">shallowRouting</span>
-</span></span><span class="line"><span class="cl">      <span class="o">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Providers</span><span class="p">;</span>
-</span></span></code></pre></div><p>Note: You can customize the progress bar color using HEX or HSL values.</p>
-
-
-
-</li>
-<li>
-<p><strong>Import and use the Provider inside <code>layout.tsx</code></strong><br>
-I imported the <code>Providers</code> component into the <code>layout.tsx</code> file to wrap the <code>{children}</code>.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// /app/layout.tsx
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">Providers</span> <span class="nx">from</span> <span class="s2">&#34;@/components/ProgressBarProvider&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// This line above 👆
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;My Next.js App&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;Optimized with a progress bar&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">RootLayout</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">children</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">children</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">ReactNode</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;en&#34;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">Providers</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Providers&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// This line above 👆
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="o">&lt;</span><span class="err">/body&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/html&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></li>
-</ol>
-<p>Wrapping the app this way avoids making the <code>layout.tsx</code> a client component, which is not ideal for performance.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>After completing the setup, I ran my app locally to test the changes.</p>
-
-
-
-<p>The progress bar now gives immediate feedback to users, significantly improving the perceived speed of my app.</p>
-
-
-
-<p>While there’s still an initial cold start, the progress bar improves the user experience, making the site feel faster.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Hopefully, future updates in Next.js will address this issue. Thanks to the Next.js team for their contributions to the dev community!</p>
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -632,32 +472,32 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/console-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.error/">Difference Between console.log and console.error</a>
+        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
+        <img src="http://localhost:1313/images/closeup-wireless-router-young-man-600w-521452618-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-router/">Difference between Wi-Fi and Router: Understand the Basics</a>
  </div>
     
     
      <div class="xx">
         <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/remove-number-from-string-in-regex-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-numbers-from-a-string-in-python-using-regex/">How to Remove Numbers from a String in Python using Regex?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
  </div>
     
 
@@ -676,8 +516,8 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/console-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.error/">Difference Between console.log and console.error</a>
+        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
  </div>
     
     
@@ -688,20 +528,20 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/light-mac-browser.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-lightweight-browsers-for-mac/">6 Best Lightweight Browsers for macOS (2024)</a>
+        <img src="http://localhost:1313/images/abstraction.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-abstraction-in-computer-science-with-example/">Abstraction in Computer Science Explained (With Examples)</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/closeup-wireless-router-young-man-600w-521452618-transformed-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-router/">Difference between Wi-Fi and Router: Understand the Basics</a>
+        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
+        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
  </div>
     
   </div>
@@ -709,11 +549,12 @@ I imported the <code>Providers</code> component into the <code>layout.tsx</code>
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,148 +342,7 @@
 
 
 
-
-
-
-<p><code>forEach</code> loop and the <code>for...in</code> loop are two different ways to iterate over elements in JavaScript.</p>
-
-
-
-<p><strong><code>forEach</code> loop is used to iterate over the elements of an array, whereas the <code>for...in</code> loop is used to iterate over the properties of an object. They have different purposes and are suited for different data structures.</strong></p>
-
-
-
-<h2 id="difference-between-foreach-and-forin-loop">Difference Between <code>forEach</code> and <code>for…in</code> Loop</h2>
-<h3 id="foreach-loop"><code>forEach</code> <strong>Loop:</strong></h3>
-<p><code>forEach</code> loop is a method available for arrays in JavaScript. It allows you to iterate over each element in an array and perform a specific action for each element.</p>
-
-
-
-<blockquote>
-<p>The syntax for using a <code>forEach</code> is -  <code>array.forEach(callbackFunction)</code></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<p>The <code>forEach</code> method takes a callback function as an argument. This callback function is called once for each element in the array. The current element of the array is passed as an argument to the callback function.</p>
-
-
-
-<p>You can perform any desired action within the callback function using the current element.</p>
-
-
-
-<p>Here is a code example in which <code>forEach</code> loop is used to log each element of an array:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">numbers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Output:
-</span></span></span><span class="line"><span class="cl"><span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 1
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 2
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 3
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 4
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 5
-</span></span></span></code></pre></div><p>In the above code example, we have an array called <code>numbers</code> containing <code>[1, 2, 3, 4, 5]</code>. By using the <code>forEach</code> method on the <code>numbers</code> array, we provide a callback function as an argument.</p>
-
-
-
-<p>This callback function is executed for each element of the array. In this case, we simply log each element (<code>num</code>) to the console.</p>
-
-
-
-<blockquote>
-<p>The <code>forEach</code> loop allows you to iterate over each element in a more concise and readable way compared to traditional <code>for</code> loops. It is commonly used when you want to perform an action for each element of an array.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<h3 id="forin-loop"><code>for...in</code> <strong>loop:</strong></h3>
-<p><code>for...in</code> loop is used to iterate over the properties of an object in JavaScript.</p>
-
-
-
-<blockquote>
-<p>The syntax for using a <code>for...in</code> loop is – ⁣<code>for (variable in object) { ... }</code></p>
-
-
-
-</blockquote>
-<p>The <code>for...in</code> loop allows you to access each property of an object. It iterates over the enumerable properties of an object, and for each property, the loop assigns the property name to the specified variable.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>You can perform any desired action within the loop&rsquo;s block.</p>
-
-
-
-<p>Here&rsquo;s an example using the <code>for...in</code> loop to access object properties:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">age</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">city</span><span class="o">:</span> <span class="s2">&#34;New York&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span> <span class="o">+</span> <span class="s2">&#34;: &#34;</span> <span class="o">+</span> <span class="nx">person</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Output:
-</span></span></span><span class="line"><span class="cl"><span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1">// name: John 
-</span></span></span><span class="line"><span class="cl"><span class="c1">// age: 30 
-</span></span></span><span class="line"><span class="cl"><span class="c1">// city: New York
-</span></span></span></code></pre></div><p>In the example code above, we have an object called <code>person</code> with properties such as <code>name</code>, <code>age</code>, and <code>city</code>. Using the <code>for...in</code> loop, we iterate over the properties of the <code>person</code> object.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The <code>key</code> variable represents each property name, and we can access the corresponding value using <code>person[key]</code>.</p>
-
-
-
-<blockquote>
-<p>The <code>for...in</code> loop is specifically designed for object properties and is not intended for iterating over arrays. It allows you to access and perform operations on each property of an object.</p>
-
-
-
-</blockquote>
-<h2 id="in-few-points">In Few Points:</h2>
-<p><code>forEach</code> is used to iterate over the elements of an array, while <code>for...in</code> is used to iterate over the properties of an object.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -613,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/java-compare-string.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-compare-strings-in-java/">How to Compare Strings in Java?</a>
+        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
  </div>
     
     
      <div class="xx">
-        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/who-owns-chatgpt-and-who-created-it/">Who Owns ChatGPT and Who Created It? All You Need to Know</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
+        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
 
@@ -657,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/apple_new-m1-chip-graphic_11102020_big.jpg.large.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-processor-is-best-for-coding-or-programming/">Which Processor is Best for Coding or Programming?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
+        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
+        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
+        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
  </div>
     
   </div>
@@ -690,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

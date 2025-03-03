@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,300 +342,7 @@
 
 
 
-
-
-
-<p>JavaScript Objects are in-memory data structures that allow direct manipulation and access within JavaScript code. They are versatile, mutable, and provide an object-oriented approach to organizing data.</p>
-
-
-
-<p>JSON, on the other hand, is a text-based data interchange format designed for easy data transmission and interoperability between systems.</p>
-
-
-
-<p>It provides a standardized way to represent structured data as a string, making it suitable for communication between different platforms and programming languages.</p>
-
-
-
-<h2 id="difference-between-javascript-object-and-json"><strong>Difference Between JavaScript Object and JSON</strong></h2>
-<h3 id="-javascript-object"># <strong>JavaScript Object</strong></h3>
-<p>A JavaScript object is a data structure that allows you to store and organize data using key-value pairs. It is a fundamental feature of the JavaScript programming language and provides a way to group related properties and methods together.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here are some key aspects of JavaScript objects:</p>
-
-
-
-<h4 id="a-syntax--">a) Syntax -</h4>
-<p>JavaScript Objects are defined using curly braces <code>{}</code> and contain properties and methods enclosed within. Properties are specified as key-value pairs, where the keys are strings and the values can be of any data type, including strings, numbers, booleans, arrays, other objects, and even functions.</p>
-
-
-
-<p>Here is an example code snippet:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John Doe&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">age</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">isActive</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">address</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">city</span><span class="o">:</span> <span class="s2">&#34;New York&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">country</span><span class="o">:</span> <span class="s2">&#34;USA&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">hobbies</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;reading&#34;</span><span class="p">,</span> <span class="s2">&#34;coding&#34;</span><span class="p">,</span> <span class="s2">&#34;traveling&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// Output: &#34;John Doe&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// Output: 25
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">isActive</span><span class="p">);</span> <span class="c1">// Output: true
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">address</span><span class="p">.</span><span class="nx">city</span><span class="p">);</span> <span class="c1">// Output: &#34;New York&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">address</span><span class="p">.</span><span class="nx">country</span><span class="p">);</span> <span class="c1">// Output: &#34;USA&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">hobbies</span><span class="p">);</span> <span class="c1">// Output: [&#34;reading&#34;, &#34;coding&#34;, &#34;traveling&#34;]
-</span></span></span></code></pre></div><p><img src="http://localhost:1313/images/js-object.webp" alt="js object syntax" title="js object syntax"></p>
-
-
-
-<p>In this code, the JavaScript object <code>person</code> is directly defined using the JSON-like syntax. It has properties such as <code>name</code>, <code>age</code>, <code>isActive</code>, <code>address</code>, and <code>hobbies</code>. The <code>address</code> property is an object itself, containing properties like <code>city</code> and <code>country</code>. The <code>hobbies</code> property is an array.</p>
-
-
-
-<p>You can access the properties of the JavaScript object using dot notation (<code>person.name</code>, <code>person.age</code>, etc.), as demonstrated in the <code>console.log()</code> statements.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<blockquote>
-<p>When we discuss about JSON, you will discover that both JSON and JavaScript Object look alike but the obvious difference in their syntax is that - JS Object property looks like this -   <code>name: &quot;John Doe&quot;</code> while in JSON format look like -   <code>&quot;name&quot;: &quot;John Doe&quot;</code>.</p>
-
-
-
-<p>Do you notice the quotes that surround the <strong>key name.</strong></p>
-
-
-
-<p>The other difference is that JS Object start with <code>{ code goes here }</code> while in JSON <code>`{ Code goes here }`</code> For example, in JS Object we have - <code>{ name: &quot;John Doe&quot; }</code> while in JSON we have - <code>`{ &quot;name&quot;: &quot;John Doe&quot;}`</code></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<h4 id="b-flexibility--">b) Flexibility -</h4>
-<p>JavaScript Objects are dynamic and mutable, meaning that you can add, modify, or remove properties at any time. They provide a flexible way to represent and manipulate data within JavaScript code.</p>
-
-
-
-<p>Here is a code snippet that demonstrate the dynamic and mutable nature of JavaScript Objects:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Define a JavaScript object
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John Doe&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">age</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">isActive</span><span class="o">:</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span> <span class="c1">// Output: { name: &#39;John Doe&#39;, age: 25, isActive: true }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Add a new property
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">address</span> <span class="o">=</span> <span class="s2">&#34;123 Main St&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span> <span class="c1">// Output: { name: &#39;John Doe&#39;, age: 25, isActive: true, address: &#39;123 Main St&#39; }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Modify an existing property
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span> <span class="c1">// Output: { name: &#39;John Doe&#39;, age: 30, isActive: true, address: &#39;123 Main St&#39; }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Remove a property
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">delete</span> <span class="nx">person</span><span class="p">.</span><span class="nx">isActive</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span> <span class="c1">// Output: { name: &#39;John Doe&#39;, age: 30, address: &#39;123 Main St&#39; }
-</span></span></span></code></pre></div><p><img src="http://localhost:1313/images/flexibility-of-js-object.webp" alt="dynamic and mutablenature of js object" title="dynamic and mutablenature of js object"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>In this code, we start by defining a JavaScript object <code>person</code> with properties such as <code>name</code>, <code>age</code>, and <code>isActive</code>. We then demonstrate the dynamic and mutable nature of JavaScript objects.</p>
-
-
-
-<p>First, we add a new property <code>address</code> to the <code>person</code> object using dot notation (<code>person.address = &quot;123 Main St&quot;</code>). This showcases the ability to add properties to an object dynamically.</p>
-
-
-
-<p>Next, we modify the <code>age</code> property by assigning it a new value (<code>person.age = 30</code>). This demonstrates the capability to modify existing properties of an object.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Finally, we remove the <code>isActive</code> property using the <code>delete</code> keyword (<code>delete person.isActive</code>). This highlights the ability to remove properties from an object.</p>
-
-
-
-<p>Throughout the code, we log the <code>person</code> object to the console to observe the changes made to the object. This exemplifies the flexibility of JavaScript objects, allowing for the addition, modification, and removal of properties at any time.</p>
-
-
-
-<h4 id="c-object-oriented-programming-oop--">c) Object-Oriented Programming (OOP) -</h4>
-<p>JavaScript Objects are a fundamental part of object-oriented programming in JavaScript. They can serve as blueprints for creating multiple instances of similar objects using constructor functions or classes.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Here&rsquo;s a code snippet that demonstrates how JavaScript objects can serve as blueprints for creating multiple instances using constructor functions:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Constructor function for creating Person objects
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Create instances of Person using the constructor function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">person1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;John Doe&#34;</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;Jane Smith&#34;</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person1</span><span class="p">);</span> <span class="c1">// Output: Person { name: &#39;John Doe&#39;, age: 25 }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person2</span><span class="p">);</span> <span class="c1">// Output: Person { name: &#39;Jane Smith&#39;, age: 30 }
-</span></span></span></code></pre></div><h4 id="d-functionality--">d) Functionality -</h4>
-<p>JavaScript Objects can have methods, which are functions stored as object properties. These methods can be called to perform specific actions or computations related to the object&rsquo;s data.</p>
-
-
-
-<p>Here&rsquo;s a code snippet that illustrates how JavaScript objects can have methods:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Define a JavaScript object with a method
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">calculator</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">add</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">subtract</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Call the methods of the object
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calculator</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// Output: 8
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calculator</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// Output: 6
-</span></span></span></code></pre></div><h4 id="e-in-memory-data-structure--">e) In-Memory Data Structure -</h4>
-<p>JavaScript Objects are in-memory data structures, allowing direct manipulation and access to properties and methods within JavaScript code.</p>
-
-
-
-<h3 id="-json-javascript-object-notation"># <strong>JSON (JavaScript Object Notation)</strong></h3>
-<p>JSON is a lightweight data interchange format that originated from JavaScript object syntax. It provides a standardized way to represent structured data as a string, making it easy to transmit and exchange data between different systems and programming languages.</p>
-
-
-
-<p>Here are some important aspects of JSON:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h4 id="a-syntax---1">a) Syntax -</h4>
-<p>JSON follows a specific syntax derived from JavaScript object syntax. It uses key-value pairs separated by colons (<code>:</code>) and is typically represented as a string. Property names in JSON must be enclosed in double quotes (<code>&quot;</code>), and strings, numbers, booleans, arrays, objects (limited to key-value pairs), and <code>null</code> are supported data types.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// JSON Syntax Example
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">jsonCode</span> <span class="o">=</span> <span class="sb">`{
-</span></span></span><span class="line"><span class="cl"><span class="sb">  &#34;name&#34;: &#34;John Doe&#34;,
-</span></span></span><span class="line"><span class="cl"><span class="sb">  &#34;age&#34;: 25,
-</span></span></span><span class="line"><span class="cl"><span class="sb">  &#34;isActive&#34;: true,
-</span></span></span><span class="line"><span class="cl"><span class="sb">  &#34;hobbies&#34;: [&#34;reading&#34;, &#34;coding&#34;],
-</span></span></span><span class="line"><span class="cl"><span class="sb">  &#34;address&#34;: {
-</span></span></span><span class="line"><span class="cl"><span class="sb">    &#34;city&#34;: &#34;New York&#34;,
-</span></span></span><span class="line"><span class="cl"><span class="sb">    &#34;country&#34;: &#34;USA&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sb">  }
-</span></span></span><span class="line"><span class="cl"><span class="sb">}`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">jsonCode</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Output:
-</span></span></span><span class="line"><span class="cl"><span class="c1">// {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   &#34;name&#34;: &#34;John Doe&#34;,
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   &#34;age&#34;: 25,
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   &#34;isActive&#34;: true,
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   &#34;hobbies&#34;: [&#34;reading&#34;, &#34;coding&#34;],
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   &#34;address&#34;: {
-</span></span></span><span class="line"><span class="cl"><span class="c1">//     &#34;city&#34;: &#34;New York&#34;,
-</span></span></span><span class="line"><span class="cl"><span class="c1">//     &#34;country&#34;: &#34;USA&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//   }
-</span></span></span><span class="line"><span class="cl"><span class="c1">// }
-</span></span></span></code></pre></div><h4 id="b-data-interchange--">b) Data Interchange -</h4>
-<p>JSON is primarily used as a data interchange format. It allows data to be easily transferred between systems, platforms, and programming languages.</p>
-
-
-
-<p>JSON provides a universal format that is widely supported and understood across different environments.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h4 id="c-string-representation--">c) String Representation -</h4>
-<p>JSON data is represented as a string, allowing for easy storage and transmission. The string representation enables JSON to be consumed by various systems, including web browsers, servers, and APIs.</p>
-
-
-
-<h4 id="d-limited-data-types--">d) Limited Data Types -</h4>
-<p>Unlike JavaScript Object that supports all data types, JSON supports a subset of the data types available in JavaScript.</p>
-
-
-
-<p>It does not include functions or undefined values. JSON&rsquo;s focus is on data representation and interchange rather than executing code.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h4 id="e-serialization-and-deserialization--">e) Serialization and Deserialization -</h4>
-<p>JSON provides mechanisms for serializing (converting to a string) and deserializing (parsing from a string) data.</p>
-
-
-
-<p>Serialization converts JavaScript objects or other data types into JSON strings, while deserialization converts JSON strings back into their respective data structures.</p>
-
-
-
-<p>Here comes the end. Hope you get the point &#x1f389;</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</p>
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -765,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
+        <img src="http://localhost:1313/images/speed-up-optimize-nextjs-website-blog.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/speed-up-optimize-nextjs-website-blog/">How to Speed Up and Optimize Your Next.js Website or Blog for Faster Page Load</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-microsoft-edge-useful-keyboard-shortcuts-keys-for-windows/">List of Microsoft Edge Useful Keyboard Shortcuts Keys for Windows (2024)</a>
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
+        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-give-the-same-answer-to-everyone/">Does ChatGPT Give the Same Answer to Everyone?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-examples-of-ai-technology-and-how-is-it-used-today/">Examples of AI Technology and How They Are Used Today</a>
  </div>
     
 
@@ -809,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
+        <img src="http://localhost:1313/images/emoji-rendering-in-mdx-with-remark-emoji-in-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-emoji-rendering-in-mdx-with-remark-emoji-in-nextjs/">How to Fix Emoji Rendering in MDX with remark-emoji in Next.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
+        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-system-software-and-application-software-with-examples/">Difference Between System Software and Application Software with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-chatgpt-and-chatgpt-plus/">Differences between ChatGPT and ChatGPT Plus</a>
+        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
+        <img src="http://localhost:1313/images/ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-examples-of-ai-technology-and-how-is-it-used-today/">Examples of AI Technology and How They Are Used Today</a>
  </div>
     
   </div>
@@ -842,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

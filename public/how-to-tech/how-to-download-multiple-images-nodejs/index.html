@@ -302,7 +302,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -345,198 +345,7 @@
 
 
 
-
-
-
-<p>Downloading multiple images in Node.js can be efficiently accomplished using the Promise and async/await features.</p>
-
-
-
-<p>In this article, we are going to look at how to achieve this in your Node.js projects.</p>
-
-
-
-<div class="toc-container">
-  <h2 class="toc-h2">
-    Table of Contents <button class="toggle-button">↬</button>
-  </h2>
-  <div class="table-of-contents"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#installation-and-setup"><strong>Installation and Setup</strong></a></li>
-    <li><a href="#downloading-multiple-images"><strong>Downloading Multiple Images</strong></a></li>
-    <li><a href="#handling-errors"><strong>Handling Errors</strong></a></li>
-    <li><a href="#validating-image-urls"><strong>Validating Image URLs</strong></a></li>
-  </ul>
-</nav></div>
-</div>
-<h2 id="installation-and-setup"><strong>Installation and Setup</strong></h2>
-<p>To begin, ensure that you have Node.js installed on your system. Then, follow these steps to set up your project:</p>
-
-
-
-<ol>
-<li>
-<p>Create a new directory for your project.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-<li>
-<p>Open a terminal and navigate to the project directory.</p>
-
-
-
-</li>
-<li>
-<p>Run the following command to initialize a new Node.js project:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm init -y
-</span></span></code></pre></div></li>
-<li>
-<p>Install the required dependencies by running the following command:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm install request fs
-</span></span></code></pre></div></li>
-</ol>
-<h2 id="downloading-multiple-images"><strong>Downloading Multiple Images</strong></h2>
-<p>To download multiple images in Node.js, follow these steps:</p>
-
-
-
-<ol>
-<li>
-<p>Create a file named <code>imageDownloader.js</code> in your project directory.</p>
-
-
-
-</li>
-<li>
-<p>Open the file and add the following code:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">downloadImage</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">destination</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">request</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="nx">destination</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Image downloaded successfully!&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">})</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error downloading the image:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">downloadImage</span><span class="p">;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>In your main file (e.g., <code>app.js</code>), import the <code>downloadImage</code> function and define an array of image URLs.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">downloadImage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./imageDownloader&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageUrls</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;https://example.com/image1.jpg&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;https://example.com/image2.jpg&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;https://example.com/image3.jpg&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Call the downloadImages function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">downloadImages</span><span class="p">();</span>
-</span></span></code></pre></div></li>
-<li>
-<p>Implement the <code>downloadImages</code> function using the async/await approach.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">downloadImages</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">downloadPromises</span> <span class="o">=</span> <span class="nx">imageUrls</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">url</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">destination</span> <span class="o">=</span> <span class="sb">`./images/image</span><span class="si">${</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="sb">.jpg`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">downloadImage</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">destination</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">downloadPromises</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;All images downloaded successfully!&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error downloading images:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></li>
-</ol>
-<p><strong>At the end of testing the code out, you should get something like this:</strong></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="how to download multiple images nodejs" title="how to download multiple images nodejs"></p>
-
-
-
-<blockquote>
-<p>💡</p>
-
-
-
-<p>Make sure to create the folder that you intend to store the image so that, the image will be downloaded to that folder.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</blockquote>
-<h2 id="handling-errors"><strong>Handling Errors</strong></h2>
-<p>Handling errors during the image download process is crucial for a smooth user experience.</p>
-
-
-
-<p>By attaching an event listener to the <code>error</code> event, you can handle errors effectively. In the <code>imageDownloader.js</code> file, we already handle errors using the <code>on('error')</code> event listener.</p>
-
-
-
-<h2 id="validating-image-urls"><strong>Validating Image URLs</strong></h2>
-<p>Before downloading images, it&rsquo;s important to validate the image URLs to avoid unnecessary requests and handle invalid URLs.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/how-to-check-if-an-image-url-is-valid-in-javascript/">How to Check if an Image URL is Valid in JavaScript?</a></p>
-
-
-
-<p>You can utilize regular expressions or libraries like <code>url-regex</code> to validate URLs. The <a href="https://www.npmjs.com/package/url-regex" target="_blank" rel="nofollow noopener ">url-regex</a> library provides a simple way to validate URLs.</p>
-
-
-
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -666,32 +475,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/can-chatgpt-replace-search-engines-like-google/">Can ChatGPT Replace Search Engines like Google?</a>
+        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
+        <img src="http://localhost:1313/images/bard-activity-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-google-bard-better-than-chatgpt/">Is Google Bard Better Than ChatGPT?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
  </div>
     
     
      <div class="xx">
         <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/in.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-regular-expressions-in-python/">Regular Expression in Python: A Step by Step Explanation</a>
  </div>
     
 
@@ -710,32 +519,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
+        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
+        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-chatgpt-and-chatgpt-plus/">Differences between ChatGPT and ChatGPT Plus</a>
+        <img src="http://localhost:1313/images/light-mac-browser.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-lightweight-browsers-for-mac/">6 Best Lightweight Browsers for macOS (2024)</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/can-chatgpt-replace-search-engines-like-google/">Can ChatGPT Replace Search Engines like Google?</a>
+        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
  </div>
     
   </div>
@@ -743,11 +552,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

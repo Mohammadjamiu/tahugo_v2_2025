@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,449 +342,7 @@
 
 
 
-
-
-
-<p>Are you trying to learn C or C++ programming using Visual Studio Code, or are you experiencing issues during the installation process?</p>
-
-
-
-<p>In this guide, we will walk you through the step-by-step process of installing the &ldquo;MinGW&rdquo; compiler and running C and C++ programs in Visual Studio Code.</p>
-
-
-
-<div class="toc-container">
-  <h2 class="toc-h2">
-    Table of Contents <button class="toggle-button">↬</button>
-  </h2>
-  <div class="table-of-contents"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#steps-on-how-to-set-up-cc-in-visual-studio-code"><strong>Steps on how to set up C/C++ in Visual Studio Code:</strong></a>
-      <ul>
-        <li><a href="#1-download-mingw"><strong>1/ Download MinGW</strong></a></li>
-        <li><a href="#2-install-mingw"><strong>2/ Install MinGW</strong></a></li>
-        <li><a href="#3-configure-mingw-installation"><strong>3/ Configure MinGW Installation</strong></a></li>
-        <li><a href="#4-complete-the-installation"><strong>4/ Complete the Installation</strong></a></li>
-        <li><a href="#5-configure-environment-variables"><strong>5/ Configure Environment Variables</strong></a></li>
-        <li><a href="#6-verify-mingw-installation"><strong>6/ Verify MinGW Installation</strong></a></li>
-        <li><a href="#7-create-a-cc-file-in-visual-studio-code"><strong>7/ Create a C/C++ File in Visual Studio Code</strong></a></li>
-        <li><a href="#8-install-the-code-runner-extension"><strong>8/ Install the Code Runner Extension</strong></a></li>
-        <li><a href="#troubleshooting-warning"><strong>Troubleshooting &#x26a0;&#xfe0f;</strong></a></li>
-        <li><a href="#here-is-an-installation-video-for-more-guide">Here is an Installation Video for More Guide:</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-</div>
-<h2 id="steps-on-how-to-set-up-cc-in-visual-studio-code"><strong>Steps on how to set up C/C++ in Visual Studio Code:</strong></h2>
-<h3 id="1-download-mingw"><strong>1/ Download MinGW</strong></h3>
-<p>The first step in setting up your C/C++ development environment is to download the MinGW (Minimalist GNU for Windows) compiler.</p>
-
-
-
-<p>MinGW is a collection of free and open-source compilers for C and C++ languages.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<ol>
-<li>Go to the MinGW download page at <a href="https://sourceforge.net/projects/mingw/" target="_blank" rel="nofollow noopener ">https://sourceforge.net/projects/mingw/</a>.</li>
-<li>Download the MinGW installation executable.</li>
-</ol>
-<p><img src="http://localhost:1313/images/mingw-download-from-site.webp" alt="download mingw form sourceforge site" title="download mingw form sourceforge site"></p>
-
-
-
-<h3 id="2-install-mingw"><strong>2/ Install MinGW</strong></h3>
-<p>After downloading the MinGW installer, follow these steps to install it:</p>
-
-
-
-<ol>
-<li>Run the MinGW installer executable.</li>
-<li>The setup screen will appear. Click on the “Install” button.
-<img src="http://localhost:1313/images/mingw-install-one.webp" alt="mingw setup screen " title="mingw setup screen "></li>
-<li>On the next setup screen, select the path (e.g., C:\MinGW) where you want to install MinGW, and then click “Continue.”
-<img src="http://localhost:1313/images/mingw-install-click-continue-two.webp" alt="mingw setup screen path and continue" title="mingw setup screen path and continue"></li>
-<li>The installation process will begin. Wait for it to complete, and then click “Continue.”</li>
-</ol>
-<p><img src="http://localhost:1313/images/installation-process-complete-three.webp" alt="mingw installation process" title="mingw installation process"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<h3 id="3-configure-mingw-installation"><strong>3/ Configure MinGW Installation</strong></h3>
-<p>Now that MinGW is installed, let&rsquo;s configure it for C/C++ development:</p>
-
-
-
-<ol>
-<li>
-<p>The MinGW Installation Manager will appear. Mark the checkboxes for “mingw32-base” and “mingw32-gcc-g++” for installation.</p>
-
-
-
-<p><img src="http://localhost:1313/images/mark-for-install-base-and-gcc.webp" alt="mingw installation manager one" title="mingw installation manager one"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/mark-for-install-mingw-six.webp" alt="mark mingw32 base and gcc" title="mark mingw32 base and gcc"></p>
-
-
-
-</li>
-<li>
-<p>Click on the “Install” option in the menu and then select “Apply Changes.”</p>
-
-
-
-<p><img src="http://localhost:1313/images/click-on-install-and-apply-changes.webp" alt="click on install and apply changes" title="click on install and apply changes"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/click-apply-after-install-apply.webp" alt="click apply again to proceed" title="click apply again to proceed"></p>
-
-
-
-</li>
-<li>
-<p>The installation process for the selected compilers will begin.</p>
-
-
-
-<p><img src="http://localhost:1313/images/installation-process-for-selected-compiler-seven.webp" alt="installation process for the selected compilers" title="installation process for the selected compilers"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-</ol>
-<h3 id="4-complete-the-installation"><strong>4/ Complete the Installation</strong></h3>
-<p>After the installation of the selected packages is finished, follow these steps:</p>
-
-
-
-<ol>
-<li>
-<p>Click “Close” to exit the MinGW Installation Manager.</p>
-
-
-
-<p><img src="http://localhost:1313/images/close-install-eight.webp" alt="close after installation" title="close after installation"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/click-on-close-nine.webp" alt="click on close button again" title="click on close button again"></p>
-
-
-
-</li>
-<li>
-<p>Open the folder where MinGW is installed and locate the “bin” folder.</p>
-
-
-
-<p><img src="http://localhost:1313/images/open-mingw-folder-in-c-drive-five.webp" alt="open the mingw folder in windows" title="open the mingw folder in windows"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/open-bin-folder-ten.webp" alt="open the bin folder in the mingw folder" title="open the bin folder in the mingw folder"></p>
-
-
-
-</li>
-<li>
-<p>Copy the file path for the “bin” folder.</p>
-
-
-
-<p><img src="http://localhost:1313/images/click-on-path-and-copy-bin.webp" alt="copy file path for bin" title="copy file path for bin"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-</ol>
-<h3 id="5-configure-environment-variables"><strong>5/ Configure Environment Variables</strong></h3>
-<p>To ensure that Visual Studio Code can access MinGW, you need to add the MinGW “bin” folder path to your system&rsquo;s PATH environment variable:</p>
-
-
-
-<ol>
-<li>
-<p>In the Windows search bar, type “environment” and then click on “Edit the system environment variables.”</p>
-
-
-
-<p><img src="http://localhost:1313/images/type-environment-eleven-plus.webp" alt="click on environment variable" title="click on environment variable"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/click-on-edit-system-environment-variables-eleven.webp" alt="click on edit environment variable" title="click on edit environment variable"></p>
-
-
-
-</li>
-<li>
-<p>In the System Properties window, click on the “Environment Variables” button.</p>
-
-
-
-<p><img src="http://localhost:1313/images/click-on-env-variable-twelve.webp" alt="click on environment variable button on the system properties" title="click on environment variable button on the system properties"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-<li>
-<p>In the Environment Variables window, locate the “Path” section, and click “Edit.”
-<img src="http://localhost:1313/images/click-on-path-on-environ-var-13.webp" alt="click on path" title="click on path"></p>
-
-
-
-</li>
-<li>
-<p>Click on “New” to add a new entry, and paste the file path for the “bin” folder you copied earlier.</p>
-
-
-
-<p><img src="http://localhost:1313/images/add-bin-path-14.webp" alt="click on new and add the file path" title="click on new and add the file path"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-<li>
-<p>Click “OK” to save the changes.
-<img src="http://localhost:1313/images/click-on-ok-after-bin-path-add.webp" alt="click ok after adding the file path" title="click ok after adding the file path"></p>
-
-
-
-</li>
-</ol>
-<h3 id="6-verify-mingw-installation"><strong>6/ Verify MinGW Installation</strong></h3>
-<p>To verify that MinGW is correctly installed and configured, follow these steps:</p>
-
-
-
-<ol>
-<li>
-<p>Open PowerShell or Command Prompt.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-</li>
-<li>
-<p>Type the following command and press Enter:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gcc</span> <span class="p">-</span><span class="n">-version</span>
-</span></span></code></pre></div><p>This command will display the installed GCC version.
-<img src="http://localhost:1313/images/type-gcc-version-in-cmd-15.webp" alt="type gcc version to check if mingw is installed correctly" title="type gcc version to check if mingw is installed correctly"></p>
-
-
-
-</li>
-</ol>
-<h3 id="7-create-a-cc-file-in-visual-studio-code"><strong>7/ Create a C/C++ File in Visual Studio Code</strong></h3>
-<p>Now that you have set up MinGW and configured your environment, it&rsquo;s time to create your first C/C++ program in Visual Studio Code:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<ol>
-<li>
-<p>Open Visual Studio Code.</p>
-
-
-
-</li>
-<li>
-<p>Create a new “C” file and add a simple “Hello, World!” code.</p>
-
-
-
-<p><img src="http://localhost:1313/images/simple-c-hello-world-code.webp" alt="create c file and simple c code" title="create c file and simple c code"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></li>
-</ol>
-<h3 id="8-install-the-code-runner-extension"><strong>8/ Install the Code Runner Extension</strong></h3>
-<p>For an even smoother coding experience, consider installing the “Code Runner” extension in Visual Studio Code:</p>
-
-
-
-<ol>
-<li>
-<p>Go to the Visual Studio Code extensions marketplace.</p>
-
-
-
-</li>
-<li>
-<p>Search for “Code Runner” and click “Install.”</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/code-runner-extension.webp" alt="create c file and install code runner extension" title="create c file and install code runner extension"></p>
-
-
-
-</li>
-<li>
-<p>After successful installation, open your C file and click on the “Run” button above it.</p>
-
-
-
-</li>
-</ol>
-<p><img src="http://localhost:1313/images/code-runner-installed-.webp" alt="code runner installed" title="code runner installed"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p><img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="run the code" title="run the code"></p>
-
-
-
-<h3 id="troubleshooting-warning"><strong>Troubleshooting &#x26a0;&#xfe0f;</strong></h3>
-<p>If you encounter any issues while running your code and the output is not as expected, try restarting VSCode.</p>
-
-
-
-<p>Also, if the code runs but is not showing any output, you can use the terminal within Visual Studio Code:</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<ol>
-<li>
-<p>In the terminal, type the following command, replacing <code>&lt;file-name-with-extension&gt;</code> and <code>&lt;file-name-without-extension&gt;</code> with your file names:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gcc</span> <span class="p">&lt;</span><span class="nb">file-name</span><span class="n">-with-extension</span><span class="p">&gt;</span> <span class="n">-o</span> <span class="p">&lt;</span><span class="nb">file-name</span><span class="n">-without-extension</span><span class="p">&gt;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>Click enter then, type this and then click enter again:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">./&lt;</span><span class="nb">file-name</span><span class="n">-without-extension</span><span class="p">&gt;</span>
-</span></span></code></pre></div></li>
-</ol>
-<p><strong>Here&rsquo;s an example:</strong></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gcc</span> <span class="n">app</span><span class="p">.</span><span class="py">c</span> <span class="n">-o</span> <span class="n">app</span>
-</span></span><span class="line"><span class="cl"><span class="p">./</span><span class="n">app</span>
-</span></span></code></pre></div><p>&ldquo;app.c&rdquo; is the filename with <code>.c</code> extension.</p>
-
-
-
-<p><img src="http://localhost:1313/images/gcc-file-name-if-code-runner-not-work.webp" alt="if the ouput keeps running with no output" title="if the ouput keeps running with no output"></p>
-
-
-
-<h3 id="here-is-an-installation-video-for-more-guide">Here is an Installation Video for More Guide:</h3>
- 
-
-<div style="width: 100%; max-width: 55rem">
-  <div
-    style="
-      position: relative;
-      padding-bottom: 56.15%;
-      height: 0;
-      overflow: hidden;
-
-      box-shadow: 0 0.3rem 0.6rem hsla(0, 0%, 0%, 0.2);
-      border-radius: 1rem;
-      max-width: 100%;
-    "
-  >
-    <iframe
-      style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 1px solid #ccc;
-      "
-      src="https://www.youtube.com/embed/77v-Poud_io"
-      title="C"
-      frameborder="1"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    >
-    </iframe>
-  </div>
-</div>
-
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -914,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
+        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
+        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
+        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
  </div>
     
 
@@ -958,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-hydration.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-hydration-failed-because-the-initial-ui-does-not-match-what-was-rendered-on-the-server-in-nextjs/">How to fix error hydration failed because the initial UI does not match what was rendered on the server in nextJS?</a>
+        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
+        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-give-the-same-answer-to-everyone/">Does ChatGPT Give the Same Answer to Everyone?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/log-and-write.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-document.write-in-javascript/">Difference Between console.log() and document.write() in JavaScript</a>
+        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/abstraction.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-abstraction-in-computer-science-with-example/">Abstraction in Computer Science Explained (With Examples)</a>
+        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-needed-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-semicolons-needed-in-css/">Are Semicolons Needed in CSS?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
   </div>
@@ -991,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 

@@ -299,7 +299,7 @@
 </div>
 <div class="container-grid">
 <div class=" single-page-container">
-
+  <div id="ezoic-pub-ad-placeholder-146"></div>
   <div id="ezoic-pub-ad-placeholder-163"></div>
 
 
@@ -342,141 +342,7 @@
 
 
 
-
-
-
-<p><strong>Tailwind CSS</strong> is a nice way to write CSS without having to leave your HTML file, which makes it good for large projects.</p>
-
-
-
-<p>But one of it downside is that you need to be good at CSS to use it.</p>
-
-
-
-<p>In this article, we are going to be looking at how to add the :before and :after pseudo-element to an HTML element.</p>
-
-
-
-<p>Know that <code>:before and ::before</code> is the same, the only difference is that the former <strong>(:before or :after)</strong> is the old version while the later <strong>(::before or ::after)</strong> is used in CSS3 – the new version to separate pseudo-elements from pseudo-classes.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The way we are going to approach this is to write a normal CSS while using a pseudo-element and then convert it to tailwind, so you see the distinctions.</p>
-
-
-
-<p>Here is a heading 2 tag to hold our heading, and it has a class called <code>&quot;no-tailwind&quot;</code>, so that we can target the <code>&quot;no-tailwind&quot;</code> class and style it with CSS.</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;no-tailwind&#34;</span><span class="p">&gt;</span>Be great<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">no-tailwind</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">58</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="n">fit-content</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">no-tailwind</span><span class="p">:</span><span class="nd">before</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">-15</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;Learn to&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">padding-right</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p><img src="http://localhost:1313/images/pseudo-before-tailwindcss.webp" alt="tailwind before and after pseudo" title="tailwind before and after pseudo"></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The <code>.no-tailwind{ ..... }</code> CSS selector is used to target the H2 tag, as we stated earlier. The style applied is:</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">no-tailwind</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">58</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="n">fit-content</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>To make the font size big, make the width to be fit content and lastly the position relative to make the before or after pseudo-element work.</p>
-
-
-
-<p>After that, the <code>:before</code> pseudo-element is used to target the H2 tag.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>Now, to do this in tailwind CSS, each of the styles applied in the <code>:before{ .... }</code> will be prefixed with <strong>before</strong> keyword. For example <code>position: absolute;</code> in the <code>.no-tailwind:before{ ... }</code> class in normal CSS will be <code>before:absolute</code> in tailwind CSS likewise, the <code>content: &quot;Learn to&quot;;</code> would be <code>before:content-[&quot;Learn_to&quot;].</code></p>
-
-
-
-<blockquote>
-<p><strong>Note:</strong></p>
-
-
-
-<p>You can see that &ldquo;Learn to&rdquo; in normal CSS is replaced with &ldquo;Learn_to&rdquo; with an underscore.</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>The <code>_</code> is used to denote whitespace. But what if you want to add something like <code>&quot;Amazing 1_0 &quot;</code> to do this, you type <code>&quot;Amazing_1\_0&quot;</code>. the <code>\</code> introduced is to escape any special character that you want to show up.</p>
-
-
-
-</blockquote>
-<p>Here is what the outcome of converting the normal CSS to tailwind CSS looks like -</p>
-
-
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span>
-</span></span><span class="line"><span class="cl">  <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-[58px] relative w-[fit-content] before:absolute before:top-[-15px] before:content-[&#39;Learn_to&#39;] before:text-[16px] before:bg-blue-600 before:text-white before:pt-[2px] before:pb-[4px] before:pl-[8px] before:pr-[8px] before:mb-[4px] before:rounded-[4px]&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Be great
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>You can see that the first 3 classes applied to the H2 tag <code>text-[58px] relative w-[fit-content]</code> is for the <code>.no-tailwind{ ... }</code> while the rest goes for the <code>.no-tailwind:before{ ... }.</code></p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-<p>This goes also for the :after pseudo-element.</p>
-
-
-
-<p>Hope the abstractions are demystified. Keep learning &#x1f389;</p>
-
-
-
-</p>
-
-<div id="ezoic-pub-ad-placeholder-166"></div>
-
-
-
-
-
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -606,32 +472,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
+        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
+        <img src="http://localhost:1313/images/consolelog.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console-log-and-alert-in-javascript/">What Is the Difference Between console.log() and alert() in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
+        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/wifi-bluetooth.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-bluetooth/">Difference Between Wi-Fi and Bluetooth</a>
+        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
  </div>
     
 
@@ -650,32 +516,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
+        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
+        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/cpu.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-core-i3-i5-i7/">Intel Core i3, i5, and i7 Processors: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-does-chatgpt-get-data-from/">Where Does ChatGPT Get Its Data From?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
+        <img src="http://localhost:1313/images/mail.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-email-and-gmail/">Difference Between Email and Gmail: A Detailed Comparison</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
+        <img src="http://localhost:1313/images/isolate-tailwindcss-to-fix-z-index-issue.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-tailwindcss-z-index-problem-with-isolate/">How to Fix TailwindCSS z-index Problem with `isolate`</a>
  </div>
     
   </div>
@@ -683,11 +549,12 @@
 </div>
 
 
+<div id="ezoic-pub-ad-placeholder-124"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(163,164,165,166);
+      ezstandalone.showAds(120,124,146,163,164,165,166);
   });
 </script>
 
