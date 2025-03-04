@@ -342,7 +342,74 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>I moved my Hugo website to Next.js, but all the emojis I used with markdown syntax (e.g., <code>:warning:</code> or <code>:bulb:</code>) were displayed as text instead of actual emoji icons. I needed Next.js to recognize the emoji text like <code>:bulb:</code> in the MDX content and render it as an emoji icon.</p>
+  
+
+  
+<h3 id="how-i-fixed-the-issue">How I Fixed the Issue</h3>
+<ol>
+<li>
+<p><strong>Installed the Required Plugin</strong><br>
+I searched online and found that I needed the <code>remark-emoji</code> plugin to handle emoji rendering in MDX files. I installed it by running:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm add remark-emoji
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Updated Next.js Config</strong><br>
+In my <code>velite.config.ts</code> (since I’m using <a href="https://velite.js.org/" target="_blank" rel="nofollow noopener ">Velite</a> for MDX content), I added the <code>remark-emoji</code> plugin to the <code>remarkPlugins</code> array, which is used to configure MDX processing:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">mdx</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">rehypePlugins</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">rehypeSlug</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">rehypePrettyCode</span><span class="p">,</span> <span class="p">{</span> <span class="nx">theme</span><span class="o">:</span> <span class="s2">&#34;github-dark&#34;</span> <span class="p">}],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">rehypeAutoLinkHeadings</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">behavior</span><span class="o">:</span> <span class="s2">&#34;wrap&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">properties</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">className</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;subheading-anchor&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">ariaLabel</span><span class="o">:</span> <span class="s2">&#34;Link to section&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">remarkPlugins</span><span class="o">:</span> <span class="p">[</span><span class="nx">remarkEmoji</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Tested the Emoji Rendering</strong><br>
+After making the changes, I restarted the development server, and the emojis in my MDX files were rendered correctly as icons instead of text.</p>
+  
+
+  
+</li>
+</ol>
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +539,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
+        <img src="http://localhost:1313/images/wm_hon-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-vs-cpp-vs-csharp-whats-the-difference/">C vs C&#43;&#43; vs C#: What&#39;s the Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
+        <img src="http://localhost:1313/images/pseudo-before-tailwindcss.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-before-and-after-pseudo-tailwind-css/">Tailwind CSS: how do you add :before and :after pseudo-element?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
+        <img src="http://localhost:1313/images/wifi-bluetooth.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-bluetooth/">Difference Between Wi-Fi and Bluetooth</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/eyedrpperpopup.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-know-the-color-of-any-image-on-firefox-browser/">how to know the color of any image on firefox browser easily</a>
+        <img src="http://localhost:1313/images/isolate-tailwindcss-to-fix-z-index-issue.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-tailwindcss-z-index-problem-with-isolate/">How to Fix TailwindCSS z-index Problem with `isolate`</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/default-margin.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-wide-is-the-default-body-margin-webpage/">How Wide is the Default `&lt;body&gt;` Margin [HTML Webpage]?</a>
+        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
  </div>
     
 
@@ -516,32 +583,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
+        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
+        <img src="http://localhost:1313/images/valid-image-in-js-or-not.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-an-image-url-is-valid-in-javascript/">How to Check if an Image URL is Valid in JavaScript?</a>
  </div>
     
   </div>
@@ -549,12 +616,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +784,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

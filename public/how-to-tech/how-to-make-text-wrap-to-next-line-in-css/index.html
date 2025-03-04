@@ -345,7 +345,122 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>If a line of text in HTML is not breaking, and it is leading to the overflow of the text, here are some ways you can fix it.</p>
+  
+
+  
+<h2 id="step-on-how-to-fix-text-not-wrapping-in-css"><strong>Step on How to Fix Text Not Wrapping in CSS</strong></h2>
+<h3 id="1-by-using-the-word-wrap-property"><strong>1. By Using the Word-Wrap Property</strong></h3>
+<p>To address the issue of text overflow in CSS, the <strong>word-wrap</strong> property comes in handy.</p>
+  
+
+  
+<p>This property allows long words to be broken and wrap onto the next line. By default, this property is set to &rsquo;normal,&rsquo; which means that words will not be wrapped, even if they overflow the container.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>However, by using the value <strong>break-word</strong>, you can force words to wrap, even if they break in the middle.</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">word-wrap</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>When you apply this CSS to your HTML element, it ensures that text within that element wraps gracefully to the next line when needed.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="2-by-using-the-overflow-wrap-property"><strong>2. By Using the Overflow-Wrap Property</strong></h3>
+<p>Similar to <strong>word-wrap</strong>, the <strong>overflow-wrap</strong> property offers a solution for handling text overflow.</p>
+  
+
+  
+<p>It allows the browser to break lines within an unbreakable string, making it particularly useful for wrapping long strings of text that contain punctuation or symbols.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Just like <strong>word-wrap</strong>, the default value of <strong>overflow-wrap</strong> is &rsquo;normal,&rsquo; which breaks lines only at word boundaries.</p>
+  
+
+  
+<p>However, you can use the value <strong>break-word</strong> to force the browser to break lines wherever necessary, even within unbreakable strings.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow-wrap</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>By applying this CSS to your HTML element, you enable the browser to handle text overflow gracefully, ensuring readability and a polished appearance.</p>
+  
+
+  
+<h3 id="3-controlling-text-wrapping-with-the-white-space-property"><strong>3. Controlling Text Wrapping with the White-Space Property</strong></h3>
+<p>In addition to the above properties, you can use the <strong>white-space</strong> property to control how text wraps in your HTML documents.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>This property offers several values, including:</p>
+  
+
+  
+<ul>
+<li><strong>nowrap</strong>: Prevents text from wrapping, even if it overflows the container.</li>
+<li><strong>normal</strong>: The default value, allowing text to wrap at word boundaries.</li>
+<li><strong>pre</strong>: Prevents text from wrapping and displays it as it is written, including spaces and tabs.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">white-space</span><span class="p">:</span> <span class="kc">nowrap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>By applying this CSS, you can customize the text wrapping behavior to suit your specific needs, ensuring a better reading experience for your website visitors.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="faqs"><strong>FAQs</strong></h2>
+<ol>
+<li><strong>How do I make text wrap in CSS?</strong> To make text wrap in CSS, you can use the <strong>word-wrap</strong>, <strong>overflow-wrap</strong>, or <strong>white-space</strong> properties. These properties allow you to control how text wraps and overflows within HTML elements.</li>
+<li><strong>Can I force text to wrap in the middle of a word?</strong> Yes, you can force text to wrap in the middle of a word by using the <strong>word-wrap: break-word</strong> property in your CSS. This will ensure that even long words are broken and wrapped to the next line when needed.</li>
+<li><strong>What is the default behavior of text wrapping in CSS?</strong> The default behavior of text wrapping in CSS is set to &rsquo;normal,&rsquo; which means that text will not wrap, even if it overflows the container. To change this behavior, you can use the CSS properties mentioned in this article.</li>
+<li><strong>Are there other CSS properties for controlling text wrapping?</strong> While <strong>word-wrap</strong>, <strong>overflow-wrap</strong>, and <strong>white-space</strong> are commonly used properties, there may be other CSS properties that can affect text wrapping in specific situations. However, these are the most frequently used properties for this purpose.</li>
+<li><strong>Is there a way to prevent text from wrapping at all?</strong> Yes, you can prevent text from wrapping at all by using the <strong>white-space: nowrap</strong> property in your CSS. This will ensure that text remains on a single line, even if it overflows the container.</li>
+</ol>
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -475,32 +590,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
+        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/promptinstallplugin.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-sitemap-to-your-site-using-netlify-plugin/">How to add sitemap to your site using netlify plugin</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-examples-of-ai-technology-and-how-is-it-used-today/">Examples of AI Technology and How They Are Used Today</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-hackers-better-than-programmers/">Are Hackers Better Than Programmers?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/using-control-shift-and-pallete.jpg.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-terminal-in-vs-code/">How to Clear the Terminal in VS Code?</a>
  </div>
     
 
@@ -519,32 +634,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
+        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/semicolon-needed-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-semicolons-needed-in-css/">Are Semicolons Needed in CSS?</a>
+        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/mifi.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-mifi/">Difference between Wi-Fi and MiFi: All You Need to Know</a>
+        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/branch-deleted-successfully.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-a-git-branch-locally-and-remotely/">How to Delete a Git Branch Locally and Remotely?</a>
+        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/default-margin.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-wide-is-the-default-body-margin-webpage/">How Wide is the Default `&lt;body&gt;` Margin [HTML Webpage]?</a>
+        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
  </div>
     
   </div>
@@ -552,12 +667,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -719,6 +835,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

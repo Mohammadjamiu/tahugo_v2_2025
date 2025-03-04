@@ -342,7 +342,77 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>I recently decided to migrate my Hugo website from Netlify to Vercel to take advantage of Vercel&rsquo;s features.</p>
+  
+
+  
+<p>After cloning the project and removing any Netlify-specific configurations, I attempted to deploy the site on Vercel.</p>
+  
+
+  
+<p>However, I encountered deployment errors because Vercel was using a different Hugo version than my local environment.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>My local Hugo version was:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo v0.125.7-b1d808bc373f53ad37c8966bb02a6aea095db5f8 windows/amd64 <span class="nv">BuildDate</span><span class="o">=</span>2024-05-08T14:46:24Z <span class="nv">VendorInfo</span><span class="o">=</span>gohugoio
+</span></span></code></pre></div><p>To resolve this issue, I created a <code>vercel.json</code> file at the root of my project in Visual Studio Code (VSCode) with the following content:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;env&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;HUGO_VERSION&#34;</span><span class="p">:</span> <span class="s2">&#34;0.125.7&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This configuration explicitly sets the Hugo version that Vercel should use during the build process. After adding this file and redeploying,</p>
+  
+
+  
+<p>Vercel utilized the specified Hugo version, aligning with my local development environment and resolving the deployment issues.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>By ensuring that both my local and Vercel environments use the same Hugo version, I was able to successfully migrate my website without further issues.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +542,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-for-substring-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/string-contains-a-substring-in-javascript/">How to Check If a String Contains a Substring in JavaScript?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/preview-pane-enabled.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-preview-markdown-md-file-in-vscode/">How to Preview Markdown(.md) File in VSCode</a>
- </div>
-    
-    
-     <div class="xx">
         <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-computer-science-and-software-engineering/">Difference Between Computer Science and Software Engineering</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-microsoft-edge-useful-keyboard-shortcuts-keys-for-windows/">List of Microsoft Edge Useful Keyboard Shortcuts Keys for Windows (2024)</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/free-wifi-signboard-airport-zone-600w-506762929-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-wi-fi-and-wlan/">What is the difference between Wi-Fi and WLAN?</a>
+ </div>
+    
+    
+     <div class="xx">
+        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
  </div>
     
 
@@ -516,32 +586,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
+        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
+        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
+        <img src="http://localhost:1313/images/how-to-remove-unused-packages-and-update-dependencies-in-a-next.js-project.jpeg" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-unused-packages-and-update-dependencies-in-a-next-js-project/">How to Remove Unused Packages and Update Dependencies in a Next.js Project</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/emoji-rendering-in-mdx-with-remark-emoji-in-nextjs.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-emoji-rendering-in-mdx-with-remark-emoji-in-nextjs/">How to Fix Emoji Rendering in MDX with remark-emoji in Next.js</a>
+        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
  </div>
     
   </div>
@@ -549,12 +619,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +787,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

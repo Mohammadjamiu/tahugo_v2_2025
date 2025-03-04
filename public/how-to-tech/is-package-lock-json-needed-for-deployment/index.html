@@ -342,7 +342,183 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>When working on a Node.js project or any project that need some Node.js dependencies, you will definitely have two JSON files. One of them been package.json and the other package-lock.json.</p>
+  
+
+  
+<p><strong>The purpose of package.json and package-lock.json in a Node.js project, is to ensure that all the dependencies or packages that are needed for your application to function properly are tracked.</strong></p>
+  
+
+  
+<p>The main things that are tracked are the names of the packages and their versions.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Let&rsquo;s take an example of a package.json file and package-lock.json and see their difference.</p>
+  
+
+  
+<p><strong>Package.json snippet</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;legacy1.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;build-css&#34;</span><span class="p">:</span> <span class="s2">&#34;tailwindcss build -i ./src/styles.css -o ./public/styles.css --watch&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;license&#34;</span><span class="p">:</span> <span class="s2">&#34;ISC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;tailwindcss&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.2.6&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Package-lock.json snippet</strong></p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"> <span class="s2">&#34;node_modules/tailwindcss&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;3.2.6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;resolved&#34;</span><span class="p">:</span> <span class="s2">&#34;https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.6.tgz&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;integrity&#34;</span><span class="p">:</span> <span class="s2">&#34;sha512-BfgQWZrtqowOQMC2bwaSNe7xcIjdDEgixWGYOd6AL0CbKHJlvhfdbINeAW76l1sO+1ov/MJ93ODJ9yluRituIw==&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;arg&#34;</span><span class="p">:</span> <span class="s2">&#34;^5.0.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;chokidar&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.5.3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;color-name&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.1.4&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;detective&#34;</span><span class="p">:</span> <span class="s2">&#34;^5.2.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;didyoumean&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.2.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;dlv&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.1.3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;fast-glob&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.2.12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;glob-parent&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.0.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;is-glob&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.0.3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lilconfig&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.0.6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;micromatch&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.0.5&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;normalize-path&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;object-hash&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;picocolors&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss&#34;</span><span class="p">:</span> <span class="s2">&#34;^8.0.9&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss-import&#34;</span><span class="p">:</span> <span class="s2">&#34;^14.1.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss-js&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss-load-config&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.1.4&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss-nested&#34;</span><span class="p">:</span> <span class="s2">&#34;6.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss-selector-parser&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.0.11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss-value-parser&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;quick-lru&#34;</span><span class="p">:</span> <span class="s2">&#34;^5.1.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;resolve&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.22.1&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;bin&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;tailwind&#34;</span><span class="p">:</span> <span class="s2">&#34;lib/cli.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;tailwindcss&#34;</span><span class="p">:</span> <span class="s2">&#34;lib/cli.js&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;engines&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;=12.13.0&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;peerDependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;postcss&#34;</span><span class="p">:</span> <span class="s2">&#34;^8.0.9&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+</span></span></code></pre></div><p>As you can see, the <code>package.json</code> file has just little information like the dependency name and the corresponding version.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><code>&quot;dependencies&quot;: { &quot;tailwindcss&quot;: &quot;^3.2.6&quot; }</code></p>
+  
+
+  
+<p>But package-lock.json file takes its own to another level by providing details about the name of the package, the corresponding version, the npm registry where the package is downloaded from,</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>and other behind the scene packages that the package you intend to install also depends on.</p>
+  
+
+  
+<p>Like in the example above, you will see that the package or dependency is <code>tailwindcss</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>This <code>tailwindcss</code> package also depends on another package called <code>postcss</code>.</p>
+  
+
+  
+<p>Also, this <code>postcss</code> package in the package-lock.json file under the <code>tailwindcss</code> dependency has it own corresponding version. That&rsquo;s how detailed the information in the package-lock.json file is.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Now here comes the answer to the question – “Is package-lock.json needed for deployment?”</p>
+  
+
+  
+<p><strong>Yes, the <code>package-lock.json</code> file is needed for deployment in most cases. Because when you deploy your application, the package manager either npm or yarn will use the information in the <code>package-lock.json</code> file to install the exact same versions of the packages and dependencies that you have been working with during development.</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a></p>
+  
+
+  
+<p>This ensures that your application runs as expected in the production environment, with the same package versions and dependencies as in your development environment.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>So therefore, the <code>package-lock.json</code> file is an essential part of the Node.js application deployment process and should be included in the deployment package.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +648,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
+        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
+        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-export-and-import-modules-in-javascript/">How to Import and Export Modules in Javascript | Simple Explanation</a>
+        <img src="http://localhost:1313/images/in.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-regular-expressions-in-python/">Regular Expression in Python: A Step by Step Explanation</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/tech-driven-strategies-for-optimal-medical-billing-performance.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/strategies-for-optimal-medical-billing-performance/">Tech-Driven Strategies for Optimal Medical Billing Performance</a>
+        <img src="http://localhost:1313/images/valid-image-in-js-or-not.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-an-image-url-is-valid-in-javascript/">How to Check if an Image URL is Valid in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
+        <img src="http://localhost:1313/images/stepqr.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-barcode-in-word/">How to Create Barcode in Word In just few steps</a>
  </div>
     
 
@@ -516,32 +692,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
+        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-vscode-useful-keyboard-shortcuts/">List of VSCode Useful Keyboard Shortcut Keys (2024)</a>
  </div>
     
     
        <div class="xx">
-        <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
+        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-dev-dependency-and-dependency/">Difference Between Dev-Dependency and Dependency?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/default-margin.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-wide-is-the-default-body-margin-webpage/">How Wide is the Default `&lt;body&gt;` Margin [HTML Webpage]?</a>
+        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
  </div>
     
   </div>
@@ -549,12 +725,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +893,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

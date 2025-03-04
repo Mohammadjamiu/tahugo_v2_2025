@@ -342,7 +342,89 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>The first time I tried to use <code>import * as Math from &quot;./math.js&quot;;</code></p>
+  
+
+  
+<p>I got an error saying <strong>“Uncaught SyntaxError: import declarations may only appear at top level of a module”</strong></p>
+  
+
+  
+<p>I tried solving the issue by adding <code>type=&quot;module”</code> to the HTML script tag.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;/js/script.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">// is changed to 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;/js/script.js&#34;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;module&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><p>Which should work in most cases. Make sure to use <strong>“./”, “../” or “/”</strong> to kind of help in locating where the file exists.</p>
+  
+
+  
+<h2 id="what---and--means">What ./, ../ and / means?</h2>
+<ul>
+<li><strong>/</strong> means the root of the current folder</li>
+<li><strong>./</strong> means the current folder</li>
+<li><strong>../</strong> means the parent of the current directory</li>
+</ul>
+<p><strong>/ and ./</strong> kind of do the same thing because it allows you to access any folder inside the main folder that cover the whole file.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>But for <strong>../</strong> you are saying for the first dot <strong>(.)</strong> Go out to the folder that covers you just as <strong>./</strong> does now by adding another dot <strong>(..)</strong> you say not only the folder that covers you but the folder that covers the folder that covers you, meaning that it goes two steps upward.</p>
+  
+
+  
+<p>Sometimes after adding a <strong>“./”, “../” or “/”</strong> it might still not work.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>One thing you can do is to try and remove the file from the let say, you put the file in a folder called <strong>learnjs</strong>, and inside the folder there are files named <strong>main.js</strong> and a <strong>math.js</strong> where the <strong>math.js</strong> file is what you want to import into your main.js as in my case.</p>
+  
+
+  
+<p>Just move the math.js from the <strong>learnjs</strong> folder to the root and remove the <strong>./ or / or ../</strong> in the import rule and use <code>import as Math from “math.js”</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>If it does work, use it that way but if not, try to move it again back into the <strong>learnjs</strong> folder and use <code>import * as Math from “./math.js”</code> with the <strong>./, ../ and /</strong> again. Hope it helps.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +554,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-08-at-14-56-12-rss-to-json-online-converter-rss2json.com.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-youtube-video-data-in-json-format/">5 Steps on How to Get Youtube Video Data in JSON Format</a>
+        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cache-file-size.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-vscode-cached-data-files/">How to Delete VSCode Cached Data Files?</a>
+        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
+        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-export-and-import-modules-in-javascript/">How to Import and Export Modules in Javascript | Simple Explanation</a>
+        <img src="http://localhost:1313/images/add-progress-bar-nextjs-app.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/add-progress-bar-nextjs-app/">How to Add a Progress Bar to Your Next.js App for Better User Experience</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
+        <img src="http://localhost:1313/images/this-in-object-scope.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-this-and-that-in-javascript/">Difference Between the ‘This’ and ‘That’ Keyword in JavaScript</a>
  </div>
     
 
@@ -516,32 +598,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
+        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
+        <img src="http://localhost:1313/images/java-compare-string.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-compare-strings-in-java/">How to Compare Strings in Java?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-06-at-03-51-12-enabled-integrations.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-plugins-from-netlify/">How to remove plugins from Netlify?</a>
+        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
+        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
+        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
  </div>
     
   </div>
@@ -549,12 +631,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +799,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

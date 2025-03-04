@@ -342,7 +342,258 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>In a computer networks, data or information are transferred from one device across a network to another in the form of a signal.</p>
+  
+
+  
+<p>Data such as human voice, audio, video, text and number to name a few needs to be converted to either an analog signal or digital signal.</p>
+  
+
+  
+<p>In this tutorial, we would focus specifically on how to convert a digital data to a digital signal and the techniques used.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>There are three techniques that can be used in digital-to-digital conversion, which are;</p>
+  
+
+  
+<ol>
+<li>Line coding</li>
+<li>Block coding</li>
+<li>Scrambling</li>
+</ol>
+<p>But the most used technique is that of line coding hence, line coding is a technique which is used to convert a digital data to digital signal in other words it converts sequence of bits to digital data.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>At the sending device side, digital data are encoded or altered from it plain form either as a text or any type of data into a digital signal with the help of an encoder.</p>
+  
+
+  
+<p>As the data travels through the link or transmission line, it is decoded by a decoder so that the receiving device would understand the data sent.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="line-coding-schemes">Line coding schemes</h2>
+<p>There are five broad categories of line coding schemes, and they are;</p>
+  
+
+  
+   <img loading="lazy" src="http://localhost:1313/images/line-coding.webp" alt="line coding scheme">
+<ol>
+<li>Unipolar (NRZ)</li>
+<li>Polar (NRZ, RZ and Biphase)</li>
+<li>Bipolar (AMZ, Pseudoternary)</li>
+<li>Multilevel (2B/IQ, 8B/6T, and 4U-PAM5)</li>
+<li>Multitransition (MLT - 3)</li>
+</ol>
+<h3 id="unipolar-scheme">Unipolar Scheme</h3>
+<p>In unipolar scheme, the signal levels (or the signal voltage amplitudes) are on one side of the time axis, i.e. either on the above or below.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Basically, when you hear the word Unipolar, it depicts NRZ because NRZ (which is termed Non –Return-to-Zero) is the scheme which Unipolar is designed based on.</p>
+  
+
+  
+<h4 id="nrz--non-return-to-zero">NRZ – Non-Return to Zero</h4>
+<p>In NRZ, the positive voltage level defines a bit of 1 and the zero voltage level defines a bit of 0.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>But you might be confused, why is it called NRZ. It is called so because the signal does not return to zero at the middle or during each bit transmission.</p>
+  
+
+  
+   <img loading="lazy" src="http://localhost:1313/images/unipolar-nrz.webp" alt="Unipolar NRZ">
+<p>This scheme is often or even not normally used in the transmission of data because of power consumption. For example, the power needed to transmit a bit per unit transmission line resistance is double in comparison to that of RZ in Polar scheme.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h3 id="polar-scheme">Polar scheme</h3>
+<p>In polar scheme, the voltage level of amplitude is on both side of the time axis. Instead of having a positive level and a zero or ground as in Unipolar NRZ, the polar scheme has a positive voltage level and a negative voltage level. A zero bit can be represented by a positive voltage level, while a 1 bit can be represented by a negative voltage level.
+There are several versions of the polar scheme which are NRZ, RZ and Biphase (Manchester and Differential Manchester).</p>
+  
+
+  
+<h4 id="polar-nrz">Polar NRZ</h4>
+<p>In polar NRZ, the encoding of data to signal is done with the help of two voltage levels, as we stated earlier. This NRZ scheme as two versions; NRZ – L (Non-Return-to-Zero – Level) and NRZ – I (Non-Return-to-Zero – Invert).</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>In NRZ – Level, the level of the voltage determines the value of the bit.</p>
+  
+
+  
+   <img loading="lazy" src="http://localhost:1313/images/polar-nrz-li.webp" alt="Polar NRZ-L and NRZ-I">
+<p>In NRZ – Invert, the change or absence of change in the level of the voltage determines the value of the bit. In other words, if there is a 0 bit occurring as the next bit, there is change in voltage level but if the next bit occurring is 1 then there is change.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h4 id="polar-rz-return-to-zero">Polar RZ (Return-to-Zero)</h4>
+<p>The polar NRZ discussed above has a problem, and the problem occurs when the sender and the receiver clock are not synchronized. Hence, the receiver might not know when a bit has started or ended.</p>
+  
+
+  
+<p>That’s why RZ is here to combat that, and it is going to do so by introducing more voltage level so instead of two, it has three – a positive, negative and zero voltage level.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+   <img loading="lazy" src="http://localhost:1313/images/polar-rz.webp" alt="polar RZ - return to zero">
+<p>Also, the signal does not change after each bit, but during each bit. During each bit, it changes at the middle point and the signal goes from either a positive level to zero or a negative level to zero and stays on that zero level until the beginning of the next bit.</p>
+  
+
+  
+<p>Now it seems as if NRZ is bad an RZ will solve the whole problem no, it does not because, it requires two signal to encode a bit and this lead to a larger bandwidth.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h3 id="biphase--manchester-and-differential-manchester">Biphase – Manchester and Differential Manchester</h3>
+<p>Manchester and Differential Manchester are called the Biphase encoding scheme as each combine the idea of transition at the middle of bit as in the case of RZ with that of NRZ level (for Manchester) and that of NRZ – I (for Differential Manchester).</p>
+  
+
+  
+   <img loading="lazy" src="http://localhost:1313/images/biphase.webp" alt="biphase manchester and differential amnchester scheme">
+<h4 id="manchester-scheme">Manchester Scheme</h4>
+<p>The Manchester scheme = the idea of transition in RZ + NRZ – L.
+The duration of the bit is divided into two halves. The voltage remains at one level during the first half and moves to the other level in the second half.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h4 id="differential-manchester-scheme">Differential Manchester Scheme</h4>
+<p>The Differential Manchester scheme = the idea of transition in RZ + NRZ – I.</p>
+  
+
+  
+<p>There is always a transition at the middle of the bit, but the bit values are determined at the beginning of the bit.
+If the next bit is 0, there is a transition; if the next bit is 1, there is no transition.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<blockquote class="blockquote">
+<p class="little-nugget">Note</p>
+  
+
+  
+<p class="quote-text">
+Remember that the transition at the middle which is an idea of the RZ scheme is to provide synchronization for both Manchester and Differential Manchester.
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</blockquote>
+<br>
+<h3 id="bipolar-schemes">Bipolar Schemes</h3>
+<p>Bipolar scheme or multilevel binary as it is sometimes called uses three voltage levels – positive, negative and zero voltage levels.</p>
+  
+
+  
+<p>The main point about this scheme is that the voltage level for one data is at zero while for the other data element alternates between positive and negative.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>There are two versions of the bipolar scheme and they are:</p>
+  
+
+  
+<ol>
+<li>AMI (Alternate Mark Inversion)</li>
+<li>Pseudoternary</li>
+</ol>
+<h4 id="ami-alternate-mark-inversion">AMI (Alternate Mark Inversion)</h4>
+<p>Bipolar AMI is the common type of the bipolar scheme. A binary zero is represented by a zero voltage level, while binary 1s are represented by an alternating positive and negative voltage levels.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>That is why from the name Alternate Mark Inversion where Mark is 1 in telegraphy, hence it becomes Alternate 1 Inversion.</p>
+  
+
+  
+   <img loading="lazy" src="http://localhost:1313/images/ami.webp" alt="AMI and pseudoternary">
+<h4 id="pseudoternary">Pseudoternary</h4>
+<p>Pseudoternary is an opposite or another version of AMI whereby binary 1s is encoded as a zero voltage while binary 0s are represented by alternating positive and negative voltage levels.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,26 +723,26 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ethernet-cable.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-cables-used-in-networking/">List of Cables Used in Networking</a>
+        <img src="http://localhost:1313/images/seven-hexagonal-cells.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-frequency-reuse-in-wireless-communication/">What is Frequency Reuse in Wireless Communication?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/framework1_8.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/how-computers-are-connected-through-wired-network/">Basics of How Computers And Other Devices Are Connected To The Internet Through Wired Network.</a>
+        <img src="http://localhost:1313/images/data-in-wire.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/how-does-data-travel-through-wires/">How Does Data Travel Through Wires?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/amplifier.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-optical-amplifier-and-its-types/">What Is Optical Amplifier and Its Types?</a>
+        <img src="http://localhost:1313/images/wavelength-and-fiber-optics.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-wavelength-and-why-is-it-important-to-fiber-optics/">What is Wavelength, and Why Is It Important to Fiber Optics?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/server-network.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/is-cyber-security-and-network-security-same/">Is Cyber Security the Same as Network Security?</a>
+        <img src="http://localhost:1313/images/fiber.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/why-optical-fiber-communication-is-prefered/">Why Optical Fiber Communication Is Preferred Over Other Means of Communication?</a>
  </div>
     
     
@@ -516,32 +767,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/wired-and-wireless-networdk.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-wired-and-wireless-network-with-examples/">Difference Between Wired and Wireless Networks With Examples</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/temprv_1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-a-random-process-with-examples/">What Is a Random Process With Examples?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/sc.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/types-of-optical-fiber-connectors/">Types of Optical Fiber Connectors Explained</a>
- </div>
-    
-    
-       <div class="xx">
         <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-packets-and-frames/">Difference Between Packets and Frames In Networking</a>
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-tcp-and-udp/">13 Differences Between Transmission Control Protocol (TCP) and User Datagram Protocol (UDP)</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/duplex.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-simplex-half-duplex-and-full-duplex/">What Is Simplex, Half-Duplex and Full-Duplex Mode of Communication?</a>
+        <img src="http://localhost:1313/images/fiber.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/do-fiber-optic-cables-get-hot/">Do Fiber Optic Cables Get Hot?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/satellite-2.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/is-it-possible-to-use-the-same-frequency-for-downlink-and-uplink-in-satellites/">Is it possible to use the same frequency for downlink and uplink in satellites?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/fiberoptics_1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-core-and-cladding-losses-in-optical-fiber/">What Are Core and Cladding Losses in Optical Fiber?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/amplifier.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-optical-amplifier-and-its-types/">What Is Optical Amplifier and Its Types?</a>
  </div>
     
   </div>
@@ -549,12 +800,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +968,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

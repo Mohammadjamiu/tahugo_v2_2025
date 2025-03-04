@@ -342,7 +342,156 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>Middleware in Next.js is a powerful tool for handling route protection, authentication, and redirects before the page even loads.</p>
+  
+
+  
+<p>Unlike solutions that rely on <code>useEffect</code> or <code>useRouter</code>, middleware runs at the edge, ensuring a seamless experience without flickering UI issues.</p>
+  
+
+  
+<h2 id="problem-middleware-not-working-due-to-incorrect-placement"><strong>Problem:</strong> Middleware Not Working Due to Incorrect Placement</h2>
+<p>If your <code>middleware.ts</code> file isn’t working, it’s likely placed incorrectly in your project structure.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="solution-correct-middleware-placement-based-on-your-project-structure"><strong>Solution:</strong> Correct Middleware Placement Based on Your Project Structure</h2>
+<h3 id="-if-you-are-using-the-src-directory">✅ <strong>If You Are Using the <code>src</code> Directory:</strong></h3>
+<p>Place <code>middleware.ts</code> inside <code>src</code>, at the same level as the <code>app</code> folder:</p>
+  
+
+  
+<pre tabindex="0"><code>/src
+  ├── app/
+  ├── middleware.ts
+</code></pre><h4 id="-if-you-are-not-using-the-src-directory">✅ <strong>If You Are Not Using the <code>src</code> Directory:</strong></h4>
+<p>Place <code>middleware.ts</code> in the root of your project, at the same level as the <code>pages</code> or <code>app</code> folder:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<pre tabindex="0"><code>/
+  ├── app/ (or pages/)
+  ├── middleware.ts
+</code></pre><h3 id="key-takeaways"><strong>Key Takeaways</strong></h3>
+<ul>
+<li>
+<p><strong>One <code>middleware.ts</code> file per project</strong> – Next.js only supports a single middleware file.</p>
+  
+
+  
+</li>
+<li>
+<p><strong>Modular Middleware Approach:</strong> Even though Next.js only allows one middleware file,</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>you can break it into multiple functions by creating separate files and importing them into <code>middleware.ts</code>.</p>
+  
+
+  
+</li>
+<li>
+<p><strong>Performance Boost:</strong> Middleware runs before the page loads,</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>ensuring smoother user experience compared to <code>useEffect</code>-based protections.</p>
+  
+
+  
+</li>
+</ul>
+<h3 id="example-middleware-file"><strong>Example Middleware File</strong></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">NextResponse</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;next/server&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">NextRequest</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;next/server&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kd">function</span> <span class="nx">middleware</span><span class="p">(</span><span class="nx">req</span>: <span class="kt">NextRequest</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">isAuthenticated</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">cookies</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="s2">&#34;token&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isAuthenticated</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">NextResponse</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="s2">&#34;/login&#34;</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">NextResponse</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="common-questions-faqs"><strong>Common Questions (FAQs)</strong></h3>
+<p><strong>1. What happens if I place <code>middleware.ts</code> in the wrong directory?</strong><br>
+Next.js won’t recognize it, meaning your middleware logic won’t execute.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>2. Can I have multiple <code>middleware.ts</code> files?</strong><br>
+No, Next.js only supports a single <code>middleware.ts</code> file.</p>
+  
+
+  
+<p>However, you can modularize it by importing functions from other files.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><strong>3. Can middleware protect API routes?</strong><br>
+No, middleware is only for handling requests to pages, not API routes (<code>/api</code>).</p>
+  
+
+  
+<p>Use API route handlers (<code>app/api</code>) for API-specific protection.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>4. How can I verify my middleware is running correctly?</strong><br>
+Add a <code>console.log</code> inside your middleware function and check your server logs to ensure it executes.</p>
+  
+
+  
+<p>For more details, check out the <a href="https://nextjs.org/docs/app/building-your-application/routing/middleware" target="_blank" rel="nofollow noopener ">Next.js middleware documentation</a>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +621,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/use-generatestaticparam-instead-of-getstaticprops-and-getstaticpath.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/getstaticprops-and-getstaticpaths-are-no-longer-supported-in-the-next-js-app-router-use-generatestaticparams-instead/">getStaticProps and getStaticPaths Are No Longer Supported in the Next.js App Router: Use generateStaticParams Instead</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cache-file-size.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-vscode-cached-data-files/">How to Delete VSCode Cached Data Files?</a>
+        <img src="http://localhost:1313/images/chatgpt.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/can-chatgpt-replace-search-engines-like-google/">Can ChatGPT Replace Search Engines like Google?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/preview-pane-enabled.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-preview-markdown-md-file-in-vscode/">How to Preview Markdown(.md) File in VSCode</a>
+        <img src="http://localhost:1313/images/list-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-a-list-in-python-with-example/">What is a List in Python with Example?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-unable-to-connect.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-whatsapp-unable-to-connect-please-try-again-error/">How to Fix WhatsApp &#34;Unable to Connect. Please try again&#34; Error?</a>
+        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
+        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
  </div>
     
 
@@ -516,32 +665,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/tahtmlfrontpage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/html-textarea-required-attribute-not-working/">HTML “textarea” Required Attribute Not Working | How to Fix?</a>
+        <img src="http://localhost:1313/images/tech-driven-strategies-for-optimal-medical-billing-performance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/strategies-for-optimal-medical-billing-performance/">Tech-Driven Strategies for Optimal Medical Billing Performance</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
+        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
+        <img src="http://localhost:1313/images/semicolon-needed-css.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-semicolons-needed-in-css/">Are Semicolons Needed in CSS?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
+        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/who-owns-chatgpt-and-who-created-it/">Who Owns ChatGPT and Who Created It? All You Need to Know</a>
+        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
  </div>
     
   </div>
@@ -549,12 +698,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +866,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

@@ -345,7 +345,213 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>JavaScript provides two comparison operators, <code>!=</code> and <code>!==</code>, which are used to compare two values and determine their equality.</p>
+  
+
+  
+<p>These operators play a crucial role in JavaScript programming, as they allow developers to perform comparisons and make decisions based on the results.</p>
+  
+
+  
+<div class="toc-container">
+  <h2 class="toc-h2">
+    Table of Contents <button class="toggle-button">↬</button>
+  </h2>
+  <div class="table-of-contents"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the--operator"><strong>The != Operator</strong></a></li>
+    <li><a href="#the--operator-1"><strong>The !== Operator</strong></a></li>
+    <li><a href="#usage-of--and--operators"><strong>Usage of != and !== Operators</strong></a></li>
+    <li><a href="#wrap-up"><strong>Wrap Up</strong></a></li>
+    <li><a href="#frequently-asked-questions"><strong>Frequently Asked Questions</strong></a></li>
+  </ul>
+</nav></div>
+</div>
+<h2 id="the--operator"><strong>The != Operator</strong></h2>
+<p>The <code>!=</code> operator is known as the “not equal” operator in JavaScript. It compares two values and returns <code>true</code> if they are not equal, regardless of their data types.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>If the values are equal, it returns <code>false</code>. The <code>!=</code> operator performs both value and type coercion before making the comparison.</p>
+  
+
+  
+<p>Here&rsquo;s an example:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">!=</span> <span class="nx">b</span><span class="p">);</span>
+</span></span></code></pre></div><pre tabindex="0"><code> true
+</code></pre><p>In this example, <code>a</code> and <code>b</code> are not equal, so the <code>!=</code> operator returns <code>true</code>. The operator compares the values <code>1</code> and <code>2</code> and determines that they are different.</p>
+  
+
+  
+<p>The <code>!=</code> operator can also be used with strings:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="s2">&#34;world&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span> <span class="o">!=</span> <span class="nx">d</span><span class="p">);</span> 
+</span></span></code></pre></div><pre tabindex="0"><code> true
+</code></pre><p>In this case, <code>c</code> and <code>d</code> are different strings, so the <code>!=</code> operator returns <code>true</code>.</p>
+  
+
+  
+<h2 id="the--operator-1"><strong>The !== Operator</strong></h2>
+<p>The <code>!==</code> operator, called the “strict not equal” operator, compares two values for both inequality and type.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>It returns <code>true</code> if the values are not equal or if they have different types.</p>
+  
+
+  
+<p>If the values are equal and have the same type, it returns <code>false</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Consider the following example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="s2">&#34;5&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span> <span class="o">!==</span> <span class="nx">f</span><span class="p">);</span> 
+</span></span></code></pre></div><pre tabindex="0"><code> true
+</code></pre><p>In this example, <code>e</code> and <code>f</code> have the same value, but they are of different types (<code>number</code> and <code>string</code>), so the <code>!==</code> operator returns <code>true</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The <code>!==</code> operator is especially useful when you want to perform strict comparisons, ensuring that the values being compared are not only unequal but also of different types.</p>
+  
+
+  
+<h2 id="usage-of--and--operators"><strong>Usage of != and !== Operators</strong></h2>
+<p>The <code>!=</code> and <code>!==</code> operators can be utilized in various JavaScript expressions, including conditional statements, loops, and functions.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>These operators enable you to create decision-making logic based on value comparisons.</p>
+  
+
+  
+<p>For instance, let&rsquo;s consider a conditional statement:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">!=</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;a is not equal to b&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;a is equal to b&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In this example, the <code>if</code> statement checks if <code>a</code> is not equal to <code>b</code>.</p>
+  
+
+  
+<p>If they are not equal, the code inside the <code>if</code> block will be executed and <strong>“a is not equal to b”</strong> will be printed to the console.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Otherwise, the code inside the <code>else</code> block will be executed.</p>
+  
+
+  
+<h2 id="wrap-up"><strong>Wrap Up</strong></h2>
+<p>In JavaScript, the <code>!=</code> and <code>!==</code> operators provide a way to compare values for inequality.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The <code>!=</code> operator checks for inequality while ignoring type, whereas the <code>!==</code> operator checks for both inequality and type mismatch.</p>
+  
+
+  
+<p>These operators are versatile tools that can be used in various JavaScript expressions, enabling developers to write concise and clear code.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>By understanding and utilizing these operators effectively, you can enhance your JavaScript programming skills and create more robust applications.</p>
+  
+
+  
+<h2 id="frequently-asked-questions"><strong>Frequently Asked Questions</strong></h2>
+<ol>
+<li><strong>Can I use the <code>!=</code> and <code>!==</code> operators with other data types like arrays or booleans?</strong> Yes, the <code>!=</code> and <code>!==</code> operators can be used with other data types, including arrays and booleans.</li>
+<li><strong>Are there any performance differences between <code>!=</code> and <code>!==</code>?</strong> In terms of performance, there is generally no significant difference between the <code>!=</code> and <code>!==</code> operators. Both operators are efficient and provide similar functionality.</li>
+<li><strong>When should I use the <code>!=</code> operator instead of the <code>!==</code> operator?</strong> The <code>!=</code> operator should be used when you want to compare values for inequality, while disregarding their types. If you need to compare values for both inequality and type mismatch, use the <code>!==</code> operator.</li>
+<li><strong>Can I use the <code>!=</code> and <code>!==</code> operators with null and undefined values?</strong> Yes, you can use the <code>!=</code> and <code>!==</code> operators to compare null and undefined values.</li>
+<li><strong>Are the <code>!=</code> and <code>!==</code> operators exclusive to JavaScript?</strong> No, the <code>!=</code> and <code>!==</code> operators are commonly used in many programming languages. However, the exact behavior of these operators may vary slightly between languages.</li>
+</ol>
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -475,32 +681,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
+        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
+        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-chatgpt-and-chatgpt-plus/">Differences between ChatGPT and ChatGPT Plus</a>
+        <img src="http://localhost:1313/images/how-to-fix-pnpm-outdated-lockfile-error-on-vercel.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pnpm-outdated-lockfile-error-on-vercel/">How to Fix ERR_PNPM_OUTDATED_LOCKFILE Error on Vercel</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_20230524-135353.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-polling-on-whatsapp/">How to Add Polling on WhatsApp – A Step-by-Step Guide</a>
+        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
+        <img src="http://localhost:1313/images/semicolon-in-c.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-purpose-of-semicolons-in-c-language/">What is the purpose of semicolons (;) in C language?</a>
  </div>
     
 
@@ -519,32 +725,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/text-cannot-be-selected.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-turn-off-or-disable-text-selection-highlight-in-css/">How to Turn Off or Disable Text Selection Highlight in CSS?</a>
+        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/github-user-on-profile.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-find-your-github-username/">How to Find Your GitHub Username?</a>
+        <img src="http://localhost:1313/images/sam-altman-plugin-rollout.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-use-the-internet/">Does ChatGPT Use the Internet?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/java-compare-string.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-compare-strings-in-java/">How to Compare Strings in Java?</a>
+        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
+        <img src="http://localhost:1313/images/in.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-regular-expressions-in-python/">Regular Expression in Python: A Step by Step Explanation</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
  </div>
     
   </div>
@@ -552,12 +758,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -719,6 +926,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

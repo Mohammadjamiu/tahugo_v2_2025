@@ -342,7 +342,345 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p><code>this</code> is a keyword in JavaScript that refers to the current execution context or the object that a function is being executed within. It allows you to access and manipulate properties and methods within that context.</p>
+  
+
+  
+<p>While <code>that</code> is a keyword that is commonly used as a variable that serve as workarounds to preserve the value of <code>this</code> in certain situations, especially when dealing with nested or callback functions, where the value of <code>this</code> might refer to a different object or be undefined.</p>
+  
+
+  
+<h2 id="difference-between-the-this-and-that-keyword"><strong>Difference Between the ‘This’ and ‘That’ Keyword</strong></h2>
+<h3 id="the-this-keyword"><strong>The <code>this</code> Keyword:</strong></h3>
+<p><code>this</code> is a special keyword in JavaScript that refers to the current execution context or the object that the function is being executed within.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The value of <code>this</code> is determined dynamically at runtime, based on how a function is invoked.</p>
+  
+
+  
+<p><code>this</code> provides a way to access and manipulate properties and methods within the current execution context.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<blockquote>
+<p>In simple term, when you enter a building, what wraps you up is the building because you are inside the building.</p>
+  
+
+  
+<p>Now, when you enter a room inside the building, what wraps you up is not the building, but the room that you entered.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><strong>How is this related to the <code>this</code> keyword?</strong> The building can be thought of as an object or a function, and you (the person), inside the building (i.e., object or function) is representing the <code>this</code> keyword.</p>
+  
+
+  
+<p>So now as you entered a room, you are not directly enclosed by the building (i.e., object or function) rather you are enclosed by a new room (i.e., another object or function) hence your context or the <code>this</code> keyword context changes.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</blockquote>
+<p>The value of <code>this</code> can change depending on the way a function is called:</p>
+  
+
+  
+<p><strong>Global Scope</strong> – When <code>this</code> is used in the global scope (outside any function), it refers to the global object, which is <code>window</code> in browsers and <code>global</code> in Node.js.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><img src="http://localhost:1313/images/this-in-global-scope.webp" alt="this in the global scope" title="this in the global scope"></p>
+  
+
+  
+<p><strong>Object Method</strong> – When <code>this</code> is used inside a method of an object, it refers to the object itself. It allows the method to access and manipulate the object&rsquo;s properties and methods.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">greet</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person</span><span class="p">.</span><span class="nx">greet</span><span class="p">();</span> <span class="c1">// Output: Hello, John
+</span></span></span></code></pre></div><p><img src="http://localhost:1313/images/this-in-object-scope.webp" alt="this in object scope" title="this in object scope"></p>
+  
+
+  
+<p>In the code example above, <code>this</code> inside the <code>greet</code> method refers to the <code>person</code> object, so <code>this.name</code> accesses the <code>name</code> property of the object – <code>name: “John”</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>Event Handlers</strong> –When <code>this</code> is used within an event handler, such as a click event or a timer function e.g., (setTimeout), it usually refers to the element that triggered the event.</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#myButton&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Button clicked:&#34;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p><img src="http://localhost:1313/images/this-in-enventlistener-scope.webp" alt="this in event handlers context" title="this in event handlers context"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>In this case, <code>this</code> refers to the <code>button</code> element, as it is the object that triggered the click event.</p>
+  
+
+  
+<p><strong>Explicit Binding</strong> – JavaScript provides methods that allow us to explicitly set the value of <code>this</code> using functions such as <code>call()</code>, <code>apply()</code>, and <code>bind()</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greet</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">greet</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span> <span class="c1">// Output: Hello, John
+</span></span></span></code></pre></div><p>In this code example, <code>greet()</code> is a function on its own and <code>person</code> is an object on its own.</p>
+  
+
+  
+<p>In order to use the name in the <code>person</code> object inside the <code>greet()</code> function, <code>call()</code> is used to invoke the <code>greet</code> function with <code>person</code> as the explicit context for <code>this</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<blockquote>
+<p><em><strong>Note:</strong></em></p>
+  
+
+  
+<p><em>The behavior of <code>this</code> can be different in arrow functions, as they do not bind their own <code>this</code> value, but rather inherit it from the surrounding lexical scope.</em></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</blockquote>
+<p>Regular functions in JavaScript have their own <code>this</code> value, which is determined by how the function is called. It can change depending on the context or the way the function is invoked.</p>
+  
+
+  
+<p>In arrow functions, the value of <code>this</code> is not determined by how the function is called, but rather by the surrounding (lexical) scope.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>This means that <code>this</code> inside an arrow function refers to the same <code>this</code> value as the enclosing scope where the arrow function is defined.</p>
+  
+
+  
+<p>Let&rsquo;s see an example to illustrate this behavior:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sayHello</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sayHelloArrow</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">();</span> <span class="c1">// Output: Hello, undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">sayHelloArrow</span><span class="p">();</span> <span class="c1">// Output: Hello, John
+</span></span></span></code></pre></div><p>In the code example above, we have an object called <strong>“person”</strong> with two methods: <strong>“sayHello”</strong> and <strong>“sayHelloArrow”</strong>. Both methods use a <code>setTimeout</code> function to delay the execution of an inner function.</p>
+  
+
+  
+<p>In the <strong>“sayHello”</strong> method, we use a regular function as the inner function of <code>setTimeout</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>But, since regular functions have their own <code>this</code> value, the <code>this</code> inside the inner function (i.e., the function inside the <code>setTimeout()</code>) refers to the global object (or undefined in strict mode) – which is the <strong>sayHello</strong> method rather than the “person” object.</p>
+  
+
+  
+<blockquote>
+<p><strong>Remember the building analogy we gave previously.</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><em>This means that <code>sayHello</code> method is the room that covers the function.</em></p>
+  
+
+  
+<p><em>While the <code>person</code> object is the building that covers the sayHello (the room).</em></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</blockquote>
+<p>Hence, when we try to access “this.name”, it results in “undefined”.</p>
+  
+
+  
+<p>On the other hand, in the <strong>“sayHelloArrow”</strong> method, we use an arrow function as the inner function of <code>setTimeout</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>The arrow function does not have its own <code>this</code> value and instead inherits the <code>this</code> value from the surrounding (lexical) scope, which is the “person” object.</p>
+  
+
+  
+<p>Therefore, when we access “this.name” inside the arrow function, it correctly refers to the “name” property of the “person” object, resulting in the expected <code>output “Hello, John”</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<blockquote>
+<p>Arrow functions in JavaScript provide a more convenient and predictable way to access the <code>this</code> value. By inheriting the <code>this</code> value from the surrounding scope, arrow functions eliminate the need to use workarounds like creating a separate variable or using functions like <code>bind()</code> to maintain the desired <code>this</code> context.</p>
+  
+
+  
+</blockquote>
+<h3 id="the-that-keyword"><strong>The <code>that</code> Keyword:</strong></h3>
+<p><code>that</code> is just a keyword commonly used as variables within JavaScript functions as a workaround to preserve the value of <code>this</code> in certain scenarios.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>This workaround is often used in nested functions or callback functions, where <code>this</code> might refer to a different object, context or is undefined.</p>
+  
+
+  
+<p>Here is a code snippet to illustrate the <code>that</code> keyword:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">greet</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="nx">that</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person</span><span class="p">.</span><span class="nx">greet</span><span class="p">();</span> <span class="c1">// Output: Hello, John
+</span></span></span></code></pre></div><p>In this example, the <code>greet</code> method of the <code>person</code> object uses the variable <code>that</code> to preserve the value of <code>this</code> within the nested callback function of <strong>“setTimeout”</strong>.</p>
+  
+
+  
+<p>Without using <code>that</code>, <code>this</code> would refer to the global object (or undefined in strict mode) which is the function above it – the <code>greet</code> method instead of the <code>person</code> object.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>It&rsquo;s important to note that the choice between using <code>this</code> or <code>that</code> depends on the specific context and requirements of the code.</p>
+  
+
+  
+<p><strong>Generally, <code>this</code> is preferred when it correctly refers to the desired object, while <code>that</code> is used as a workaround when <code>this</code> needs to be preserved in nested or callback functions.</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +810,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/fixing-apex-domain-issues-nextjs-vercel.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-apex-domain-issues-nextjs-vercel/">Fixing Apex Domain Issues on Next.js Vercel Deployment with Namecheap</a>
+        <img src="http://localhost:1313/images/cpu.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-core-i3-i5-i7/">Intel Core i3, i5, and i7 Processors: What&#39;s The Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/in.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-regular-expressions-in-python/">Regular Expression in Python: A Step by Step Explanation</a>
+        <img src="http://localhost:1313/images/apple-laptop-pc.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-best-json-file-viewer-for-mac/">The 5 Best JSON File Viewer for Macs: View, Edit and Debug</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cpx-an-alternative-to-cp-linux-command.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/cpx-module-an-alternative-to-the-linux-cp-command-for-copying-files-across-folders/">cpx Module: An Alternative to the Linux cp Command for Copying Files Across Folders</a>
+        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-vscode-useful-keyboard-shortcuts/">List of VSCode Useful Keyboard Shortcut Keys (2024)</a>
+        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
  </div>
     
 
@@ -516,32 +854,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
+        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-coding-apps-for-android/">Best Coding Apps for Android: Learn and Practice in 2023</a>
+        <img src="http://localhost:1313/images/branch-deleted-successfully.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-a-git-branch-locally-and-remotely/">How to Delete a Git Branch Locally and Remotely?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-examples-of-ai-technology-and-how-is-it-used-today/">Examples of AI Technology and How They Are Used Today</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/consolelog.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console-log-and-alert-in-javascript/">What Is the Difference Between console.log() and alert() in JavaScript?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-nodejs-used-for-backend-or-frontend/">Is Node.js Used for Backend or Frontend?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
   </div>
@@ -549,12 +887,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +1055,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

@@ -342,7 +342,138 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p><code>console.log()</code> and <code>alert()</code> are functions/methods in JavaScript that are used for displaying messages, but they are used for different purposes.</p>
+  
+
+  
+<blockquote>
+<p>Method is just a function inside another function.</p>
+  
+
+  
+</blockquote>
+<p>The main difference between <code>console.log()</code> and <code>alert()</code> in JavaScript is that <code>console.log()</code> is part of the console object while <code>alert()</code> is part of the window object.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="what-is-consolelog">What is <code>console.log()</code>?</h2>
+<p><code>console.log()</code> is used for printing messages or values to the browser&rsquo;s console, which is a developer tool for debugging and troubleshooting code.</p>
+  
+
+  
+<p>It does not interrupt the execution of the code and is mainly used by developers to check the output of certain values or log messages for debugging purposes.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</span></span></code></pre></div><p>The code above, will print out the value of <code>x</code> (which is 10) to the console, so you can see what the value is as your code runs.</p>
+  
+
+  
+<p><img src="http://localhost:1313/images/consolelog.webp" alt="console.log() in javascript" title="console.log() in javascript"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><strong>Read on:</strong> <em><a href="http://localhost:1313/how-to-tech/difference-between-console.log-and-document.write-in-javascript/">Difference Between console.log() and document.write() in JavaScript?</a></em></p>
+  
+
+  
+<h2 id="what-is-alert">What is <code>alert()</code>?</h2>
+<p><code>alert()</code> is used to display a message box to the user with the specified message and an OK button.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Are you sure you want to delete this?&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><p>When you run this code, it will display a pop-up dialog box with the message <em>“Are you sure you want to delete this?”</em> and the user will have to click the “OK” button to continue.</p>
+  
+
+  
+<p><img src="http://localhost:1313/images/alert.webp" alt="alert() in javascript" title="alert() in javascript"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>It interrupts the execution of the code until the user interacts with the message box by clicking OK.</p>
+  
+
+  
+<p>It&rsquo;s typically used to provide information or prompt the user for input, pausing the code&rsquo;s execution until the user responds.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="difference-between-consolelog-and-alert-in-javascript">Difference between <code>console.log()</code> and <code>alert()</code> in JavaScript?</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>console.log()</th>
+<th>alert()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output</td>
+<td><code>console.log()</code> prints messages or values to the console.</td>
+<td><code>alert()</code> displays a message box on the screen.</td>
+</tr>
+<tr>
+<td>Interruption of code execution</td>
+<td><code>console.log()</code> does not interrupt the code&rsquo;s execution, allowing it to continue running.</td>
+<td><code>alert()</code>, however, pauses the code&rsquo;s execution until the user interacts with the message box.</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td><code>console.log()</code> is primarily used by developers for debugging, logging, and checking values.</td>
+<td><code>alert()</code> is used when you want to communicate information or prompt user interaction.</td>
+</tr>
+</tbody>
+</table>
+<p>In just a few points, <code>console.log()</code> <strong>is used for internal debugging and logging purposes, while <code>alert()</code> is used to interact with the user and display messages in a pop-up window that pauses the code&rsquo;s execution.</strong></p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +603,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
+        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
+        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/file-path-node.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/access-a-file-in-node-js-using-relative-and-absolute-path/">How To Access a File in Node.js? ( /, ./, and ../ ) Paths Explained</a>
+        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
+        <img src="http://localhost:1313/images/in.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-regular-expressions-in-python/">Regular Expression in Python: A Step by Step Explanation</a>
  </div>
     
 
@@ -516,32 +647,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/npm-cache-preview-image.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-npm-cache/">How to Clear npm Cache?</a>
+        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/hitesh-choudhary-t1paibmtjim-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-machine-learning-and-generative-ai/">Difference Between Machine Learning and Generative AI </a>
+        <img src="http://localhost:1313/images/map-and-filter.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-map-and-filter-in-javascript-with-example/">Difference Between map() and filter() in JavaScript With Example</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-hackers-better-than-programmers/">Are Hackers Better Than Programmers?</a>
+        <img src="http://localhost:1313/images/circular-image-css.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-circular-image-in-css/">How to Make a Circular Image in CSS?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-02-at-03-53-40-enhance-speech-from-adobe-free-ai-filter-for-cleaning-up-spoken-audio.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-record-video-or-audio-without-background-noise/">How to Record Video or Audio without Background Noise</a>
+        <img src="https://neuralink.com/assets/static/whats-next-mobile.aede448d.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-powers-neuralink-chip-when-implanted-into-the-human-brain/">What Powers Neuralink Chip When Implanted into the Human Brain?</a>
  </div>
     
   </div>
@@ -549,12 +680,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +848,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

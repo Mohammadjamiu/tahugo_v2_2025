@@ -342,7 +342,142 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>Underscore <code>(_)</code> is just a character that has no special meaning in JavaScript. But it can be used for different purposes.</p>
+  
+
+  
+<h2 id="use-of-underscore-_-in-javascript">Use of underscore (_) in JavaScript</h2>
+<p>Here are some of the uses of underscore in JavaScript:</p>
+  
+
+  
+<h3 id="1-variable-name-spacing">1. Variable name spacing</h3>
+<p>The most common use of an underscore in JavaScript is to give space to a variable name, which makes it easier to understand what a variable is all about. For example, <code>var my_variable = 10;</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h3 id="2-ignoring-function-parameters">2. Ignoring function parameters</h3>
+<p>Underscore can be used for ignoring function parameters. For example, you may define a function that requires parameters, but you don&rsquo;t intend to use all of them at that time.</p>
+  
+
+  
+<p>In such cases, you can use an underscore as a convention to indicate that the parameter is intentionally being ignored.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>It&rsquo;s a way to communicate to other developers that the parameter value is not relevant to the function&rsquo;s logic.</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">exampleFunc</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// The first parameter (_) is ignored
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">exampleFunc</span><span class="p">(</span><span class="s1">&#39;ignored&#39;</span><span class="p">,</span> <span class="s1">&#39;used&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: &#34;used&#34;
+</span></span></span></code></pre></div><h3 id="ignoring-value-when-calling-functions">Ignoring value when calling functions</h3>
+<p>When calling functions that return multiple values, you can use an underscore to ignore values that you don&rsquo;t need from the functions.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getCoordinates</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Simulating a function that returns an array of coordinates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">_</span><span class="p">]</span> <span class="o">=</span> <span class="nx">getCoordinates</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: 10 20
+</span></span></span></code></pre></div><h3 id="library-or-framework-conventions">Library or framework conventions</h3>
+<p>Some JavaScript libraries or frameworks, like Underscore.js or Lodash, use the underscore as part of their naming conventions.</p>
+  
+
+  
+<p>These libraries provide utility functions for working with arrays, objects, and other data types.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>For example, in <a href="https://underscorejs.org/" target="_blank" rel="nofollow noopener ">Underscore.js</a>, you can transform an array into a new array using the functions or methods it provides like filter and map.</p>
+  
+
+  
+<p>Here is a code snippet that use Underscore.js map method to double the value of the numbers in an array.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">_</span><span class="p">.</span><span class="nx">map</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: [2, 4, 6]
+</span></span></span></code></pre></div><p>Though, the map method in the code above was used to transform the array <code>[1, 2, 3]</code> into <code>[2, 4, 6]</code> by multiplying <code>[1, 2, 3]</code> by 2.</p>
+  
+
+  
+<p>This way of transforming or mapping an array into a new array was done using the underscore.js library.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>In today&rsquo;s modern <a href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">ES6 JavaScript</a>, there are inbuilt functions/method like <code>map()</code> and <code>filter()</code> that comes with JavaScript, which makes the use of underscore.js quite obsolete.</p>
+  
+
+  
+<p><strong>Read on:</strong> <em><a href="http://localhost:1313/how-to-tech/difference-between-map-and-filter-in-javascript-with-example/">Difference Between map() and filter() in JavaScript With Example</a></em></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="in-few-points">In Few Points:</h2>
+<p>The use of _ in JavaScript is to give space to a variable name, to ignore a function parameter, and it is also used in a library like underscore.js to transform arrays and object.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +607,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/mifi.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-mifi/">Difference between Wi-Fi and MiFi: All You Need to Know</a>
+        <img src="http://localhost:1313/images/closeup-wireless-router-young-man-600w-521452618-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-router/">Difference between Wi-Fi and Router: Understand the Basics</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
+        <img src="http://localhost:1313/images/normal-and-floor-division-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-/-and-/-in-python-with-example/">Difference Between / and // in Python with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cpx-an-alternative-to-cp-linux-command.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/cpx-module-an-alternative-to-the-linux-cp-command-for-copying-files-across-folders/">cpx Module: An Alternative to the Linux cp Command for Copying Files Across Folders</a>
+        <img src="http://localhost:1313/images/chatgpt.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/can-chatgpt-replace-search-engines-like-google/">Can ChatGPT Replace Search Engines like Google?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
+        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
  </div>
     
 
@@ -516,32 +651,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
+        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/single-hash-and-double-hash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-single-hash-and-double-hash-in-python/">What is the Difference Between # and ## in Python?</a>
+        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/shuffle-array.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-shuffle-an-array-randomly-in-javascript/">How to Shuffle an Array Randomly in JavaScript?</a>
+        <img src="http://localhost:1313/images/whatsapp-unable-to-connect.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-whatsapp-unable-to-connect-please-try-again-error/">How to Fix WhatsApp &#34;Unable to Connect. Please try again&#34; Error?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
+        <img src="http://localhost:1313/images/square-brackets-and-curly-braces-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-using-square-bracket-and-curly-braces-in-python/">What is the Difference Between Using [] and {} in Python?</a>
  </div>
     
   </div>
@@ -549,12 +684,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +852,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

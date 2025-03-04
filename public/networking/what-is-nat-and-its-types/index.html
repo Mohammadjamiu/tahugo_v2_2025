@@ -342,7 +342,172 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>Every device needs an IP address (or public IP address) to access the internet. For that reason, engineers in the 1970’s decided to do some research so as to know how long an IP address needs to be.</p>
+  
+
+  
+<p>Put in mind that a data packet (or information) often contains a sender IP and receiver IP address (or source and destination IP address) and the aim of the engineers also is to keep the packet as small as possible.</p>
+  
+
+  
+<p><strong>If a 2-bit IP address is chosen, it will result in a small packet size but the drawback is that the available IP addresses slot is minimal.</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>If they also decide to go with 256-bit IP address, it will result in a huge data packet size with a lot of available slot to accompany even trillions of devices.</strong></p>
+  
+
+  
+<p>Now due to the tradeoffs, they settled on 32-bit IP address which offers over 4 billion (4,294,967,296) IP addresses and also with a moderate file size and this IP address version is termed as IPv4 (IP version 4).</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>During that time, they believe 4 billion is enough as internet is not widely spread.</p>
+  
+
+  
+<p>Years later, there is an increase reduction in the number of available slot so they tried as much to proffer solution which they decided also to go from the IPv4 to IPv6 with (3.4 x 10^38) number of IP addresses or 128-bit long addresses which is huge but the drawback is that devices have been built based on IPv4</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>so it’s kind of tedious but prior to working more on IPv6 they look out to providing a certain type of IP address called Private IP address so that if we have even a million device, they would provide only one public address to us so as to limit the usage of the public address.</p>
+  
+
+  
+<p>This private IP address is of two type, one with the 192.168.X.X or 10.X.X.X and the reason being is to provide more available private address and a I am convinced that they have learnt from their mistakes.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The private IP address is uniquely assign to each devices we own e.g. smartphone, computer, laptop etc. with the help of a router in order to access the internet because the private IP address can only be used to communicate between different computers but not to access the internet.</p>
+  
+
+  
+<p>The router which assign a private address to our device has a public address. But how does NAT come into play?</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h2 id="what-is-network-address-translation-nat">What is Network Address Translation (NAT)?</h2>
+<p><strong>NAT</strong> is a translator which is embedded into a router and it function is to translate private IP address to a public IP address. It stores this on a table called NAT forwarding table.</p>
+  
+
+  
+<h2 id="types-of-nat">Types of NAT</h2>
+<p>There are three types of NAT Which are:-</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<ol>
+<li>Port Address Translation (PAT) or NAT overloading</li>
+<li>Dynamic NAT</li>
+<li>Static NAT</li>
+</ol>
+<p>Out of all the types of NAT, PAT is commonly used as it is what we use when accessing the internet with our device.</p>
+  
+
+  
+<h3 id="what-is-port-address-translation-pat">what is Port Address Translation (PAT)?</h3>
+<p>In PAT, when a computer wants to communicate with the internet, it first sends it data packet which contains a source and destination address with port numbers attached to it, the router sees it but cannot directly push it to the internet so it does some underground work with the help of the NAT by translating the source address which is a private address to its own public address and then send to the internet.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The internet sends the query to the web server (e.g. google.com) and the web server responds to the query. The result is then send back to the router and the router sees a source address which is of the web server and a destination address which is the public address of the router.</p>
+  
+
+  
+<p>The router then looks out on its NAT forwarding table to see the private address associated to it and boom it sends the response it got from the web server to it.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="what-is-dynamic-nat">what is Dynamic NAT?</h3>
+<p>The difference between PAT and Dynamic NAT is that, instead of assigning the routers public address to any device trying to access the internet, it has a pool of several public addresses which it can use.</p>
+  
+
+  
+<p>This means that upon sending any data packet from a computer it assigns a public address which will be different from the public address it is going to assign when receiving the response to the data packet sent.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>In essence it does not have to store any public address to a table as it is dynamic.</p>
+  
+
+  
+<h3 id="what-is-static-nat">what is static NAT?</h3>
+<p>In static NAT, instead of the router to do the job itself, the user has to manually type in the public address to be associated to with the private address.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="advantages-of-nat">Advantages of NAT</h2>
+<p>It helps to translate or map private IP address to public IP address
+It helps to reduce or conserve the number of public IPv4 addresses to be used
+It helps protects the privacy of our devices as only the public address is available to the world</p>
+  
+
+  
+<h2 id="disadvantages-of-nat">Disadvantages of NAT</h2>
+<p>Due to translation that has to occur, there is delay in switching paths
+When NAT is enabled, some applications would not function
+Troubleshooting of certain network issues is quite complicated as there is no end to end IP traceability.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +637,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cell-tower-resized.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/why-uplink-frequency-is-lower-than-downlink-frequency-in-mobile-communication/">Why Uplink Frequency is Lower than Downlink Frequency in Mobile Communication?</a>
+        <img src="http://localhost:1313/images/lossg_1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/types-of-losses-in-optical-fiber/">Types of Losses in Optical Fiber</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/thomas-jensen-qtej-kmmq_q-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-difference-between-tcp-and-ip-protocols/">What Is the Difference Between TCP and IP Protocols?</a>
+        <img src="http://localhost:1313/images/network-congestion.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-multicast-address-with-example/">What is a Multicast Address? With Examples and Applications</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/laserworld-laserbeam-llqy3id5xxm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/characteristics-of-laser/">LASER and its Characteristics</a>
+        <img src="http://localhost:1313/images/embedded.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-different-types-of-noise-in-computer-networks/">Different Types of Noise in Computer Networks?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/distortion_3.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-different-causes-of-transmission-impairments/">What Are the Different Causes of Transmission Impairments?</a>
+        <img src="http://localhost:1313/images/sim_card_sizes-esim.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-function-of-the-sim-card-in-a-gsm-phone/">What is the Function of a SIM Card in a GSM Phone?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/electronics-and-oscilloscope.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/optical-detectors-in-optical-fiber-communication/">Optical Detectors in Optical Fiber Communication</a>
+        <img src="http://localhost:1313/images/ionosphere_1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/modes-of-radio-wave-propagation/">What Is Radio Wave Propagation? And the Different Modes of Radio Wave Propagation?</a>
  </div>
     
 
@@ -516,32 +681,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/power-control.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/power-control-strategies-in-3g/">Power Control Strategies in 3G</a>
+        <img src="http://localhost:1313/images/u-storsberg-_maupmujj08-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-lan-and-wan-with-examples/">Difference Between LAN and WAN With Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/wavelength-and-fiber-optics.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-wavelength-and-why-is-it-important-to-fiber-optics/">What is Wavelength, and Why Is It Important to Fiber Optics?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/seven-hexagonal-cells.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-frequency-reuse-in-wireless-communication/">What is Frequency Reuse in Wireless Communication?</a>
+        <img src="" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-difference-between-pop3-and-imap/">What are the Differences Between POP3 and IMAP</a>
  </div>
     
     
        <div class="xx">
         <img src="http://localhost:1313/images/networks-installment.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-the-difference-between-gsm-and-internet/">What is the Difference Between GSM and Internet?</a>
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-latency-in-networking/">What Is Latency in Networking?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/server-network.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-benefits-of-lte-over-gsm/">What are the Benefits of LTE Over GSM?</a>
+        <img src="http://localhost:1313/images/laserworld-laserbeam-llqy3id5xxm-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/characteristics-of-laser/">LASER and its Characteristics</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/fiberoptics_4.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-single-mode-and-multimode-fiber/">Difference Between Single Mode and Multimode Fiber</a>
  </div>
     
   </div>
@@ -549,12 +714,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +882,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

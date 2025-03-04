@@ -342,7 +342,209 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p><img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="Dependency and devDependency in pacakage.json" title="Dependency and devDependency"></p>
+  
+
+  
+<p><strong>Dependency and devDependency</strong> are external packages or libraries that a project or application relies on in order to function or execute properly.</p>
+  
+
+  
+<p>The difference between a dependency and a devDependency is that dependency is needed always both in development and production phase, while devDependency is needed only in the development phase.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="what-is-dependency-and-devdependency">What is Dependency and DevDependency?</h2>
+<p><strong>Dependency</strong> is a package that is required for an application to function, and it is needed in the development process as well as in the production process. These can include frameworks (like Angular, Vue and Express), libraries (like ReactJS), or any other package that is necessary for an application to run properly.</p>
+  
+
+  
+<p><strong>DevDependency</strong> is a package that is only needed during the development process. This includes tools like testing frameworks, build tools (such as Webpack, Babel and Vite), and linters (like ESLint).</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>These tools are not needed for the actual running of the application, but they are necessary for building and testing it.</p>
+  
+
+  
+<p>Dependencies and devDependencies can be found in the package.json file inside a project. This package.json file is the first thing that must be created when developing an application, as it keep track of all the dependencies and devDependencies a project relies or depend on.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>It can be created manually and automatically. The latter is the best way and can be done by running <code>npm init</code>.</p>
+  
+
+  
+<p>Here is how a package.json file for a ReactJS project looks like.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;start-react-project&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;private&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;0.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;module&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;vite&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;vite build&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;preview&#34;</span><span class="p">:</span> <span class="s2">&#34;vite preview&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;react-dom&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.2.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;devDependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;@types/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.0.27&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;@types/react-dom&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.0.10&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;@vitejs/plugin-react&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.1.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vite&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.1.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="example-of-dependency-and-devdependency">Example of Dependency and DevDependency</h2>
+<p>For example, when building a ReactJS project, you need to import some packages like -</p>
+  
+
+  
+<p>react (library) itself, react-dom (which help to render the React code to the DOM), react-router-dom (for routing react pages), webpack (for bundling react code), ESLint (for checking errors in code and for styling the way you write your code), Vite (a fast build tool) and others.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>Read on:</strong> <a href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a></p>
+  
+
+  
+<p>Out of these packages, react, react-dom and react-router-dom are dependencies that make a ReactJS project a ReactJS project as without these packages the project won&rsquo;t run properly not only during the development phase but also on production.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>As you can see from the package.json file shown above, you will notice that there is an object in the JSON file that is tagged “dependencies”,</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"> <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;react-dom&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.2.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="err">,</span>
+</span></span></code></pre></div><p>These are the dependencies needed for the ReactJS project.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>While packages like Webpack, Vite and ESLint are devDependencies. <strong>Webpack</strong> is a build tool used for bundling and optimizing react application code for production.</p>
+  
+
+  
+<p><strong>Vite</strong> is a build tool which offers fast development and reduced build times.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>ESLint</strong> is a linter that checks your code for errors, coding style, and best practices while in development phase.</p>
+  
+
+  
+<p>This means that once you are done coding or developing the application, you don&rsquo;t need these packages again once the project is live or deployed.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Inside the package.json file, you will see an object tagged <code>devDependencies</code></p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;devDependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;@types/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.0.27&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;@types/react-dom&#34;</span><span class="p">:</span> <span class="s2">&#34;^18.0.10&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;@vitejs/plugin-react&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.1.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vite&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.1.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>These are the devDependencies.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="difference-between-dev-dependency-and-dependency">Difference Between Dev Dependency and Dependency</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Dependency</th>
+<th>DevDependency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td><strong>Dependency</strong> is a package that is required for an application to function, and it is needed in the development process as well as in the production process.</td>
+<td><strong>DevDependency</strong> is a package that is required for an application to function, and it is needed only in the development process.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>A dependency package can be installed using npm (Node Package Manager) by running <code>npm install &lt;package-name&gt;</code> e.g., <code>npm install express</code> where <strong>express</strong> is the package.</td>
+<td>A devDependency package can be installed using npm by running <code>npm install -D &lt;package-name&gt;</code> e.g., <code>npm install -D tailwindcss</code> where <strong>tailwindcss</strong> is the package. The flag <code>-D</code> is what differentiate a dependency package and that of devDependency.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>It can be found inside the package.json file inside a project with the tag <code>&quot;dependencies&quot;</code></td>
+<td>It can be found inside the package.json file inside a project with the tag <code>&quot;devDependencies&quot;</code></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Examples of dependencies include react, react-dom, express etc.</td>
+<td>Examples of devDependencies include webpack, babel, ESLint etc.</td>
+</tr>
+</tbody>
+</table>
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +674,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/nextjs-hydration.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-hydration-failed-because-the-initial-ui-does-not-match-what-was-rendered-on-the-server-in-nextjs/">How to fix error hydration failed because the initial UI does not match what was rendered on the server in nextJS?</a>
+        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/stefen-tan-kyw1eux1j7y-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/list-of-chrome-keyboard-shortcuts/">List of Google Chrome Useful Keyboard Shortcut Keys (2024)</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
+        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
+        <img src="http://localhost:1313/images/jonathan-kemper-n8ayh8r2rwq-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-chatgpt-and-chatgpt-plus/">Differences between ChatGPT and ChatGPT Plus</a>
  </div>
     
 
@@ -516,32 +718,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
- </div>
-    
-    
-       <div class="xx">
         <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
+        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/wifi-bluetooth.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-bluetooth/">Difference Between Wi-Fi and Bluetooth</a>
+        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/js-object.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-javascript-object-and-json/">Difference Between JavaScript Object and JSON</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
  </div>
     
   </div>
@@ -549,12 +751,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +919,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

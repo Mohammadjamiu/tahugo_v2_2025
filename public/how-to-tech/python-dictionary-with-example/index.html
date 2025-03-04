@@ -342,7 +342,380 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>Are you a beginner looking to understand Python dictionaries? In this comprehensive guide, we will walk you through the concept of dictionaries in Python, providing clear explanations and practical examples along the way.</p>
+  
+
+  
+<p><img src="http://localhost:1313/images/python-dictionary.webp" alt="python dictionary" title="python dictionary"></p>
+  
+
+  
+<p>By the end of this article, you will have a solid understanding of Python dictionaries and how to utilize them effectively in your coding journey.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="toc-container">
+  <h2 class="toc-h2">
+    Table of Contents <button class="toggle-button">↬</button>
+  </h2>
+  <div class="table-of-contents"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-a-python-dictionary"><strong>What is a Python Dictionary?</strong></a></li>
+    <li><a href="#creating-a-python-dictionary"><strong>Creating a Python Dictionary</strong></a></li>
+    <li><a href="#accessing-dictionary-values"><strong>Accessing Dictionary Values</strong></a></li>
+    <li><a href="#modifying-dictionary-values"><strong>Modifying Dictionary Values</strong></a></li>
+    <li><a href="#adding-and-removing-items"><strong>Adding and Removing Items</strong></a></li>
+    <li><a href="#dictionary-methods"><strong>Dictionary Methods</strong></a></li>
+    <li><a href="#iterating-over-a-dictionary"><strong>Iterating Over a Dictionary</strong></a></li>
+    <li><a href="#dictionary-operations"><strong>Dictionary Operations</strong></a></li>
+    <li><a href="#nested-dictionaries"><strong>Nested Dictionaries</strong></a></li>
+    <li><a href="#final-thought"><strong>Final Thought</strong></a></li>
+  </ul>
+</nav></div>
+</div>
+<h2 id="what-is-a-python-dictionary"><strong>What is a Python Dictionary?</strong></h2>
+<p>A Python dictionary is a fundamental data structure that allows you to store and retrieve data in key-value pairs.</p>
+  
+
+  
+<p>It provides a powerful and efficient way to manage and organize data, making it an essential tool in Python programming.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Unlike other data structures like lists or tuples, dictionaries are unordered, and their elements are accessed using unique keys.</p>
+  
+
+  
+<h2 id="creating-a-python-dictionary"><strong>Creating a Python Dictionary</strong></h2>
+<p>Creating a dictionary in Python is straightforward. You use curly braces <code>{}</code> and separate the key-value pairs with colons.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Each key must be unique within the dictionary, and it is associated with a corresponding value. Let&rsquo;s take a look at an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;John&#34;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;Emily&#34;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&#34;Michael&#34;</span><span class="p">:</span> <span class="mi">41</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>{&#34;John&#34;: 25, &#34;Emily&#34;: 32, &#34;Michael&#34;: 41}
+</code></pre><p>In this example, “John,” “Emily,” and “Michael” are the keys, and their respective ages (25, 32, and 41) are the corresponding values.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Python dictionaries can have keys of any immutable data type and values of any data type.</p>
+  
+
+  
+<h2 id="accessing-dictionary-values"><strong>Accessing Dictionary Values</strong></h2>
+<p>Accessing values in a dictionary is an important operation. You can retrieve a value by using its corresponding key.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>By providing the key within square brackets, you can access the associated value. Let&rsquo;s see an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">john_age</span> <span class="o">=</span> <span class="n">ages</span><span class="p">[</span><span class="s2">&#34;John&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">john_age</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>25
+</code></pre><p>In this case, the variable <code>john_age</code> will contain the value 25. Similarly, you can access the ages of other individuals by using their respective keys.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="modifying-dictionary-values"><strong>Modifying Dictionary Values</strong></h2>
+<p>Python dictionaries are mutable, which means you can modify the values associated with keys.</p>
+  
+
+  
+<p>To update a value in a dictionary, you can assign a new value to its key. For instance, let&rsquo;s say John celebrated his birthday, and you want to update his age:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ages</span><span class="p">[</span><span class="s2">&#34;John&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">26</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>{&#34;John&#34;: 26, &#34;Emily&#34;: 32, &#34;Michael&#34;: 41}
+</code></pre><p>After executing this line of code, the age of John in the <code>ages</code> dictionary will be updated to 26.</p>
+  
+
+  
+<h2 id="adding-and-removing-items"><strong>Adding and Removing Items</strong></h2>
+<p>Dictionaries provide flexibility in adding and removing key-value pairs. To add a new pair, you can assign a value to a new key.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>For example, let&rsquo;s add Sarah and her age to the <code>ages</code> dictionary:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ages</span><span class="p">[</span><span class="s2">&#34;Sarah&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">29</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>{&#34;John&#34;: 26, &#34;Emily&#34;: 32, &#34;Michael&#34;: 41, &#34;Sarah&#34;: 29}
+</code></pre><p>Now, the <code>ages</code> dictionary includes Sarah and her corresponding age. Conversely, to remove a key-value pair, you can use the <code>del</code> keyword followed by the key you wish to remove.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Let&rsquo;s remove the entry for Michael:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">del</span> <span class="n">ages</span><span class="p">[</span><span class="s2">&#34;Michael&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>{&#34;John&#34;: 26, &#34;Emily&#34;: 32, &#34;Sarah&#34;: 29}
+</code></pre><p>After executing these lines of code, the <code>ages</code> dictionary will no longer include Michael&rsquo;s age.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="dictionary-methods"><strong>Dictionary Methods</strong></h2>
+<p>Python provides several built-in methods that facilitate working with</p>
+  
+
+  
+<p>dictionaries. Some commonly used methods include:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<ul>
+<li><code>keys()</code>: Returns a list of all the keys in the dictionary.</li>
+<li><code>values()</code>: Returns a list of all the values in the dictionary.</li>
+<li><code>items()</code>: Returns a list of tuples, where each tuple contains a key-value pair.</li>
+</ul>
+<p>These methods are useful for retrieving information about the dictionary&rsquo;s keys, values, or items.</p>
+  
+
+  
+<p>Let&rsquo;s see these methods in action:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><strong>1. keys():</strong> This method returns a list of all the keys present in the dictionary. It provides a convenient way to access and iterate over the keys. Here&rsquo;s an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;John&#34;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;Emily&#34;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&#34;Michael&#34;</span><span class="p">:</span> <span class="mi">41</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">key_list</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">key_list</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>dict_keys([&#39;John&#39;, &#39;Emily&#39;, &#39;Michael&#39;])
+</code></pre><p>In this example, the <code>keys()</code> method returns a list-like object containing all the keys in the <code>ages</code> dictionary.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>2. values():</strong> The <code>values()</code> method retrieves a list of all the values in the dictionary. This is useful when you want to access or manipulate the values independently. Here&rsquo;s an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;John&#34;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;Emily&#34;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&#34;Michael&#34;</span><span class="p">:</span> <span class="mi">41</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">value_list</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">value_list</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>dict_values([25, 32, 41])
+</code></pre><p>The <code>values()</code> method returns a list-like object containing all the values from the <code>ages</code> dictionary.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>3. items():</strong> The <code>items()</code> method is particularly useful as it returns a list of tuples, where each tuple contains a key-value pair from the dictionary. This method enables you to access both the keys and values simultaneously. Let&rsquo;s see an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;John&#34;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;Emily&#34;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&#34;Michael&#34;</span><span class="p">:</span> <span class="mi">41</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">item_list</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">item_list</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>dict_items([(&#39;John&#39;, 25), (&#39;Emily&#39;, 32), (&#39;Michael&#39;, 41)])
+</code></pre><p>In this example, the <code>items()</code> method returns a list-like object containing tuples, each representing a key-value pair from the <code>ages</code> dictionary.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="iterating-over-a-dictionary"><strong>Iterating Over a Dictionary</strong></h2>
+<p>Iterating over a dictionary allows you to perform operations on each key-value pair. Python provides a convenient way to loop through a dictionary using a <code>for</code> loop.</p>
+  
+
+  
+<p>Here&rsquo;s an example that prints the names and ages of each person in the <code>ages</code> dictionary:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">ages</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&#34; is &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; years old.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code class="language-log" data-lang="log">John is 26 years old.
+Emily is 32 years old.
+Sarah is 29 years old.
+</code></pre><p>This loop iterates over each key-value pair in the <code>ages</code> dictionary and prints a formatted string containing the name and age of each person.</p>
+  
+
+  
+<h2 id="dictionary-operations"><strong>Dictionary Operations</strong></h2>
+<p>There are common operations you can perform on dictionaries, such as checking if a key exists in a dictionary and finding the length of a dictionary.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>You can use the <code>in</code> keyword to check if a key exists:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="s2">&#34;John&#34;</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;John&#39;s age is known.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>John&#39;s age is known.
+</code></pre><p>This code snippet checks if the key “John” exists in the <code>ages</code> dictionary. If it does, it prints a message indicating that John&rsquo;s age is known.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>In addition, you can use the <code>len()</code> function to determine the number of key-value pairs in a dictionary:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dictionary_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">dictionary_length</span><span class="p">)</span>
+</span></span></code></pre></div><p>Output:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<pre tabindex="0"><code>3
+</code></pre><p>The variable <code>dictionary_length</code> will store the number of key-value pairs in the <code>ages</code> dictionary.</p>
+  
+
+  
+<h2 id="nested-dictionaries"><strong>Nested Dictionaries</strong></h2>
+<p>Python dictionaries can be nested, allowing you to create more complex data structures. You can have dictionaries within dictionaries, which is especially useful for representing hierarchical data.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Let&rsquo;s see an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">contacts</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;John&#34;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;john@example.com&#34;</span><span class="p">,</span> <span class="s2">&#34;phone&#34;</span><span class="p">:</span> <span class="s2">&#34;123-456-7890&#34;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Emily&#34;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;emily@example.com&#34;</span><span class="p">,</span> <span class="s2">&#34;phone&#34;</span><span class="p">:</span> <span class="s2">&#34;987-654-3210&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">emily_email</span> <span class="o">=</span> <span class="n">contacts</span><span class="p">[</span><span class="s2">&#34;Emily&#34;</span><span class="p">][</span><span class="s2">&#34;email&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">emily_email</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>emily@example.com
+</code></pre><p>In this example, the <code>contacts</code> dictionary contains two nested dictionaries, each representing contact information for John and Emily.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>To access Emily&rsquo;s email address, we provide the outer key (“Emily”) followed by the inner key (“email”). The variable <code>emily_email</code> will store Emily&rsquo;s email address.</p>
+  
+
+  
+<h2 id="final-thought"><strong>Final Thought</strong></h2>
+<p>In this article, we covered the fundamentals of Python dictionaries. We discussed creating dictionaries, accessing and modifying their values, adding and removing items, and using various methods.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>In addition, we explored iterating over dictionaries, performing common operations, and using nested dictionaries.</p>
+  
+
+  
+<p>Python dictionaries are a powerful tool that allows for efficient data management and organization. They are essential for any Python programmer, and mastering their usage will enhance your coding skills significantly.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +845,32 @@
      
     
      <div class="xx">
+        <img src="http://localhost:1313/images/gpt3-tokens-cost.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-version-of-gpt-is-chat-gpt-using/">What Version of GPT Is ChatGPT Using?</a>
+ </div>
+    
+    
+     <div class="xx">
         <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-uncaught-syntaxerror/">How to fix “Uncaught SyntaxError: import declarations may only appear at top level of a module” | Javascript</a>
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/laptop-orcomputer-storage.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-gb-is-required-for-a-programming-laptop/">How much GB is required for a programming laptop?</a>
+        <img src="http://localhost:1313/images/pop-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-pop-in-python-and-how-to-use-it/">What is the pop() Method in Python? A Comprehensive Guide with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
+        <img src="http://localhost:1313/images/reverse-a-string-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-reverse-a-string-in-javascript/">How to Reverse a String in JavaScript: 3 Easy Ways</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
- </div>
-    
-    
-     <div class="xx">
-        <img src="http://localhost:1313/images/cpx-an-alternative-to-cp-linux-command.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/cpx-module-an-alternative-to-the-linux-cp-command-for-copying-files-across-folders/">cpx Module: An Alternative to the Linux cp Command for Copying Files Across Folders</a>
+        <img src="http://localhost:1313/images/remove-number-from-string-in-regex-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-numbers-from-a-string-in-python-using-regex/">How to Remove Numbers from a String in Python using Regex?</a>
  </div>
     
 
@@ -516,14 +889,20 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/abstraction.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-abstraction-in-computer-science-with-example/">Abstraction in Computer Science Explained (With Examples)</a>
+        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/text-wrap-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-text-wrap-to-next-line-in-css/">How to Make Text Wrap to Next Line in CSS?</a>
+        <img src="http://localhost:1313/images/node-module-not-found.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-module-not-found-error-in-nodejs/">How To Fix ‘MODULE_NOT_FOUND’ Error in Node.js</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/nextjs-middleware-file-location.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/nextjs-middleware-file-location/">Where Should Your `middleware.ts` File Be Located in a Next.js 15 Project?</a>
  </div>
     
     
@@ -534,14 +913,8 @@
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/default-margin.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-wide-is-the-default-body-margin-webpage/">How Wide is the Default `&lt;body&gt;` Margin [HTML Webpage]?</a>
+        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
  </div>
     
   </div>
@@ -549,12 +922,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +1090,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

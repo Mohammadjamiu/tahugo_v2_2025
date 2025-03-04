@@ -342,7 +342,124 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>When using Tailwind CSS in a React or Next.js app, the order of classes in the <code>className</code> property doesn’t seem to matter for functionality.</p>
+  
+
+  
+<p>However, I noticed it can get messy and inconsistent, especially for readability and maintaining a clean codebase. For instance:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;gap-3 rounded-lg border p-5 hover:bg-muted/60 flex&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span><span class="nx">title</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Even though this works fine, the classes are out of order and less readable.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>To fix this issue, I used Prettier with a Tailwind CSS plugin to automatically sort my classes in a consistent order:</p>
+  
+
+  
+<ol>
+<li>
+<p><strong>Install Dependencies</strong>:<br>
+I installed Prettier and the Tailwind CSS plugin as devDependencies:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm install -D prettier prettier-plugin-tailwindcss
+</span></span></code></pre></div><blockquote>
+<p><em>(You can also use <code>npm install -D prettier prettier-plugin-tailwindcss</code> if you’re using npm. I prefer pnpm because it’s faster and more storage-efficient.)</em></p>
+  
+
+  
+</blockquote>
+</li>
+<li>
+<p><strong>Configure Prettier</strong>:<br>
+I created a <code>.prettierrc</code> file in the root directory and added the following configuration:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;plugins&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;prettier-plugin-tailwindcss&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Class Sorting in Action</strong>:<br>
+When I saved a file, Prettier automatically reordered the classes for better readability. For example:</p>
+  
+
+  
+<ul>
+<li><strong>Before</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;gap-3 rounded-lg border p-5 hover:bg-muted/60 flex&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span><span class="nx">title</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span></code></pre></div></li>
+<li><strong>After</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;flex gap-3 rounded-lg border p-5 hover:bg-muted/60&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span><span class="nx">title</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span></code></pre></div></li>
+</ul>
+<p>Another example:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<ul>
+<li><strong>Before</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;lg:grid-cols-4 grid sm:grid-cols-3 grid-cols-2&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div></li>
+<li><strong>After</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<p>Now, all my Tailwind CSS classes are consistently ordered with minimal effort—Prettier and the plugin take care of it when I save my files!</p>
+  
+
+  
+<p>Here’s a link to TailwindCSS page to read <a href="https://tailwindcss.com/blog/automatic-class-sorting-with-prettier" target="_blank" rel="nofollow noopener ">more</a>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +589,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
+        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
+        <img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/when-to-use-var-let-and-const-in-javascript/">When To Use Var, Let, and Const in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
+        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/mac-pc-laptop-apple.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-csv-editors-or-tools-for-macs/">The Best CSV Editors for Macs: View, Edit, and Format</a>
+        <img src="http://localhost:1313/images/area-size-of-cell.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-hexagonal-shape-is-preferred-in-cellular-architecture/">Why Hexagonal Shape Is Preferred in Cellular Architecture?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/select-placeholder-1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-placeholder-for-a-select-box/">How to make a placeholder for a &#39;select&#39; box?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-chatgpt-a-strong-or-weak-ai/">Is ChatGPT a Strong or Weak AI?</a>
  </div>
     
 
@@ -516,32 +633,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-coding-apps-for-android/">Best Coding Apps for Android: Learn and Practice in 2023</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
- </div>
-    
-    
-       <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-export-and-import-modules-in-javascript/">How to Import and Export Modules in Javascript | Simple Explanation</a>
- </div>
-    
-    
-       <div class="xx">
         <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
               <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/migrating-hugo-website-netlify-to-vercel-version-mismatch.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/migrating-hugo-website-netlify-to-vercel-version-mismatch/">Migrating a Hugo Website from Netlify to Vercel: Resolving Deployment Errors Due to Hugo Version Mismatch</a>
+        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-coding-apps-for-android/">Best Coding Apps for Android: Learn and Practice in 2023</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/semicolon-needed-css.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-semicolons-needed-in-css/">Are Semicolons Needed in CSS?</a>
+ </div>
+    
+    
+       <div class="xx">
+        <img src="http://localhost:1313/images/computer-ram.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-much-ram-is-needed-for-coding-in-laptop/">How Much RAM is Needed for Coding in a Laptop?</a>
  </div>
     
   </div>
@@ -549,12 +666,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +834,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

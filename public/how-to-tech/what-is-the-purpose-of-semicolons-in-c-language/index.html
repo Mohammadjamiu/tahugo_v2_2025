@@ -345,7 +345,160 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>When writing a C program, a semicolon (;) is used after each line of code. This might seem tedious, but it is essential for ensuring the correct interpretation and execution of the code.</p>
+  
+
+  
+<h2 id="why-is-semicolon--needed-in-c-language"><strong>Why is semicolon (;) needed in C language?</strong></h2>
+<p>Some of the reasons why semicolon is used in C programming is discussed below.</p>
+  
+
+  
+<h3 id="1-for-statement-termination">1. For statement termination</h3>
+<p>In C, statements are the fundamental building blocks of code, representing instructions or actions that the program should execute.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Semicolons act as statement terminators, marking the end of a single statement and separating it from the next.</p>
+  
+
+  
+<p>Without proper semicolon placement, the compiler may struggle to interpret the code correctly, leading to syntax errors or unexpected behavior.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>For example, in this c program below,</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello Error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The variables &lsquo;<code>a</code>&rsquo; and &lsquo;<code>b</code>&rsquo; are not ended with a semicolon, while the <code>printf(“Hello Error”)</code> is ended with a semicolon.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>This will lead to an error called <strong>declaration error</strong> because, the way the compiler will see it is like this, “<code>int a, b printf(“Hello Error”);</code>”—all in one line.</p>
+  
+
+  
+<p><strong>So the corrected code should be:</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// Corrected with semicolons
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   
+</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello Error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="2-to-prevent-ambiguity">2. To Prevent Ambiguity</h3>
+<p>C allows for multiple statements to be written on a single line, which can potentially lead to confusion if not properly terminated with semicolons.</p>
+  
+
+  
+<p>Consider the following example, the <code>x</code>, <code>y</code> and <code>sum</code> variables are all on the same line.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>But if in any case that the semicolon used in separating each statement is not there, then it will lead to an error.</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="kt">int</span> <span class="n">sum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">sum</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The sum is %d &#34;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="3-to-make-code-readable">3. To make code readable</h3>
+<p>Semicolons not only ensure proper code execution but also enhance code readability and maintainability.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>By clearly separating statements, semicolons make the code easier to understand and debug, especially when working with complex or lengthy code segments.</p>
+  
+
+  
+<h3 id="4-to-enforce-syntax-rules">4. To enforce syntax rules</h3>
+<p>Semicolons are part of the C language syntax, and their proper usage is enforced by the compiler.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>This ensures that programmers adhere to standard coding conventions and maintain consistency across different codebases.</p>
+  
+
+  
+<h2 id="wrap-up"><strong>Wrap Up</strong></h2>
+<p>As a wrap up, semicolons are not just arbitrary punctuation marks in C programming; they are essential for ensuring correct code execution, preventing ambiguity, enhancing readability, and enforcing syntax rules.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Their usage is fundamental to writing well-structured, maintainable, and reliable C code.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -475,32 +628,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
+        <img src="http://localhost:1313/images/tech-driven-strategies-for-optimal-medical-billing-performance.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/strategies-for-optimal-medical-billing-performance/">Tech-Driven Strategies for Optimal Medical Billing Performance</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/vscode-is-not-responding.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-vscode-window-not-responding/">How to Fix VSCode Window Not Responding?</a>
+        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/using-control-shift-and-pallete.jpg.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-clear-terminal-in-vs-code/">How to Clear the Terminal in VS Code?</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/text-wrap-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-text-wrap-to-next-line-in-css/">How to Make Text Wrap to Next Line in CSS?</a>
+        <img src="http://localhost:1313/images/slice-method-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-split-array-in-2-parts-javascript/">How to Split an Array in 2 Parts in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/cache-file-size.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-delete-vscode-cached-data-files/">How to Delete VSCode Cached Data Files?</a>
+        <img src="http://localhost:1313/images/screenshot-2023-02-06-at-03-51-12-enabled-integrations.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-plugins-from-netlify/">How to remove plugins from Netlify?</a>
  </div>
     
 
@@ -519,32 +672,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-false-response.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-limitations-of-chatgpt/">What Are the Limitations of ChatGPT?</a>
+        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/cpu.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-core-i3-i5-i7/">Intel Core i3, i5, and i7 Processors: What&#39;s The Difference?</a>
+        <img src="http://localhost:1313/images/mail.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-email-and-gmail/">Difference Between Email and Gmail: A Detailed Comparison</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
+        <img src="http://localhost:1313/images/screenshot-2023-01-26-at-14-47-52-identity-site-settings.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-configure-a-website-netlifycms-to-access-the-admin-page-using-google-account/">How to configure a website netlifyCMS to access the admin page using google account</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
+        <img src="http://localhost:1313/images/isolate-tailwindcss-to-fix-z-index-issue.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-tailwindcss-z-index-problem-with-isolate/">How to Fix TailwindCSS z-index Problem with `isolate`</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/npm-uninstall-sharp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-uninstall-an-npm-package/">How To Uninstall an NPM Package?</a>
+        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
  </div>
     
   </div>
@@ -552,12 +705,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -719,6 +873,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

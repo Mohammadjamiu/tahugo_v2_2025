@@ -345,7 +345,183 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>In JavaScript, shuffling an array randomly can be a useful technique when you want to randomize the order of elements.</p>
+  
+
+  
+<p>Whether you&rsquo;re building a game, conducting statistical analysis, or simply adding some randomness to your application, understanding how to shuffle an array is essential.</p>
+  
+
+  
+<p>In this article, we will provide a detailed explanation of the code used to shuffle an array randomly in JavaScript. Let&rsquo;s dive in!</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="toc-container">
+  <h2 class="toc-h2">
+    Table of Contents <button class="toggle-button">↬</button>
+  </h2>
+  <div class="table-of-contents"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-code"><strong>The Code</strong></a></li>
+    <li><a href="#understanding-the-code"><strong>Understanding the Code</strong></a>
+      <ul>
+        <li><a href="#step-1-initializing-the-array"><strong>Step 1: Initializing the Array</strong></a></li>
+        <li><a href="#step-2-looping-through-the-array"><strong>Step 2: Looping through the Array</strong></a></li>
+        <li><a href="#step-3-generating-a-random-index"><strong>Step 3: Generating a Random Index</strong></a></li>
+        <li><a href="#step-4-swapping-elements"><strong>Step 4: Swapping Elements</strong></a></li>
+        <li><a href="#step-5-repeat-until-shuffled"><strong>Step 5: Repeat Until Shuffled</strong></a></li>
+        <li><a href="#step-6-console-log-the-shuffled-array"><strong>Step 6: Console Log the Shuffled Array</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+<h2 id="the-code"><strong>The Code</strong></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">j</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="understanding-the-code"><strong>Understanding the Code</strong></h2>
+<p>To understand the code, let&rsquo;s break it down step by step.</p>
+  
+
+  
+<h3 id="step-1-initializing-the-array"><strong>Step 1: Initializing the Array</strong></h3>
+<p>The first line of code declares a variable called <code>array</code> and assigns it an array of numbers <code>[1, 2, 3, 4, 5]</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>This array can be customized to contain any elements you want to shuffle.</p>
+  
+
+  
+<h3 id="step-2-looping-through-the-array"><strong>Step 2: Looping through the Array</strong></h3>
+<p>The second line of code starts a <code>for</code> loop. The loop will iterate <code>array.length - 1</code> times, where <code>array.length</code> is the number of elements in the array.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The loop begins from the last index of the array and goes backwards to the first index.</p>
+  
+
+  
+<h3 id="step-3-generating-a-random-index"><strong>Step 3: Generating a Random Index</strong></h3>
+<p>In each iteration of the loop, the following code is executed:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">j</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+</span></span></code></pre></div><p>This code generates a random number between <code>0</code> and <code>i + 1</code>, where <code>i</code> is the current index in the loop.</p>
+  
+
+  
+<p>The <code>Math.random()</code> function generates a random decimal number between <code>0</code> and <code>1</code>, which is then multiplied by <code>(i + 1)</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>The <code>Math.floor()</code> function is used to round down the resulting number to the nearest integer.</p>
+  
+
+  
+<p>The variable <code>j</code> is assigned the value of the rounded-down random number.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h3 id="step-4-swapping-elements"><strong>Step 4: Swapping Elements</strong></h3>
+<p>The next line of code swaps the elements at indices <code>i</code> and <code>j</code> in the array:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]];</span>
+</span></span></code></pre></div><p>This line of code uses destructuring assignment and the square bracket notation to create a temporary array with the elements at indices <code>i</code> and <code>j</code> in the original array.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The values of <code>array[i]</code> and <code>array[j]</code> are swapped by assigning them to the elements of the temporary array in reverse order.</p>
+  
+
+  
+<h3 id="step-5-repeat-until-shuffled"><strong>Step 5: Repeat Until Shuffled</strong></h3>
+<p>The swapping process is repeated until the <code>i</code> variable is <code>0</code>. At this point, the loop will terminate, and the array will be shuffled.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="step-6-console-log-the-shuffled-array"><strong>Step 6: Console Log the Shuffled Array</strong></h3>
+<p>By using <code>console.log(array);</code> you will get a new shuffled array.</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+</span></span></code></pre></div><p>For example, when the code is run in the console, here is the result gotten.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><img src="http://localhost:1313/images/shuffle-array.webp" alt="array shuffle in js" title="array shuffle in js"></p>
+  
+
+  
+<p>Voilà &#x1f389; Happy shuffling!</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -475,32 +651,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/circular-image-css.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-make-a-circular-image-in-css/">How to Make a Circular Image in CSS?</a>
+        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/date-fns-does-have-default-export.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-date-fns-format-has-no-default-export-error/">How to Fix the date-fns format() Has No Default Export Error</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/bard-activity-1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-google-bard-better-than-chatgpt/">Is Google Bard Better Than ChatGPT?</a>
+        <img src="http://localhost:1313/images/isolate-tailwindcss-to-fix-z-index-issue.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-tailwindcss-z-index-problem-with-isolate/">How to Fix TailwindCSS z-index Problem with `isolate`</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
+        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/rf-rm-powershell-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/remove-item-a-parameter-cannot-be-found-that-matches-parameter-name-rf/">How to Fix &#34;Remove-Item: A parameter cannot be found that matches parameter name &#39;rf&#39;&#34;</a>
+        <img src="http://localhost:1313/images/npm-install-encoding.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/module-not-found-cant-resolve-encoding-in-next-js/">How to Fix &#34;Module not found: Can&#39;t resolve encoding&#34; in Next.js</a>
  </div>
     
 
@@ -519,32 +695,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
+        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/notifications-duration-whatsapp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-mute-or-unmute-group-notifications-on-whatsapp/">How to Mute or Unmute Group Notifications on WhatsApp?</a>
+        <img src="http://localhost:1313/images/wm_hon-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-vs-cpp-vs-csharp-whats-the-difference/">C vs C&#43;&#43; vs C#: What&#39;s the Difference?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/remove-from-an-array-in-javascript.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-specific-element-from-array-in-javascript/">How to Remove a Specific Element from an Array in JavaScript</a>
+        <img src="http://localhost:1313/images/underscore-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-use-of-underscore-in-javascript/">What is the use of underscore ( _ ) in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
+        <img src="http://localhost:1313/images/logical-or-and-logical-and.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-logical-or-and-logical-and-in-javascript/">Difference Between || and &amp;&amp; in JavaScript?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/are-hackers-better-than-programmers/">Are Hackers Better Than Programmers?</a>
+        <img src="http://localhost:1313/images/how-to-fix-pnpm-outdated-lockfile-error-on-vercel.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/insert-ads-dynamically-hugo/">How to Insert Ads Dynamically, for Example, After Every 3 Paragraphs in Hugo&#34;</a>
  </div>
     
   </div>
@@ -552,12 +728,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -719,6 +896,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

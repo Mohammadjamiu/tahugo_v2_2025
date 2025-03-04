@@ -342,7 +342,90 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>I was working on a Next.js 15 project using <code>pnpm</code>, and when I tried to run the build command (<code>pnpm build</code>), I encountered the following error:</p>
+  
+
+  
+<pre tabindex="0"><code>uncaughtException [Error: EPERM: operation not permitted, open &#39;C:\Users\USER\Desktop\My Projects\tooabstractive\.next\trace&#39;] {
+  errno: -4048,
+  code: &#39;EPERM&#39;,
+  syscall: &#39;open&#39;,
+  path: &#39;C:\\Users\\USER\\Desktop\\My Projects\\tooabstractive\\.next\\trace&#39;
+}
+ ELIFECYCLE  Command failed with exit code 1.
+</code></pre><p>This error occurred because I was also running an instance of the app using <code>pnpm dev</code> (the development server) at the same time.</p>
+  
+
+  
+<p>Once I closed the dev server, the issue was resolved, and the build process worked as expected.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h3 id="what-i-learned">What I Learned</h3>
+<ol>
+<li>
+<p><strong>Close the Development Server:</strong>
+I realized that running the development server (<code>pnpm dev</code>) while also attempting to build the project (<code>pnpm build</code>) caused a conflict, as both processes tried to access and modify the same files in the <code>.next</code> folder.</p>
+  
+
+  
+<ul>
+<li>I stopped the development server by closing the terminal where <code>pnpm dev</code> was running or by pressing <code>Ctrl + C</code> in that terminal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Run the Build Command:</strong>
+After closing the development server, I ran <code>pnpm build</code> again, and the build process completed successfully without the &ldquo;EPERM: operation not permitted&rdquo; error.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</li>
+<li>
+<p><strong>Avoid Running Multiple Instances Simultaneously:</strong>
+To prevent this issue from occurring in the future, I made sure to avoid running both the development server and the build process simultaneously.</p>
+  
+
+  
+<p>This way, only one instance has access to the <code>.next</code> folder at a time, preventing conflicts and permission issues.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+</li>
+</ol>
+<p>By ensuring that only one process is accessing the <code>.next</code> folder at a time, I was able to successfully build my Next.js project without encountering the &ldquo;EPERM: operation not permitted&rdquo; error.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +555,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
+        <img src="http://localhost:1313/images/sharp-and-imagesize.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-image-width-and-height-in-nodejs/">How To Get Image Width and Height in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/wm_hon-transformed-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-vs-cpp-vs-csharp-whats-the-difference/">C vs C&#43;&#43; vs C#: What&#39;s the Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
+        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/for-loop-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-for-loop-explain-with-example-in-python/">For Loop in Python: An Easy Explanation with Examples</a>
+        <img src="http://localhost:1313/images/software-eng-vs-computer-science.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-system-software-and-application-software-with-examples/">Difference Between System Software and Application Software with Examples</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
+        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
  </div>
     
 
@@ -516,32 +599,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
+        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/pclightup.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-computer-science-teach-coding/">Does Computer Science Teach Coding?</a>
+        <img src="http://localhost:1313/images/reverse-a-string-in-js.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-reverse-a-string-in-javascript/">How to Reverse a String in JavaScript: 3 Easy Ways</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
+        <img src="http://localhost:1313/images/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-automatically-sort-tailwind-css-classes-in-react-or-nextjs/">How to Automatically Sort Tailwind CSS Classes in React or Next.js</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/console-error.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.error/">Difference Between console.log and console.error</a>
+        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-screen-size-is-best-for-programming/">Which Laptop Screen Size Is Best for Programming?</a>
+        <img src="http://localhost:1313/images/pseudo-before-tailwindcss.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-add-before-and-after-pseudo-tailwind-css/">Tailwind CSS: how do you add :before and :after pseudo-element?</a>
  </div>
     
   </div>
@@ -549,12 +632,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +800,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

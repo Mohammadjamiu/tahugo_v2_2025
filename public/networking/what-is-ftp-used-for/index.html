@@ -342,7 +342,249 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p><strong>Transferring of files from your computer to the internet can be done through the use of a protocols called FTP.</strong></p>
+  
+
+  
+<h2 id="what-is-ftp-and-what-is-it-used-for">What is FTP and What is it used for?</h2>
+<p><strong>FTP</strong> stands for File Transfer Protocol. It is a protocol which is used for transferring files across network.</p>
+  
+
+  
+<p>It uses a client-server model in which the server host or store the files while the client (e.g. a computer) can connect, access, download, upload, rename and delete files which is hosted on the server.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>FTP is not commonly used these days but is still in use in some areas such as web development where developers or frontend engineers upload files to the server through the use of a client application called FileZilla.</p>
+  
+
+  
+<p>Also, it is still in use in network management.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>FTP uses Transmission Control Protocol (TCP). TCP is a protocol that uses a three-way handshake for connection to be established. The client will have to send a “SYN” message, the server will respond with “SYN-ACK” and lastly the client will respond with “ACK”.</p>
+  
+
+  
+<p>If the handshake is done successfully, there will be an open connection between the client and the server.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>FTP uses two types of connections, the control connection and the data connection.</p>
+  
+
+  
+<p>The control connection handles all of the FTP commands and instruction e.g. GET command, PUT command etc. the client will be able to connect to the server with a port number of 21 and a randomly selected dynamic source port number (e.g. 42363).</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The data connection is in action when files are being shared or transferred.</p>
+  
+
+  
+<p>Data connections is also divided into types which are active data connection and passive data connection.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Active data connection is established by the server initiating a session and the server does this through a port number of 20 and it uses a randomly generated port (e.g. 45363).</p>
+  
+
+  
+<p>The issue with the active data connection is that, because of the firewall (for protection) which often exist between a client and a server, the firewall discard the session initiated by the server because the purpose of a firewall is to block incoming data.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>That’s why a passive data connection is often used and in this case, the client is responsible for the initiation of session.</p>
+  
+
+  
+<p>In passive data connection, random source port and destination port numbers are used.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="how-do-you-access-a-file-using-ftp">How do you access a file using FTP?</h2>
+<p>To access a file on a server using FTP, all you need to do is the IP address or URL which points to the server and you need to replace the http:// or https:// part in an address with ftp:// so that the browser will understand the protocol to use. e.g. <a href="ftp://google.com">ftp://google.com</a></p>
+  
+
+  
+<h2 id="advantages-of-ftp">Advantage(s) of FTP</h2>
+<ol>
+<li>
+<p>FTP is simple and easy to use.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</li>
+<li>
+<p>Speed at which data can be transferred.</p>
+  
+
+  
+</li>
+<li>
+<p>It allows the accessing, uploading, downloading etc. of file across a server.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+</li>
+</ol>
+<h2 id="disadvantages-of-ftp">Disadvantage(s) of FTP</h2>
+<ol>
+<li>
+<p>Data are transmitted in plain text or format.</p>
+  
+
+  
+</li>
+<li>
+<p>There is limit to the file size that can be transferred.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</li>
+<li>
+<p>It does not support multiple receivers.</p>
+  
+
+  
+</li>
+<li>
+<p>There is no data encryption hence, often result in data bridges.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+</li>
+</ol>
+<p>In order to make FTP safe and secured, some layers of security are added and it results in a new type or version of FTP which is called FTPs.</p>
+  
+
+  
+<h2 id="what-is-ftps">What is FTPs?</h2>
+<p><strong>FTPs</strong> stands for File Transfer Protocol Secure. It is a newer version of FTP which is secure and it uses Transport Layer Security (TLS) and Secure Sockets Layer SSL encryption.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="advantages-of-ftps">Advantage(s) of FTPs</h2>
+<ol>
+<li>
+<p>It uses an addition layer of security.</p>
+  
+
+  
+</li>
+<li>
+<p>Data are not transmitted in plain format.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</li>
+<li>
+<p>It provides encryption of data.</p>
+  
+
+  
+</li>
+</ol>
+<h2 id="disadvantage-of-ftps">Disadvantage of FTPs</h2>
+<ol>
+<li>The addition layer of security leads to complexity.</li>
+</ol>
+<p>Another version of FTP is TFTP.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h2 id="what-is-tftp">What is TFTP?</h2>
+<p><strong>TFTP</strong> is termed as Trivial File Transfer Protocol.</p>
+  
+
+  
+<p>It is a simple form of FTP which is not used to transfer file over the internet but on a Local Area Network.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The kind of files which can be transferred using TFTP is a Configuration files often shortened as Config files.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +714,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/power-control.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/power-control-strategies-in-3g/">Power Control Strategies in 3G</a>
+        <img src="http://localhost:1313/images/fiberoptics_3.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-fiber-optics-cable-and-how-does-light-travels-through-it/">What Is Fiber Optics Cable, Modes of Propagation and How Does Light Travels Through It</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/fiberoptics_1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-core-and-cladding-losses-in-optical-fiber/">What Are Core and Cladding Losses in Optical Fiber?</a>
+        <img src="http://localhost:1313/images/networks-installment.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/similarities-between-wired-and-wireless-networks/">Similarities between Wired and Wireless Networks</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/ionosphere_1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/modes-of-radio-wave-propagation/">What Is Radio Wave Propagation? And the Different Modes of Radio Wave Propagation?</a>
+        <img src="http://localhost:1313/images/fiber.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/why-optical-fiber-communication-is-prefered/">Why Optical Fiber Communication Is Preferred Over Other Means of Communication?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/utp-and-stp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/types-of-transmission-media-in-computer-networks/">Types of Transmission Media in Computer Networks Explained</a>
+        <img src="http://localhost:1313/images/fiberoptics_4.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-single-mode-and-multimode-fiber/">Difference Between Single Mode and Multimode Fiber</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/network-hub-1060337-transformed-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/do-hubs-use-ip-address/">Do Hubs Use IP Addresses?</a>
+        <img src="http://localhost:1313/images/amplifier.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-is-optical-amplifier-and-its-types/">What Is Optical Amplifier and Its Types?</a>
  </div>
     
 
@@ -516,20 +758,20 @@
      
     
        <div class="xx">
-        <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-packets-and-frames/">Difference Between Packets and Frames In Networking</a>
+        <img src="http://localhost:1313/images/network-congestion.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/what-are-the-features-of-wimax/">What are the features of WiMAX?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/satellite-2.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/similarities-of-circuit-switching-and-packet-switching/">What Are the Similarities Between Circuit Switching and Packet Switching</a>
+        <img src="http://localhost:1313/images/electromagnetic-waves.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/do-fibre-optic-cables-conduct-electricity/">Do Fiber Optic Cables Conduct Electricity?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/lightp.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/how-fast-does-data-travel-on-fibre-optic-cables/">How Fast Does Data Travel on Fiber Optic Cables?</a>
+        <img src="http://localhost:1313/images/probability_1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-random-process-and-random-variable/">Difference Between Random Process and Random Variable</a>
  </div>
     
     
@@ -540,8 +782,8 @@
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/fiberoptics_3.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/networking/difference-between-step-index-and-graded-index-optical-fiber/">Differences Between Step-Index and Graded-Index Optical Fiber</a>
+        <img src="http://localhost:1313/images/cell-tower-resized.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/networking/telecommunications-engineering-integration-with-other-fields-like-cybersecurity-or-iot/">How does telecommunications engineering integrate with other fields like cybersecurity or IoT?</a>
  </div>
     
   </div>
@@ -549,12 +791,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +959,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

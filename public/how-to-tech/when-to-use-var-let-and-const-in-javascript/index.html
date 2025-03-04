@@ -342,7 +342,322 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p><code>var</code>, <code>let</code>, and <code>const</code> are all used for declaring variables in JavaScript, but they have some differences in terms of scoping and mutability (i.e., the tendency to change).</p>
+  
+
+  
+<blockquote>
+<p><strong>Variable:</strong></p>
+  
+
+  
+<p><em>Think of a variable as a labeled storage box where you can put different things, like numbers, words, or even more complex information. You can name the box, store values in it, and later access or modify those values as needed in your code.</em></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</blockquote>
+<p>In this article, we will delve into the intricacies of <code>var</code>, <code>let</code>, and <code>const</code>, explaining their characteristics and when to use each one.</p>
+  
+
+  
+<h2 id="the-var-keyword">The <code>var</code> Keyword</h2>
+<p>The <code>var</code> keyword is the oldest and most basic way to declare variables in JavaScript. It provides function-level scoping, meaning that a variable declared with <code>var</code> is accessible throughout the entire function in which it is defined.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Variables declared with <code>var</code> can be reassigned, meaning you can assign a new value to the variable at any point in the code. Another characteristic of <code>var</code> variables is hoisting, where the variable declaration is moved to the top of its scope during the code execution phase.</p>
+  
+
+  
+<p>This allows you to use the variable before it is actually declared, which can sometimes lead to unexpected behavior and bugs.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Let&rsquo;s look at a code example and analyze how variables declared with the <code>var</code> keyword works.</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">myExample</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// Output: undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// Output: 25
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myExample</span><span class="p">();</span>
+</span></span></code></pre></div><p>In this code example, the variable <em>age</em> is declared with<code>var</code> inside the <code>myExample()</code> function, and it comes after logging it to the console.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The normal way code should be written is the declaration coming first before logging it value to the console. But as you can see, when we try to log the value of age, it outputs <code>undefined</code> instead of <em>throwing an error</em>.</p>
+  
+
+  
+<p>This is because the <code>var</code> declaration is hoisted to the top, and it is considered as if the variable was defined but not assigned a value yet.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>To avoid the potential issues caused by hoisting and unexpected behavior, it is recommended to use <code>let</code> or <code>const</code> instead of var in modern JavaScript development.</strong></p>
+  
+
+  
+<p>Next, let&rsquo;s explore the <code>let</code> and <code>const</code> keywords in more detail.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h2 id="the-let-keyword">The <code>let</code> keyword</h2>
+<p>The <code>let</code> keyword is a newer addition to JavaScript and is widely recommended for declaring variables.</p>
+  
+
+  
+<p>It provides block scoping, meaning that the variable is only accessible within the block (typically enclosed in curly braces) where it is declared. Let&rsquo;s explore its key features:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Here is a code snippet that we can use to analyze how the let keyword works and how it is used:</p>
+  
+
+  
+<p><strong>Declaration -</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Block scope with let
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">myExample</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// Declared within the block
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// Different variable with the same name within the inner block
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// Output: 20
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// Output: 10 (outer block variable remains unchanged)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myExample</span><span class="p">();</span>
+</span></span></code></pre></div><p>In this code example, we declare a variable <code>x</code> using let within the outer block of the <code>myExample()</code> function.</p>
+  
+
+  
+<p>Inside the inner block (i.e., the <code>if</code> statement), we declare another variable <code>x</code> with the same variable name.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The let keyword ensures that these variables are distinct and separate within their respective blocks.</p>
+  
+
+  
+<p>As a result, we can have different values assigned to <code>x</code> within each block, and the variable remains confined to its specific block.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><img src="http://localhost:1313/images/let-keyword.webp" alt="let keyword in javascript" title="let keyword in javascript"></p>
+  
+
+  
+<p><strong>Reassignment -</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Variable reassignment with let
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">score</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span> <span class="c1">// Output: 100
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">score</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span> <span class="c1">// Reassigning the let variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span> <span class="c1">// Output: 200
+</span></span></span></code></pre></div><p>As you can see in this code example, we declare a variable <code>score</code> using let and assign it an initial value of 100.</p>
+  
+
+  
+<p>Later in the code, we can reassign a new value (200) to the <code>score</code> variable. The let keyword allows for variable reassignment within its scope, making it flexible for scenarios where the value needs to change.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p><img src="http://localhost:1313/images/let-keyword-reassignment.webp" alt="let keyword reassignment in js" title="let keyword reassignment in js"></p>
+  
+
+  
+<p>By using the let keyword, you can create variables that are block-scoped, cannot be hoisted, and can be reassigned within their respective scope.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>This provides certainty and avoids potential issues caused by variable hoisting.</p>
+  
+
+  
+<h2 id="theconst-keyword">The<code>const</code> Keyword</h2>
+<p>The <code>const</code> keyword is the newest addition among the three keywords (<code>var</code>, ⁣<code>let</code>, and <code>const</code>), and it is used to declare constant variables. Here&rsquo;s a detailed explanation of its features:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>Declaration and Reassignment -</strong></p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Constant variable declaration with const
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">PI</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">PI</span><span class="p">);</span> <span class="c1">// Output: 3.14159
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Trying to reassign a constant variable (results in an error)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">PI</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span> <span class="c1">// Error: TypeError: Assignment to constant variable.
+</span></span></span></code></pre></div><p>In this code example, we declare a constant variable <code>PI</code> using the <code>const</code> keyword and assign it the value 3.14159.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The <code>const</code>keyword ensures that the variable cannot be reassigned a new value. If we attempt to reassign a new value to <code>PI</code>, it will result in a <em><strong>TypeError</strong></em> indicating that we cannot assign a new value to a constant variable.</p>
+  
+
+  
+<p><img src="http://localhost:1313/images/const-typeerror.webp" alt="const typeerror" title="const typeerror"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Constants are useful for values that should remain constant throughout the execution of the program, such as mathematical constants or configuration values.</p>
+  
+
+  
+<p><strong>Scoping -</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Block scope with const
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">myNewExample</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// Constant variable within the block
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// Output: 10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// ReferenceError: x is not defined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myNewExample</span><span class="p">();</span>
+</span></span></code></pre></div><p>In this code example, we declare a constant variable <code>x</code> using <code>const</code> within the inner block (i.e., <code>if</code> statement).</p>
+  
+
+  
+<p>The<code>const</code> keyword ensures that <code>x</code> is block-scoped, meaning it is only accessible within the block in which it is declared.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>If we try to access <code>x</code> outside the block, it will result in a <em><strong>ReferenceError</strong></em> since <code>x</code> is not defined in that scope.</p>
+  
+
+  
+<p><img src="http://localhost:1313/images/referror-const.webp" alt="const reference error" title="const reference error"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>By using the <code>const</code> keyword, you can declare variables that are constant, meaning they cannot be reassigned after their initial assignment.</p>
+  
+
+  
+<p>In addition to that, <code>const</code> variables are block-scoped, making them useful for values that should not be changed, such as the names of objects, configuration values, or mathematical constants just as it was mentioned earlier.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h2 id="summary">Summary</h2>
+<p>In just few points, <strong>you use <code>let</code> to declare variables that may change, and you should use <code>const</code> to declare variables that should not change.</strong></p>
+  
+
+  
+<p><strong>You should only use <code>var</code> if you need to support older browsers that do not support let or<code>const</code>.</strong></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +787,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/apple-laptop-pc.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-best-json-file-viewer-for-mac/">The 5 Best JSON File Viewer for Macs: View, Edit and Debug</a>
+        <img src="http://localhost:1313/images/emoji-rendering-in-mdx-with-remark-emoji-in-nextjs.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fixing-emoji-rendering-in-mdx-with-remark-emoji-in-nextjs/">How to Fix Emoji Rendering in MDX with remark-emoji in Next.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/headway-5qgiuubxkwm-unsplash.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-long-does-it-take-to-learn-basic-computer-skills/">How Long Does It Take to Learn Basic Computer Skills?</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/how-to-check-if-a-variable-is-number-in-python.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-a-variable-is-a-number-in-python/">How to Check if a Variable is a Number in Python?</a>
+        <img src="http://localhost:1313/images/codes.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-programming-languages-are-taught-in-computer-science/">What Programming Languages are Taught in Computer Science?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/code-944499_640.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/explain-es6-in-detail/">Javascript ES6 (ECMAScript 6) Explained for Beginners</a>
+        <img src="https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/613ZTDcDsiL._SL1500_.jpg" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/the-best-html5-books-for-beginners/">7 Best HTML5 Books for Beginners (2024)</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-02-06-at-03-51-12-enabled-integrations.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-plugins-from-netlify/">How to remove plugins from Netlify?</a>
+        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
  </div>
     
 
@@ -516,32 +831,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
+        <img src="http://localhost:1313/images/download-image-from-url.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-image-from-url-in-node-js/">How to Download Images from URL in Node.js?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/could-not-find-package-json-file.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-couldnt-find-a-package-json-file/">How to Fix &#34;Error Couldn&#39;t Find a package.json File&#34;?</a>
+        <img src="http://localhost:1313/images/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-next.js-14-and-15-in-separate-branches-and-deploy-to-netlify/">How to Use Next.js 14 and 15 in Separate Branches and Deploy to Netlify</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
+        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/foreach-and-forin-loop.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-foreach-and-forin-loop-in-javascript/">Difference Between forEach and for…in Loop in JavaScript</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-09-02-at-1.55.54-pm.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-your-devices-were-logged-out-error-on-whatsapp/">How to Fix &#34;Your Devices Were Logged Out&#34; Error on WhatsApp?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-assembler/">Difference Between Compiler and Assembler</a>
+        <img src="http://localhost:1313/images/rfid.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-rfid-used-for/">What is Radio Frequency Identification (RFID) Used For?</a>
  </div>
     
   </div>
@@ -549,12 +864,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +1032,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

@@ -345,7 +345,464 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>In JavaScript, the <code>||</code> (logical OR) and <code>&amp;&amp;</code> (logical AND) operators are used to combine two or more expressions and return a Boolean value.</p>
+  
+
+  
+<p>The &amp;&amp; operator returns true if both of its operands are true, and false otherwise. The || operator returns true if either of its operands are true, and false otherwise.</p>
+  
+
+  
+<div class="toc-container">
+  <h2 class="toc-h2">
+    Table of Contents <button class="toggle-button">↬</button>
+  </h2>
+  <div class="table-of-contents"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-logical-or-operator"><strong>|| (Logical OR) Operator</strong></a>
+      <ul>
+        <li><a href="#-logical-or-operation"><strong>|| (Logical OR) Operation</strong></a></li>
+        <li><a href="#-logical-or-example-code"><strong>|| (Logical OR) Example Code</strong></a></li>
+        <li><a href="#usage-with-non-boolean-values"><strong>Usage with Non-Boolean Values</strong></a></li>
+        <li><a href="#usage-in-conditional-statements"><strong>Usage in Conditional Statements</strong></a></li>
+        <li><a href="#usage-in-loops"><strong>Usage in Loops</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#-logical-and-operator"><strong>&amp;&amp; (Logical AND) Operator</strong></a>
+      <ul>
+        <li><a href="#-logical-and-operation"><strong>&amp;&amp; (Logical AND) Operation</strong></a></li>
+        <li><a href="#-logical-and-example-code"><strong>&amp;&amp; (Logical AND) Example Code</strong></a></li>
+        <li><a href="#usage-with-non-boolean-values-1"><strong>Usage with Non-Boolean Values</strong></a></li>
+        <li><a href="#usage-in-conditional-statements-1"><strong>Usage in Conditional Statements</strong></a></li>
+        <li><a href="#usage-in-loops-1"><strong>Usage in Loops</strong></a></li>
+        <li><a href="#usage-in-functions"><strong>Usage in Functions</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#wrap-up"><strong>Wrap Up</strong></a></li>
+    <li><a href="#faqs"><strong>FAQs</strong></a></li>
+  </ul>
+</nav></div>
+</div>
+<h2 id="-logical-or-operator"><strong>|| (Logical OR) Operator</strong></h2>
+<p>The <code>||</code> operator in JavaScript is primarily used to combine expressions and return the value of the first truthy operand encountered.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>If both operands are falsy, the operator returns the value of the last operand.</p>
+  
+
+  
+<p>Let&rsquo;s dive deeper into the behavior of the <code>||</code> operator:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="-logical-or-operation"><strong>|| (Logical OR) Operation</strong></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Logical OR operation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">true</span> <span class="o">||</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">true</span> <span class="o">||</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">false</span> <span class="o">||</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">false</span> <span class="o">||</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// false
+</span></span></span></code></pre></div><h3 id="-logical-or-example-code"><strong>|| (Logical OR) Example Code</strong></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">||</span> <span class="nx">b</span><span class="p">);</span> 
+</span></span></code></pre></div><pre tabindex="0"><code> true
+</code></pre><p>In this case, <code>a</code> is evaluated first, and since it is a truthy value, the expression <code>a || b</code> returns <code>true</code>.</p>
+  
+
+  
+<h3 id="usage-with-non-boolean-values"><strong>Usage with Non-Boolean Values</strong></h3>
+<p>While the <code>||</code> operator is commonly associated with Boolean values, it can also work with non-Boolean values.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>JavaScript utilizes a process called “coercion” to convert these values into Boolean equivalents before evaluation.</p>
+  
+
+  
+<p>In the context of the <code>||</code> operator, if the first operand is truthy, it immediately returns that value without evaluating the second operand.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>If the first operand is falsy, the operator proceeds to evaluate the second operand and returns it if it is truthy.</p>
+  
+
+  
+<p>For example:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">favoriteFruit</span> <span class="o">=</span> <span class="s2">&#34;apple&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fallbackFruit</span> <span class="o">=</span> <span class="s2">&#34;orange&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">selectedFruit</span> <span class="o">=</span> <span class="nx">favoriteFruit</span> <span class="o">||</span> <span class="nx">fallbackFruit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectedFruit</span><span class="p">);</span>  <span class="c1">// &#34;apple&#34;
+</span></span></span></code></pre></div><pre tabindex="0"><code> apple
+</code></pre><p>In this scenario, <code>favoriteFruit</code> has a truthy value (“apple”), so the <code>||</code> operator returns that value without evaluating <code>fallbackFruit</code>.</p>
+  
+
+  
+<p>This behavior allows for concise fallback or default value assignments.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h3 id="usage-in-conditional-statements"><strong>Usage in Conditional Statements</strong></h3>
+<p>The <code>||</code> operator is commonly used in conditional statements to provide a default value when a variable or expression is falsy.</p>
+  
+
+  
+<p>Consider the following example:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="nx">getUserInput</span><span class="p">()</span> <span class="o">||</span> <span class="s2">&#34;Guest&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Welcome, &#34;</span> <span class="o">+</span> <span class="nx">username</span><span class="p">);</span>
+</span></span></code></pre></div><p>In this case, if the <code>getUserInput()</code> function returns a truthy value (e.g., a valid username), the <code>||</code> operator short-circuits and assigns that value to <code>username</code>.</p>
+  
+
+  
+<p>However, if the function returns a falsy value (e.g., an empty string or <code>null</code>), the <code>||</code> operator assigns the default value &ldquo;Guest&rdquo; to <code>username</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>This approach ensures that a meaningful username is used when available, or a fallback value is provided.</p>
+  
+
+  
+<h3 id="usage-in-loops"><strong>Usage in Loops</strong></h3>
+<p>The <code>||</code> operator can also be useful in loop conditions, allowing for concise termination conditions.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Consider the following example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In this scenario, the loop continues as long as the <code>array[i]</code> expression is truthy or if <code>i</code> is equal to 0.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The <code>||</code> operator ensures that the loop terminates once both conditions are falsy, effectively iterating over the elements of the array.</p>
+  
+
+  
+<h2 id="-logical-and-operator"><strong>&amp;&amp; (Logical AND) Operator</strong></h2>
+<p>The <code>&amp;&amp;</code> operator in JavaScript is used to combine expressions and return the value of the first falsy operand encountered.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>If both operands are truthy, the operator returns the value of the last operand.</p>
+  
+
+  
+<p>Let&rsquo;s explore the behavior of the <code>&amp;&amp;</code> operator in more detail:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<h3 id="-logical-and-operation"><strong>&amp;&amp; (Logical AND) Operation</strong></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Logical AND operation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// false
+</span></span></span></code></pre></div><h3 id="-logical-and-example-code"><strong>&amp;&amp; (Logical AND) Example Code</strong></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">&amp;&amp;</span> <span class="nx">b</span><span class="p">);</span> 
+</span></span></code></pre></div><pre tabindex="0"><code> false
+</code></pre><p>In this case, <code>a</code> is evaluated first, and since it is a truthy value, it proceeds to the second value b which is falsy.</p>
+  
+
+  
+<p>Hence, the expression <code>a &amp;&amp; b</code> returns <code>false</code> since <code>b</code> is falsy.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h3 id="usage-with-non-boolean-values-1"><strong>Usage with Non-Boolean Values</strong></h3>
+<p>Similar to the <code>||</code> operator, the <code>&amp;&amp;</code> operator can work with non-Boolean values by employing coercion to Boolean equivalents.</p>
+  
+
+  
+<p>When the <code>&amp;&amp;</code> operator encounters a falsy value as the first operand, it immediately returns that value without evaluating the second operand.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>This behavior is based on the principle of short-circuiting, which saves unnecessary evaluation when the first operand already determines the outcome.</p>
+  
+
+  
+<p>Consider the following examples:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&#34;apple&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="s2">&#34;orange&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">&amp;&amp;</span> <span class="nx">b</span><span class="p">);</span>  <span class="c1">// &#34;orange&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span> <span class="o">&amp;&amp;</span> <span class="nx">a</span><span class="p">);</span>  <span class="c1">// &#34;apple&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">&amp;&amp;</span> <span class="s2">&#34;&#34;</span><span class="p">);</span> <span class="c1">// &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">a</span><span class="p">);</span> <span class="c1">// &#34;&#34;
+</span></span></span></code></pre></div><pre tabindex="0"><code>
+
+  orange
+  apple
+  &#34; &#34;
+  &#34; &#34;
+</code></pre><p>In the first two cases, both operands are truthy, so the <code>&amp;&amp;</code> operator returns the value of the second operand.</p>
+  
+
+  
+<p>The operator evaluates the first operand and then proceeds to evaluate the second operand.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>Since both operands have truthy values, the result is the value of the second operand.</p>
+  
+
+  
+<p>In the last two cases, one of the operands is falsy. When the <code>&amp;&amp;</code> operator encounters a falsy value as the first operand, it immediately returns the falsy value without evaluating the second operand.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="usage-in-conditional-statements-1"><strong>Usage in Conditional Statements</strong></h3>
+<p>The <code>&amp;&amp;</code> operator is frequently used in conditional statements to perform multiple checks within a single expression. This allows for concise and readable code.</p>
+  
+
+  
+<p>Consider the following example:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">condition1</span> <span class="o">&amp;&amp;</span> <span class="nx">condition2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Code to execute if both conditions are true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>In this scenario, the code inside the <code>if</code> statement is executed if both <code>condition1</code> and <code>condition2</code> are truthy.</p>
+  
+
+  
+<p>If either of the conditions evaluates to a falsy value, the code block is skipped.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The <code>&amp;&amp;</code> operator enables the logical combination of conditions, providing a compact syntax for complex conditions.</p>
+  
+
+  
+<h3 id="usage-in-loops-1"><strong>Usage in Loops</strong></h3>
+<p>The <code>&amp;&amp;</code> operator is also beneficial in loop conditions to specify multiple criteria for iteration.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Let&rsquo;s look at an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In this case, the loop continues as long as both conditions are true: <code>i</code> is less than the length of the array, and the value of <code>array[i]</code> is not equal to 0.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>If either condition becomes false, the loop terminates. The <code>&amp;&amp;</code> operator allows for concise specification of multiple conditions within the loop.</p>
+  
+
+  
+<h3 id="usage-in-functions"><strong>Usage in Functions</strong></h3>
+<p>The <code>&amp;&amp;</code> operator can be utilized within functions to perform conditional operations or set default values. Let&rsquo;s consider an example:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greetUser</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="o">&amp;&amp;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">!</span><span class="nx">name</span> <span class="o">&amp;&amp;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, Guest&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">greetUser</span><span class="p">(</span><span class="s2">&#34;John&#34;</span><span class="p">);</span>   <span class="c1">// &#34;Hello, John&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">greetUser</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>     <span class="c1">// &#34;Hello, Guest&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">greetUser</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>  <span class="c1">// &#34;Hello, Guest&#34;
+</span></span></span></code></pre></div><pre tabindex="0"><code>
+
+  Hello, John
+  Hello, Guest
+  Hello, Guest
+</code></pre><p>In this function, the <code>&amp;&amp;</code> operator is used to conditionally execute code based on the truthiness of the <code>name</code> parameter.</p>
+  
+
+  
+<p>If <code>name</code> is truthy (e.g., a valid name), the <code>&amp;&amp;</code> operator executes the first expression, which logs a personalized greeting.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>If <code>name</code> is falsy (e.g., <code>null</code> or <code>undefined</code>), the <code>&amp;&amp;</code> operator skips the first expression and executes the second expression, which logs a generic greeting for guests.</p>
+  
+
+  
+<h2 id="wrap-up"><strong>Wrap Up</strong></h2>
+<p>In JavaScript, the <code>||</code> and <code>&amp;&amp;</code> operators are very important  in controlling the flow of execution and combining expressions.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The <code>||</code> operator returns the value of the first truthy operand encountered, while the <code>&amp;&amp;</code> operator returns the value of the first falsy operand encountered.</p>
+  
+
+  
+<p>These operators can work with both Boolean and non-Boolean values through coercion.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>The <code>||</code> operator is commonly used to provide fallback or default values, especially in conditional statements and assignments.</p>
+  
+
+  
+<p>It allows for concise code by short-circuiting when a truthy value is encountered. On the other hand, the <code>&amp;&amp;</code> operator is often utilized for conditional checks and loop conditions.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>It enables the combination of multiple conditions within a single expression, making the code more compact and readable.</p>
+  
+
+  
+<h2 id="faqs"><strong>FAQs</strong></h2>
+<ol>
+<li><strong>What happens if both operands in the <code>||</code> operator are falsy?</strong> In such cases, the <code>||</code> operator returns the value of the last operand. It evaluates both operands and returns the last operand when both are falsy.</li>
+<li><strong>Can the <code>||</code> operator be used with Boolean values directly?</strong> Yes, the <code>||</code> operator can be used with Boolean values. It simply returns the value of the first truthy operand encountered or the last falsy operand if both are falsy.</li>
+<li><strong>How does the <code>&amp;&amp;</code> operator work with non-Boolean values?</strong> When the <code>&amp;&amp;</code> operator encounters non-Boolean values, it undergoes coercion to convert them into Boolean equivalents. The operator returns the first falsy operand encountered or the last truthy operand if both are truthy.</li>
+<li><strong>Is short-circuiting unique to <code>||</code> and <code>&amp;&amp;</code> operators in JavaScript?</strong> No, short-circuiting is a fundamental principle in JavaScript that applies to other logical operators as well. It allows for efficient evaluation by skipping unnecessary operations when the outcome is already determined.</li>
+<li><strong>Can the <code>&amp;&amp;</code> operator be used for assigning default values?</strong> Yes, the <code>&amp;&amp;</code> operator can be used to assign default values when combined with conditional checks. It allows for concise syntax by checking the truthiness of a variable or expression and providing a fallback value if it is falsy.</li>
+<li><strong>How can the <code>&amp;&amp;</code> operator be used within functions?</strong> The <code>&amp;&amp;</code> operator can be used in functions to conditionally execute code based on the truthiness of a parameter or variable. It enables concise conditional operations and default value assignments.</li>
+</ol>
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -475,32 +932,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/closure-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-do-closures-work-in-javascript/">How Do JavaScript Closures Work? An Easy Explanation</a>
+        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/4457733_2347617.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/advantages-and-disadvantages-of-digital-system/">Advantages and Disadvantages of Digital Systems</a>
+        <img src="http://localhost:1313/images/vscode-update-mode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-stop-or-disable-vscode-auto-update/">How to Stop or Disable VSCode Auto Update?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-screen-size-is-best-for-programming/">Which Laptop Screen Size Is Best for Programming?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/convert-title-to-url-slug-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-convert-a-title-to-url-slug-in-javascript/">How to Convert a Title to URL Slug in JavaScript</a>
+        <img src="http://localhost:1313/images/remove-number-from-string-in-regex-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-numbers-from-a-string-in-python-using-regex/">How to Remove Numbers from a String in Python using Regex?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/old-window-and-new-window.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-vscode-terminal-in-another-window/">How to Open VS Code Terminal in Another Window?</a>
+        <img src="http://localhost:1313/images/nextjs-hydration.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-error-hydration-failed-because-the-initial-ui-does-not-match-what-was-rendered-on-the-server-in-nextjs/">How to fix error hydration failed because the initial UI does not match what was rendered on the server in nextJS?</a>
  </div>
     
 
@@ -519,32 +976,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
+        <img src="http://localhost:1313/images/function-anatomy.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-normal-function-and-arrow-function/">Difference Between Normal (Regular) Function and Arrow Function</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/who-owns-chatgpt-and-who-created-it/">Who Owns ChatGPT and Who Created It? All You Need to Know</a>
+        <img src="http://localhost:1313/images/software-and-code.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-compiler-and-assembler/">Difference Between Compiler and Assembler</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/console.info.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-console.info/">Difference Between console.log and console.info</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-dev-dependency-and-dependency/">Difference Between Dev-Dependency and Dependency?</a>
+        <img src="http://localhost:1313/images/ai-machine-learning.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-language-is-chatgpt-coded-in/">What Programming Language is ChatGPT Coded In?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
+        <img src="https://neuralink.com/assets/static/whats-next-mobile.aede448d.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-powers-neuralink-chip-when-implanted-into-the-human-brain/">What Powers Neuralink Chip When Implanted into the Human Brain?</a>
  </div>
     
   </div>
@@ -552,12 +1009,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -719,6 +1177,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

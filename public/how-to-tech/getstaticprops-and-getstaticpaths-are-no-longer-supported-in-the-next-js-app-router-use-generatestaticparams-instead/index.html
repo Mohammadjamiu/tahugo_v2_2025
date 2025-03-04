@@ -342,7 +342,111 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>I was working on a Next.js 15 project using the App Router when I needed to handle dynamic routes. While reviewing an older project from GitHub, I noticed the use of <code>getStaticProps</code> and <code>getStaticPaths</code> to fetch and pre-render data.</p>
+  
+
+  
+<p>However, when I tried implementing them in my project, I realized that these functions were not supported in the App Router. This left me confused about how to achieve the same functionality in the latest version of Next.js.</p>
+  
+
+  
+<p>The issue arises because the App Router, introduced in Next.js 13 and refined in versions 14 and 15, replaces the <code>getStaticProps</code> and <code>getStaticPaths</code> functions with <code>generateStaticParams</code> for handling static generation of dynamic routes.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="use-generatestaticparams-instead-of-getstaticprops-and-getstaticpaths-for-dynamic-routes"><strong>Use generateStaticParams Instead of getStaticProps and getStaticPaths for Dynamic Routes</strong></h2>
+<p>To handle dynamic routes in the Next.js App Router, you need to use the <code>generateStaticParams</code> function. This approach is designed to work with server components and pre-render pages at build time.</p>
+  
+
+  
+<p>Here’s how I updated the project to use <code>generateStaticParams</code> instead of <code>getStaticProps</code> and <code>getStaticPaths</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="step-1-define-dynamic-route">Step 1: Define Dynamic Route</h3>
+<p>In the App Router, create a file for your dynamic route inside the <code>app</code> directory. For example, to define a route like <code>/posts/[postId]</code>, create the following structure:</p>
+  
+
+  
+<pre tabindex="0"><code>app/
+  posts/
+    [postId]/
+      page.js
+</code></pre><h3 id="step-2-use-generatestaticparams">Step 2: Use <code>generateStaticParams</code></h3>
+<p>Add the <code>generateStaticParams</code> function to fetch the dynamic route parameters and pre-render pages for them.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// app/posts/[postId]/page.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">generateStaticParams</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;https://jsonplaceholder.typicode.com/posts&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">posts</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">posts</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">post</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">postId</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">PostPage</span><span class="p">({</span> <span class="nx">params</span> <span class="p">})</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">postId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Post</span> <span class="nx">ID</span><span class="o">:</span> <span class="p">{</span><span class="nx">postId</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="explanation">Explanation</h3>
+<ol>
+<li><strong><code>generateStaticParams</code>:</strong><br>
+This function fetches the list of posts from the API and maps them into an array of <code>params</code> objects. Each object contains the dynamic route parameter (<code>postId</code>).</li>
+<li><strong><code>params</code> Prop:</strong><br>
+In the page component, the <code>params</code> prop is automatically passed, containing the <code>postId</code> value for the corresponding route.</li>
+</ol>
+<h2 id="why-generatestaticparams"><strong>Why <code>generateStaticParams</code>?</strong></h2>
+<p>The shift from <code>getStaticProps</code> and <code>getStaticPaths</code> to <code>generateStaticParams</code> reflects Next.js&rsquo;s evolution towards server components and improved build-time performance. Unlike the old functions, <code>generateStaticParams</code> works well with the App Router and focuses solely on pre-rendering dynamic routes.</p>
+  
+
+  
+<h2 id="wrapping-up"><strong>Wrapping Up</strong></h2>
+<p>If you&rsquo;re transitioning to Next.js 15 or starting a new project with the App Router, remember that <code>getStaticProps</code> and <code>getStaticPaths</code> are no longer supported. Use <code>generateStaticParams</code> to pre-render dynamic routes effectively.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>This not only aligns with Next.js&rsquo;s latest architecture but also simplifies dynamic route handling with server components.</p>
+  
+
+  
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +576,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/work-smart-vs-work-hard-venn-diagram.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-better-yarn-or-npm/">Which Is Better Yarn or npm?</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
+        <img src="http://localhost:1313/images/log-and-write.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-document.write-in-javascript/">Difference Between console.log() and document.write() in JavaScript</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/search-engine.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-chatgpt-and-a-search-engine/">Difference Between ChatGPT and Search Engine (Google Search)</a>
+        <img src="http://localhost:1313/images/c-code-working-in-vscode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-setup-c-and-cpp-in-visual-studio-code/">How to setup C/C&#43;&#43; in Visual Studio Code?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/git-unable-to-resolve.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-git-error-unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/">How to Fix Git Error &#34;Unable to Resolve Reference refs/remotes/origin/master Reference Broken&#34;</a>
+        <img src="http://localhost:1313/images/dependency-nad-devdep.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-package-lock-json-needed-for-deployment/">Is package-lock.json needed for deployment?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-20-at-2.20.25-am-3-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-share-or-send-multiple-photos-from-whatsapp-to-email/">How To Share or Send Multiple Photos From WhatsApp to Email?</a>
  </div>
     
 
@@ -516,32 +620,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/studentessay.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/essential-tools-do-engineering-students-need/">12 Essential Tools Engineering Students Need the Most</a>
+        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
+        <img src="http://localhost:1313/images/migrating-hugo-website-netlify-to-vercel-version-mismatch.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/migrating-hugo-website-netlify-to-vercel-version-mismatch/">Migrating a Hugo Website from Netlify to Vercel: Resolving Deployment Errors Due to Hugo Version Mismatch</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
+        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/chatgpt-3.5.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-gpt-1-gpt-2-gpt-3-gpt-4/">Difference between GPT-1, GPT-2, GPT-3/3.5 and GPT-4</a>
+        <img src="http://localhost:1313/images/vscode-is-not-responding.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-vscode-window-not-responding/">How to Fix VSCode Window Not Responding?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/screenshot-2023-01-31-at-08-58-20-content-manager.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/netlify-sitemap-plugin-how-to-exclude-certain-pages/">Netlify Sitemap Plugin: How to Exclude Certain Pages</a>
+        <img src="http://localhost:1313/images/whatsapp-image-2023-05-22-at-10.32.16-am.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/why-whatsapp-is-not-installing-in-my-android-how-to-fix/">How to Fix WhatsApp Is Not Installing in My Android?</a>
  </div>
     
   </div>
@@ -549,12 +653,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +821,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

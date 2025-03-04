@@ -342,7 +342,169 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>The main difference between <code>console.log()</code> and <code>document.write()</code> is that <code>console.log()</code> <strong>outputs information to the browser&rsquo;s console for debugging and testing purposes, while <code>document.write()</code> directly modifies the HTML document, inserting content into the web page visible to users.</strong></p>
+  
+
+  
+<h2 id="what-is-consolelog">What is <code>console.log()</code>?</h2>
+<p><code>Console.log()</code> is a method used for debugging and logging purposes in JavaScript. It prints the specified message or value to the browser&rsquo;s console.</p>
+  
+
+  
+<p>The console is a developer tool included in web browsers like Chrome and Firefox that allows developers to view and interact with JavaScript code.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>Read on:</strong> <em><a href="http://localhost:1313/how-to-tech/difference-between-console-log-and-alert-in-javascript/">What Is the Difference Between console.log() and alert() in JavaScript?</a></em></p>
+  
+
+  
+<p>It is primarily used for debugging, inspecting variables, and testing code. The output of <code>console.log()</code> can be seen in the browser&rsquo;s developer console, which provides a textual representation of the logged data.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Using console.log()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">myMessage</span> <span class="o">=</span> <span class="s2">&#34;Hello, world!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myMessage</span><span class="p">);</span> <span class="c1">// Output: Hello, world!
+</span></span></span></code></pre></div><p>The <strong>myMessage</strong> variable holds the string <strong>“Hello, world!”</strong>. When we call <code>console.log(myMessage)</code>, it prints the value of the <strong>myMessage</strong> variable to the browser&rsquo;s console, which is – “Hello, world!”.</p>
+  
+
+  
+<p><img src="http://localhost:1313/images/loogmymessage.webp" alt="console.log() output" title="console.log() output"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>The console is a developer tool that can be accessed using browser developer tools (e.g., Chrome DevTools, Firefox Developer Tools). The output is displayed in the console, typically as part of a logged message.</p>
+  
+
+  
+<h2 id="what-is-documentwrite">What is <code>document.write()</code>?</h2>
+<p><code>Document.write()</code> is a method of the document object in JavaScript, representing the HTML document being displayed in the browser.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>It is used to dynamically insert content into the web page. When invoked, document.write() directly writes the provided content to the document, altering the HTML structure.</p>
+  
+
+  
+<p>It can be used to add text, HTML, or even JavaScript code to the page, and the output will be visible in the rendered web page.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Using document.write()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&#34;Hello, world!&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><p><img src="http://localhost:1313/images/document-write.webp" alt="document.write() in javascript" title="document.write() in javascript"></p>
+  
+
+  
+<p>Here, we directly invoke document.write(“Hello, world!”). The specified content, in this case, the string “Hello, world!”, is written directly to the HTML document that is being displayed in the browser.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>When the web page loads or when this code is executed, the content is inserted into the document, modifying the rendered web page itself.</p>
+  
+
+  
+<p>You will see “Hello, world!” displayed on the web page as part of the visible content.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>It&rsquo;s important to note that while <code>console.log()</code> works solely with JavaScript code and outputs to the console, <code>document.write()</code> directly modifies the HTML document and affects the visible content of the web page.</p>
+  
+
+  
+<p>Accordingly, <code>console.log()</code> is mainly used for debugging and logging during development, while <code>document.write()</code> is typically used for dynamically generating or modifying the content displayed on the page and is usually not recommended for extensive use.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h2 id="difference-between-consolelog-and-documentwrite-in-javascript">Difference Between console.log() and document.write() in JavaScript</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>console.log()</th>
+<th>document.write()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Output information to the console for debugging</td>
+<td>Output content directly to the web page</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Prints output to the console</td>
+<td>Renders output as content on the web page</td>
+</tr>
+<tr>
+<td>Usage</td>
+<td>Debugging, logging</td>
+<td>Modifying the visible content of the page</td>
+</tr>
+<tr>
+<td>Supported Types</td>
+<td>All types of data: strings, numbers, objects, etc.</td>
+<td>Text, HTML, or JavaScript code</td>
+</tr>
+<tr>
+<td>Overwriting</td>
+<td>Does not overwrite the document</td>
+<td>Can overwrite the entire document if called</td>
+</tr>
+<tr>
+<td>Use with HTML</td>
+<td>Does not interpret HTML tags</td>
+<td>Interprets and renders HTML tags</td>
+</tr>
+</tbody>
+</table>
+</p>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +634,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/screenshot_2-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/no-utility-classes-were-detected-in-your-source-files-fixed/">How to fix &#34;No utility classes were detected in your source files&#34;</a>
+        <img src="http://localhost:1313/images/internet-day-pana.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-are-the-advantages-and-disadvantages-of-electronic-payments-system/">What Are the Advantages and Disadvantages of Electronic Payments System?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/hacker-hacking-computer.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-programming-language-is-used-for-hacking/">Which Programming Language is Used for Hacking?</a>
+        <img src="http://localhost:1313/images/valid-image-in-js-or-not.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-check-if-an-image-url-is-valid-in-javascript/">How to Check if an Image URL is Valid in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/not-equal-and-strict-not-equal-in-js.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-not-equal-and-strict-not-equal-in-javascript/">What is != and !== in JavaScript?</a>
+        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/dalle-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-dall-e-and-where-does-dall-e-get-its-data-from/">What is DALL-E and Where Does DALL-E Get Its Data From?</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
     
      <div class="xx">
-        <img src="" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/best-free-graphic-design-software-for-graphics-designers/">Best Free Graphic Design Software for Graphics Designers [2022]</a>
+        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
  </div>
     
 
@@ -516,32 +678,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/map-and-filter.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-map-and-filter-in-javascript-with-example/">Difference Between map() and filter() in JavaScript With Example</a>
+        <img src="http://localhost:1313/images/fix-react-children-only-error-button-aschild.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/fix-react-children-only-error-button-aschild/">Resolving the &#39;React.Children.only Expected to Receive a Single React Element Child&#39; Error in Button Components</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/script-tag-in-html.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/where-is-the-best-place-to-put-the-script-tag/">Where Is the Best Place To Put an HTML Script Tag?</a>
+        <img src="http://localhost:1313/images/speed-up-optimize-nextjs-website-blog.png" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/speed-up-optimize-nextjs-website-blog/">How to Speed Up and Optimize Your Next.js Website or Blog for Faster Page Load</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/not-downloading.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-pdfdrive-not-working-or-downloading/">How to Fix PDFDrive not Working or Downloading?</a>
+        <img src="http://localhost:1313/images/wifi-bluetooth.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-wifi-and-bluetooth/">Difference Between Wi-Fi and Bluetooth</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/c-code-for-average.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/c-program-to-calculate-the-average-of-n-numbers/">C Program to Calculate the Average of N Numbers</a>
+        <img src="http://localhost:1313/images/import-and-requir-in-nodejs.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-import-instead-of-require-in-node-js/">How to Use Import Instead of Require in Node.js?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
+        <img src="http://localhost:1313/images/python-dictionary.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/python-dictionary-with-example/">Python Dictionaries: A Beginner&#39;s Guide with Examples</a>
  </div>
     
   </div>
@@ -549,12 +711,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +879,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 

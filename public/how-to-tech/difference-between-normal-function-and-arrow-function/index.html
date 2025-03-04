@@ -342,7 +342,272 @@
 
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+
+
+
+
+
+
+
+
+  <p>Functions, in JavaScript, are a fundamental concept that allow us to encapsulate reusable blocks of code.</p>
+  
+
+  
+<p><strong>Regular functions</strong> also known as <em>normal functions</em> and <strong>arrow functions</strong> are two commonly used function types, each with its own characteristics and use cases.</p>
+  
+
+  
+<p>In this blog post, we&rsquo;ll explore these differences in detail, covering their syntaxes, lexical scope (i.e., surrounding scope), “this” binding, the use of “return,”, others and provide code examples to illustrate each concept.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="normal-regular-functions">Normal (Regular) Functions</h2>
+<p>Regular functions are defined using the “function” keyword, followed by the function name, a list of parameters enclosed in parentheses, and the function body enclosed in curly braces. Example: <code>function add(a, b) { return a + b; }</code></p>
+  
+
+  
+<p><img src="http://localhost:1313/images/function-anatomy.webp" alt="function syntax breakdown" title="function syntax breakdown"></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Regular functions offer flexibility in terms of “this” binding, constructors, and explicit return statements.</p>
+  
+
+  
+<p>Let&rsquo;s see how to use a regular function:</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Regular function example
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// Output: 15
+</span></span></span></code></pre></div><p>In this example, the regular function <code>multiply</code> takes two parameters <code>a</code> and <code>b</code> and returns their product using the <code>return</code> statement.</p>
+  
+
+  
+<p>Regular functions provide an explicit way to specify the value to be returned.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<h2 id="arrow-functions">Arrow Functions</h2>
+<p>Arrow functions, introduced in ES6, provide a more concise syntax and have some distinct characteristics compared to regular functions.</p>
+  
+
+  
+<p>They are defined using a parameter list (which can be empty or enclosed in parentheses for multiple parameters), followed by the arrow <code>(=&gt;)</code> and the function body. Example: <code>(a, b) =&gt; a + b</code></p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Let see how to use an arrow function:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Arrow function example
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// Output: 20
+</span></span></span></code></pre></div><p>The arrow function <code>multiply</code> in this example achieves the same functionality as the regular function.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>It implicitly returns the result of the expression <code>a * b</code> without using the <code>return</code> keyword.</p>
+  
+
+  
+<p>Arrow functions are especially useful when the function body consists of a single expression.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p>When an arrow function consists of multiple expressions or requires more complex logic, you need to use explicit curly braces <code>({})</code> and the <code>return</code> keyword. Here&rsquo;s an example:</p>
+  
+
+  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Arrow function with multiple expressions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">multiplyAndAdd</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">product</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">product</span> <span class="o">+</span> <span class="nx">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">multiplyAndAdd</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// Output: 10
+</span></span></span></code></pre></div><p>In this example, the arrow function <code>multiplyAndAdd</code> takes three parameters (<code>a</code>, <code>b</code>, and <code>c</code>).</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p>Inside the function body enclosed in curly braces, it performs multiple expressions: calculating the product of <code>a</code> and <code>b</code>, adding <code>c</code> to the product, and returning the sum using the <code>return</code> statement.</p>
+  
+
+  
+<p>By using explicit curly braces and the <code>return</code> keyword, you can handle more complex computations or perform multiple statements within an arrow function.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>This allows you to have greater control over the logic and the value to be returned.</p>
+  
+
+  
+<blockquote>
+<p>Remember that the use of curly braces and the <code>return</code> keyword is optional when the arrow function has a single expression. However, when dealing with multiple expressions, always use the curly braces and explicitly specify the return value using <code>return</code>.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+</blockquote>
+<h2 id="differences-between-regular-functions-and-arrow-functions"><strong>Differences between Regular Functions and Arrow Functions</strong></h2>
+<h3 id="1-lexical-scope-and-this-binding"><strong>1. Lexical Scope and “this” Binding:</strong></h3>
+<p><strong>Regular functions</strong> have their own “this” value, which is determined by how the function is called.</p>
+  
+
+  
+<p>The value of “this” can vary based on the context in which the function is invoked.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<p><strong>Read on:</strong> <em><a href="http://localhost:1313/how-to-tech/difference-between-this-and-that-in-javascript/">Difference Between the ‘This’ and ‘That’ Keyword in JavaScript</a></em></p>
+  
+
+  
+<p><strong>Arrow functions</strong> do not have their own “this” binding. Instead, they inherit the value of “this” from the surrounding (lexical) scope.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>This allows arrow functions to maintain the same “this” value as the enclosing scope.</p>
+  
+
+  
+<h3 id="2-use-of-return"><strong>2. Use of “return”:</strong></h3>
+<p><strong>Regular functions</strong> use the <code>return</code> keyword to explicitly specify the value to be returned. If no <code>return</code> statement is used, the function will return <code>undefined</code> by default.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+  
+<p><strong>Arrow functions</strong> have an implicit return behavior. If the function body consists of a single expression, that expression is automatically returned without using the <code>return</code> keyword.</p>
+  
+
+  
+<p>But, for more complex logic or multiple statements, explicit curly braces and the <code>return</code> keyword are required.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-129"></div>
+    <div id="ezoic-pub-ad-placeholder-130"></div>
+  
+
+  
+<h3 id="3-constructors"><strong>3. Constructors:</strong></h3>
+<p><strong>Regular functions</strong> can be used as constructors with the <code>new</code> keyword to create new objects. They have a <code>prototype</code> property that can be used to define shared methods and properties for instances.</p>
+  
+
+  
+<p><strong>Arrow functions</strong> cannot be used as constructors. They do not have a <code>prototype</code> property and cannot be used to create new objects.</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-120"></div>
+    <div id="ezoic-pub-ad-placeholder-124"></div>
+  
+
+  
+<p>Regular functions provide flexibility in terms of “this” binding, constructors, and explicit return statements. On the other hand, arrow functions offer a more concise syntax, lexical scoping behavior, and implicit return.</p>
+  
+
+  
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Normal Function</th>
+<th>Arrow Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syntax</td>
+<td>function functionName(params) {&hellip;}</td>
+<td>(params) =&gt; {&hellip;}</td>
+</tr>
+<tr>
+<td>Lexical Scope</td>
+<td>Has its own “this” value</td>
+<td>Inherits “this” from surrounding scope</td>
+</tr>
+<tr>
+<td>Constructors</td>
+<td>Can be used as constructors</td>
+<td>Cannot be used as constructor</td>
+</tr>
+<tr>
+<td>Use of “return”</td>
+<td>Uses explicit “return” statements</td>
+<td>Has implicit return</td>
+</tr>
+</tbody>
+</table>
+</p>
+  
+    
+    <div id="ezoic-pub-ad-placeholder-127"></div>
+    <div id="ezoic-pub-ad-placeholder-128"></div>
+  
+
+
+
+<div id="ezoic-pub-ad-placeholder-131"></div>
 
   <div id="ezoic-pub-ad-placeholder-166"></div>
  
@@ -472,32 +737,32 @@
      
     
      <div class="xx">
-        <img src="http://localhost:1313/images/gpt-ai.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/which-is-the-most-powerful-gpt/">The Most Powerful GPT?</a>
+        <img src="http://localhost:1313/images/software-computer.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-difference-between-programming-and-coding/">Programming vs. Coding: What&#39;s The Key Difference?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/facebook-install1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-cant-download-facebook-app-on-android/">How to Fix Can&#39;t Download Facebook App on Android?</a>
+        <img src="http://localhost:1313/images/slice-method-1.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-split-array-in-2-parts-javascript/">How to Split an Array in 2 Parts in JavaScript?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/qredge1.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-create-qr-code-for-a-page-in-microsoft-edge/">How to Create Qr Code for a Page in Microsoft Edge</a>
+        <img src="http://localhost:1313/images/vscode-update-mode.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-stop-or-disable-vscode-auto-update/">How to Stop or Disable VSCode Auto Update?</a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/json-file-opened.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-open-settings.json-in-vscode/">How to open Visual Studio Code&#39;s &#39;settings.json&#39; file?</a>
+        <img src="http://localhost:1313/images/hitesh-choudhary-t1paibmtjim-unsplash.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-the-difference-between-machine-learning-and-generative-ai/">Difference Between Machine Learning and Generative AI </a>
  </div>
     
     
      <div class="xx">
-        <img src="http://localhost:1313/images/handling-property-description-is-possibly-undefined-in-typescript.png" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/handling-property-description-is-possibly-undefined-in-typescript/">Handling &#34;Property &#39;description&#39; is Possibly &#39;Undefined&#39;&#34; in TypeScript</a>
+        <img src="http://localhost:1313/images/whatsapp-unable-to-connect.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-fix-whatsapp-unable-to-connect-please-try-again-error/">How to Fix WhatsApp &#34;Unable to Connect. Please try again&#34; Error?</a>
  </div>
     
 
@@ -516,32 +781,32 @@
      
     
        <div class="xx">
-        <img src="http://localhost:1313/images/ilgmyzin-agfmimwypso-unsplash-1-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/what-is-chatgpt-and-its-advantages-and-disadvantages/">What is ChatGPT? Its Advantages and Disadvantages</a>
+        <img src="http://localhost:1313/images/sam-altman-plugin-rollout.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/does-chatgpt-use-the-internet/">Does ChatGPT Use the Internet?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/current-port.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-get-current-port-number-in-javascript/">How to Get Current Port Number in JavaScript?</a>
+        <img src="http://localhost:1313/images/code-learn.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/programming-forums-for-beginners/">Programming Forums for Beginners</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/multiple-images-nodejs.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-download-multiple-images-nodejs/">How to Download Multiple Images in Node.js</a>
+        <img src="http://localhost:1313/images/system-unit.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-cpu-and-system-unit/">The Key Difference Between CPU and System Unit</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/intel-i5-core-2-.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/is-i3-or-i5-better-for-college-students/">i3 or i5: Which is Better for College Students?</a>
+        <img src="http://localhost:1313/images/remove-item-from-list-python.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-remove-items-from-a-list-while-iterating-in-python/">How to Remove Items from a List While Iterating in Python?</a>
  </div>
     
     
        <div class="xx">
-        <img src="http://localhost:1313/images/vite-localserver-on-web.webp" alt="" class="xxx">
-              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/how-to-use-vite-with-react/">How to Use Vite with React? Learn How to Create React App with Vite</a>
+        <img src="http://localhost:1313/images/return-keyword.webp" alt="" class="xxx">
+              <a class="links-to-others xxxx" href="http://localhost:1313/how-to-tech/difference-between-console.log-and-return-in-javascript/">Difference Between console.log() and return in JavaScript</a>
  </div>
     
   </div>
@@ -549,12 +814,13 @@
 </div>
 
 
-<div id="ezoic-pub-ad-placeholder-124"></div>
+<div id="ezoic-pub-ad-placeholder-134"></div>
 
 
 <script>
   ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(120,124,146,163,164,165,166);
+      
+      ezstandalone.showAds(120,124,127,128,129,130,131,134,146,163,164,165,166);
   });
 </script>
 
@@ -716,6 +982,11 @@
 </footer>
 
 
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(163, 166);
+      });
+    </script>
     <script defer src="http://localhost:1313/js/script.js"></script>
     
 
